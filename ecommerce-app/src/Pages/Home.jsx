@@ -127,6 +127,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="Blog"></div>
+<div className="newsletter"></div>
 
 <br/>
 

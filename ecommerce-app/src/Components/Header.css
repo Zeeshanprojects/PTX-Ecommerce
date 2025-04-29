@@ -1,0 +1,20 @@
+.topbar{
+    height: 50px;
+    background-color: black;
+}
+.topbar p{
+    color: white;
+    text-align: center;
+}
+.navbar{
+    height: 80px;
+}
+.navbar-brand img{
+    height: 50px !important;
+}
+.nav-link{
+    font-size: 17px;
+    font-size: bold;
+text-align: center;
+padding: 20px !important;
+}

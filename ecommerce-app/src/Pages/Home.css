@@ -1,8 +1,4 @@
-.sliderimage {
-  height: 100dvh;
-  width: 100%;
-  overflow-x: hidden;
-}
+
 .image-wrapper {
   position: relative;
   width: 100%;
@@ -25,7 +21,6 @@
 }
 .imagetext h2 {
   font-size: 40px;
-
 }
 .btn {
   height: 50px;
@@ -57,6 +52,7 @@
   font-size: 1rem;
   color: #555;
 }
+
 .box img {
   height: 250px !important;
   width: 100%;
@@ -70,6 +66,7 @@
 }
 .product-card:hover {
   transform: translateY(-5px);
+
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 .product-img-container {
@@ -102,6 +99,21 @@
 .product-card:hover .product-overlay {
   opacity: 1;
 }
+/* NEW Badge */
+.new-badge {
+  background-color: #dc3545; /* or use #000 (black), #007bff (blue) */
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+/* Lightened Overlay */
+.product-overlay {
+  background: rgba(255, 255, 255, 0.6); /* previously 0.85 */
+}
 
 .color-dot {
   width: 14px;
@@ -109,8 +121,8 @@
   border-radius: 50%;
   border: 1px solid #ccc;
 }
-.banner{
-  height: 100vh;
+.banner {
+  height: 100dvh;
   object-fit: cover;
   width: 100%;
 }
@@ -120,8 +132,7 @@
 }
 
 .info-icon {
-  height: 50px; /* Set a fixed height */
+  height: 40px; /* Set a fixed height */
   object-fit: contain; /* Prevent stretching */
   margin-bottom: 20px;
 }
-

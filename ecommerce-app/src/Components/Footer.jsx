@@ -1,5 +1,6 @@
 import React from 'react'
-
+import './Footer.css'
+import {Link} from 'react-router-dom'
 export default function Footer() {
   return (
 
@@ -14,24 +15,24 @@ export default function Footer() {
         >
           
           <div>
-            <a href="#" className="text-white me-4">
+            <Link href="#" className="text-white me-4">
               <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="text-white me-4">
+            </Link>
+            <Link href="#" className="text-white me-4">
               <i className="fab fa-twitter"></i>
-            </a>
-            <a href="#" className="text-white me-4">
+            </Link>
+            <Link href="#" className="text-white me-4">
               <i className="fab fa-google"></i>
-            </a>
-            <a href="#" className="text-white me-4">
+            </Link>
+            <Link href="#" className="text-white me-4">
               <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="text-white me-4">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="#" className="text-white me-4">
+            </Link>
+            <Link href="#" className="text-white me-4">
+              <i className="fab fa-Linkedin"></i>
+            </Link>
+            <Link href="#" className="text-white me-4">
               <i className="fab fa-github"></i>
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -39,7 +40,7 @@ export default function Footer() {
           <div className="container-fluid text-center text-md-start mt-5">
             <div className="row mt-3">
               <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold">Company name</h6>
+                <h6 className="text-uppercase fw-bold">PAKISTAN TEXTILE EXCHANGE</h6>
                 <hr
                   className="mb-4 mt-0 d-inline-block mx-auto"
                   style={{
@@ -66,29 +67,29 @@ export default function Footer() {
                   }}
                 />
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     MDBootstrap
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     MDWordPress
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     BrandFlow
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     Bootstrap Angular
-                  </a>
+                  </Link>
                 </p>
               </div>
 
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold">Useful links</h6>
+                <h6 className="text-uppercase fw-bold">Useful Links</h6>
                 <hr
                   className="mb-4 mt-0 d-inline-block mx-auto"
                   style={{
@@ -98,24 +99,24 @@ export default function Footer() {
                   }}
                 />
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     Your Account
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     Become an Affiliate
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     Shipping Rates
-                  </a>
+                  </Link>
                 </p>
                 <p>
-                  <a href="#!" className="text-dark">
+                  <Link href="#!" className="text-dark">
                     Help
-                  </a>
+                  </Link>
                 </p>
               </div>
 
@@ -151,9 +152,9 @@ export default function Footer() {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
           © 2020 Copyright:
-          <a className="text-dark" href="https://mdbootstrap.com/">
+          <Link className="text-dark" href="https://mdbootstrap.com/">
             MDBootstrap.com
-          </a>
+          </Link>
         </div>
       </footer>
     </div>

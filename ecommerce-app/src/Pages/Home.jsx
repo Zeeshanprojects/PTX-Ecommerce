@@ -8,14 +8,12 @@ export default function Home() {
       name: " Yellow",
       price: "PKR 1,999",
       image: Image.image1,
-   
     },
     {
       id: 2,
       name: "Red",
       price: "PKR 2,299",
       image: Image.image2,
-      
     },
     {
       id: 3,
@@ -124,13 +122,8 @@ export default function Home() {
   return (
     <>
       <div className="image-wrapper">
-        <img
-          src={Image.banner}
-          alt="slider-image1"
-          className="sliderimage"
-        />
+        <img src={Image.banner} alt="slider-image1" className="sliderimage" />
         <div className="imagetext">
-          
           <button type="button" className="btn btn-outline-light mt-4 ">
             SHOP NOW
           </button>
@@ -197,7 +190,7 @@ export default function Home() {
       <div className="space"></div>
 
       <h2 className="text-center uppercase">
-      CURATED ESSENTIALS FOR A TIMELESS WARDROBE
+        CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
       <p className="text-center">
         Complement your everyday style with timeless essential items
@@ -211,6 +204,9 @@ export default function Home() {
               key={product.id}
             >
               <div className="product-card position-relative overflow-hidden rounded shadow-sm">
+                <span className="new-badge position-absolute top-0 start-0 m-2">
+                  NEW
+                </span>
                 <div className="product-img-container position-relative">
                   <img
                     src={product.image}
@@ -226,53 +222,45 @@ export default function Home() {
                 <div className="p-3">
                   <h6 className="mb-1">{product.name}</h6>
                   <p className="text-muted mb-1">{product.price}</p>
-            
                 </div>
               </div>
             </div>
           ))}
-          
         </div>
       </div>
-
-      <br />
-      
 
       <div className="space"></div>
       <div className="container-fluid p-0">
         <img src={Image.Fashion_Banner} alt="banner" className="banner" />
       </div>
 
-<div className="space"> </div>
+      <div className="space"> </div>
 
-<div className="container">
-  <div className="row text-center">
-    <div className="col-sm-4 col-lg-4 col-xl-4">
-      <div className="info-box">
-        <img src={Image.icon1} alt="icons" className="info-icon" />
-        <h5>SUPPORT 24/7</h5>
-        <p>Contact us 24 hours a day, 7 days a week</p>
+      <div className="container">
+        <div className="row text-center">
+          <div className="col-sm-4 col-lg-4 col-xl-4">
+            <div className="info-box">
+              <img src={Image.icon1} alt="icons" className="info-icon" />
+              <h5>SUPPORT 24/7</h5>
+              <p>Contact us 24 hours a day, 7 days a week</p>
+            </div>
+          </div>
+          <div className="col-sm-4 col-lg-4 col-xl-4">
+            <div className="info-box">
+              <img src={Image.icon2} alt="icons" className="info-icon" />
+              <h5>TRACK YOUR ORDER</h5>
+              <p>Click for the quick update on your order</p>
+            </div>
+          </div>
+          <div className="col-sm-4 col-lg-4 col-xl-4">
+            <div className="info-box">
+              <img src={Image.icon3} alt="icons" className="info-icon" />
+              <h5>RETURN & EXCHANGES</h5>
+              <p>Please view the return and exchange policy</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="col-sm-4 col-lg-4 col-xl-4">
-      <div className="info-box">
-        <img src={Image.icon2} alt="icons" className="info-icon" />
-        <h5>TRACK YOUR ORDER</h5>
-        <p>Click for the quick update on your order</p>
-      </div>
-    </div>
-    <div className="col-sm-4 col-lg-4 col-xl-4">
-      <div className="info-box">
-        <img src={Image.icon3} alt="icons" className="info-icon" />
-        <h5>RETURN & EXCHANGES</h5>
-        <p>Please view the return and exchange policy</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
     </>
   );
 }

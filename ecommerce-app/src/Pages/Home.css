@@ -132,7 +132,7 @@
 }
 
 .info-icon {
-  height: 40px; /* Set a fixed height */
+  height: 50px; /* Set a fixed height */
   object-fit: contain; /* Prevent stretching */
   margin-bottom: 20px;
 }

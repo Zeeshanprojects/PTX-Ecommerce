@@ -14,29 +14,84 @@ export default function Home() {
     Mens: [
       { id: 1, name: "Yellow", price: "PKR 1,999", image: Image.image1 },
       { id: 2, name: "Red", price: "PKR 2,299", image: Image.image2 },
-      { id: 3, name: "Urban Black Shirt", price: "PKR 2,799", image: Image.image3 },
-      { id: 4, name: "Ocean Blue Tee", price: "PKR 2,499", image: Image.image4 },
-      { id: 5, name: "Ocean Blue Tee", price: "PKR 2,499", image: Image.image5 },
-      { id: 6, name: "Urban Pink Tee", price: "PKR 2,799", image: Image.image6 },
-      { id: 7, name: "Mint Green Tee", price: "PKR 2,299", image: Image.image7 },
+      {
+        id: 3,
+        name: "Urban Black Shirt",
+        price: "PKR 2,799",
+        image: Image.image3,
+      },
+      {
+        id: 4,
+        name: "Ocean Blue Tee",
+        price: "PKR 2,499",
+        image: Image.image4,
+      },
+      {
+        id: 5,
+        name: "Ocean Blue Tee",
+        price: "PKR 2,499",
+        image: Image.image5,
+      },
+      {
+        id: 6,
+        name: "Urban Pink Tee",
+        price: "PKR 2,799",
+        image: Image.image6,
+      },
+      {
+        id: 7,
+        name: "Mint Green Tee",
+        price: "PKR 2,299",
+        image: Image.image7,
+      },
       { id: 8, name: "Sunset Orange", price: "PKR 1,999", image: Image.image8 },
     ],
     Womens: [
-      { id: 5, name: "Ocean Blue Tee", price: "PKR 2,499", image: Image.image5 },
-      { id: 6, name: "Urban Pink Tee", price: "PKR 2,799", image: Image.image6 },
-      { id: 7, name: "Mint Green Tee", price: "PKR 2,299", image: Image.image7 },
+      {
+        id: 5,
+        name: "Ocean Blue Tee",
+        price: "PKR 2,499",
+        image: Image.image5,
+      },
+      {
+        id: 6,
+        name: "Urban Pink Tee",
+        price: "PKR 2,799",
+        image: Image.image6,
+      },
+      {
+        id: 7,
+        name: "Mint Green Tee",
+        price: "PKR 2,299",
+        image: Image.image7,
+      },
       { id: 8, name: "Sunset Orange", price: "PKR 1,999", image: Image.image8 },
     ],
     Juniors: [
       { id: 10, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image10 },
       { id: 11, name: "Cartoon Tee", price: "PKR 1,199", image: Image.image11 },
-      { id: 12, name: "Tiny Green Tee", price: "PKR 1,299", image: Image.image12 },
+      {
+        id: 12,
+        name: "Tiny Green Tee",
+        price: "PKR 1,299",
+        image: Image.image12,
+      },
       { id: 13, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image13 },
       { id: 14, name: "Cartoon Tee", price: "PKR 1,199", image: Image.image14 },
-      { id: 15, name: "Tiny Green Tee", price: "PKR 1,299", image: Image.image15 },
+      {
+        id: 15,
+        name: "Tiny Green Tee",
+        price: "PKR 1,299",
+        image: Image.image15,
+      },
       { id: 16, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image16 },
       { id: 17, name: "Cartoon Tee", price: "PKR 1,199", image: Image.image17 },
-      { id: 18, name: "Tiny Green Tee", price: "PKR 1,299", image: Image.image18 },
+      {
+        id: 18,
+        name: "Tiny Green Tee",
+        price: "PKR 1,299",
+        image: Image.image18,
+      },
     ],
   };
   const imageVariant = {
@@ -44,8 +99,8 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const [activeTab, setActiveTab] = useState("Mens");
@@ -63,51 +118,59 @@ export default function Home() {
 
       <div className="space"></div>
 
+      <div className="space"></div>
+      <h2 className="text-center">BEST SELLINGS</h2>
+      <div className="space"></div>
+      <div className="container-fluid p-0">
+        <div className="row gx-1 gy-4">
+          {[
+            Image.bestselling1,
+            Image.bestselling2,
+            Image.bestselling3,
+            Image.bestselling4,
+       
+            Image.bestselling6,
+            Image.bestselling7,
+            Image.bestselling8,
+            Image.bestselling9
+          ].map((imgSrc, idx) => (
+            <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
+              {/* Animate both image and badge together */}
+              <motion.div
+                className="position-relative"
+                variants={imageVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+              >
+                {/* SALE Badge */}
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "10px",
+                    right: "10px",
+                    backgroundColor: "#dc3545",
+                    color: "#fff",
+                    padding: "5px 10px",
+                    borderRadius: "5px",
+                    fontSize: "0.8rem",
+                    zIndex: 2,
+                  }}
+                >
+                  SALE
+                </span>
 
-<div className="space"></div>
-      <h2 className="text-center">
-        BEST SELLINGS
-        </h2>
-<div className="space"></div>
-<div className="container-fluid p-0">
-  <div className="row gx-1 gy-4">
-    {[Image.bestselling1, Image.bestselling2, Image.bestselling3, Image.bestselling4].map((imgSrc, idx) => (
-      <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
-        {/* Animate both image and badge together */}
-        <motion.div
-          className="position-relative"
-          variants={imageVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-        >
-          {/* SALE Badge */}
-          <span style={{
-            position: "absolute",
-            top: "10px",
-            right: "10px",
-            backgroundColor: "#dc3545",
-            color: "#fff",
-            padding: "5px 10px",
-            borderRadius: "5px",
-            fontSize: "0.8rem",
-            zIndex: 2
-          }}>
-            SALE
-          </span>
-
-          {/* Image */}
-          <img
-            src={imgSrc}
-            alt="bestselling"
-            className="best-selling img-fluid"
-          />
-        </motion.div>
+                {/* Image */}
+                <img
+                  src={imgSrc}
+                  alt="bestselling"
+                  className="best-selling img-fluid"
+                />
+              </motion.div>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-  
 
       <div className="space"></div>
 
@@ -169,7 +232,9 @@ export default function Home() {
                     className="img-fluid product-img"
                   />
                   <div className="product-overlay d-flex justify-content-center align-items-center">
-                    <button className="btn btn-dark btn-sm">View Details</button>
+                    <button className="btn btn-dark btn-sm">
+                      View Details
+                    </button>
                   </div>
                 </div>
                 <div className="p-3">
@@ -207,22 +272,26 @@ export default function Home() {
               <div className="info-box">
                 <img src={icon} alt="icons" className="info-icon" />
                 <h5>
-                  {["SUPPORT 24/7", "TRACK YOUR ORDER", "RETURN & EXCHANGES"][i]}
+                  {
+                    ["SUPPORT 24/7", "TRACK YOUR ORDER", "RETURN & EXCHANGES"][
+                      i
+                    ]
+                  }
                 </h5>
                 <p>
-                  {[
-                    "Contact us 24 hours a day, 7 days a week",
-                    "Click for the quick update on your order",
-                    "Please view the return and exchange policy",
-                  ][i]}
+                  {
+                    [
+                      "Contact us 24 hours a day, 7 days a week",
+                      "Click for the quick update on your order",
+                      "Please view the return and exchange policy",
+                    ][i]
+                  }
                 </p>
               </div>
             </div>
           ))}
         </div>
       </motion.div>
-
-     
     </>
   );
 }

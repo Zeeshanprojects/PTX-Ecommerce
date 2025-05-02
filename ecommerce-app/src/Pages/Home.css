@@ -87,13 +87,25 @@
 .product-overlay {
   background: rgba(255, 255, 255, 0.6); /* previously 0.85 */
 }
-
-.color-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
+/* Remove bottom border from the tab bar */
+.nav-tabs {
+  border-bottom: none !important;
 }
+
+/* Remove underline or border from active/inactive links */
+.nav-tabs .nav-link {
+  border: none !important;
+  background: none !important;
+  color: #000; /* optional: customize your tab text color */
+}
+
+/* Remove active tab underline and background */
+.nav-tabs .nav-link.active {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
 .banner {
   height: 80dvh;
   object-fit: cover;
@@ -109,9 +121,12 @@
   object-fit: contain; /* Prevent stretching */
   margin-bottom: 20px;
 }
-
-.best-selling{
+  
+.best-selling {
   height: 450px;
-  gap: 0 !important;
   width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  transform-origin: center top; /* Zoom from top-center */
 }
+

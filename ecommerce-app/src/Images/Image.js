@@ -35,5 +35,10 @@ const Image = {
   bestselling3: new URL("./11.jpg", import.meta.url).href,
   bestselling4: new URL("./13.jpg", import.meta.url).href,
   bestselling5: new URL("./16.jpg", import.meta.url).href,
+  bestselling6: new URL("./12.jpg", import.meta.url).href,
+  bestselling7: new URL("./15.jpg", import.meta.url).href,
+  bestselling8: new URL("./18.jpg", import.meta.url).href,
+  bestselling9: new URL("./9.jpg", import.meta.url).href,
+
 };
 export default Image;

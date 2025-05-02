@@ -39,6 +39,14 @@ export default function Home() {
       { id: 18, name: "Tiny Green Tee", price: "PKR 1,299", image: Image.image18 },
     ],
   };
+  const imageVariant = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
+    }
+  };
 
   const [activeTab, setActiveTab] = useState("Mens");
 
@@ -55,54 +63,51 @@ export default function Home() {
 
       <div className="space"></div>
 
-      <motion.h2
-        className="text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        FEATURED PRODUCT
-      </motion.h2>
 
-      <div className="space"></div>
+<div className="space"></div>
+      <h2 className="text-center">
+        BEST SELLINGS
+        </h2>
+<div className="space"></div>
+<div className="container-fluid p-0">
+  <div className="row gx-1 gy-4">
+    {[Image.bestselling1, Image.bestselling2, Image.bestselling3, Image.bestselling4].map((imgSrc, idx) => (
+      <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
+        {/* Animate both image and badge together */}
+        <motion.div
+          className="position-relative"
+          variants={imageVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          {/* SALE Badge */}
+          <span style={{
+            position: "absolute",
+            top: "10px",
+            right: "10px",
+            backgroundColor: "#dc3545",
+            color: "#fff",
+            padding: "5px 10px",
+            borderRadius: "5px",
+            fontSize: "0.8rem",
+            zIndex: 2
+          }}>
+            SALE
+          </span>
 
-      <motion.div
-  className="container latest-products-section"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ amount: 0.5, once: true }} // 👈 Triggers when 50% visible
-  variants={fadeInUp}
->
-  <div className="row">
-    {[Image.product1, Image.product2, Image.product3].map((img, i) => (
-      <motion.div
-        key={i}
-        className="col-sm-12 col-md-12 col-lg-4"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ amount: 0.5, once: true }} // 👈 Animate each product when 50% visible
-        variants={fadeInUp}
-      >
-        <div className="product-box">
-          <img src={img} className="product-image" alt={`product${i + 1}`} />
-          <div className="product-info">
-            <h3 className="product-title">
-              {["PTX Essential", "PTX Juniors", "PTX Denim"][i]}
-            </h3>
-            <p className="product-description">
-              {[
-                "Our wide range of quality premium essentials",
-                "Our new range of essentials for kids",
-                "Our collection of classic denim",
-              ][i]}
-            </p>
-          </div>
-        </div>
-      </motion.div>
+          {/* Image */}
+          <img
+            src={imgSrc}
+            alt="bestselling"
+            className="best-selling img-fluid"
+          />
+        </motion.div>
+      </div>
     ))}
   </div>
-</motion.div>
+</div>
+  
 
       <div className="space"></div>
 
@@ -217,39 +222,7 @@ export default function Home() {
         </div>
       </motion.div>
 
-      <div className="space"></div>
-      <h2 className="text-center">
-        BEST SELLINGS
-        </h2>
-
-        <div className="container-fluid p-0">
-          <div className="row gx-1 gy-4">
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling1} alt="bestselling" className="best-selling"/>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling2} alt="bestselling" className="best-selling"/>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling3} alt="bestselling" className="best-selling "/>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling4} alt="bestselling" className="best-selling"/>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling1} alt="bestselling" className="best-selling"/>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling2} alt="bestselling" className="best-selling"/>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling3} alt="bestselling" className="best-selling"/>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-3">
-          <img src={Image.bestselling4} alt="bestselling" className="best-selling"/>
-            </div>
-          </div>
-        </div>
+     
     </>
   );
 }

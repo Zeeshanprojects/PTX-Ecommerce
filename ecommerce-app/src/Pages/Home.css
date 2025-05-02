@@ -12,7 +12,7 @@
 .imagetext {
   position: absolute;
   top: 80%;
-  left: 12%;
+  left:12%;
   transform: translate(-50%, -50%);
   text-align: start;
   padding: 20px;
@@ -23,7 +23,7 @@
 }
 .btn {
   height: 50px;
-  width: 170px;
+
 }
 
 .box img {

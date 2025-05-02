@@ -31,54 +31,42 @@ export default function Header() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" href="#">
+          <Link className="nav-link active" aria-current="page" to="/">
             HOME
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" href="#">
+          <Link className="nav-link active" to="/Shop">
             SHOP
           </Link>
         </li>
-        <li className="nav-item dropdown">
-          <Link
-            className="nav-link active dropdown-toggle"
-            href="#"
-            id="navbarDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            PAGES
+        <li className="nav-item">
+          <Link className="nav-link active" to="/Men">
+            MEN
           </Link>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li>
-              <Link className="dropdown-item" href="#">
-                ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Another action
-              </Link>
-            </li>
-            <li>
-              <hr className="dropdown-divider" />
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Something else here
-              </Link>
-            </li>
-          </ul>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" to="/Women">
+            WOMEN
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" to="/Kids">
+            KIDS
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" to="#">
+            LOOKBOOK
+          </Link>
         </li>
         <li className="nav-item ">
-          <Link className="nav-link active" href="#">
+          <Link className="nav-link active" to="#">
             BLOG
           </Link>
         </li>
         <li className="nav-item ">
-          <Link className="nav-link active" href="#">
+          <Link className="nav-link active" to="#">
         CONTACT
           </Link>
         </li>

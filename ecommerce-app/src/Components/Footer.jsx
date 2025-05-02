@@ -151,9 +151,9 @@ export default function Footer() {
           className="text-center p-3"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
-          © 2020 Copyright:
+          © 2025 | 
           <Link className="text-dark" href="https://mdbootstrap.com/">
-            MDBootstrap.com
+        {" "}  Paktex.com
           </Link>
         </div>
       </footer>

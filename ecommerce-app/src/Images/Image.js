@@ -39,6 +39,9 @@ const Image = {
   bestselling7: new URL("./15.jpg", import.meta.url).href,
   bestselling8: new URL("./18.jpg", import.meta.url).href,
   bestselling9: new URL("./9.jpg", import.meta.url).href,
+  Men:new URL("./Men.webp",import.meta.url).href,
+  Women:new URL("./Women.webp", import.meta.url).href,
+  Kids:new URL("./Kid.webp",import.meta.url).href,
 
 };
 export default Image;

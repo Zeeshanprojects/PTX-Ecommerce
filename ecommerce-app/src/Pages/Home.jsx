@@ -61,7 +61,7 @@ export default function Home() {
       </div>
       <div className="text-center mt-4">
         <Link to={route}>
-          <button className="btn btn-outline-dark ps-5 pe-5">View All Collection</button>
+          <button className="btn btn-outline-dark ps-5 pe-5 ">View All Collection</button>
         </Link>
       </div>
     </motion.div>
@@ -72,7 +72,7 @@ export default function Home() {
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="sliderimage" />
         <div className="imagetext">
-          <button type="button" className="btn btn-outline-light mt-4 ps-5 pe-5">SHOP NOW</button>
+          <button type="button" className="btn btn-outline-light mt-4 ps-5 pe-5 ">SHOP NOW</button>
         </div>
       </div>
 

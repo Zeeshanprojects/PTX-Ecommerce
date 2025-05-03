@@ -12,7 +12,7 @@ export default function Header() {
 
     </div>
  </div>
- <nav className="navbar navbar-expand-lg navbar-light  ">
+ <nav className="navbar navbar-expand-lg navbar-light">
   <div className="container">
     <Link className="navbar-brand" to="#">
       <img src={Image.logo}/>

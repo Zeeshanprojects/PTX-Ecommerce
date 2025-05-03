@@ -12,18 +12,14 @@
 .imagetext {
   position: absolute;
   top: 80%;
-  left:12%;
+  left: 12%;
   transform: translate(-50%, -50%);
   text-align: start;
   padding: 20px;
   border-radius: 10px;
 }
-.imagetext h2 {
-  font-size: 40px;
-}
 .btn {
   height: 50px;
-
 }
 
 .box img {
@@ -107,9 +103,9 @@
 }
 
 .banner {
-  height: 80dvh;
-  object-fit: cover;
   width: 100%;
+  height: auto;
+  display: block;
 }
 .info-box {
   text-align: center;
@@ -121,7 +117,7 @@
   object-fit: contain; /* Prevent stretching */
   margin-bottom: 20px;
 }
-  
+
 .best-selling {
   height: 450px;
   width: 100%;
@@ -129,4 +125,17 @@
   transition: transform 0.5s ease;
   transform-origin: center top; /* Zoom from top-center */
 }
+@media (max-width: 576px) {
+  .imagetext {
+    top: 80%; /* Adjust if needed */
+    left: 17%; /* Center it for smaller screens */
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
+  .btn {
+    height: 40px;
+    font-size: 14px;
+padding: 10px !important;
+  }
+}

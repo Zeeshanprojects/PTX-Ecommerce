@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,11 +10,14 @@ import Men from "./Pages/Men";
 import Women from "./Pages/Women";
 import Kids from "./Pages/Kids";
 import Shop from "./Pages/Shop";
+import ScrollToTop from './Components/ScrollToTop';
 
 function App() {
   return (
     <>
+    
     <Router>
+      <ScrollToTop/>
     <Header />
     <Routes>
       <Route path="/" element={<Home/>}/>

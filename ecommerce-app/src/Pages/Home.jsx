@@ -23,7 +23,7 @@ export default function Home() {
       { id: 8, name: "Mint Green Tee", price: "PKR 2,299", image: Image.image7 },
       { id: 9, name: "Ocean Blue Tee", price: "PKR 2,499", image: Image.image5 },
     ],
-    Juniors: [
+    Kids: [
       { id: 10, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image10 },
       { id: 11, name: "Cartoon Tee", price: "PKR 1,199", image: Image.image11 },
       { id: 12, name: "Tiny Green Tee", price: "PKR 1,299", image: Image.image12 },
@@ -116,7 +116,7 @@ export default function Home() {
       {/* Product Sections with individual route paths */}
       {renderProductSection("Men", products.Mens, "/Men")}
       {renderProductSection("Women", products.Womens, "/Women")}
-      {renderProductSection("Juniors", products.Juniors, "/juniors-collection")}
+      {renderProductSection("Kid", products.Kids, "/Kid")}
 
       <motion.div
         className="container-fluid p-0"

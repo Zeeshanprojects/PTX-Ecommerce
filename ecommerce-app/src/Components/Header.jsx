@@ -36,18 +36,19 @@ export default function Header() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" to="/Shop">
-            SHOP
-          </Link>
-        </li>
-        <li className="nav-item">
           <Link className="nav-link active" to="/Men">
             MEN
           </Link>
         </li>
+      
         <li className="nav-item">
           <Link className="nav-link active" to="/Women">
             WOMEN
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link active" to="/Shop">
+            SHOP
           </Link>
         </li>
         <li className="nav-item">

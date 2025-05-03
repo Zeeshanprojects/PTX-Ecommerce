@@ -1,26 +1,28 @@
-.topbar{
-    height: 50px;
-    width: 100%;
-    background-color: black;
-    position: absolute;
-    z-index: 10;
-    position: fixed;
+.topbar {
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 10;
+  position: fixed;
 }
-.topbar p{
-    color: white;
-    text-align: center;
+.topbar p {
+  color: white;
+  text-align: center;
 }
-.navbar{
-    padding-top: 60px;
-    height: 120px;
+.navbar {
+  padding-top: 60px;
+  height: 120px;
 }
-.navbar-brand img{
-    height: 50px !important;
-    
+.navbar-brand img {
+  height: 50px !important;
 }
-.nav-link{
-    font-size: 17px;
-    font-size: bold;
-text-align: center;
-padding: 20px !important;
+.nav-link {
+  font-size: 17px;
+  font-size: bold;
+  text-align: center;
+  padding: 20px !important;
+}
+.nav-link:hover {
+  color: red !important;
 }

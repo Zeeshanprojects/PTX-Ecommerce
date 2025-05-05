@@ -35,6 +35,7 @@ export default function Productinfo() {
 </div>
         <div className="col-md-6 ">
           <h2 className="fw-bold">{title}</h2>
+          
           <h5 className="text-muted mb-3">{price}</h5>
           <p className="mb-4">
             This premium cotton t-shirt offers comfort and elegance for everyday wear.

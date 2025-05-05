@@ -12,7 +12,7 @@ export default function Header() {
 
     </div>
  </div>
- <nav className="navbar navbar-expand-lg navbar-light">
+ <nav className="navbar navbar-expand-lg navbar-dark bg-black">
   <div className="container">
     <Link className="navbar-brand" to="#">
       <img src={Image.logo}/>
@@ -47,30 +47,23 @@ export default function Header() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link active" to="/Shop">
-            SHOP
-          </Link>
-        </li>
-        <li className="nav-item">
           <Link className="nav-link active" to="/Kids">
             KIDS
           </Link>
         </li>
         <li className="nav-item">
+          <Link className="nav-link active" to="/Shop">
+            SHOP
+          </Link>
+        </li>
+      
+        <li className="nav-item">
           <Link className="nav-link active" to="#">
             LOOKBOOK
           </Link>
         </li>
-        <li className="nav-item ">
-          <Link className="nav-link active" to="#">
-            BLOG
-          </Link>
-        </li>
-        <li className="nav-item ">
-          <Link className="nav-link active" to="#">
-        CONTACT
-          </Link>
-        </li>
+     
+     
        
       </ul>
     

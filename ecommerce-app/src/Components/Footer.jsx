@@ -57,7 +57,7 @@ export default function Footer() {
               </div>
 
               <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold">Products</h6>
+                <h6 className="text-uppercase fw-bold">Help</h6>
                 <hr
                   className="mb-4 mt-0 d-inline-block mx-auto"
                   style={{
@@ -68,28 +68,28 @@ export default function Footer() {
                 />
                 <p>
                   <Link href="#!" className="text-dark">
-                    MDBootstrap
+                    Contact US
                   </Link>
                 </p>
                 <p>
                   <Link href="#!" className="text-dark">
-                    MDWordPress
+                    Shipping & Handling
                   </Link>
                 </p>
                 <p>
                   <Link href="#!" className="text-dark">
-                    BrandFlow
+                    Terms & Condition
                   </Link>
                 </p>
                 <p>
                   <Link href="#!" className="text-dark">
-                    Bootstrap Angular
+                    Privacy Policy
                   </Link>
                 </p>
               </div>
 
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold">Useful Links</h6>
+                <h6 className="text-uppercase fw-bold">Pages</h6>
                 <hr
                   className="mb-4 mt-0 d-inline-block mx-auto"
                   style={{
@@ -100,24 +100,20 @@ export default function Footer() {
                 />
                 <p>
                   <Link href="#!" className="text-dark">
-                    Your Account
+                    Men
                   </Link>
                 </p>
                 <p>
                   <Link href="#!" className="text-dark">
-                    Become an Affiliate
+                    Women
                   </Link>
                 </p>
                 <p>
                   <Link href="#!" className="text-dark">
-                    Shipping Rates
+                    Kids
                   </Link>
                 </p>
-                <p>
-                  <Link href="#!" className="text-dark">
-                    Help
-                  </Link>
-                </p>
+               
               </div>
 
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
@@ -134,7 +130,7 @@ export default function Footer() {
                   <i className="fas fa-home mr-3"></i> New York, NY 10012, US
                 </p>
                 <p>
-                  <i className="fas fa-envelope mr-3"></i> info@example.com
+                  <i className="fas fa-envelope mr-3"></i> sales@paktex.com
                 </p>
                 <p>
                   <i className="fas fa-phone mr-3"></i> + 01 234 567 88

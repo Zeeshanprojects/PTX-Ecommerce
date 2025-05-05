@@ -1,35 +1,38 @@
 import React, { useState } from 'react';
 import Image from '../Images/Image';
+import { Link } from 'react-router-dom';
+import './Shop.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const dummyProducts = [
-  { id: 1, name: 'T-Shirt1', category: 'Men', price: 29, image: Image.image1 },
-  { id: 2, name: 'T-Shirt2', category: 'Men', price: 49, image: Image.image2 },
-  { id: 3, name: 'T-Shirt3', category: 'Men', price: 79, image: Image.image3 },
-  { id: 4, name: 'T-Shirt4', category: 'Men', price: 79, image: Image.image4 },
-  { id: 5, name: 'T-Shirt5', category: 'Men', price: 29, image: Image.image5},
-  { id: 6, name: 'T-Shirt6', category: 'Men', price: 49, image: Image.image6 },
-  { id: 7, name: 'T-Shirt7', category: 'Men', price: 79, image: Image.image7 },
-  { id: 8, name: 'T-Shirt8', category: 'Men', price: 79, image: Image.image8 },
-  { id: 9, name: 'T-Shirt9', category: 'Women', price: 35, image: Image.image9 },
-  { id: 10, name: 'T-Shirt10', category: 'Women', price: 59, image: Image.image5},
-  { id: 11, name: 'T-Shirt11', category: 'Women', price: 39, image: Image.image3 },
-  { id: 12, name: 'T-Shirt12', category: 'Kids', price: 19, image: Image.image10 },
-  { id: 13, name: 'T-Shirt13', category: 'Kids', price: 29, image: Image.image11 },
-  { id: 14, name: 'T-Shirt14', category: 'Kids', price: 15, image: Image.image12 },
-  { id: 15, name: 'T-Shirt15', category: 'Kids', price: 19, image: Image.image13 },
-  { id: 16, name: 'T-Shirt16', category: 'Kids', price:309, image: Image.image14 },
-  { id: 16, name: 'T-Shirt17', category: 'Kids', price: 15, image: Image.image15 },
-  { id: 18, name: 'T-Shirt18', category: 'Kids', price: 19, image: Image.image16 },
-  { id: 19, name: 'T-Shirt19', category: 'Kids', price: 29, image: Image.image17 },
-  { id: 20, name: 'T-Shirt20', category: 'Kids', price: 15, image: Image.image18 },
+  { id: 1, name: 'T-Shirt1', category: 'Men', price: 1299, image: Image.image1 },
+  { id: 2, name: 'T-Shirt2', category: 'Men', price: 1499, image: Image.image2 },
+  { id: 3, name: 'T-Shirt3', category: 'Men', price: 1799, image: Image.image3 },
+  { id: 4, name: 'T-Shirt4', category: 'Men', price: 1799, image: Image.image4 },
+  { id: 5, name: 'T-Shirt5', category: 'Men', price: 2199, image: Image.image5},
+  { id: 6, name: 'T-Shirt6', category: 'Men', price: 1499, image: Image.image6 },
+  { id: 7, name: 'T-Shirt7', category: 'Men', price: 1799, image: Image.image7 },
+  { id: 8, name: 'T-Shirt8', category: 'Men', price: 1799, image: Image.image8 },
+  { id: 9, name: 'T-Shirt9', category: 'Women', price: 1350, image: Image.image9 },
+  { id: 10, name: 'T-Shirt10', category: 'Women', price: 1599, image: Image.image5},
+  { id: 11, name: 'T-Shirt11', category: 'Women', price: 1399, image: Image.image3 },
+  { id: 12, name: 'T-Shirt12', category: 'Kids', price: 1999, image: Image.image10 },
+  { id: 13, name: 'T-Shirt13', category: 'Kids', price: 2299, image: Image.image11 },
+  { id: 14, name: 'T-Shirt14', category: 'Kids', price: 1599, image: Image.image12 },
+  { id: 15, name: 'T-Shirt15', category: 'Kids', price: 1999, image: Image.image13 },
+  { id: 16, name: 'T-Shirt16', category: 'Kids', price:1399, image: Image.image14 },
+  { id: 16, name: 'T-Shirt17', category: 'Kids', price: 1599, image: Image.image15 },
+  { id: 18, name: 'T-Shirt18', category: 'Kids', price: 1299, image: Image.image16 },
+  { id: 19, name: 'T-Shirt19', category: 'Kids', price: 1899, image: Image.image17 },
+  { id: 20, name: 'T-Shirt20', category: 'Kids', price: 1199, image: Image.image18 },
 ];
 
 export default function Shop() {
   const [search, setSearch] = useState('');
   const [checkedFilters, setCheckedFilters] = useState([]);
-  const [activeCategory, setActiveCategory] = useState('Men'); // Default: Men
+  const [activeCategory, setActiveCategory] = useState('Men'); 
+
 
   const categories = ['Men', 'Women', 'Kids'];
 
@@ -139,12 +142,13 @@ export default function Shop() {
                       src={product.image}
                       className="card-img-top"
                       alt={product.name}
-                      style={{ objectFit: 'cover', height: '300px' }}
+                      style={{ objectFit: 'cover', height: '320px' }}
                     />
                     <div className="card-body d-flex flex-column">
                       <h6 className="card-title">{product.name}</h6>
                       <p className="text-muted small mb-1">{product.category}</p>
-                      <p className="fw-semibold mb-2">${product.price}</p>
+                      <p className="fw-semibold mb-2">PKR {product.price}</p>
+                      <button type="button" class="btn btn-outline-dark ">View Details</button>
                     </div>
                   </div>
                 </div>

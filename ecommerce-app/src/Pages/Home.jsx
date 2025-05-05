@@ -47,9 +47,7 @@ export default function Home() {
               <span className="new-badge position-absolute top-0 start-0 m-2">NEW</span>
               <div className="product-img-container position-relative">
                 <img src={product.image} alt={product.name} className="img-fluid product-img" />
-                <div className="product-overlay d-flex justify-content-center align-items-center">
-                  <button className="btn btn-dark btn-sm">View Details</button>
-                </div>
+               
               </div>
               <div className="p-3">
                 <h6 className="mb-1">{product.name}</h6>

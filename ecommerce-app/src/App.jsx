@@ -11,6 +11,9 @@ import Women from "./Pages/Women";
 import Kids from "./Pages/Kids";
 import Shop from "./Pages/Shop";
 import ScrollToTop from './Components/ScrollToTop';
+import Productinfo from './Pages/Productinfo';
+import Termsandconditions from './Pages/Termsandconditions';
+import Privacyandpolicy from './Pages/Privacyandpolicy';
 
 function App() {
   return (
@@ -23,8 +26,11 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/Men" element={<Men/>}/>
       <Route path="/Women" element={<Women/>}/>
-      <Route path="/Kids" element={<Kids/>}/>
+      <Route path="/Kid" element={<Kids/>}/>
       <Route path="/Shop" element={<Shop/>}/>
+      <Route path='/productInfo' element={<Productinfo/>}/>
+      <Route path='/TermsandConditions' element={<Termsandconditions/>}/>
+      <Route path='/PrivacyandPolicy' element={<Privacyandpolicy/>}/>
     </Routes>
     <Footer/>
     </Router>

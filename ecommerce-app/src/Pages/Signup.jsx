@@ -6,7 +6,7 @@ export default function Signup() {
     <div className="login-wrapper py-5">
       <div className="container d-flex justify-content-center align-items-center">
         <div className="login-form card p-4 shadow" style={{ width: "100%", maxWidth: "400px" }}>
-          <h2 className="text-center mb-4">Login</h2>
+          <h2 className="text-center mb-4">SIGN UP</h2>
           <form>
           <div className="mb-3">
               <label className="form-label">Name</label>
@@ -22,7 +22,7 @@ export default function Signup() {
             </div>
             <button type="submit" className="btn btn-dark w-100">Sign UP</button>
             <p className="text-center mt-3">
-              Don’t have an account? <Link to="/Contact">Register</Link>
+              Already have an account? <Link to="/Login">Login</Link>
             </p>
           </form>
         </div>

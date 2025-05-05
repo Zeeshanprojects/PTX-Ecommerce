@@ -1,0 +1,9 @@
+.login-wrapper {
+background-color: white;
+    min-height: 100vh;
+  }
+  .login-form {
+    background-color: white;
+    border-radius: 10px;
+  }
+  

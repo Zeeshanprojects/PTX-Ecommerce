@@ -15,22 +15,22 @@ export default function Footer() {
         >
           
           <div>
-            <Link href="#" className="text-white me-4">
+            <Link to="#" className="text-white me-4">
               <i className="fab fa-facebook-f"></i>
             </Link>
-            <Link href="#" className="text-white me-4">
+            <Link to="#" className="text-white me-4">
               <i className="fab fa-twitter"></i>
             </Link>
-            <Link href="#" className="text-white me-4">
+            <Link to="#" className="text-white me-4">
               <i className="fab fa-google"></i>
             </Link>
-            <Link href="#" className="text-white me-4">
+            <Link to="#" className="text-white me-4">
               <i className="fab fa-instagram"></i>
             </Link>
-            <Link href="#" className="text-white me-4">
+            <Link to="#" className="text-white me-4">
               <i className="fab fa-Linkedin"></i>
             </Link>
-            <Link href="#" className="text-white me-4">
+            <Link to="#" className="text-white me-4">
               <i className="fab fa-github"></i>
             </Link>
           </div>
@@ -67,22 +67,22 @@ export default function Footer() {
                   }}
                 />
                 <p>
-                  <Link href="/Contact" className="text-dark">
+                  <Link to="/Contact" className="text-dark">
                     Contact US
                   </Link>
                 </p>
                 <p>
-                  <Link href="#!" className="text-dark">
+                  <Link to="#!" className="text-dark">
                     Shipping & Handling
                   </Link>
                 </p>
                 <p>
-                  <Link href="#!" className="text-dark">
+                  <Link to="#!" className="text-dark">
                     Terms & Condition
                   </Link>
                 </p>
                 <p>
-                  <Link href="#!" className="text-dark">
+                  <Link to="#!" className="text-dark">
                     Privacy Policy
                   </Link>
                 </p>
@@ -99,17 +99,17 @@ export default function Footer() {
                   }}
                 />
                 <p>
-                  <Link href="#!" className="text-dark">
+                  <Link to="#!" className="text-dark">
                     Men
                   </Link>
                 </p>
                 <p>
-                  <Link href="#!" className="text-dark">
+                  <Link to="#!" className="text-dark">
                     Women
                   </Link>
                 </p>
                 <p>
-                  <Link href="#!" className="text-dark">
+                  <Link to="#!" className="text-dark">
                     Kids
                   </Link>
                 </p>
@@ -148,7 +148,7 @@ export default function Footer() {
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
           © 2025 | 
-          <Link className="text-dark" href="https://mdbootstrap.com/">
+          <Link className="text-dark" to="https://mdbootstrap.com/">
         {" "}  Paktex.com
           </Link>
         </div>

@@ -23,7 +23,7 @@
 }
 
 .box img {
-  height: 250px !important;
+  height: 290px !important;
   width: 100%;
   padding: 10px;
   background-color: #e9ecf3;
@@ -39,6 +39,7 @@
 }
 .product-img-container {
   height: 280px;
+ padding: 10px;
   background-color: #f0f2f5;
 }
 .product-img {
@@ -52,22 +53,24 @@
 }
 
 .product-overlay {
-  position: absolute;
+  pointer-events: none;
+  /* position: absolute;
+
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: flex; /* Add this */
+  display: flex; 
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.85);
   opacity: 0;
   transition: opacity 0.3s ease;
-  padding: 0; /* Ensure no internal padding */
+  padding: 0; Ensure no internal padding */
 }
-
 .product-card:hover .product-overlay {
   opacity: 1;
+
 }
 /* NEW Badge */
 .new-badge {

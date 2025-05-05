@@ -67,7 +67,7 @@ export default function Footer() {
                   }}
                 />
                 <p>
-                  <Link href="#!" className="text-dark">
+                  <Link href="/Contact" className="text-dark">
                     Contact US
                   </Link>
                 </p>

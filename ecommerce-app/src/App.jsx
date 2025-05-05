@@ -14,6 +14,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import Productinfo from './Pages/Productinfo';
 import Termsandconditions from './Pages/Termsandconditions';
 import Privacyandpolicy from './Pages/Privacyandpolicy';
+import Contact from './Pages/Contact';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Route path="/Women" element={<Women/>}/>
       <Route path="/Kid" element={<Kids/>}/>
       <Route path="/Shop" element={<Shop/>}/>
+      <Route path='/Contact' element={<Contact/>}/>
       <Route path='/productInfo' element={<Productinfo/>}/>
       <Route path='/TermsandConditions' element={<Termsandconditions/>}/>
       <Route path='/PrivacyandPolicy' element={<Privacyandpolicy/>}/>

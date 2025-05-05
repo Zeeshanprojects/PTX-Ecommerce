@@ -26,20 +26,22 @@ export default function Kids() {
               <div className="product-card position-relative overflow-hidden rounded shadow-sm">
                 <span className="new-badge position-absolute top-0 start-0 m-2">NEW</span>
                 <div className="product-img-container position-relative">
-                  <img
+                  <Link
+                  to='/productinfo'
+                  state={{
+                    title:product.title,
+                    price:product.price,
+                    image:product.image
+                  }}
+                  >
+                      <img
                     src={product.image}
                     alt={product.title}
                     className="img-fluid product-img"
                   />
-                  <div className="product-overlay d-flex justify-content-center align-items-center ">
-                    <Link
-                      to="/productinfo"
-                       className="btn btn-dark btn-sm pt-2"
-                      state={{ image: product.image, title: product.title, price: product.price }}
-                    >
-                      View Details
-                    </Link>
-                  </div>
+                  </Link>
+                
+                 
                 </div>
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>

@@ -283,17 +283,12 @@ export default function Shop() {
                      }}>
  <img
                       src={product.image}
-                      className=" <img
-                      src={product.image}
                       className="card-img-top"
-                      alt={product.title}
-                      style={{ objectFit: "cover", height: "300px" }}
-                    />"
                       alt={product.title}
                       style={{ objectFit: "cover", height: "300px" }}
                     />
                      </Link>
-                   
+        
                     <div className="card-body d-flex flex-column">
                       <h6 className="card-title">{product.title}</h6>
                       <p className="text-muted small mb-1">

@@ -77,12 +77,12 @@ export default function Footer() {
                   </Link>
                 </p>
                 <p>
-                  <Link to="#!" className="text-dark">
+                  <Link to="/TermsandConditions" className="text-dark">
                     Terms & Condition
                   </Link>
                 </p>
                 <p>
-                  <Link to="#!" className="text-dark">
+                  <Link to="/PrivacyandPolicy" className="text-dark">
                     Privacy Policy
                   </Link>
                 </p>
@@ -127,7 +127,7 @@ export default function Footer() {
                   }}
                 />
                 <p>
-                  <i className="fas fa-home mr-3"></i> New York, NY 10012, US
+                  <i className="fas fa-home mr-3"></i> LAGUNA BREACH, CALIFORNIA
                 </p>
                 <p>
                   <i className="fas fa-envelope mr-3"></i> sales@paktex.com

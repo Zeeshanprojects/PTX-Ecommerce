@@ -2,10 +2,9 @@
   height: 50px;
   width: 100%;
   background-color: white !important;
-
   position: absolute;
   z-index: 10;
-  position: fixed;
+
 }
 .topbar p {
   color: black;
@@ -17,7 +16,7 @@
 }
 .navbar-brand img {
   height: 50px !important;
-filter: invert(1);
+  filter: invert(1);
 }
 .nav-link {
   font-size: 17px;

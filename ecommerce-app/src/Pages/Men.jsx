@@ -27,27 +27,45 @@ export default function Men() {
           {products.map((product, index) => (
             <div key={index} className="col-sm-12 col-md-6 col-lg-3 mb-4">
               <div className="product-card position-relative overflow-hidden rounded shadow-sm">
-                <span className="new-badge position-absolute top-0 start-0 m-2">NEW</span>
+                <span className="new-badge position-absolute top-0 start-0 m-2">
+                  NEW
+                </span>
                 <div className="product-img-container position-relative">
                   <Link
-                  to="/productinfo"
-                     state={{
-                       title: product.title,
-                       price: product.price,
-                       image: product.image,
-                     }}>
-                       <img
-                    src={product.image}
-                    alt={product.title}
-                    className="img-fluid product-img"
-                  />
+                    to="/productinfo"
+                    state={{
+                      title: product.title,
+                      price: product.price,
+                      image: product.image,
+                    }}
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="img-fluid product-img"
+                    />
                   </Link>
-                 
-                
                 </div>
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
                   <p className="text-muted mb-1">{product.price}</p>
+                  <div className="buttons ">
+                    <button type="button" className="sizes btn-outline-dark">
+                      S
+                    </button>
+                    <button type="button" className="sizes btn-outline-dark">
+                      M
+                    </button>
+                    <button type="button" className="sizes btn-outline-dark">
+                      L
+                    </button>
+                    <button type="button" className="sizes btn-outline-dark">
+                      XL
+                    </button>
+                    <button type="button" className="sizes btn-outline-dark">
+                      2XL
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -22,7 +22,7 @@ const Image = {
   image17: new URL("./17.webp", import.meta.url).href,
   image18: new URL("./18.webp", import.meta.url).href,
   image19: new URL("./19.webp", import.meta.url).href,
-
+jeans:new URL("./Jeans.webp",  import.meta.url).href,
   product1: new URL("./latestproduct1.jpg", import.meta.url).href,
   product2: new URL("./latestproduct2.jpg", import.meta.url).href,
   product3: new URL("./latestproduct3.jpg", import.meta.url).href,

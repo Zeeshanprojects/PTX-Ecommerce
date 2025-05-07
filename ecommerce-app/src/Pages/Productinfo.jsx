@@ -13,7 +13,7 @@ export default function Productinfo() {
     return null;
   }
 
-  const { image, title, price } = state;
+  const { image, title, price,size} = state;
 
   const increaseQty = () => setQuantity((prev) => prev + 1);
   const decreaseQty = () => {
@@ -31,13 +31,13 @@ export default function Productinfo() {
         <div className="col-md-6 ">
           <h2 className="fw-bold">{title}</h2>
 
-          <h5 className="text-muted mb-3">{price}</h5>
+          <h5 className="text-muted mb-3">PKR {price}</h5>
+        
           <p className="mb-4">
             This premium cotton t-shirt offers comfort and elegance for everyday
             wear. Designed with modern cuts and top-quality fabric, it’s perfect
             for casual or semi-formal occasions.
           </p>
-
           <div className="d-flex align-items-center mb-3">
             <label className="me-3 fw-semibold">Quantity:</label>
             <button

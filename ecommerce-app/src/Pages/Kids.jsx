@@ -19,8 +19,8 @@ export default function Kids() {
         <img src={Image.Kids} alt="men" className="sub-banner-image" />
       </div>
 
-      <div className="container my-5">
-        <div className="row">
+      <div className="container my-5 ">
+        <div className="row g-4">
           {products.map((product, index) => (
             <div key={index} className="col-sm-12 col-md-6 col-lg-3">
               <div className="product-card position-relative overflow-hidden rounded shadow-sm">
@@ -46,6 +46,11 @@ export default function Kids() {
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
                   <p className="text-muted mb-1">{product.price}</p>
+                  <div className="buttons ">
+              <button type="button" className="sizes btn-outline-dark">S</button>
+              <button type="button" className="sizes btn-outline-dark">M</button>
+            
+                </div>
                 </div>
               </div>
             </div>

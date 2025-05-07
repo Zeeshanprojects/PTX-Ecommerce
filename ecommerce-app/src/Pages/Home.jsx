@@ -59,6 +59,12 @@ export default function Home() {
       },
       { id: 13, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image13 },
     ],
+    Fleece: [
+      { id: 14, name: "Fleece One", price: "PKR 1299", image: Image.Fleece1 },
+      { id: 15, name: "Fleece Two", price: "PKR 1299", image: Image.Fleece2 },
+      { id: 16, name: "Fleece Three", price: "PKR 1299", image: Image.Fleece3 },
+      { id: 17, name: "Fleece Four", price: "PKR 1299", image: Image.Fleece4 },
+    ],
   };
 
   const renderProductSection = (category, items, route) => (
@@ -87,7 +93,6 @@ export default function Home() {
               <div className="p-3">
                 <h6 className="mb-1">{product.name}</h6>
                 <p className="text-muted mb-1">{product.price}</p>
-              
               </div>
             </div>
           </div>
@@ -123,11 +128,11 @@ export default function Home() {
         <div className="space"></div>
         <div className="row justify-content-center text-center">
           {[
-            { label: "MEN", image: Image.bestselling1 },
+            { label: "MEN T-SHIRTS", image: Image.bestselling1 },
             { label: "FLEECE", image: Image.fleece },
             { label: "JEANS", image: Image.jeans },
             { label: "HOODIES", image: Image.hoddies },
-            { label: "WOMEN", image: Image.WomenTshirt },
+            { label: "WOMEN T-SHIRTS", image: Image.WomenTshirt },
             { label: "KIDS", image: Image.junior },
           ].map((item, index) => (
             <motion.div
@@ -206,6 +211,7 @@ export default function Home() {
       {renderProductSection("Men", products.Mens, "/Men")}
       {renderProductSection("Women", products.Womens, "/Women")}
       {renderProductSection("Kid", products.Kids, "/Kid")}
+      {renderProductSection("Fleece", products.Fleece, "/Fleece")}
 
       <motion.div
         className="container-fluid p-0"
@@ -252,6 +258,38 @@ export default function Home() {
           ))}
         </div>
       </motion.div>
+      <div className="container-fluid py-5" style={{ backgroundColor: "#000000" }}>
+  <div className="row justify-content-center">
+    <div className="col-md-8 col-lg-6">
+      <div className="text-center">
+        <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
+        <p className="mb-4 text-white">Stay updated with the latest trends, offers, and news. Sign up for our newsletter!</p>
+
+        <form>
+          <div className="input-group mb-3">
+            <input
+              type="email"
+              className="form-control bg-transparent text-white border-white"
+              placeholder="Enter your email"
+              aria-label="Email address"
+              aria-describedby="subscribe-button"
+              required
+            />
+            <button
+              className="btn btn-outline-light"
+              type="submit"
+              id="subscribe-button"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </>
   );
 }

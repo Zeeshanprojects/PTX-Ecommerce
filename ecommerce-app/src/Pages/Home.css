@@ -116,8 +116,9 @@
 
 .banner {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 500px;
+  object-fit: cover;
+  /* display: block; */
 }
 .info-box {
   text-align: center;
@@ -136,6 +137,9 @@
   object-fit: cover;
   transition: transform 0.5s ease;
   transform-origin: center top; /* Zoom from top-center */
+}
+::placeholder{
+  color: gray !important;
 }
 @media (max-width: 576px) {
   .imagetext {

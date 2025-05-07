@@ -8,7 +8,7 @@ export default function Footer() {
 <div className="container-fluid p-0">
       <footer
         className="text-center text-lg-start text-dark"
-        style={{ backgroundColor: "#ECEFF1" }}
+        style={{ backgroundColor: "#f0f0f0" }}
       >
         <section
       

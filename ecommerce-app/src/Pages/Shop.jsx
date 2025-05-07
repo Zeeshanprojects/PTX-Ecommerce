@@ -80,64 +80,67 @@ export default function Shop() {
 
             {/* Accordion with checkboxes */}
             <div className="accordion" id="filterAccordion">
-              {categories.map((cat) => {
-                const productsInCategory = dummyProducts.filter(
-                  (p) => p.category === cat
-                );
-                const uniqueTitles = [
-                  ...new Set(productsInCategory.map((p) => p.title)),
-                ];
+  {categories.map((cat) => {
+    const productsInCategory = dummyProducts.filter((p) => p.category === cat);
+    const uniqueTitles = [...new Set(productsInCategory.map((p) => p.title))];
 
-                return (
-                  <div className="accordion-item border-0" key={cat}>
-                    <h2 className="accordion-header">
-                      <button
-                        className={`accordion-button bg-white shadow-none ${
-                          activeCategory === cat ? "" : "collapsed"
-                        }`}
-                        type="button"
-                        onClick={() => handleCategoryClick(cat)}
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#collapse${cat}`}
-                        aria-expanded={activeCategory === cat ? "true" : "false"}
-                      >
-                        {cat}
-                      </button>
-                    </h2>
-                    <div
-                      id={`collapse${cat}`}
-                      className={`accordion-collapse collapse ${
-                        activeCategory === cat ? "show" : ""
-                      }`}
-                      data-bs-parent="#filterAccordion"
+    return (
+      <div className="accordion-item border-0" key={cat}>
+        <h2 className="accordion-header">
+          <button
+            className={`accordion-button bg-white shadow-none ${
+              activeCategory === cat ? "" : "collapsed"
+            }`}
+            type="button"
+            onClick={() => handleCategoryClick(cat)}
+            data-bs-toggle="collapse"
+            data-bs-target={`#collapse${cat}`}
+            aria-expanded={activeCategory === cat ? "true" : "false"}
+          >
+            {cat}
+          </button>
+        </h2>
+        <div
+          id={`collapse${cat}`}
+          className={`accordion-collapse collapse ${
+            activeCategory === cat ? "show" : ""
+          }`}
+          data-bs-parent="#filterAccordion"
+        >
+          <div className="accordion-body px-2 pt-2">
+            {uniqueTitles.map((title) => {
+              
+              const filterKey = `${cat}-${title}`;
+              return (
+                <div key={filterKey}>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      id={filterKey}
+                      checked={checkedFilters.includes(filterKey)}
+                      onChange={() => handleCheckboxChange(cat, title)}
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor={filterKey}
                     >
-                      <div className="accordion-body px-2 pt-2">
-                        {uniqueTitles.map((title) => {
-                          const filterKey = `${cat}-${title}`;
-                          return (
-                            <div className="form-check" key={filterKey}>
-                              <input
-                                className="form-check-input"
-                                type="checkbox"
-                                id={filterKey}
-                                checked={checkedFilters.includes(filterKey)}
-                                onChange={() => handleCheckboxChange(cat, title)}
-                              />
-                              <label
-                                className="form-check-label"
-                                htmlFor={filterKey}
-                              >
-                                {title}
-                              </label>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </div>
+                      {title}
+                    
+                    </label>
+                    
                   </div>
-                );
-              })}
-            </div>
+                  <hr className="my-2" />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+
           </div>
         </div>
 

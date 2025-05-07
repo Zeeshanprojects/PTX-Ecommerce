@@ -24,9 +24,18 @@
 .category-img {
   height: 200px;
   width: 200px;
+  background-color: gray !important;
   border-radius: 50%;
   object-fit: cover;
 }
+.category-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.category-img:hover {
+  transform: scale(1.1);
+}
+
 
 .box img {
   height: 290px !important;
@@ -45,7 +54,7 @@
 }
 .product-img-container {
   height: 280px;
- padding: 10px;
+  padding: 10px;
   background-color: #f0f2f5;
 }
 .product-img {
@@ -70,7 +79,7 @@
   background-color: white;
   transition: all 0.3s ease;
   font-weight: bold;
-  font-size:10px;
+  font-size: 10px;
   color: #333;
 }
 
@@ -97,7 +106,7 @@
 .nav-tabs .nav-link {
   border: none !important;
   background: none !important;
-  color: #000; 
+  color: #000;
 }
 .nav-tabs .nav-link.active {
   border: none !important;
@@ -139,6 +148,6 @@
   .btn {
     height: 40px;
     font-size: 14px;
-padding: 10px !important;
+    padding: 10px !important;
   }
 }

@@ -23,7 +23,7 @@ const Image = {
   image18: new URL("./18.webp", import.meta.url).href,
   image19: new URL("./19.webp", import.meta.url).href,
   WomenTshirt: new URL("./Wtshirt.webp",import.meta.url).href,
-  fleece: new URL("./Fleece.avif", import.meta.url).href,
+  fleece: new URL("./Fleece.webp", import.meta.url).href,
   jeans: new URL("./Jeans.webp", import.meta.url).href,
   hoddies: new URL("./Hoodie.webp", import.meta.url).href,
   junior: new URL("./Juniors.webp", import.meta.url).href,

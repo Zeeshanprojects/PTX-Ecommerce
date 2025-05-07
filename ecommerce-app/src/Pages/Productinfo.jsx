@@ -61,7 +61,7 @@ export default function Productinfo() {
                   LOGIN
                 </button>
               </Link>
-              <Link>
+              <Link to='/Cart'>
                 <button className="btn btn-dark px-5 py-2 w-100">ADD TO CART</button>
               </Link>
             </div>

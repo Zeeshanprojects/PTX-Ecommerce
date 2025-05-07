@@ -4,6 +4,13 @@ import Image from "../Images/Image";
 import "./Header.css";
 
 export default function Header() {
+  const handleNavCollapse = () => {
+    const collapse = document.getElementById("navbarSupportedContent");
+    if (collapse.classList.contains("show")) {
+      collapse.classList.remove("show");
+    }
+  };
+
   return (
     <>
       <div className="topbar">
@@ -15,7 +22,7 @@ export default function Header() {
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-        <div className="container">
+        <div className="container px-0"> {/* Remove padding on small screens */}
           <Link className="navbar-brand" to="#">
             <img src={Image.logo} />
           </Link>
@@ -33,55 +40,54 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" to="/" onClick={handleNavCollapse}>
                   HOME
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/Men">
+                <Link className="nav-link active" to="/Men" onClick={handleNavCollapse}>
                   MEN
                 </Link>
               </li>
-
               <li className="nav-item">
-                <Link className="nav-link active" to="/Women">
+                <Link className="nav-link active" to="/Women" onClick={handleNavCollapse}>
                   WOMEN
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/Kid">
+                <Link className="nav-link active" to="/Kid" onClick={handleNavCollapse}>
                   KIDS
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/Fleece">
+                <Link className="nav-link active" to="/Fleece" onClick={handleNavCollapse}>
                   FLEECE
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/Shop">
+                <Link className="nav-link active" to="/Shop" onClick={handleNavCollapse}>
                   CATALOG
                 </Link>
               </li>
-
               <li className="nav-item">
-                <Link className="nav-link active" to="#">
+                <Link className="nav-link active" to="#" onClick={handleNavCollapse}>
                   LOOKBOOK
                 </Link>
               </li>
             </ul>
 
             <div className="d-flex align-items-center gap-3 ms-auto">
-              <Link to="/Login">
-              <img src={Image.user} alt="User Icon" className="header-icon " />
+              <Link to="/Login" onClick={handleNavCollapse}>
+                <img
+                  src={Image.user}
+                  alt="User Icon"
+                  className="header-icon "
+                />
               </Link>
-<Link to="/Cart">
-<img src={Image.cart} alt="Cart Icon" className="header-icon" />
-</Link>
-   
-  </div>
-
-
+              <Link to="/Cart" onClick={handleNavCollapse}>
+                <img src={Image.cart} alt="Cart Icon" className="header-icon" />
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

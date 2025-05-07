@@ -139,12 +139,12 @@ export default function Home() {
   <div className="space"></div>
   <div className="row justify-content-center text-center">
     {[
-      { label: "TSHIRTS", image: Image.bestselling1 },
-      { label: "FLEECE", image: Image.bestselling2 },
-      { label: "JEANS", image: Image.bestselling3 },
-      { label: "HOODIES", image: Image.bestselling4 },
-      { label: "Knits", image: Image.bestselling5 },
-      { label: "Premium", image: Image.bestselling6 },
+      { label: "MEN", image: Image.bestselling1 },
+      { label: "FLEECE", image: Image.fleece },
+      { label: "JEANS", image: Image.jeans },
+      { label: "HOODIES", image: Image.hoddies },
+      { label: "WOMEN", image: Image.WomenTshirt },
+      { label: "JUNIORS", image: Image.junior },
     ].map((item, index) => (
       <motion.div
         key={index}
@@ -167,7 +167,7 @@ export default function Home() {
   </div>
 </div>
 
-      <div className="space"></div>
+     <br/>
       <h2 className="text-center">BEST SELLINGS</h2>
       <div className="space"></div>
 

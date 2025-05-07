@@ -26,3 +26,12 @@
 .nav-link:hover {
   color: red !important;
 }
+.header-icon {
+  height: 24px;
+  width: 24px;
+  filter: invert(1); /* assuming navbar bg is black */
+  cursor: pointer;
+}
+.header-icon:hover {
+  filter: invert(23%) sepia(86%) saturate(7493%) hue-rotate(1deg) brightness(99%) contrast(109%);
+}

@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import Men from "./Pages/Men";
 import Women from "./Pages/Women";
 import Kids from "./Pages/Kids";
+import Fleece from './Pages/Fleece';
 import Shop from "./Pages/Shop";
 import ScrollToTop from './Components/ScrollToTop';
 import Productinfo from './Pages/Productinfo';
@@ -31,6 +32,7 @@ function App() {
       <Route path="/Women" element={<Women/>}/>
       <Route path="/Kid" element={<Kids/>}/>
       <Route path="/Shop" element={<Shop/>}/>
+      <Route path='/Fleece' element={<Fleece/>}/>
       <Route path='/Contact' element={<Contact/>}/>
       <Route path='/Login' element={<Login/>}/>
       <Route path='/Signup' element={<Signup/>}/>

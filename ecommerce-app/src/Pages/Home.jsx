@@ -87,23 +87,7 @@ export default function Home() {
               <div className="p-3">
                 <h6 className="mb-1">{product.name}</h6>
                 <p className="text-muted mb-1">{product.price}</p>
-                <div className="buttons ">
-                  <button type="button" className="sizes btn-outline-dark">
-                    S
-                  </button>
-                  <button type="button" className="sizes btn-outline-dark">
-                    M
-                  </button>
-                  <button type="button" className="sizes btn-outline-dark">
-                    L
-                  </button>
-                  <button type="button" className="sizes btn-outline-dark">
-                    XL
-                  </button>
-                  <button type="button" className="sizes btn-outline-dark">
-                    2XL
-                  </button>
-                </div>
+              
               </div>
             </div>
           </div>
@@ -135,39 +119,39 @@ export default function Home() {
 
       <div className="space"></div>
       <div className="container-fluid">
-  <h2 className="text-center">POPULAR CATEGORIES</h2>
-  <div className="space"></div>
-  <div className="row justify-content-center text-center">
-    {[
-      { label: "MEN", image: Image.bestselling1 },
-      { label: "FLEECE", image: Image.fleece },
-      { label: "JEANS", image: Image.jeans },
-      { label: "HOODIES", image: Image.hoddies },
-      { label: "WOMEN", image: Image.WomenTshirt },
-      { label: "JUNIORS", image: Image.junior },
-    ].map((item, index) => (
-      <motion.div
-        key={index}
-        className="col-6 col-sm-4 col-md-2 mb-4"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-      >
-        <div className="text-center">
-          <img
-            src={item.image}
-            alt={item.label}
-            className="img-fluid category-img"
-          />
-          <p className="mt-2">{item.label}</p>
+        <h2 className="text-center">POPULAR CATEGORIES</h2>
+        <div className="space"></div>
+        <div className="row justify-content-center text-center">
+          {[
+            { label: "MEN", image: Image.bestselling1 },
+            { label: "FLEECE", image: Image.fleece },
+            { label: "JEANS", image: Image.jeans },
+            { label: "HOODIES", image: Image.hoddies },
+            { label: "WOMEN", image: Image.WomenTshirt },
+            { label: "KIDS", image: Image.junior },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="col-6 col-sm-4 col-md-2 mb-4"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <div className="text-center">
+                <img
+                  src={item.image}
+                  alt={item.label}
+                  className="img-fluid category-img"
+                />
+                <p className="mt-2">{item.label}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
-    ))}
-  </div>
-</div>
+      </div>
 
-     <br/>
+      <br />
       <h2 className="text-center">BEST SELLINGS</h2>
       <div className="space"></div>
 

@@ -72,8 +72,13 @@ export default function Header() {
             </ul>
 
             <div className="d-flex align-items-center gap-3 ms-auto">
-    <img src={Image.user} alt="User Icon" className="header-icon " />
-    <img src={Image.cart} alt="Cart Icon" className="header-icon" />
+              <Link to="/Login">
+              <img src={Image.user} alt="User Icon" className="header-icon " />
+              </Link>
+<Link to="/Cart">
+<img src={Image.cart} alt="Cart Icon" className="header-icon" />
+</Link>
+   
   </div>
 
 

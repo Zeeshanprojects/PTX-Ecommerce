@@ -20,6 +20,10 @@ export default function Signup() {
               <label className="form-label">Password</label>
               <input type="password" className="form-control" required />
             </div>
+            <div className="mb-3">
+              <label className="form-label">Confirm Password</label>
+              <input type="password" className="form-control" required />
+            </div>
             <button type="submit" className="btn btn-dark w-100">Sign UP</button>
             <p className="text-center mt-3">
               Already have an account? <Link to="/Login">Login</Link>

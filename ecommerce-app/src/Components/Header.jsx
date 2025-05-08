@@ -46,17 +46,7 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link active" to="/Men" onClick={handleNavCollapse}>
-                  MEN
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" to="/Women" onClick={handleNavCollapse}>
-                  WOMEN
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link active" to="/Kid" onClick={handleNavCollapse}>
-                  KIDS
+                  T-SHIRTS
                 </Link>
               </li>
               <li className="nav-item">
@@ -64,6 +54,12 @@ export default function Header() {
                   FLEECE
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link active" to="/Kid" onClick={handleNavCollapse}>
+                  KIDS
+                </Link>
+              </li>
+             
               <li className="nav-item">
                 <Link className="nav-link active" to="/Shop" onClick={handleNavCollapse}>
                   CATALOG

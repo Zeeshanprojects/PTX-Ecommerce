@@ -14,6 +14,7 @@ export default function Men() {
     { image: Image.image7, title: "orange Kid Tee", price: "PKR 2199" },
     { image: Image.image8, title: "Blue Boy Tee", price: "PKR 1999" },
     { image: Image.image9, title: "Green Tee", price: "PKR 2099" },
+
   ];
 
   return (

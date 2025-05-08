@@ -27,27 +27,7 @@ export default function Home() {
         image: Image.image4,
       },
     ],
-    Womens: [
-      {
-        id: 6,
-        name: "Urban Pink Tee",
-        price: "PKR 2,799",
-        image: Image.image6,
-      },
-      { id: 7, name: "Sunset Orange", price: "PKR 1,999", image: Image.image8 },
-      {
-        id: 8,
-        name: "Mint Green Tee",
-        price: "PKR 2,299",
-        image: Image.image7,
-      },
-      {
-        id: 9,
-        name: "Ocean Blue Tee",
-        price: "PKR 2,499",
-        image: Image.image5,
-      },
-    ],
+
     Kids: [
       { id: 10, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image10 },
       { id: 11, name: "Cartoon Tee", price: "PKR 1,199", image: Image.image11 },
@@ -128,11 +108,11 @@ export default function Home() {
         <div className="space"></div>
         <div className="row justify-content-center text-center">
           {[
-            { label: "MEN T-SHIRTS", image: Image.bestselling1 },
+            { label: "T-SHIRTS", image: Image.bestselling1 },
             { label: "FLEECE", image: Image.fleece },
-            { label: "JEANS", image: Image.jeans },
+
             { label: "HOODIES", image: Image.hoddies },
-            { label: "WOMEN T-SHIRTS", image: Image.WomenTshirt },
+
             { label: "KIDS", image: Image.junior },
           ].map((item, index) => (
             <motion.div
@@ -209,7 +189,7 @@ export default function Home() {
 
       {/* Product Sections with individual route paths */}
       {renderProductSection("Men", products.Mens, "/Men")}
-      {renderProductSection("Women", products.Womens, "/Women")}
+     
       {renderProductSection("Kid", products.Kids, "/Kid")}
       {renderProductSection("Fleece", products.Fleece, "/Fleece")}
 
@@ -258,38 +238,42 @@ export default function Home() {
           ))}
         </div>
       </motion.div>
-      <div className="container-fluid py-5" style={{ backgroundColor: "#000000" }}>
-  <div className="row justify-content-center">
-    <div className="col-md-8 col-lg-6">
-      <div className="text-center">
-        <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
-        <p className="mb-4 text-white">Stay updated with the latest trends, offers, and news. Sign up for our newsletter!</p>
+      <div
+        className="container-fluid py-5"
+        style={{ backgroundColor: "#000000" }}
+      >
+        <div className="row justify-content-center">
+          <div className="col-md-8 col-lg-6">
+            <div className="text-center">
+              <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
+              <p className="mb-4 text-white">
+                Stay updated with the latest trends, offers, and news. Sign up
+                for our newsletter!
+              </p>
 
-        <form>
-          <div className="input-group mb-3">
-            <input
-              type="email"
-              className="form-control bg-transparent text-white border-white"
-              placeholder="Enter your email"
-              aria-label="Email address"
-              aria-describedby="subscribe-button"
-              required
-            />
-            <button
-              className="btn btn-outline-light"
-              type="submit"
-              id="subscribe-button"
-            >
-              Subscribe
-            </button>
+              <form>
+                <div className="input-group mb-3">
+                  <input
+                    type="email"
+                    className="form-control bg-transparent text-white border-white"
+                    placeholder="Enter your email"
+                    aria-label="Email address"
+                    aria-describedby="subscribe-button"
+                    required
+                  />
+                  <button
+                    className="btn btn-outline-light"
+                    type="submit"
+                    id="subscribe-button"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
     </>
   );
 }

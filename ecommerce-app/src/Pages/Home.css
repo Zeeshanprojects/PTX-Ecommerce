@@ -137,7 +137,7 @@
   transform-origin: center top; /* Zoom from top-center */
 }
 ::placeholder {
-  color: white !important;
+  color: gray !important;
 }
 @media (max-width: 576px) {
   .imagetext {

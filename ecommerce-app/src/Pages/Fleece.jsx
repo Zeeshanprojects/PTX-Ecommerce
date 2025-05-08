@@ -5,26 +5,26 @@ import "./Home.css";
 
 export default function Fleece() {
   const products = [
-    { image: Image.Fleece1, title: "Fleece 1", price: "PKR 2199" },
-    { image: Image.Fleece2, title: "Fleece 2", price: "PKR 1999" },
-    { image: Image.Fleece3, title: "Fleece 3", price: "PKR 2099" },
-    { image: Image.Fleece4, title: "Fleece 4", price: "PKR 2199" },
-    { image: Image.Fleece5, title: "Fleece 5", price: "PKR 1999" },
-    { image: Image.Fleece6, title: "Fleece 6", price: "PKR 2099" },
-    { image: Image.Fleece7, title: "Fleece 7", price: "PKR 2199" },
-    { image: Image.Fleece8, title: "Fleece 8", price: "PKR 1999" },
+    { id: 301, image: Image.Fleece1, title: "Fleece 1", price: 2199, category: "Fleece" },
+    { id: 302, image: Image.Fleece2, title: "Fleece 2", price: 1999, category: "Fleece" },
+    { id: 303, image: Image.Fleece3, title: "Fleece 3", price: 2099, category: "Fleece" },
+    { id: 304, image: Image.Fleece4, title: "Fleece 4", price: 2199, category: "Fleece" },
+    { id: 305, image: Image.Fleece5, title: "Fleece 5", price: 1999, category: "Fleece" },
+    { id: 306, image: Image.Fleece6, title: "Fleece 6", price: 2099, category: "Fleece" },
+    { id: 307, image: Image.Fleece7, title: "Fleece 7", price: 2199, category: "Fleece" },
+    { id: 308, image: Image.Fleece8, title: "Fleece 8", price: 1999, category: "Fleece" },
   ];
 
   return (
     <>
       <div className="image-container">
-        <img src={Image.Fleece} alt="men" className="sub-banner-image" />
+        <img src={Image.Fleece} alt="Fleece" className="sub-banner-image" />
       </div>
 
-      <div className="container my-5 ">
-        <div className="row">
-          {products.map((product, index) => (
-            <div key={index} className="col-sm-12 col-md-6 col-lg-3 mb-4">
+      <div className="container my-5">
+        <div className="row g-4">
+          {products.map((product) => (
+            <div key={product.id} className="col-sm-12 col-md-6 col-lg-3 mb-4">
               <div className="product-card position-relative overflow-hidden rounded shadow-sm">
                 <span className="new-badge position-absolute top-0 start-0 m-2">
                   NEW
@@ -33,9 +33,11 @@ export default function Fleece() {
                   <Link
                     to="/productinfo"
                     state={{
+                      id: product.id,
                       title: product.title,
                       price: product.price,
                       image: product.image,
+                      category: product.category,
                     }}
                   >
                     <img
@@ -47,23 +49,13 @@ export default function Fleece() {
                 </div>
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
-                  <p className="text-muted mb-1">{product.price}</p>
-                  <div className="buttons ">
-                    <button type="button" className="sizes btn-outline-dark">
-                      S
-                    </button>
-                    <button type="button" className="sizes btn-outline-dark">
-                      M
-                    </button>
-                    <button type="button" className="sizes btn-outline-dark">
-                      L
-                    </button>
-                    <button type="button" className="sizes btn-outline-dark">
-                      XL
-                    </button>
-                    <button type="button" className="sizes btn-outline-dark">
-                      2XL
-                    </button>
+                  <p className="text-muted mb-1">PKR {product.price}</p>
+                  <div className="buttons">
+                    <button type="button" className="sizes btn-outline-dark">S</button>
+                    <button type="button" className="sizes btn-outline-dark">M</button>
+                    <button type="button" className="sizes btn-outline-dark">L</button>
+                    <button type="button" className="sizes btn-outline-dark">XL</button>
+                    <button type="button" className="sizes btn-outline-dark">2XL</button>
                   </div>
                 </div>
               </div>

@@ -1,23 +1,38 @@
-import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { useLocation, useNavigate, Link } from "react-router-dom";
+import { CartContext } from "../Components/CartContext.jsx";
 import "./Productinfo.css";
 
 export default function Productinfo() {
   const { state } = useLocation();
   const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
   if (!state) {
-    // fallback in case someone visits directly
     navigate("/");
     return null;
   }
 
-  const { image, title, price,size} = state;
+  const { id, image, title, price, category, size = "M" } = state;
 
   const increaseQty = () => setQuantity((prev) => prev + 1);
   const decreaseQty = () => {
     if (quantity > 1) setQuantity((prev) => prev - 1);
+  };
+
+  const handleAddToCart = () => {
+    const product = {
+      id,
+      image,
+      title,
+      price,
+      category,
+      size,
+      quantity,
+    };
+    addToCart(product);
+    navigate("/Cart");
   };
 
   return (
@@ -28,11 +43,9 @@ export default function Productinfo() {
             <img src={image} alt={title} className="img-fluid product-image" />
           </div>
         </div>
-        <div className="col-md-6 ">
+        <div className="col-md-6">
           <h2 className="fw-bold">{title}</h2>
-
-          <h5 className="text-muted mb-3">PKR {price}</h5>
-        
+          <h5 className="text-muted mb-3">{price}</h5>
           <p className="mb-4">
             This premium cotton t-shirt offers comfort and elegance for everyday
             wear. Designed with modern cuts and top-quality fabric, it’s perfect
@@ -61,9 +74,12 @@ export default function Productinfo() {
                   LOGIN
                 </button>
               </Link>
-              <Link to='/Cart'>
-                <button className="btn btn-dark px-5 py-2 w-100">ADD TO CART</button>
-              </Link>
+              <button
+                className="btn btn-dark px-5 py-2 w-100"
+                onClick={handleAddToCart}
+              >
+                ADD TO CART
+              </button>
             </div>
           </div>
         </div>

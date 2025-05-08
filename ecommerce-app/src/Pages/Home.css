@@ -24,7 +24,6 @@
 .category-img {
   height: 200px;
   width: 200px;
-  background-color: gray !important;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -86,7 +85,6 @@
   background-color: #333;
   color: white;
 }
-
 .new-badge {
   background-color: #dc3545; /* or use #000 (black), #007bff (blue) */
   color: #fff;
@@ -112,7 +110,6 @@
   background: none !important;
   box-shadow: none !important;
 }
-
 .banner {
   width: 100%;
   height: 550px;
@@ -124,8 +121,8 @@
 }
 
 .info-icon {
-  height: 50px; /* Set a fixed height */
-  object-fit: contain; /* Prevent stretching */
+  height: 50px; 
+  object-fit: contain; 
   margin-bottom: 20px;
 }
 
@@ -134,12 +131,39 @@
   width: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
-  transform-origin: center top; /* Zoom from top-center */
+  transform-origin: center top; 
 }
 ::placeholder {
   color: gray !important;
 }
+
+@media (min-width:768px) and (max-width:991px) {
+  
+.main-btn{
+   margin-left: 70px !important;
+  }
+  .category-img {
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  } 
+  .banner {
+    height: auto; /* Let height adjust automatically */
+    object-fit: contain; /* Show full image without cropping */
+  }
+ }
+@media (min-width:576px) and (max-width:767px) {
+ .main-btn{
+  margin-left: 100px !important;
+ } 
+ .banner {
+  height: auto; /* Let height adjust automatically */
+  object-fit: contain; /* Show full image without cropping */
+}
+}
 @media (max-width: 576px) {
+ 
   .imagetext {
     top: 80%; /* Adjust if needed */
     left: 17%; /* Center it for smaller screens */

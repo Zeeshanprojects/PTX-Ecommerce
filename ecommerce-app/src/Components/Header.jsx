@@ -22,7 +22,9 @@ export default function Header() {
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-        <div className="container px-0"> {/* Remove padding on small screens */}
+        <div className="container px-0">
+          {" "}
+       
           <Link className="navbar-brand" to="#">
             <img src={Image.logo} />
           </Link>
@@ -40,33 +42,57 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" to="/" onClick={handleNavCollapse}>
+                <Link
+                  className="nav-link active"
+                  to="/"
+                  onClick={handleNavCollapse}
+                >
                   HOME
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/T-Shirts" onClick={handleNavCollapse}>
+                <Link
+                  className="nav-link active"
+                  to="/T-Shirts"
+                  onClick={handleNavCollapse}
+                >
                   T-SHIRTS
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/Fleece" onClick={handleNavCollapse}>
+                <Link
+                  className="nav-link active"
+                  to="/Fleece"
+                  onClick={handleNavCollapse}
+                >
                   FLEECE
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/Kid" onClick={handleNavCollapse}>
+                <Link
+                  className="nav-link active"
+                  to="/Kid"
+                  onClick={handleNavCollapse}
+                >
                   KIDS
                 </Link>
               </li>
-             
+
               <li className="nav-item">
-                <Link className="nav-link active" to="/Shop" onClick={handleNavCollapse}>
+                <Link
+                  className="nav-link active"
+                  to="/Shop"
+                  onClick={handleNavCollapse}
+                >
                   CATALOG
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="#" onClick={handleNavCollapse}>
+                <Link
+                  className="nav-link active"
+                  to="#"
+                  onClick={handleNavCollapse}
+                >
                   LOOKBOOK
                 </Link>
               </li>

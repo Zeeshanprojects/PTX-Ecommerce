@@ -4,12 +4,12 @@ import "./Contact.css"; // Make sure this file exists
 export default function Contact() {
   return (
     <div className="contact-wrapper py-5">
-      <div className="container-fluid">
+      <div className="container">
         <div className="row align-items-center">
           {/* Contact Form Column */}
-          <div className="col-md-6 mb-4">
+          <div className="col-md-12 mb-4 ">
             <div className="contact-form card p-4 shadow h-100">
-              <h2 className="text-center mb-4">Contact Us</h2>
+              <h2 className="text-center mb-4">CONTACT US</h2>
               <form>
                 <div className="mb-3">
                   <label className="form-label">Name</label>
@@ -32,7 +32,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Map Column */}
+          {/* Map Column
           <div className="col-md-6">
             <div className="map-container shadow rounded h-100">
               <iframe
@@ -45,7 +45,7 @@ export default function Contact() {
                 loading="lazy"
               ></iframe>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

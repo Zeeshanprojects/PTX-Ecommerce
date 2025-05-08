@@ -5,8 +5,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
-import Men from "./Pages/Men";
-
 import Kids from "./Pages/Kids";
 import Fleece from "./Pages/Fleece";
 import Shop from "./Pages/Shop";
@@ -18,6 +16,7 @@ import Privacyandpolicy from "./Pages/Privacyandpolicy";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
+import TShirt from "./Pages/T-Shirt";
 
 function App() {
   return (
@@ -27,7 +26,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/T-Shirts" element={<Men />} />
+          <Route path="/T-Shirts" element={<TShirt/>} />
           <Route path="/Kid" element={<Kids />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Fleece" element={<Fleece />} />

@@ -177,7 +177,7 @@ export default function Shop() {
                     <div className="card-body d-flex flex-column">
                       <h6 className="card-title">{product.title}</h6>
                       <p className="text-muted small mb-1">{product.category}</p>
-                      <p className="fw-semibold mb-2">PKR {product.price}</p>
+                      <p className="fw-semibold text-muted mb-2">PKR {product.price}</p>
                     </div>
                   </div>
                 </div>

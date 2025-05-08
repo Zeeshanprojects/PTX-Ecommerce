@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Image from "../Images/Image";
 import "./Home.css";
 
-export default function Men() {
+export default function TShirt() {
   const products = [
     { id: 101, image: Image.image1, title: "Red Kid Tee", price: 2199, category: "Men" },
     { id: 102, image: Image.image2, title: "Blue Boy Tee", price: 1999, category: "Men" },
@@ -50,7 +50,7 @@ export default function Men() {
                 </div>
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
-                  <p className="text-muted mb-1">PKR {product.price}</p>
+                  <p className="fw-semibold text-muted mb-1">PKR {product.price}</p>
                   <div className="buttons">
                     <button type="button" className="sizes btn-outline-dark">S</button>
                     <button type="button" className="sizes btn-outline-dark">M</button>
@@ -58,6 +58,7 @@ export default function Men() {
                     <button type="button" className="sizes btn-outline-dark">XL</button>
                     <button type="button" className="sizes btn-outline-dark">2XL</button>
                   </div>
+                  
                 </div>
               </div>
             </div>

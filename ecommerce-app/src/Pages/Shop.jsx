@@ -40,6 +40,7 @@ export default function Shop() {
   const [search, setSearch] = useState("");
   const [checkedFilters, setCheckedFilters] = useState([]);
   const [activeCategory, setActiveCategory] = useState("T-Shirt");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const categories = ["T-Shirt", "Fleece", "Kids"];
 
@@ -71,9 +72,23 @@ export default function Shop() {
 
   return (
     <div className="container-fluid mt-5">
+      {/* Toggle Button for Mobile */}
+      <div className="d-md-none mb-3">
+        <button
+          className="btn btn-outline-dark w-100"
+          type="button"
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+        >
+          {isSidebarOpen ? "Hide Filters" : "Show Filters"}
+        </button>
+      </div>
+
       <div className="row">
-        <div className="col-md-3 mb-4">
-          <div className="p-3">
+        {/* Sidebar */}
+        <div
+          className={`col-md-3 mb-4 ${isSidebarOpen ? "d-block" : "d-none d-md-block"}`}
+        >
+          <div className="p-3 bg-light rounded shadow-sm">
             <h5 className="mb-3">Filters</h5>
             <input
               type="text"
@@ -121,7 +136,7 @@ export default function Shop() {
                             <div key={filterKey}>
                               <div className="form-check">
                                 <input
-                                  className="form-check-input"
+                                  className=" Historic check-input"
                                   type="checkbox"
                                   id={filterKey}
                                   checked={checkedFilters.includes(filterKey)}
@@ -146,6 +161,8 @@ export default function Shop() {
             </div>
           </div>
         </div>
+
+        {/* Products */}
         <div className="col-md-9">
           <h3 className="mb-4">Products</h3>
           <div className="row">
@@ -168,16 +185,16 @@ export default function Shop() {
                     >
                       <img
                         src={product.image}
-                        className="card-img-top bg-light"
+                        className="card-img-top bg-light catalog-image"
                         alt={product.title}
                         style={{ objectFit: "cover", height: "300px" }}
                       />
                     </Link>
                     <hr />
                     <div className="card-body d-flex flex-column">
-                      <h6 className="card-title">{product.title}</h6>
-                      <p className="text-muted small mb-1">{product.category}</p>
-                      <p className="fw-semibold text-muted mb-2">PKR {product.price}</p>
+                      <h6 className="card-title catalog-title">{product.title}</h6>
+                      <p className="text-muted small mb-1 catalog-title">{product.category}</p>
+                      <p className="fw-semibold text-muted mb-2 catalog-title">PKR {product.price}</p>
                     </div>
                   </div>
                 </div>

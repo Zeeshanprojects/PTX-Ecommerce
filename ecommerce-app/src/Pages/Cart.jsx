@@ -41,7 +41,7 @@ export default function Cart() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    style={{ width: "60px", height: "60px", objectFit: "cover" }}
+                    style={{ width: "80px", height: "80px", objectFit: "contain" }}
                   />
                 </td>
                 <td>{item.title}</td>

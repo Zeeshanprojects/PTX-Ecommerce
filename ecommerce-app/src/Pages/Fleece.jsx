@@ -50,13 +50,7 @@ export default function Fleece() {
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
                   <p className="text-muted mb-1">PKR {product.price}</p>
-                  <div className="buttons">
-                    <button type="button" className="sizes btn-outline-dark">S</button>
-                    <button type="button" className="sizes btn-outline-dark">M</button>
-                    <button type="button" className="sizes btn-outline-dark">L</button>
-                    <button type="button" className="sizes btn-outline-dark">XL</button>
-                    <button type="button" className="sizes btn-outline-dark">2XL</button>
-                  </div>
+                 
                 </div>
               </div>
             </div>

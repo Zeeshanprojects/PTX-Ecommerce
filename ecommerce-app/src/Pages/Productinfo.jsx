@@ -14,7 +14,7 @@ export default function Productinfo() {
     return null;
   }
 
-  const { id, image, title, price, category, size = "M" } = state;
+  const { id, image, title, price, category } = state;
 
   const increaseQty = () => setQuantity((prev) => prev + 1);
   const decreaseQty = () => {
@@ -39,14 +39,31 @@ export default function Productinfo() {
     <div className="container py-5">
       <div className="row align-items-center">
         <div className="col-md-6 mb-4 mb-md-0">
-          <div className="product-image-wrapper">
+          <div className="product-image-wrapper ">
             <img src={image} alt={title} className="img-fluid product-image" />
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 ">
           <h2 className="fw-bold">{title}</h2>
           <h5 className="text-muted mb-3">{price}</h5>
-          
+          <label className="me-3 fw-semibold">Sizes:</label>
+          <div className="buttons mt-2 mb-3">
+            <button type="button" className="sizes btn-outline-dark">
+              S
+            </button>
+            <button type="button" className="sizes btn-outline-dark">
+              M
+            </button>
+            <button type="button" className="sizes btn-outline-dark">
+              L
+            </button>
+            <button type="button" className="sizes btn-outline-dark">
+              XL
+            </button>
+            <button type="button" className="sizes btn-outline-dark">
+              2XL
+            </button>
+          </div>
           <p className="mb-4">
             This premium cotton t-shirt offers comfort and elegance for everyday
             wear. Designed with modern cuts and top-quality fabric, it’s perfect

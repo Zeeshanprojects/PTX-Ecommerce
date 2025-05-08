@@ -113,9 +113,7 @@ export default function Home() {
           {[
             { label: "T-SHIRTS", image: Image.bestselling1 },
             { label: "FLEECE", image: Image.fleece },
-
             { label: "HOODIES", image: Image.hoddies },
-
             { label: "KIDS", image: Image.junior },
           ].map((item, index) => (
             <motion.div
@@ -192,7 +190,6 @@ export default function Home() {
 
       {/* Product Sections with individual route paths */}
       {renderProductSection("T-Shirts", products.Mens, "/T-Shirts")}
-     
       {renderProductSection("Kids", products.Kids, "/Kid")}
       {renderProductSection("Fleece", products.Fleece, "/Fleece")}
 

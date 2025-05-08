@@ -93,12 +93,15 @@ export default function Home() {
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="sliderimage" />
         <div className="imagetext">
+          <Link to="/Shop">
           <button
             type="button"
             className="btn btn-outline-light mt-4 ps-5 pe-5 "
           >
             SHOP NOW
           </button>
+          </Link>
+        
         </div>
       </div>
 
@@ -188,9 +191,9 @@ export default function Home() {
       </motion.div>
 
       {/* Product Sections with individual route paths */}
-      {renderProductSection("Men", products.Mens, "/Men")}
+      {renderProductSection("T-Shirts", products.Mens, "/T-Shirts")}
      
-      {renderProductSection("Kid", products.Kids, "/Kid")}
+      {renderProductSection("Kids", products.Kids, "/Kid")}
       {renderProductSection("Fleece", products.Fleece, "/Fleece")}
 
       <motion.div

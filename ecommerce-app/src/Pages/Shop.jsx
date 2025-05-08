@@ -209,7 +209,7 @@ export default function Shop() {
   const [checkedFilters, setCheckedFilters] = useState([]);
   const [activeCategory, setActiveCategory] = useState("T-Shirt");
 
-  const categories = ["T-Shirt", "Fleece", "Kids"];
+  const categories = ["T-Shirts", "Fleece", "Kids"];
 
   const handleCheckboxChange = (category, name) => {
     const filterKey = `${category}-${name}`;

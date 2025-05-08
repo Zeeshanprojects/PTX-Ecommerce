@@ -45,7 +45,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/Men" onClick={handleNavCollapse}>
+                <Link className="nav-link active" to="/T-Shirts" onClick={handleNavCollapse}>
                   T-SHIRTS
                 </Link>
               </li>

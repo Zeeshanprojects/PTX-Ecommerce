@@ -50,7 +50,7 @@ export default function Productinfo() {
         </div>
         <div className="col-md-6">
           <h2 className="fw-bold">{title}</h2>
-          <h5 className="text-muted mb-3">{price}</h5>
+          <h5 className="text-muted mb-3">PKR {price}</h5>
           <label className="me-3 fw-semibold">Sizes:</label>
           <div className="buttons mt-2 mb-3">
             {["S", "M", "L", "XL", "2XL"].map((sizeOption) => (

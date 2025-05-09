@@ -17,7 +17,7 @@
   height: 40px !important;
   filter: invert(1);
 }
-.nav-link {
+/* .nav-link {
   font-size: 17px;
   font-size: bold;
   text-align: center;
@@ -25,6 +25,26 @@
 }
 .nav-link:hover {
   color: red !important;
+} */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 18px !important;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
 }
 .header-icon {
   height: 24px;
@@ -32,10 +52,7 @@
   filter: invert(1); /* assuming navbar bg is black */
   cursor: pointer;
 }
-.header-icon:hover {
-  filter: invert(23%) sepia(86%) saturate(7493%) hue-rotate(1deg)
-    brightness(99%) contrast(109%);
-}
+
 
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar {
@@ -49,14 +66,16 @@
     padding: 1rem;
     margin: 0 !important;
     width: 100vw !important; /* Full viewport width */
-    
   }
   .navbar-nav {
     align-items: flex-start !important;
   }
   .nav-link {
-    text-align: left !important;
-    padding-left: 0 !important;
+     position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin: 0px !important;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -70,16 +89,17 @@
     background-color: black;
     padding: 1rem;
     margin: 0 !important;
-
   }
   .navbar-nav {
     align-items: flex-start !important;
   }
   .nav-link {
-    text-align: left !important;
-    padding-left: 0 !important;
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0px !important;
   }
- 
 }
 @media (max-width: 575px) {
   .topbar {
@@ -89,8 +109,15 @@
     z-index: 8888;
     width: 100% !important;
   }
-  .navbar-brand{
+  .navbar-brand {
     padding-left: 5px;
+  }
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0px !important;
   }
   .navbar-collapse {
     background-color: black;
@@ -103,4 +130,10 @@
     text-align: left !important;
     padding-left: 0 !important;
   }
+  .header-icon {
+  height: 24px;
+  width: 24px;
+  filter: invert(1); /* assuming navbar bg is black */
+  cursor: pointer;
+}
 }

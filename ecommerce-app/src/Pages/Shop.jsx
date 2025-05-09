@@ -71,8 +71,7 @@ export default function Shop() {
   });
 
   return (
-    <div className="container-fluid mt-5">
-      {/* Toggle Button for Mobile */}
+    <div className="container-fluid mt-5">    
       <div className="d-md-none mb-3">
         <button
           className="btn btn-outline-dark w-100"
@@ -129,7 +128,7 @@ export default function Shop() {
                       }`}
                       data-bs-parent="#filterAccordion"
                     >
-                      <div className="accordion-body px-2 pt-2">
+                      <div className="accordion-body px-2 pt-2 ">
                         {uniqueTitles.map((title) => {
                           const filterKey = `${cat}-${title}`;
                           return (
@@ -143,7 +142,7 @@ export default function Shop() {
                                   onChange={() => handleCheckboxChange(cat, title)}
                                 />
                                 <label
-                                  className="form-check-label"
+                                  className="form-check-label ms-3"
                                   htmlFor={filterKey}
                                 >
                                   {title}

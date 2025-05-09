@@ -66,7 +66,10 @@ export default function Cart() {
         <Link to="/Shop">
         <button className="btn btn-primary mt-3 me-2">Continue Shopping</button>
         </Link>
-        <button className="btn btn-success mt-3">Proceed to Checkout</button>
+        <Link to="/checkout">
+  <button className="btn btn-success mt-3">Proceed to Checkout</button>
+</Link>
+        
       </div>
     </div>
   );

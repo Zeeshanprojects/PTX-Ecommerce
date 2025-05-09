@@ -17,6 +17,7 @@ import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import TShirt from "./Pages/T-Shirt";
+import Checkout from "./Pages/Checkout";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/Shop" element={<Shop />} />
           <Route path="/Fleece" element={<Fleece />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Checkout" element={<Checkout/>}/>
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />

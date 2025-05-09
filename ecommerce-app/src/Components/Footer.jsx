@@ -7,15 +7,12 @@ export default function Footer() {
       <div className="container-fluid p-0">
         <footer
           className="text-center text-lg-start text-dark "
-          style={{ backgroundColor: "#f0f0f0" }}
+          // style={{ backgroundColor: "#f0f0f0" }}
         >
-           
           <section>
-          
             <div className="container-fluid text-center text-md-start">
               <div className="row mt-3">
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-5">
-              
                   <h6 className="text-uppercase fw-bold">
                     PAKISTAN TEXTILE EXCHANGE
                   </h6>
@@ -35,7 +32,6 @@ export default function Footer() {
                 </div>
 
                 <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-5">
-               
                   <h6 className="text-uppercase fw-bold">Help</h6>
                   <hr
                     className="mb-4 mt-0 d-inline-block mx-auto"
@@ -79,7 +75,7 @@ export default function Footer() {
                   />
                   <p>
                     <Link to="/T" className="text-dark">
-                    T-Shirts
+                      T-Shirts
                     </Link>
                   </p>
                   <p>
@@ -123,8 +119,8 @@ export default function Footer() {
           </section>
 
           <div
-            className="text-center p-3"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+            className="text-center p-2"
+        
           >
             © 2025 |
             <Link className="text-dark" to="https://mdbootstrap.com/">

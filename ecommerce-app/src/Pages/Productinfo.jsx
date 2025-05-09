@@ -8,6 +8,7 @@ export default function Productinfo() {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState("S"); // Default size
 
   if (!state) {
     navigate("/");
@@ -21,6 +22,10 @@ export default function Productinfo() {
     if (quantity > 1) setQuantity((prev) => prev - 1);
   };
 
+  const handleSizeSelect = (selectedSize) => {
+    setSize(selectedSize); // Update size state when a size button is clicked
+  };
+
   const handleAddToCart = () => {
     const product = {
       id,
@@ -28,7 +33,7 @@ export default function Productinfo() {
       title,
       price,
       category,
-      size,
+      size, // Use the selected size
       quantity,
     };
     addToCart(product);
@@ -39,30 +44,27 @@ export default function Productinfo() {
     <div className="container py-5">
       <div className="row align-items-center">
         <div className="col-md-6 mb-4 mb-md-0">
-          <div className="product-image-wrapper ">
+          <div className="product-image-wrapper">
             <img src={image} alt={title} className="img-fluid product-image" />
           </div>
         </div>
-        <div className="col-md-6 ">
+        <div className="col-md-6">
           <h2 className="fw-bold">{title}</h2>
           <h5 className="text-muted mb-3">{price}</h5>
           <label className="me-3 fw-semibold">Sizes:</label>
           <div className="buttons mt-2 mb-3">
-            <button type="button" className="sizes btn-outline-dark">
-              S
-            </button>
-            <button type="button" className="sizes btn-outline-dark">
-              M
-            </button>
-            <button type="button" className="sizes btn-outline-dark">
-              L
-            </button>
-            <button type="button" className="sizes btn-outline-dark">
-              XL
-            </button>
-            <button type="button" className="sizes btn-outline-dark">
-              2XL
-            </button>
+            {["S", "M", "L", "XL", "2XL"].map((sizeOption) => (
+              <button
+                key={sizeOption}
+                type="button"
+                className={`sizes btn ${
+                  size === sizeOption ? "btn-dark" : "btn-outline-dark"
+                }`}
+                onClick={() => handleSizeSelect(sizeOption)}
+              >
+                {sizeOption}
+              </button>
+            ))}
           </div>
           <p className="mb-4">
             This premium cotton t-shirt offers comfort and elegance for everyday
@@ -92,15 +94,13 @@ export default function Productinfo() {
                   LOGIN
                 </button>
               </Link>
-              <Link to="/Cart">
+
               <button
                 className="btn btn-dark px-5 py-2 w-100"
                 onClick={handleAddToCart}
               >
                 ADD TO CART
               </button>
-              </Link>
-              
             </div>
           </div>
         </div>

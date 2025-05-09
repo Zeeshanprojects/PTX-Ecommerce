@@ -1,6 +1,4 @@
 const Image = {
-  // sliderimage1: new URL("./hero-1.jpg", import.meta.url).href,
-  // sliderimage2: new URL("./hero-2.jpg", import.meta.url).href,
   logo: new URL("./PTX-Main-Logo.png", import.meta.url).href,
   banner: new URL("./Main-Banner.webp", import.meta.url).href,
   image1: new URL("./1.webp", import.meta.url).href,
@@ -43,7 +41,7 @@ const Image = {
   icon2: new URL("./delivery-truck.webp", import.meta.url),
   icon3: new URL("./return-box.webp", import.meta.url),
   user: new URL("./user.webp", import.meta.url),
-cart: new URL("./shopping-cart.webp", import.meta.url),
+  cart: new URL("./shopping-cart.webp", import.meta.url),
   bestselling1: new URL("./8.jpg", import.meta.url).href,
   bestselling2: new URL("./10.jpg", import.meta.url).href,
   bestselling3: new URL("./11.jpg", import.meta.url).href,

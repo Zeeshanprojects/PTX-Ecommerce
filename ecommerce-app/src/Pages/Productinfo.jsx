@@ -89,9 +89,9 @@ export default function Productinfo() {
           </div>
           <div className="container">
             <div className="row g-2">
-              <Link to="/Login">
-                <button className="btn btn-outline-dark px-5 py-2 w-100">
-                  LOGIN
+              <Link to="/checkout">
+                <button className="btn btn-success px-5 py-2 w-100">
+                BUY NOW
                 </button>
               </Link>
 

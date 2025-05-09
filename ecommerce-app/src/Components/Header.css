@@ -133,7 +133,7 @@
   .header-icon {
   height: 24px;
   width: 24px;
-  filter: invert(1); /* assuming navbar bg is black */
+  filter: invert(1); 
   cursor: pointer;
 }
 }

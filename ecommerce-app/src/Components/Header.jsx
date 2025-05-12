@@ -25,7 +25,7 @@ export default function Header() {
         <div className="container px-0">
           {" "}
        
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             <img src={Image.logo} />
           </Link>
           <button

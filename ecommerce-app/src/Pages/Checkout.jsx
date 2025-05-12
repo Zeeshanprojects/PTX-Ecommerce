@@ -1,11 +1,16 @@
 import React, { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import { CartContext } from "../Components/CartContext.jsx";
 
 export default function Checkout() {
   const { cart } = useContext(CartContext);
+  const { state } = useLocation();
+
+  // Use products from navigation state (from Buy Now) or fall back to cart
+  const products = state?.products || cart;
 
   const getTotal = () =>
-    cart.reduce(
+    products.reduce(
       (total, item) => total + Number(item.price) * Number(item.quantity),
       0
     );
@@ -68,7 +73,7 @@ export default function Checkout() {
         <div className="col-md-6">
           <h4>Order Summary</h4>
           <ul className="list-group mb-3">
-            {cart.map((item) => (
+            {products.map((item) => (
               <li
                 key={item.id}
                 className="list-group-item d-flex justify-content-between align-items-center"
@@ -87,11 +92,13 @@ export default function Checkout() {
                   />
                   <div>
                     <h6 className="my-0">{item.title}</h6>
+                    <small className="text-muted">Size: {item.size}</small>
+                    <br />
                     <small className="text-muted">Qty: {item.quantity}</small>
                   </div>
                 </div>
                 <span className="text-muted">
-                  $ {Number(item.price) * Number(item.quantity)} USD
+                  ${Number(item.price) * Number(item.quantity)} USD
                 </span>
               </li>
             ))}

@@ -6,22 +6,33 @@ import "./Home.css";
 
 export default function TShirt() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8000/api/EcommerceTshirt")
       .then((res) => {
         setProducts(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.error("Failed to fetch T-shirts:", err);
+        setLoading(false);
       });
   }, []);
+
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+        <h4>Loading...</h4>
+      </div>
+    );
+  }
 
   return (
     <>
       <div className="image-container">
-       <img src={Image.Tshirts} alt="Tshirts" className="sub-banner-image" />
+        <img src={Image.Tshirts} alt="Tshirts" className="sub-banner-image" />
       </div>
 
       <div className="container my-5">
@@ -53,7 +64,7 @@ export default function TShirt() {
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
                   <p className="text-muted mb-1">
-                    ${product.price} USD
+                    USD {product.price}
                   </p>
                 </div>
               </div>

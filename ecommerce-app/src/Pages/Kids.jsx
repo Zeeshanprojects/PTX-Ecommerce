@@ -6,17 +6,28 @@ import "./Home.css";
 
 export default function Kids() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     axios
       .get("http://127.0.0.1:8000/api/EcommerceKid")
       .then((res) => {
         setProducts(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.error("Failed to fetch kids products:", err);
+        setLoading(false);
       });
   }, []);
+
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+        <h4>Loading...</h4>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -52,7 +63,7 @@ export default function Kids() {
                 </div>
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
-                  <p className="text-muted mb-1">${product.price} USD</p>
+                  <p className="text-muted mb-1">USD {product.price}</p>
                 </div>
               </div>
             </div>

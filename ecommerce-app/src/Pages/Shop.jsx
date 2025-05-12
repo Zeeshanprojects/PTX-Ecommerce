@@ -80,12 +80,19 @@ export default function Shop() {
     return product.category === activeCategory && matchesSearch;
   });
 
-  if (loading) {
-    return <div className="container-fluid mt-5">Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div className="container-fluid fw-bold text-center mt-5">Loading...</div>;
+  // }
 
-  if (error) {
-    return <div className="container-fluid mt-5">Error: {error}</div>;
+  // if (error) {
+  //   return <div className="container-fluid mt-5">Error: {error}</div>;
+  // }
+ if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+        <h4>Loading...</h4>
+      </div>
+    );
   }
 
   return (

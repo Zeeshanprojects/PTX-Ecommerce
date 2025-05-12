@@ -59,6 +59,28 @@ export default function Productinfo() {
     navigate("/Cart");
   };
 
+  const handleBuyNow = () => {
+    if (selectedSizes.length === 0) {
+      alert("Please select at least one size.");
+      console.log("No sizes selected");
+      return;
+    }
+
+    // Create an array of products for each selected size
+    const products = selectedSizes.map((size) => ({
+      id: `${id}-${size}`, // Unique ID per size
+      image,
+      title,
+      price: Number(price), // Ensure price is a number
+      category,
+      size,
+      quantity,
+    }));
+
+    // Navigate to Checkout with the selected products
+    navigate("/checkout", { state: { products } });
+  };
+
   return (
     <div className="container py-5">
       <div className="row align-items-center">
@@ -108,11 +130,12 @@ export default function Productinfo() {
           </div>
           <div className="container">
             <div className="row g-2">
-              <Link to="/checkout">
-                <button className="btn btn-success px-5 py-2 w-100">
-                  BUY NOW
-                </button>
-              </Link>
+              <button
+                onClick={handleBuyNow}
+                className="btn btn-success px-5 py-2 w-100"
+              >
+                BUY NOW
+              </button>
               <button
                 className="btn btn-dark px-5 py-2 w-100"
                 onClick={handleAddToCart}

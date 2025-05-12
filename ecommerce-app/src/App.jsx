@@ -18,6 +18,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import TShirt from "./Pages/T-Shirt";
 import Checkout from "./Pages/Checkout";
+import LookBook from "./Pages/LookBook";
 
 function App() {
   return (
@@ -36,11 +37,12 @@ function App() {
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/Signup" element={<Signup />} />
+          <Route path="/LookBook" element={<LookBook/>}/>
           <Route path="/productInfo" element={<Productinfo />} />
           <Route path="/TermsandConditions" element={<Termsandconditions />} />
           <Route path="/PrivacyandPolicy" element={<Privacyandpolicy />} />
         </Routes>
-        <Footer />
+       {location.pathname !== '/LookBook' && <Footer />}
       </Router>
     </>
   );

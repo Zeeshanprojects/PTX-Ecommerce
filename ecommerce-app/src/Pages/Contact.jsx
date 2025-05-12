@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Contact.css";
 
@@ -39,6 +39,14 @@ export default function Contact() {
     }
   };
 
+  // Auto-hide message after 5 seconds
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => setStatus(""), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   return (
     <div className="contact-wrapper py-5">
       <div className="container">
@@ -46,11 +54,6 @@ export default function Contact() {
           <div className="col-md-12 mb-4">
             <div className="contact-form card p-4 shadow h-100">
               <h2 className="text-center mb-4">CONTACT US</h2>
-              {status && (
-                <div className={`alert ${status.includes("successfully") ? "alert-success" : "alert-danger"}`}>
-                  {status}
-                </div>
-              )}
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label className="form-label">Name</label>
@@ -100,6 +103,13 @@ export default function Contact() {
                   Submit
                 </button>
               </form>
+
+              {/* Status Message Below the Form */}
+              {status && (
+                <div className={`alert mt-3 ${status.includes("successfully") ? "alert-success" : "alert-danger"}`}>
+                  {status}
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -91,13 +91,13 @@ export default function Checkout() {
                   </div>
                 </div>
                 <span className="text-muted">
-                  PKR {Number(item.price) * Number(item.quantity)}
+                  $ {Number(item.price) * Number(item.quantity)} USD
                 </span>
               </li>
             ))}
             <li className="list-group-item d-flex justify-content-between">
               <strong>Total</strong>
-              <strong>PKR {getTotal()}</strong>
+              <strong>${getTotal()} USD</strong>
             </li>
           </ul>
 

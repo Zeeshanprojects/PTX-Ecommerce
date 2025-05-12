@@ -52,8 +52,8 @@ export default function TShirt() {
                 </div>
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
-                  <p className="fw-semibold text-muted mb-1">
-                    USD {product.price}
+                  <p className="text-muted mb-1">
+                    ${product.price} USD
                   </p>
                 </div>
               </div>

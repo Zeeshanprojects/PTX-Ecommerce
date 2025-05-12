@@ -8,9 +8,10 @@ export default function Productinfo() {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
-  const [size, setSize] = useState("S"); // Default size
+  const [selectedSizes, setSelectedSizes] = useState([]); // Track multiple sizes
 
   if (!state) {
+    console.log("No state provided, redirecting to home");
     navigate("/");
     return null;
   }
@@ -22,21 +23,39 @@ export default function Productinfo() {
     if (quantity > 1) setQuantity((prev) => prev - 1);
   };
 
-  const handleSizeSelect = (selectedSize) => {
-    setSize(selectedSize); // Update size state when a size button is clicked
+  const handleSizeSelect = (sizeOption) => {
+    setSelectedSizes((prev) => {
+      const newSizes = prev.includes(sizeOption)
+        ? prev.filter((size) => size !== sizeOption)
+        : [...prev, sizeOption];
+      console.log("Selected sizes:", newSizes);
+      console.log("Button class for", sizeOption, ":", newSizes.includes(sizeOption) ? "btn-dark" : "btn-outline-dark");
+      return newSizes;
+    });
   };
 
   const handleAddToCart = () => {
-    const product = {
-      id,
-      image,
-      title,
-      price,
-      category,
-      size, // Use the selected size
-      quantity,
-    };
-    addToCart(product);
+    if (selectedSizes.length === 0) {
+      alert("Please select at least one size.");
+      console.log("No sizes selected");
+      return;
+    }
+
+    // Create a cart entry for each selected size
+    selectedSizes.forEach((size) => {
+      const product = {
+        id: `${id}-${size}`, // Unique ID per size
+        image,
+        title,
+        price: Number(price), // Ensure price is a number
+        category,
+        size,
+        quantity,
+      };
+      console.log("Adding to cart:", product);
+      addToCart(product);
+    });
+
     navigate("/Cart");
   };
 
@@ -50,7 +69,7 @@ export default function Productinfo() {
         </div>
         <div className="col-md-6">
           <h2 className="fw-bold">{title}</h2>
-          <h5 className="text-muted mb-3">USD {price}</h5>
+          <h5 className="text-muted mb-3">${price} USD</h5>
           <label className="me-3 fw-semibold">Sizes:</label>
           <div className="buttons mt-2 mb-3">
             {["S", "M", "L", "XL", "2XL"].map((sizeOption) => (
@@ -58,8 +77,8 @@ export default function Productinfo() {
                 key={sizeOption}
                 type="button"
                 className={`sizes btn ${
-                  size === sizeOption ? "btn-dark" : "btn-outline-dark"
-                }`}
+                  selectedSizes.includes(sizeOption) ? "btn-dark" : "btn-outline-dark"
+                } me-2`}
                 onClick={() => handleSizeSelect(sizeOption)}
               >
                 {sizeOption}
@@ -91,10 +110,9 @@ export default function Productinfo() {
             <div className="row g-2">
               <Link to="/checkout">
                 <button className="btn btn-success px-5 py-2 w-100">
-                BUY NOW
+                  BUY NOW
                 </button>
               </Link>
-
               <button
                 className="btn btn-dark px-5 py-2 w-100"
                 onClick={handleAddToCart}

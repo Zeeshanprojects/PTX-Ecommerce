@@ -28,6 +28,7 @@ export default function Cart() {
             <tr>
               <th scope="col">Product</th>
               <th scope="col">Title</th>
+              <th scope="col">Size</th>
               <th scope="col">Price</th>
               <th scope="col">Quantity</th>
               <th scope="col">Subtotal</th>
@@ -45,9 +46,10 @@ export default function Cart() {
                   />
                 </td>
                 <td>{item.title}</td>
-                <td>PKR {Number(item.price)}</td>
+                <td>{item.size}</td>
+                <td>USD {Number(item.price)}</td>
                 <td>{item.quantity}</td>
-                <td>PKR {Number(item.price) * Number(item.quantity)}</td>
+                <td>USD {Number(item.price) * Number(item.quantity)}</td>
                 <td>
                   <button
                     className="btn btn-danger btn-sm"
@@ -62,14 +64,13 @@ export default function Cart() {
         </table>
       </div>
       <div className="text-end">
-        <h4>Total: PKR {getTotal()}</h4>
+        <h4>Total: USD {getTotal()}$</h4>
         <Link to="/Shop">
-        <button className="btn btn-primary mt-3 me-2">Continue Shopping</button>
+          <button className="btn btn-primary mt-3 me-2">Continue Shopping</button>
         </Link>
         <Link to="/checkout">
-  <button className="btn btn-success mt-3">Proceed to Checkout</button>
-</Link>
-        
+          <button className="btn btn-success mt-3">Proceed to Checkout</button>
+        </Link>
       </div>
     </div>
   );

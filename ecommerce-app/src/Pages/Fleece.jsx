@@ -52,7 +52,7 @@ export default function Fleece() {
                 </div>
                 <div className="p-3">
                   <h6 className="mb-1">{product.title}</h6>
-                  <p className="text-muted mb-1">USD {product.price}</p>
+                  <p className="text-muted mb-1">${product.price} USD</p>
                 </div>
               </div>
             </div>

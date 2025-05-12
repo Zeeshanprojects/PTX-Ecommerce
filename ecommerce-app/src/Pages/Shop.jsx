@@ -220,7 +220,7 @@ export default function Shop() {
                         {product.category}
                       </p>
                       <p className="fw-semibold text-muted mb-2 catalog-title">
-                        PKR {product.price}
+                        USD {product.price}
                       </p>
                     </div>
                   </div>

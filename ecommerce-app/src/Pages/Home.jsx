@@ -12,38 +12,38 @@ const fadeInUp = {
 export default function Home() {
   const products = {
     Mens: [
-      { id: 1, name: "Yellow", price: "PKR 1,999", image: Image.image1 },
-      { id: 2, name: "Red", price: "PKR 2,299", image: Image.image2 },
+      { id: 1, name: "Yellow", price: "$ 5.00 USD", image: Image.image1 },
+      { id: 2, name: "Red", price: "$ 5 USD", image: Image.image2 },
       {
         id: 3,
         name: "Urban Black Shirt",
-        price: "PKR 2,799",
+        price: "$ 5 USD",
         image: Image.image3,
       },
       {
         id: 4,
         name: "Ocean Blue Tee",
-        price: "PKR 2,499",
+        price: "$ 5 USD",
         image: Image.image4,
       },
     ],
 
     Kids: [
-      { id: 10, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image10 },
-      { id: 11, name: "Cartoon Tee", price: "PKR 1,199", image: Image.image11 },
+      { id: 10, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image10 },
+      { id: 11, name: "Cartoon Tee", price: "$ 5 USD", image: Image.image11 },
       {
         id: 12,
         name: "Tiny Green Tee",
-        price: "PKR 1,299",
+        price: "$ 5 USD",
         image: Image.image12,
       },
-      { id: 13, name: "Red Kid Tee", price: "PKR 1,499", image: Image.image13 },
+      { id: 13, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image13 },
     ],
     Fleece: [
-      { id: 14, name: "Fleece One", price: "PKR 1299", image: Image.Fleece1 },
-      { id: 15, name: "Fleece Two", price: "PKR 1299", image: Image.Fleece2 },
-      { id: 16, name: "Fleece Three", price: "PKR 1299", image: Image.Fleece3 },
-      { id: 17, name: "Fleece Four", price: "PKR 1299", image: Image.Fleece4 },
+      { id: 14, name: "Fleece One", price: "$ 5 USD", image: Image.Fleece1 },
+      { id: 15, name: "Fleece Two", price: "$ 5 USD", image: Image.Fleece2 },
+      { id: 16, name: "Fleece Three", price: "$ 5 USD", image: Image.Fleece3 },
+      { id: 17, name: "Fleece Four", price: "$ 5 USD", image: Image.Fleece4 },
     ],
   };
 

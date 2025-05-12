@@ -1,48 +1,58 @@
-import React, { useState } from "react";
-import Image from "../Images/Image";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Shop.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-const dummyProducts = [
-  { id: 1, title: "T-Shirt1", category: "T-Shirt", price: 1299, image: Image.image1 },
-  { id: 2, title: "T-Shirt2", category: "T-Shirt", price: 1499, image: Image.image2 },
-  { id: 3, title: "T-Shirt3", category: "T-Shirt", price: 1799, image: Image.image3 },
-  { id: 4, title: "T-Shirt4", category: "T-Shirt", price: 1799, image: Image.image4 },
-  { id: 5, title: "T-Shirt5", category: "T-Shirt", price: 2199, image: Image.image5 },
-  { id: 6, title: "T-Shirt6", category: "T-Shirt", price: 1499, image: Image.image6 },
-  { id: 7, title: "T-Shirt7", category: "T-Shirt", price: 1799, image: Image.image7 },
-  { id: 8, title: "T-Shirt8", category: "T-Shirt", price: 1799, image: Image.image8 },
-  { id: 9, title: "T-Shirt9", category: "T-Shirt", price: 1350, image: Image.image9 },
-  { id: 10, title: "T-Shirt10", category: "Fleece", price: 1599, image: Image.Fleece1 },
-  { id: 11, title: "T-Shirt11", category: "Fleece", price: 1399, image: Image.Fleece2 },
-  { id: 12, title: "T-Shirt12", category: "Fleece", price: 1599, image: Image.Fleece3 },
-  { id: 13, title: "T-Shirt13", category: "Fleece", price: 1399, image: Image.Fleece4 },
-  { id: 14, title: "T-Shirt14", category: "Fleece", price: 1599, image: Image.Fleece5 },
-  { id: 15, title: "T-Shirt15", category: "Fleece", price: 1399, image: Image.Fleece6 },
-  { id: 16, title: "T-Shirt16", category: "Fleece", price: 1599, image: Image.Fleece5 },
-  { id: 17, title: "T-Shirt17", category: "Fleece", price: 1399, image: Image.Fleece6 },
-  { id: 18, title: "T-Shirt18", category: "Fleece", price: 1599, image: Image.Fleece7 },
-  { id: 19, title: "T-Shirt19", category: "Fleece", price: 1399, image: Image.Fleece8 },
-  { id: 20, title: "T-Shirt20", category: "Kids", price: 1999, image: Image.image10 },
-  { id: 21, title: "T-Shirt21", category: "Kids", price: 2299, image: Image.image11 },
-  { id: 22, title: "T-Shirt22", category: "Kids", price: 1599, image: Image.image12 },
-  { id: 23, title: "T-Shirt23", category: "Kids", price: 1999, image: Image.image13 },
-  { id: 24, title: "T-Shirt24", category: "Kids", price: 1399, image: Image.image14 },
-  { id: 25, title: "T-Shirt25", category: "Kids", price: 1599, image: Image.image15 },
-  { id: 26, title: "T-Shirt26", category: "Kids", price: 1299, image: Image.image16 },
-  { id: 27, title: "T-Shirt27", category: "Kids", price: 1899, image: Image.image17 },
-  { id: 28, title: "T-Shirt28", category: "Kids", price: 1199, image: Image.image18 },
-];
-
 export default function Shop() {
+  const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [checkedFilters, setCheckedFilters] = useState([]);
   const [activeCategory, setActiveCategory] = useState("T-Shirt");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const categories = ["T-Shirt", "Fleece", "Kids"];
+  const apiEndpoints = {
+    "T-Shirt": "http://127.0.0.1:8000/api/EcommerceTshirt",
+    "Fleece": "http://127.0.0.1:8000/api/EcommerceFleece",
+    "Kids": "http://127.0.0.1:8000/api/EcommerceKid",
+  };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        setLoading(true);
+        const allProducts = [];
+        let idCounter = 1;
+
+        for (const [category, url] of Object.entries(apiEndpoints)) {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`Failed to fetch ${category} products`);
+          }
+          const data = await response.json();
+          const categoryProducts = data.map((item) => ({
+            id: idCounter++,
+            title: item.title,
+            category,
+            price: parseFloat(item.price),
+            image: item.image,
+          }));
+          allProducts.push(...categoryProducts);
+        }
+
+        setProducts(allProducts);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleCheckboxChange = (category, name) => {
     const filterKey = `${category}-${name}`;
@@ -57,7 +67,7 @@ export default function Shop() {
     setActiveCategory(cat);
   };
 
-  const filteredProducts = dummyProducts.filter((product) => {
+  const filteredProducts = products.filter((product) => {
     const filterKey = `${product.category}-${product.title}`;
     const matchesSearch = product.title
       .toLowerCase()
@@ -70,8 +80,16 @@ export default function Shop() {
     return product.category === activeCategory && matchesSearch;
   });
 
+  if (loading) {
+    return <div className="container-fluid mt-5">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="container-fluid mt-5">Error: {error}</div>;
+  }
+
   return (
-    <div className="container-fluid mt-5">    
+    <div className="container-fluid mt-5">
       <div className="d-md-none mb-3">
         <button
           className="btn btn-outline-dark w-100"
@@ -85,7 +103,9 @@ export default function Shop() {
       <div className="row">
         {/* Sidebar */}
         <div
-          className={`col-md-3 mb-4 ${isSidebarOpen ? "d-block" : "d-none d-md-block"}`}
+          className={`col-md-3 mb-4 ${
+            isSidebarOpen ? "d-block" : "d-none d-md-block"
+          }`}
         >
           <div className="p-3 bg-light rounded shadow-sm">
             <h5 className="mb-3">Filters</h5>
@@ -98,7 +118,7 @@ export default function Shop() {
             />
             <div className="accordion" id="filterAccordion">
               {categories.map((cat) => {
-                const productsInCategory = dummyProducts.filter(
+                const productsInCategory = products.filter(
                   (p) => p.category === cat
                 );
                 const uniqueTitles = [
@@ -128,18 +148,20 @@ export default function Shop() {
                       }`}
                       data-bs-parent="#filterAccordion"
                     >
-                      <div className="accordion-body px-2 pt-2 ">
+                      <div className="accordion-body px-2 pt-2">
                         {uniqueTitles.map((title) => {
                           const filterKey = `${cat}-${title}`;
                           return (
                             <div key={filterKey}>
                               <div className="form-check">
                                 <input
-                                  className=" Historic check-input"
+                                  className="form-check-input"
                                   type="checkbox"
                                   id={filterKey}
                                   checked={checkedFilters.includes(filterKey)}
-                                  onChange={() => handleCheckboxChange(cat, title)}
+                                  onChange={() =>
+                                    handleCheckboxChange(cat, title)
+                                  }
                                 />
                                 <label
                                   className="form-check-label ms-3"
@@ -191,9 +213,15 @@ export default function Shop() {
                     </Link>
                     <hr />
                     <div className="card-body d-flex flex-column">
-                      <h6 className="card-title catalog-title">{product.title}</h6>
-                      <p className="text-muted small mb-1 catalog-title">{product.category}</p>
-                      <p className="fw-semibold text-muted mb-2 catalog-title">PKR {product.price}</p>
+                      <h6 className="card-title catalog-title">
+                        {product.title}
+                      </h6>
+                      <p className="text-muted small mb-1 catalog-title">
+                        {product.category}
+                      </p>
+                      <p className="fw-semibold text-muted mb-2 catalog-title">
+                        PKR {product.price}
+                      </p>
                     </div>
                   </div>
                 </div>

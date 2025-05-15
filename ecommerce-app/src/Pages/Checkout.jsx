@@ -59,14 +59,7 @@ export default function Checkout() {
                 required
               ></textarea>
             </div>
-            <div className="mb-3">
-              <label className="form-label">Payment Method</label>
-              <select className="form-select" required>
-                <option value="">Select a payment method</option>
-                <option value="cod">Cash on Delivery</option>
-                <option value="card">Credit/Debit Card</option>
-              </select>
-            </div>
+           
           </form>
         </div>
 

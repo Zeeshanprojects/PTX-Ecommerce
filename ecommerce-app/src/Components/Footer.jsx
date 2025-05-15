@@ -47,11 +47,6 @@ export default function Footer() {
                     </Link>
                   </p>
                   <p>
-                    <Link to="#!" className="text-dark">
-                      Shipping & Handling
-                    </Link>
-                  </p>
-                  <p>
                     <Link to="/TermsandConditions" className="text-dark">
                       Terms & Condition
                     </Link>

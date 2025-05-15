@@ -112,7 +112,7 @@ export default function Home() {
           {[
             { label: "T-SHIRTS", image: Image.bestselling1 },
             { label: "FLEECE", image: Image.fleece },
-            { label: "HOODIES", image: Image.hoddies },
+
             { label: "KIDS", image: Image.junior },
           ].map((item, index) => (
             <motion.div

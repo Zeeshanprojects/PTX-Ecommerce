@@ -34,26 +34,28 @@ export default function Checkout() {
   };
 
   // Step 3: Submit the form
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await axios.post("http://127.0.0.1:8000/api/EcommerceCheckout", formData);
-    if (response.status === 201) {
-      setSuccessMessage("Order placed successfully!");
-      setFormData({ name: "", email: "", phone: "", address: "" });
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/EcommerceCheckout",
+        formData
+      );
+      if (response.status === 201) {
+        setSuccessMessage("Order placed successfully!");
+        setFormData({ name: "", email: "", phone: "", address: "" });
 
-      // Automatically clear the message after 2 seconds
-      setTimeout(() => {
-        setSuccessMessage("");
-      }, 2000);
+        // Automatically clear the message after 2 seconds
+        setTimeout(() => {
+          setSuccessMessage("");
+        }, 2000);
+      }
+    } catch (error) {
+      console.error("Error placing order:", error);
+      alert("Something went wrong. Please try again.");
     }
-  } catch (error) {
-    console.error("Error placing order:", error);
-    alert("Something went wrong. Please try again.");
-  }
-};
-
+  };
 
   return (
     <div className="container py-5">

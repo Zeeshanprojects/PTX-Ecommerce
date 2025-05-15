@@ -119,7 +119,7 @@ export default function Checkout() {
         </div>
 
         {/* Order Summary */}
-        <div className="col-md-6">
+        <div className="col-md-6 mt-5">
           <h4>Order Summary</h4>
           <ul className="list-group mb-3">
             {products.map((item) => (

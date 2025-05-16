@@ -29,7 +29,12 @@ export default function Productinfo() {
         ? prev.filter((size) => size !== sizeOption)
         : [...prev, sizeOption];
       console.log("Selected sizes:", newSizes);
-      console.log("Button class for", sizeOption, ":", newSizes.includes(sizeOption) ? "btn-dark" : "btn-outline-dark");
+      console.log(
+        "Button class for",
+        sizeOption,
+        ":",
+        newSizes.includes(sizeOption) ? "btn-dark" : "btn-outline-dark"
+      );
       return newSizes;
     });
   };
@@ -92,29 +97,31 @@ export default function Productinfo() {
         <div className="col-md-6">
           <h2 className="fw-bold">{title}</h2>
           <h5 className="text-muted mb-3">${price} USD</h5>
-         <label className="me-3 fw-semibold">Sizes:</label>
-<div className="buttons mt-2 mb-2">
-  {["S", "M", "L", "XL", "2XL"].map((sizeOption) => (
-    <button
-      key={sizeOption}
-      type="button"
-      className={`sizes btn ${
-        selectedSizes.includes(sizeOption) ? "btn-dark" : "btn-outline-dark"
-      } me-2`}
-      onClick={() => handleSizeSelect(sizeOption)}
-    >
-      {sizeOption}
-    </button>
-  ))}
-</div>
+          <label className="me-3 fw-semibold">Sizes:</label>
+          <div className="buttons mt-2 mb-2">
+            {["S", "M", "L", "XL", "2XL"].map((sizeOption) => (
+              <button
+                key={sizeOption}
+                type="button"
+                className={`sizes btn ${
+                  selectedSizes.includes(sizeOption)
+                    ? "btn-dark"
+                    : "btn-outline-dark"
+                } me-2`}
+                onClick={() => handleSizeSelect(sizeOption)}
+              >
+                {sizeOption}
+              </button>
+            ))}
+          </div>
 
-{/* Show selected sizes as text */}
-{selectedSizes.length > 0 && (
-  <div className="mb-3 text-success">
-    Selected size{selectedSizes.length > 1 ? "s" : ""}:{" "}
-    {selectedSizes.join(", ")}
-  </div>
-)}
+          {/* Show selected sizes as text */}
+          {selectedSizes.length > 0 && (
+            <div className="mb-3 text-success">
+              Selected size{selectedSizes.length > 1 ? "s" : ""}:{" "}
+              {selectedSizes.join(", ")}
+            </div>
+          )}
 
           <p className="mb-2">
             This premium cotton t-shirt offers comfort and elegance for everyday

@@ -25,9 +25,7 @@ export default function Footer() {
                     }}
                   />
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                  Trusted by industry leaders for quality, reliability, and fast delivery.
                   </p>
                 </div>
 

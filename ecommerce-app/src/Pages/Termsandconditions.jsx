@@ -2,7 +2,9 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 export default function Termsandconditions() {
 
-
+useEffect(()=>{
+  document.title="Terms and Condition | Pakistan textile Exchange"
+})
   return (
    <>
 

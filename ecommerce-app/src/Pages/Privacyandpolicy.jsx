@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Privacyandpolicy() {
+  useEffect(()=>{
+    document.title="Privacy and Policy |Pakistan Textile Exchange"
+  })
   return (
 <>
 <div className="container my-5">

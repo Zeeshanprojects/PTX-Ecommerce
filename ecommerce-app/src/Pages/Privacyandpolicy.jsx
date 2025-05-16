@@ -69,7 +69,7 @@ export default function Privacyandpolicy() {
         This Privacy Policy may be updated occasionally to reflect changes in legal or business practices. We encourage users to review it regularly.
       </p>
 
-      <p className="mt-4">Last updated: May 6, 2025</p>
+      <p className="mt-4">Last updated: May 16, 2025</p>
     </div>
 </>
   )

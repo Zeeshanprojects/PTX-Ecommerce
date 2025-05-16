@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../Images/Image";
 import "./Home.css";
 import { motion } from "framer-motion";
@@ -10,6 +10,10 @@ const fadeInUp = {
 };
 
 export default function Home() {
+useEffect(()=>{
+  document.title="Home | Pakistan Textile Exchange";
+})
+
   const products = {
     Mens: [
       { id: 1, name: "Yellow", price: "$ 5.00 USD", image: Image.image1 },

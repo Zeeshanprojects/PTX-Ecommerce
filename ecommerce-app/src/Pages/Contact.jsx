@@ -3,6 +3,9 @@ import axios from "axios";
 import "./Contact.css";
 
 export default function Contact() {
+  useEffect(()=>{
+    document.title="Cart"
+  })
   const [formData, setFormData] = useState({
     name: "",
     email: "",

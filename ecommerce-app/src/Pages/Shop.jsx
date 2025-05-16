@@ -5,6 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function Shop() {
+useEffect(()=>{
+  document.title="Catalog | Pakistan Textile Exchange"
+});
+
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [checkedFilters, setCheckedFilters] = useState([]);
@@ -16,8 +20,8 @@ export default function Shop() {
   const categories = ["T-Shirt", "Fleece", "Kids"];
   const apiEndpoints = {
     "T-Shirt": "http://127.0.0.1:8000/api/EcommerceTshirt",
-    "Fleece": "http://127.0.0.1:8000/api/EcommerceFleece",
-    "Kids": "http://127.0.0.1:8000/api/EcommerceKid",
+    Fleece: "http://127.0.0.1:8000/api/EcommerceFleece",
+    Kids: "http://127.0.0.1:8000/api/EcommerceKid",
   };
 
   useEffect(() => {
@@ -80,16 +84,12 @@ export default function Shop() {
     return product.category === activeCategory && matchesSearch;
   });
 
-  // if (loading) {
-  //   return <div className="container-fluid fw-bold text-center mt-5">Loading...</div>;
-  // }
-
-  // if (error) {
-  //   return <div className="container-fluid mt-5">Error: {error}</div>;
-  // }
- if (loading) {
+  if (loading) {
     return (
-      <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "50vh" }}
+      >
         <h4>Loading...</h4>
       </div>
     );
@@ -143,7 +143,9 @@ export default function Shop() {
                         onClick={() => handleCategoryClick(cat)}
                         data-bs-toggle="collapse"
                         data-bs-target={`#collapse${cat}`}
-                        aria-expanded={activeCategory === cat ? "true" : "false"}
+                        aria-expanded={
+                          activeCategory === cat ? "true" : "false"
+                        }
                       >
                         {cat}
                       </button>

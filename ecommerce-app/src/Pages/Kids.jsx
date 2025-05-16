@@ -5,6 +5,9 @@ import Image from "../Images/Image";
 import "./Home.css";
 
 export default function Kids() {
+  useEffect(()=>{
+    document.title="Kids | Pakistan Textile Exchange"
+  });
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
 

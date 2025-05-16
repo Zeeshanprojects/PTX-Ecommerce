@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Login.css"; // Use same styles as Contact.css or adjust slightly
 import { Link } from "react-router-dom";
 export default function Login() {
+  useEffect(()=>{
+    document.title="Signin | Pakistan Textile Exchange"
+  });
   return (
     <div className="login-wrapper py-5">
       <div className="container d-flex justify-content-center align-items-center">

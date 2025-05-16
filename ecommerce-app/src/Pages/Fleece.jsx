@@ -5,6 +5,9 @@ import Image from "../Images/Image";
 import "./Home.css";
 
 export default function Fleece() {
+  useEffect(()=>{
+    document.title="Fleece | Pakistan Textile Exchange"
+  })
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // loading state
 

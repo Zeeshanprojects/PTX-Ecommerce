@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 
 export default function LookBook() {
+  useEffect(()=>{
+    document.title="LookBook | Pakstan Textile Exchange"
+  });
   return (
     <>
       <div style={{ height: "calc(100vh - 70px)" }}>

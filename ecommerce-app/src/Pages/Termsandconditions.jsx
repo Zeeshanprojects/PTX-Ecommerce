@@ -1,6 +1,8 @@
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 export default function Termsandconditions() {
+
+
   return (
    <>
 
@@ -62,7 +64,7 @@ export default function Termsandconditions() {
 
       <h3>8. Privacy</h3>
       <p>
-        We value your privacy. Please refer to our <a href="/privacy">Privacy Policy</a> for details on how we
+        We value your privacy. Please refer to our <Link to="/PrivacyandPolicy">Privacy Policy</Link> for details on how we
         collect and handle your data.
       </p>
 

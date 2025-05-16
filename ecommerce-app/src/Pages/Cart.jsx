@@ -1,8 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { CartContext } from "../Components/CartContext.jsx";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
+  useEffect(()=>{
+    document.title="Cart | Pakistan Textile Exchange"
+  });
   const { cart, removeFromCart } = useContext(CartContext);
 
   const getTotal = () =>

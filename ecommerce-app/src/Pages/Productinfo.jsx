@@ -1,9 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { CartContext } from "../Components/CartContext.jsx";
 import "./Productinfo.css";
 
 export default function Productinfo() {
+  useEffect(()=>{
+    document.title="ProductInformaiton | Paksitan Textile Exchange"
+  });
   const { state } = useLocation();
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);

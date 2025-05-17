@@ -114,31 +114,37 @@ export default function Home() {
       </div>
 
       <div className="space"></div>
-      <div className="container-fluid">
-        <h2 className="text-center">POPULAR CATEGORIES</h2>
-        <div className="space"></div>
-        <div className="row justify-content-center text-center">
-          {[
-            { label: "T-SHIRTS", image: Image.bestselling1 },
-            { label: "FLEECE", image: Image.fleece },
-            { label: "KIDS", image: Image.junior },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              className="col-6 col-sm-4 col-md-2 mb-4"
-              variants={fadeInUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-            >
-              <div className="text-center">
-                <img src={item.image} alt={item.label} className="img-fluid category-img" />
-                <p className="mt-2">{item.label}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+     <motion.div
+      className="container-fluid"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+    >
+      <h2 className="text-center">POPULAR CATEGORIES</h2>
+      <div className="space"></div>
+      <div className="row justify-content-center text-center">
+        {[
+          { label: "T-SHIRTS", image: Image.bestselling1 },
+          { label: "FLEECE", image: Image.fleece },
+          { label: "KIDS", image: Image.junior },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className="col-6 col-sm-4 col-md-2 mb-4"
+            variants={fadeInUp}
+          >
+            <div className="text-center">
+              <img
+                src={item.image}
+                alt={item.label}
+                className="img-fluid category-img"
+              />
+              <p className="mt-2">{item.label}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
+    </motion.div>
 
       <br />
       <h2 className="text-center">BEST SELLINGS</h2>

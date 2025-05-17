@@ -7,7 +7,14 @@ import axios from "axios"; // ✅ Import axios
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 1.2, // 👈 Try 1.2 seconds for a smoother feel
+      ease: "easeOut" // 👈 Optional, makes it even smoother
+    } 
+  },
 };
 
 export default function Home() {

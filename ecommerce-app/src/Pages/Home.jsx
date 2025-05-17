@@ -3,6 +3,7 @@ import Image from "../Images/Image";
 import "./Home.css";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import axios from "axios"; // ✅ Import axios
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -17,14 +18,22 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscription = (e) => {
+  const handleSubscription = async (e) => {
     e.preventDefault();
     if (email.trim()) {
-      // Simulate API call
-      setTimeout(() => {
-        setSubscribed(true);
-        setEmail("");
-      }, 1000);
+      try {
+        const response = await axios.post(
+          "http://127.0.0.1:8000/api/EcommerceNews",
+          { email }
+        );
+        if (response.status === 200 || response.status === 201) {
+          setSubscribed(true);
+          setEmail("");
+          setTimeout(() => setSubscribed(false), 5000);
+        }
+      } catch (error) {
+        console.error("Subscription failed:", error);
+      }
     }
   };
 
@@ -32,18 +41,8 @@ export default function Home() {
     Mens: [
       { id: 1, name: "Yellow", price: "$ 5.00 USD", image: Image.image1 },
       { id: 2, name: "Red", price: "$ 5 USD", image: Image.image2 },
-      {
-        id: 3,
-        name: "Urban Black Shirt",
-        price: "$ 5 USD",
-        image: Image.image3,
-      },
-      {
-        id: 4,
-        name: "Ocean Blue Tee",
-        price: "$ 5 USD",
-        image: Image.image4,
-      },
+      { id: 3, name: "Urban Black Shirt", price: "$ 5 USD", image: Image.image3 },
+      { id: 4, name: "Ocean Blue Tee", price: "$ 5 USD", image: Image.image4 },
     ],
     Kids: [
       { id: 10, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image10 },
@@ -72,9 +71,7 @@ export default function Home() {
         {items.map((product) => (
           <div className="col-sm-12 col-md-6 col-lg-3" key={product.id}>
             <div className="product-card position-relative overflow-hidden rounded shadow-sm">
-              <span className="new-badge position-absolute top-0 start-0 m-2">
-                NEW
-              </span>
+              <span className="new-badge position-absolute top-0 start-0 m-2">NEW</span>
               <div className="product-img-container position-relative">
                 <img
                   src={product.image}
@@ -92,9 +89,7 @@ export default function Home() {
       </div>
       <div className="text-center mt-4">
         <Link to={route}>
-          <button className="btn btn-outline-dark ps-5 pe-5 ">
-            View All Collection
-          </button>
+          <button className="btn btn-outline-dark ps-5 pe-5">View All Collection</button>
         </Link>
       </div>
     </motion.div>
@@ -106,12 +101,7 @@ export default function Home() {
         <img src={Image.banner} alt="slider-image1" className="sliderimage" />
         <div className="imagetext">
           <Link to="/Shop">
-            <button
-              type="button"
-              className="btn btn-outline-light mt-4 ps-5 pe-5 main-btn"
-            >
-              SHOP NOW
-            </button>
+            <button className="btn btn-outline-light mt-4 ps-5 pe-5 main-btn">SHOP NOW</button>
           </Link>
         </div>
       </div>
@@ -135,11 +125,7 @@ export default function Home() {
               viewport={{ once: true, amount: 0.5 }}
             >
               <div className="text-center">
-                <img
-                  src={item.image}
-                  alt={item.label}
-                  className="img-fluid category-img"
-                />
+                <img src={item.image} alt={item.label} className="img-fluid category-img" />
                 <p className="mt-2">{item.label}</p>
               </div>
             </motion.div>
@@ -153,16 +139,7 @@ export default function Home() {
 
       <div className="container-fluid p-0">
         <div className="row gx-1 gy-1">
-          {[
-            Image.bestselling1,
-            Image.bestselling2,
-            Image.bestselling3,
-            Image.bestselling4,
-            Image.bestselling6,
-            Image.bestselling7,
-            Image.bestselling8,
-            Image.bestselling9,
-          ].map((imgSrc, idx) => (
+          {[Image.bestselling1, Image.bestselling2, Image.bestselling3, Image.bestselling4, Image.bestselling6, Image.bestselling7, Image.bestselling8, Image.bestselling9].map((imgSrc, idx) => (
             <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
               <motion.div
                 className="position-relative"
@@ -171,30 +148,16 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <span className="badge bg-danger position-absolute top-0 end-0 m-2">
-                  SALE
-                </span>
-                <img
-                  src={imgSrc}
-                  alt="bestselling"
-                  className="best-selling img-fluid"
-                />
+                <span className="badge bg-danger position-absolute top-0 end-0 m-2">SALE</span>
+                <img src={imgSrc} alt="bestselling" className="best-selling img-fluid" />
               </motion.div>
             </div>
           ))}
         </div>
       </div>
 
-      <motion.div
-        className="text-center mt-5"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h2 className="uppercase">
-          CURATED ESSENTIALS FOR A TIMELESS WARDROBE
-        </h2>
+      <motion.div className="text-center mt-5" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+        <h2 className="uppercase">CURATED ESSENTIALS FOR A TIMELESS WARDROBE</h2>
         <p>Complement your everyday style with timeless essential items</p>
       </motion.div>
 
@@ -202,115 +165,61 @@ export default function Home() {
       {renderProductSection("Kids", products.Kids, "/Kid")}
       {renderProductSection("Fleece", products.Fleece, "/Fleece")}
 
-      <motion.div
-        className="container-fluid p-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      <motion.div className="container-fluid p-0" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
         <img src={Image.Fashion_Banner} alt="banner" className="banner" />
       </motion.div>
 
       <div className="space"></div>
 
-      <motion.div
-        className="container"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
+      <motion.div className="container" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
         <div className="row text-center">
           {[Image.icon1, Image.icon2, Image.icon3].map((icon, i) => (
             <div key={i} className="col-sm-4 col-lg-4 col-xl-4">
               <div className="info-box">
                 <img src={icon} alt="icons" className="info-icon" />
-                <h5>
-                  {
-                    ["SUPPORT 24/7", "TRACK YOUR ORDER", "RETURN & EXCHANGES"][
-                    i
-                    ]
-                  }
-                </h5>
-                <p>
-                  {
-                    [
-                      "Contact us 24 hours a day, 7 days a week",
-                      "Click for the quick update on your order",
-                      "Please view the return and exchange policy",
-                    ][i]
-                  }
-                </p>
+                <h5>{["SUPPORT 24/7", "TRACK YOUR ORDER", "RETURN & EXCHANGES"][i]}</h5>
+                <p>{["Contact us 24 hours a day, 7 days a week", "Click for the quick update on your order", "Please view the return and exchange policy"][i]}</p>
               </div>
             </div>
           ))}
         </div>
       </motion.div>
 
-     {/* Newsletter Section */}
-<div className="container-fluid py-5" style={{ backgroundColor: "#000000" }}>
-  <div className="row justify-content-center">
-    <div className="col-md-8 col-lg-6">
-      <div className="text-center">
-        <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
-        <p className="mb-4 text-white">
-          Stay updated with the latest trends, offers, and news. Sign up
-          for our newsletter!
-        </p>
+      {/* ✅ Newsletter Section (Corrected) */}
+      <div className="container-fluid py-5" style={{ backgroundColor: "#000000" }}>
+        <div className="row justify-content-center">
+          <div className="col-md-8 col-lg-6">
+            <div className="text-center">
+              <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
+              <p className="mb-4 text-white">
+                Stay updated with the latest trends, offers, and news. Sign up for our newsletter!
+              </p>
 
-        <form
-          onSubmit={async (e) => {
-            e.preventDefault();
-            if (email.trim()) {
-              try {
-                const response = await axios.post(
-                  "http://127.0.0.1:8000/api/EcommerceNewsLetterSubscription",
-                  { email }
-                );
-                if (response.status === 200 || response.status === 201) {
-                  setSubscribed(true);
-                  setEmail("");
+              <form onSubmit={handleSubscription}>
+                <div className="input-group mb-3">
+                  <input
+                    type="email"
+                    className="form-control bg-transparent text-white border-white"
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <button className="btn btn-light px-4" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
 
-                  // Hide message after 5 seconds
-                  setTimeout(() => setSubscribed(false), 5000);
-                }
-              } catch (error) {
-                console.error("Subscription failed:", error);
-              }
-            }
-          }}
-        >
-          <div className="input-group mb-3">
-            <input
-              type="email"
-              className="form-control bg-transparent text-white border-white"
-              placeholder="Enter your email"
-              aria-label="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button
-              className="btn btn-outline-light"
-              type="submit"
-              id="subscribe-button"
-            >
-              Subscribe
-            </button>
+              {subscribed && (
+                <div className="alert alert-success mt-3">
+                  Thank you for subscribing!
+                </div>
+              )}
+            </div>
           </div>
-        </form>
-
-        {subscribed && (
-          <div className="text-success fw-bold mt-2">
-            ✅ You have successfully subscribed to our newsletter!
-          </div>
-        )}
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "../Images/Image";
 import "./Home.css";
 import { motion } from "framer-motion";
@@ -10,9 +10,23 @@ const fadeInUp = {
 };
 
 export default function Home() {
-useEffect(()=>{
-  document.title="Home | Pakistan Textile Exchange";
-})
+  useEffect(() => {
+    document.title = "Home | Pakistan Textile Exchange";
+  }, []);
+
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscription = (e) => {
+    e.preventDefault();
+    if (email.trim()) {
+      // Simulate API call
+      setTimeout(() => {
+        setSubscribed(true);
+        setEmail("");
+      }, 1000);
+    }
+  };
 
   const products = {
     Mens: [
@@ -31,16 +45,10 @@ useEffect(()=>{
         image: Image.image4,
       },
     ],
-
     Kids: [
       { id: 10, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image10 },
       { id: 11, name: "Cartoon Tee", price: "$ 5 USD", image: Image.image11 },
-      {
-        id: 12,
-        name: "Tiny Green Tee",
-        price: "$ 5 USD",
-        image: Image.image12,
-      },
+      { id: 12, name: "Tiny Green Tee", price: "$ 5 USD", image: Image.image12 },
       { id: 13, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image13 },
     ],
     Fleece: [
@@ -116,7 +124,6 @@ useEffect(()=>{
           {[
             { label: "T-SHIRTS", image: Image.bestselling1 },
             { label: "FLEECE", image: Image.fleece },
-
             { label: "KIDS", image: Image.junior },
           ].map((item, index) => (
             <motion.div
@@ -222,7 +229,7 @@ useEffect(()=>{
                 <h5>
                   {
                     ["SUPPORT 24/7", "TRACK YOUR ORDER", "RETURN & EXCHANGES"][
-                      i
+                    i
                     ]
                   }
                 </h5>
@@ -240,42 +247,70 @@ useEffect(()=>{
           ))}
         </div>
       </motion.div>
-      <div
-        className="container-fluid py-5"
-        style={{ backgroundColor: "#000000" }}
-      >
-        <div className="row justify-content-center">
-          <div className="col-md-8 col-lg-6">
-            <div className="text-center">
-              <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
-              <p className="mb-4 text-white">
-                Stay updated with the latest trends, offers, and news. Sign up
-                for our newsletter!
-              </p>
 
-              <form>
-                <div className="input-group mb-3">
-                  <input
-                    type="email"
-                    className="form-control bg-transparent text-white border-white"
-                    placeholder="Enter your email"
-                    aria-label="Email address"
-                    aria-describedby="subscribe-button"
-                    required
-                  />
-                  <button
-                    className="btn btn-outline-light"
-                    type="submit"
-                    id="subscribe-button"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-            </div>
+     {/* Newsletter Section */}
+<div className="container-fluid py-5" style={{ backgroundColor: "#000000" }}>
+  <div className="row justify-content-center">
+    <div className="col-md-8 col-lg-6">
+      <div className="text-center">
+        <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
+        <p className="mb-4 text-white">
+          Stay updated with the latest trends, offers, and news. Sign up
+          for our newsletter!
+        </p>
+
+        <form
+          onSubmit={async (e) => {
+            e.preventDefault();
+            if (email.trim()) {
+              try {
+                const response = await axios.post(
+                  "http://127.0.0.1:8000/api/EcommerceNewsLetterSubscription",
+                  { email }
+                );
+                if (response.status === 200 || response.status === 201) {
+                  setSubscribed(true);
+                  setEmail("");
+
+                  // Hide message after 5 seconds
+                  setTimeout(() => setSubscribed(false), 5000);
+                }
+              } catch (error) {
+                console.error("Subscription failed:", error);
+              }
+            }
+          }}
+        >
+          <div className="input-group mb-3">
+            <input
+              type="email"
+              className="form-control bg-transparent text-white border-white"
+              placeholder="Enter your email"
+              aria-label="Email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button
+              className="btn btn-outline-light"
+              type="submit"
+              id="subscribe-button"
+            >
+              Subscribe
+            </button>
           </div>
-        </div>
+        </form>
+
+        {subscribed && (
+          <div className="text-success fw-bold mt-2">
+            ✅ You have successfully subscribed to our newsletter!
+          </div>
+        )}
       </div>
+    </div>
+  </div>
+</div>
+
     </>
   );
 }

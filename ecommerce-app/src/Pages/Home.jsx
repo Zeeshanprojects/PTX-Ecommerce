@@ -46,12 +46,7 @@ export default function Home() {
 
   const products = {
     Mens: [
-      {
-        id: 1,
-        name: "PT-5000-Green",
-        price: "$ 5.00 USD",
-        image: Image.image1,
-      },
+      { id: 1, name: "PT-5000-Green",price: "$ 5.00 USD",image: Image.image1,},
       { id: 2, name: "Pt-5000-Yellow", price: "$ 5 USD", image: Image.image2 },
       { id: 3, name: "PT-5000-Red", price: "$ 5 USD", image: Image.image3 },
       { id: 4, name: "PT-5000-Blue", price: "$ 5 USD", image: Image.image4 },
@@ -59,30 +54,20 @@ export default function Home() {
       { id: 6, name: "PT-5000-Gray", price: "$ 5 USD", image: Image.image6 },
     ],
     Kids: [
-      { id: 10, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image10 },
-      { id: 11, name: "Cartoon Tee", price: "$ 5 USD", image: Image.image11 },
-      {
-        id: 12,
-        name: "Tiny Green Tee",
-        price: "$ 5 USD",
-        image: Image.image12,
-      },
-      { id: 13, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image13 },
-      {
-        id: 14,
-        name: "Tiny Green Tee",
-        price: "$ 5 USD",
-        image: Image.image14,
-      },
-      { id: 15, name: "Red Kid Tee", price: "$ 5 USD", image: Image.image15 },
+      { id: 10, name: "W-2050-Gray", price: "$ 5 USD", image: Image.image10 },
+      { id: 11, name: "W-2050-Pink", price: "$ 5 USD", image: Image.image11 },
+      { id: 12, name: "W-2050-Black",price: "$ 5 USD", image: Image.image12},
+      { id: 13, name: "W-2050-Yellow", price: "$ 5 USD", image: Image.image13 },
+      {id: 14, name: "W-2050-Red", price: "$ 5 USD",image: Image.image14, },
+      { id: 15, name: "W-2050-Green", price: "$ 5 USD", image: Image.image15 },
     ],
     Fleece: [
-      { id: 16, name: "Fleece One", price: "$ 5 USD", image: Image.Fleece1 },
-      { id: 17, name: "Fleece Two", price: "$ 5 USD", image: Image.Fleece2 },
-      { id: 18, name: "Fleece Three", price: "$ 5 USD", image: Image.Fleece3 },
-      { id: 19, name: "Fleece Four", price: "$ 5 USD", image: Image.Fleece4 },
-      { id: 20, name: "Fleece Three", price: "$ 5 USD", image: Image.Fleece5 },
-      { id: 21, name: "Fleece Four", price: "$ 5 USD", image: Image.Fleece6 },
+      { id: 16, name: "PT-18000-Brown", price: "$ 5 USD", image: Image.Fleece1 },
+      { id: 17, name: "PT-18000-L-Brown", price: "$ 5 USD", image: Image.Fleece2 },
+      { id: 18, name: "PT-18000-Gray", price: "$ 5 USD", image: Image.Fleece3 },
+      { id: 19, name: "PT-18000-Blue", price: "$ 5 USD", image: Image.Fleece4 },
+      { id: 20, name: "PT-18000-Red", price: "$ 5 USD", image: Image.Fleece5 },
+      { id: 21, name: "PT-18000-Purple", price: "$ 5 USD", image: Image.Fleece6 },
     ],
   };
 

@@ -180,10 +180,13 @@
     text-align: center;
   }
 
-  .btn {
-    height: 40px;
-    font-size: 14px;
-    padding: 10px !important;
+  .main-btn {
+    height: 30px;
+    font-size: 10px;
+    margin-left: 0 !important;
+   width: 100px !important;
+   padding: 0 !important;
+
   }
 
   .banner {

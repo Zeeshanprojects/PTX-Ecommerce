@@ -114,6 +114,7 @@ export default function Home() {
 
   return (
     <>
+ 
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="sliderimage" />
         <div className="imagetext">
@@ -162,19 +163,16 @@ export default function Home() {
       <h2 className="text-center">BEST SELLINGS</h2>
       <div className="space"></div>
 
-      <div className="container-fluid p-0">
+      <div className="container-fluid  p-0">
         <div className="row gx-1 gy-1">
           {[
             Image.bestselling1,
             Image.bestselling2,
             Image.bestselling3,
             Image.bestselling4,
-            Image.bestselling6,
-            Image.bestselling7,
-            Image.bestselling8,
-            Image.bestselling9,
+           
           ].map((imgSrc, idx) => (
-            <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
+            <div key={idx} className="col-sm-12 col-md-6 col-lg-3 ">
               <motion.div
                 className="position-relative"
                 variants={fadeInUp}

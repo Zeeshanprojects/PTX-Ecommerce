@@ -19,7 +19,7 @@ const Image = {
   image16: new URL("./16.webp", import.meta.url).href,
   image17: new URL("./17.webp", import.meta.url).href,
   image18: new URL("./18.webp", import.meta.url).href,
-  image19: new URL("./19.webp", import.meta.url).href,
+  image1n9: new URL("./19.webp", import.meta.url).href,
   Fleece1: new URL("./F1.webp", import.meta.url).href,
   Fleece2: new URL("./F2.webp", import.meta.url).href,
   Fleece3: new URL("./F3.webp", import.meta.url).href,

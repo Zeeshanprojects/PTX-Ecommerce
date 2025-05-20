@@ -35,7 +35,7 @@ const Image = {
   product1: new URL("./latestproduct1.jpg", import.meta.url).href,
   product2: new URL("./latestproduct2.jpg", import.meta.url).href,
   product3: new URL("./latestproduct3.jpg", import.meta.url).href,
-  Fashion_Banner: new URL("./Fashion banner.webp", import.meta.url).href,
+  Fashion_Banner: new URL("./Banner-image.webp", import.meta.url).href,
   icon1: new URL("./24-hours.webp", import.meta.url),
   icon2: new URL("./delivery-truck.webp", import.meta.url),
   icon3: new URL("./return-box.webp", import.meta.url),

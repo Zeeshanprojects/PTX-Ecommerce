@@ -127,7 +127,7 @@ export default function Home() {
       </div>
 
       <div className="space"></div>
-      <motion.div
+      {/* <motion.div
         className="container-fluid"
         initial="hidden"
         whileInView="visible"
@@ -157,8 +157,21 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </motion.div> */}
+<div className="container-fluid">
+  <div className="row">
+    <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+      <h3>Dress Sharp,
+Live Smart</h3>
+    </div>
+     <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
+      <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
+       <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
+        <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
+         <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
 
+  </div>
+</div>
       <br />
       <h2 className="text-center">BEST SELLINGS</h2>
       <div className="space"></div>

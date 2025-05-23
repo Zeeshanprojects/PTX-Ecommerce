@@ -243,7 +243,7 @@ export default function Home() {
       variants={containerVariant}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <div className="space"></div>
 

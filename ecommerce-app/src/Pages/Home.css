@@ -20,30 +20,20 @@
 .btn {
   height: 50px;
 }
-/* .category-img {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-.category-img {
-  transition: transform 0.3s ease-in-out;
-}
-.category-img:hover {
-  transform: scale(1.1);
-} */
- .categoryicons{
-  height: 30px;
-  width: 30px;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
+ .category_mainheading{
+  font-size: 24px;
+  font-weight: bolder;
  }
  .category_heading{
   font-size: 14px !important;
   font-weight: bold;
+  text-align: center;
  }
+ .icon-wrapper {
+  height: 30px; /* Or whatever size you need */
+  width: 30px;
+
+}
  .category_font{
   font-size: 12px !important;
  }
@@ -150,22 +140,22 @@
 }
 
 @media (min-width:768px) and (max-width:991px) {
-  
+  .category_mainheading{
+    text-align: center !important;
+  }
 .main-btn{
    margin-left: 70px !important;
   }
-  .category-img {
-    height: 150px;
-    width: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-  } 
   .banner {
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
  }
 @media (min-width:576px) and (max-width:767px) {
+   .category_mainheading{
+    text-align: center !important;
+    margin-bottom: 50px;
+  }
    .sizes {
   height: 50px !important;
   width: 50px !important;
@@ -180,7 +170,6 @@
 }
 }
 @media (max-width: 576px) {
- 
   .sizes {
   height: 50px !important;
   width: 50px !important;

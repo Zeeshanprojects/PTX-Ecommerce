@@ -30,9 +30,12 @@
   text-align: center;
  }
  .icon-wrapper {
-  height: 30px; /* Or whatever size you need */
+  height: 50px; 
   width: 30px;
-
+}
+.icon-wrapper img{
+  height: 35px;
+  width: 35px;
 }
  .category_font{
   font-size: 12px !important;

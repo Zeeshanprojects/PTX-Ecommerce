@@ -46,7 +46,12 @@ export default function Home() {
 
   const products = {
     Mens: [
-      { id: 1, name: "PT-5000-Green",price: "$ 5.00 USD",image: Image.image1,},
+      {
+        id: 1,
+        name: "PT-5000-Green",
+        price: "$ 5.00 USD",
+        image: Image.image1,
+      },
       { id: 2, name: "Pt-5000-Yellow", price: "$ 5 USD", image: Image.image2 },
       { id: 3, name: "PT-5000-Red", price: "$ 5 USD", image: Image.image3 },
       { id: 4, name: "PT-5000-Blue", price: "$ 5 USD", image: Image.image4 },
@@ -56,18 +61,33 @@ export default function Home() {
     Kids: [
       { id: 10, name: "W-2050-Gray", price: "$ 5 USD", image: Image.image10 },
       { id: 11, name: "W-2050-Pink", price: "$ 5 USD", image: Image.image11 },
-      { id: 12, name: "W-2050-Black",price: "$ 5 USD", image: Image.image12},
+      { id: 12, name: "W-2050-Black", price: "$ 5 USD", image: Image.image12 },
       { id: 13, name: "W-2050-Yellow", price: "$ 5 USD", image: Image.image13 },
-      {id: 14, name: "W-2050-Red", price: "$ 5 USD",image: Image.image14, },
+      { id: 14, name: "W-2050-Red", price: "$ 5 USD", image: Image.image14 },
       { id: 15, name: "W-2050-Green", price: "$ 5 USD", image: Image.image15 },
     ],
     Fleece: [
-      { id: 16, name: "PT-18000-Brown", price: "$ 5 USD", image: Image.Fleece1 },
-      { id: 17, name: "PT-18000-L-Brown", price: "$ 5 USD", image: Image.Fleece2 },
+      {
+        id: 16,
+        name: "PT-18000-Brown",
+        price: "$ 5 USD",
+        image: Image.Fleece1,
+      },
+      {
+        id: 17,
+        name: "PT-18000-L-Brown",
+        price: "$ 5 USD",
+        image: Image.Fleece2,
+      },
       { id: 18, name: "PT-18000-Gray", price: "$ 5 USD", image: Image.Fleece3 },
       { id: 19, name: "PT-18000-Blue", price: "$ 5 USD", image: Image.Fleece4 },
       { id: 20, name: "PT-18000-Red", price: "$ 5 USD", image: Image.Fleece5 },
-      { id: 21, name: "PT-18000-Purple", price: "$ 5 USD", image: Image.Fleece6 },
+      {
+        id: 21,
+        name: "PT-18000-Purple",
+        price: "$ 5 USD",
+        image: Image.Fleece6,
+      },
     ],
   };
 
@@ -114,7 +134,6 @@ export default function Home() {
 
   return (
     <>
- 
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="sliderimage" />
         <div className="imagetext">
@@ -127,95 +146,103 @@ export default function Home() {
       </div>
 
       <div className="space"></div>
-      {/* <motion.div
-        className="container-fluid"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.5 }}
-      >
-        <h2 className="text-center">POPULAR CATEGORIES</h2>
-        <div className="space"></div>
-        <div className="row justify-content-center text-center">
-          {[
-            { label: "T-SHIRTS", image: Image.bestselling1 },
-            { label: "FLEECE", image: Image.fleece },
-            { label: "KIDS", image: Image.junior },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              className="col-6 col-sm-4 col-md-2 mb-4"
-              variants={fadeInUp}
-            >
-              <div className="text-center">
-                <img
-                  src={item.image}
-                  alt={item.label}
-                  className="img-fluid category-img"
-                />
-                <p className="mt-2">{item.label}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div> */}
-<div className="container-fluid">
-  <div className="row">
-    <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
-      
-      <h3 className="category_mainheading mt-4">DRESS SHARP,
-LIVE SMART</h3>
-    </div>
-     <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-      <div className="icon-wrapper mx-auto">
-         <img src={Image.categoriesicon1} alt="categoryicons" className=" mb-2"/>
-      </div>
-     
-      <h6 className="category_heading">Trend-Forward Collections</h6>
-      <p className="category_font">Stay fashionable with our latest styles</p>
-     </div>
-      <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-              <div className="icon-wrapper mx-auto">
-         <img src={Image.categoriesicon2} alt="categoryicons" className=" mb-2"/>
-      </div>
-        <h6 className="category_heading">Fast Shipping</h6>
-        <p className="category_font">Get your new clothes quickly with our speedy shipping</p>
-      </div>
-       <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-             <div className="icon-wrapper mx-auto">
-         <img src={Image.categoriesicon3} alt="categoryicons" className=" mb-2"/>
-      </div>
-        <h6 className="category_heading">Easy Returns</h6>
-        <p className="category_font">If it doesn't fit or you don't like it, return it easily</p>
-       </div>
-        <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-                <div className="icon-wrapper mx-auto">
-         <img src={Image.categoriesicon4} alt="categoryicons" className=" mb-2"/>
-      </div>
-          <h6 className="category_heading">Loyalty Rewards</h6>
-          <p className="category_font">Earn rewards and discounts when you shop with us</p>
-        </div>
-         <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2 text-center">
-              <div className="icon-wrapper mx-auto">
-         <img src={Image.categoriesicon5} alt="categoryicons" className=" mb-2"/>
-      </div>
-          <h6 className="category_heading">Secured Payments</h6>
-          <p className="category_font">Pay with our safe and secure payment options</p>
-         </div>
+   
+      <div className="container-fluid " >
+        <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5, delay: 0.1 }}
+        >
+           <div className="row">
+          <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+            <h3 className="category_mainheading mt-4">
+              DRESS SHARP, LIVE SMART
+            </h3>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon1}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
 
-  </div>
-</div>
-      <br />
+            <h6 className="category_heading">Trend-Forward Collections</h6>
+            <p className="category_font">
+              Stay fashionable with our latest styles
+            </p>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon2}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Fast Shipping</h6>
+            <p className="category_font">
+              Get your new clothes quickly with our speedy shipping
+            </p>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon3}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Easy Returns</h6>
+            <p className="category_font">
+              If it doesn't fit or you don't like it, return it easily
+            </p>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon4}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Loyalty Rewards</h6>
+            <p className="category_font">
+              Earn rewards and discounts when you shop with us
+            </p>
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon5}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Secured Payments</h6>
+            <p className="category_font">
+              Pay with our safe and secure payment options
+            </p>
+          </div>
+        </div>
+        </motion.div>
+       
+      </div>
+    
+        <div className="space"></div>
+     
       <h2 className="text-center">BEST SELLINGS</h2>
       <div className="space"></div>
 
       <div className="container-fluid  p-0">
         <div className="row gx-1 gy-1">
           {[
-            Image.bestselling1,
+            Image.bestselling1, 
             Image.bestselling2,
             Image.bestselling3,
             Image.bestselling4,
-           
           ].map((imgSrc, idx) => (
             <div key={idx} className="col-sm-12 col-md-6 col-lg-3 ">
               <motion.div
@@ -266,42 +293,7 @@ LIVE SMART</h3>
         <img src={Image.Fashion_Banner} alt="banner" className="banner" />
       </motion.div>
 
-      <div className="space"></div>
-
-      <motion.div
-        className="container"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <div className="row text-center">
-          {[Image.icon1, Image.icon2, Image.icon3].map((icon, i) => (
-            <div key={i} className="col-sm-4 col-lg-4 col-xl-4">
-              <div className="info-box">
-                <img src={icon} alt="icons" className="info-icon" />
-                <h5>
-                  {
-                    ["SUPPORT 24/7", "TRACK YOUR ORDER", "RETURN & EXCHANGES"][
-                      i
-                    ]
-                  }
-                </h5>
-                <p>
-                  {
-                    [
-                      "Contact us 24 hours a day, 7 days a week",
-                      "Click for the quick update on your order",
-                      "Please view the return and exchange policy",
-                    ][i]
-                  }
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
+   
       {/* ✅ Newsletter Section (Corrected) */}
       <div
         className="container-fluid py-5"

@@ -5,6 +5,14 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import axios from "axios"; // ✅ Import axios
 
+const containerVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -146,7 +154,6 @@ export default function Home() {
       </div>
 
       <div className="space"></div>
-   
       <div className="container-fluid " >
         <motion.div 
         initial={{ opacity: 0, y: 40 }}
@@ -232,25 +239,33 @@ export default function Home() {
       </div>
     
         <div className="space"></div>
-     
-      <h2 className="text-center">BEST SELLINGS</h2>
+     <motion.div
+      variants={containerVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+    >
       <div className="space"></div>
 
-      <div className="container-fluid  p-0">
+      {/* Shared Animation with Images */}
+      <motion.h2 className="text-center" variants={fadeInUp}>
+        BEST SELLINGS
+      </motion.h2>
+
+      <div className="space"></div>
+
+      <div className="container-fluid p-0">
         <div className="row gx-1 gy-1">
           {[
-            Image.bestselling1, 
+            Image.bestselling1,
             Image.bestselling2,
             Image.bestselling3,
             Image.bestselling4,
           ].map((imgSrc, idx) => (
-            <div key={idx} className="col-sm-12 col-md-6 col-lg-3 ">
+            <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
               <motion.div
                 className="position-relative"
                 variants={fadeInUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.5 }}
               >
                 <span className="badge bg-danger position-absolute top-0 end-0 m-2">
                   SALE
@@ -265,6 +280,12 @@ export default function Home() {
           ))}
         </div>
       </div>
+    </motion.div>
+
+      <div className="space"></div>
+
+      {/* Product Grid */}
+     
 
       <motion.div
         className="text-center mt-5"

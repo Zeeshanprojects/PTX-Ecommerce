@@ -3,7 +3,6 @@
   width: 100%;
   max-width: 100%;
 }
-
 .sliderimage {
   width: 100%;
   height: auto;
@@ -21,7 +20,7 @@
 .btn {
   height: 50px;
 }
-.category-img {
+/* .category-img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -30,11 +29,24 @@
 .category-img {
   transition: transform 0.3s ease-in-out;
 }
-
 .category-img:hover {
   transform: scale(1.1);
-}
-
+} */
+ .categoryicons{
+  height: 30px;
+  width: 30px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+ }
+ .category_heading{
+  font-size: 14px !important;
+  font-weight: bold;
+ }
+ .category_font{
+  font-size: 12px !important;
+ }
 .box img {
   height: 290px !important;
   width: 100%;

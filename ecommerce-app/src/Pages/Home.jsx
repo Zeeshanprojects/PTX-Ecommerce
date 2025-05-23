@@ -164,11 +164,31 @@ export default function Home() {
       <h3>Dress Sharp,
 Live Smart</h3>
     </div>
-     <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
-      <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
-       <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
-        <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
-         <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2"></div>
+     <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+      <img src={Image.categoriesicon1} alt="categoryicons" className="categoryicons mb-2"/>
+      <h6 className="category_heading">Trend-Forward Collections</h6>
+      <p className="category_font">Stay fashionable with our latest styles</p>
+     </div>
+      <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+          <img src={Image.categoriesicon2} alt="categoryicons" className="categoryicons mb-2"/>
+        <h6 className="category_heading">Fast Shipping</h6>
+        <p className="category_font">Get your new clothes quickly with our speedy shipping</p>
+      </div>
+       <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+        <img src={Image.categoriesicon3} alt="categoryicons" className="categoryicons mb-2"/>
+        <h6 className="category_heading">Easy Returns</h6>
+        <p className="category_font">If it doesn't fit or you don't like it, return it easily</p>
+       </div>
+        <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+          <img src={Image.categoriesicon4} alt="categoryicons" className="categoryicons mb-2"/>
+          <h6 className="category_heading">Loyalty Rewards</h6>
+          <p className="category_font">Earn rewards and discounts when you shop with us</p>
+        </div>
+         <div className="col-sm-12 col-md-6 col-lg-2 col-xl-2">
+          <img src={Image.categoriesicon5} alt="categoryicons" className="categoryicons mb-2"/>
+          <h6 className="category_heading">Secured Payments</h6>
+          <p className="category_font">Pay with our safe and secure payment options</p>
+         </div>
 
   </div>
 </div>

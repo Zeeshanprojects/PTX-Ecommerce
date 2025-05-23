@@ -54,5 +54,10 @@ const Image = {
   Women: new URL("./Women.webp", import.meta.url).href,
   Kids: new URL("./Kid.webp", import.meta.url).href,
   Fleece: new URL("./Fleece-banner.webp", import.meta.url).href,
+  categoriesicon1: new URL("./icon1.webp",import.meta.url).href,
+  categoriesicon2: new URL("./icon2.webp",import.meta.url).href,
+  categoriesicon3: new URL("./icon3.webp",import.meta.url).href,
+  categoriesicon4: new URL("./icon4.webp",import.meta.url).href,
+  categoriesicon5: new URL("./icon5.webp",import.meta.url).href,
 };
 export default Image;

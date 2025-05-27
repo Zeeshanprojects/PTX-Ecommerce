@@ -13,7 +13,7 @@ export default function Kids() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/EcommerceKid")
+     .get(`${import.meta.env.VITE_API_URL}/api/EcommerceKid`)
       .then((res) => {
         setProducts(res.data);
         setLoading(false);

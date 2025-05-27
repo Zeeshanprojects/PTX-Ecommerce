@@ -13,7 +13,7 @@ export default function TShirt() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/EcommerceTshirt")
+      .get(`${import.meta.env.VITE_API_URL}/api/EcommerceTshirt`)
       .then((res) => {
         setProducts(res.data);
         setLoading(false);

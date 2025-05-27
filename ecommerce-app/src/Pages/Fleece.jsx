@@ -4,6 +4,7 @@ import axios from "axios";
 import Image from "../Images/Image";
 import "./Home.css";
 
+
 export default function Fleece() {
   useEffect(()=>{
     document.title="Fleece | Pakistan Textile Exchange"
@@ -13,7 +14,7 @@ export default function Fleece() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/EcommerceFleece")
+      .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)
       .then((res) => {
         setProducts(res.data);
         setLoading(false);

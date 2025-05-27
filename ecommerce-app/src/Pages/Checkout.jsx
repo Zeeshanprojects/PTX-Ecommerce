@@ -49,10 +49,10 @@ export default function Checkout() {
     };
 
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/api/EcommerceCheckout",
-        payload
-      );
+     const response = await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/EcommerceCheckout`,
+  payload
+);
 
       if (response.status === 201) {
         setConfirmedData(payload); // Store data for modal

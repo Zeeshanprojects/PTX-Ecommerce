@@ -18,11 +18,12 @@ useEffect(()=>{
   const [error, setError] = useState(null);
 
   const categories = ["T-Shirt", "Fleece", "Kids"];
-  const apiEndpoints = {
-    "T-Shirt": "http://127.0.0.1:8000/api/EcommerceTshirt",
-    Fleece: "http://127.0.0.1:8000/api/EcommerceFleece",
-    Kids: "http://127.0.0.1:8000/api/EcommerceKid",
-  };
+  const baseURL = import.meta.env.VITE_API_URL;
+const apiEndpoints = {
+  "T-Shirt": `${baseURL}/api/EcommerceTshirt`,
+  Fleece: `${baseURL}/api/EcommerceFleece`,
+  Kids: `${baseURL}/api/EcommerceKid`,
+};
 
   useEffect(() => {
     const fetchProducts = async () => {

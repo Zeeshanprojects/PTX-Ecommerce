@@ -107,6 +107,31 @@ export default function Checkout() {
                 required
               />
             </div>
+            {/* <div className="mb-3">
+              <label className="form-label">Payment Method</label>
+              <div class="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label className="form-check-label" for="flexCheckDefault">
+                  Cash on Delievery
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label className="form-check-label" for="flexCheckDefault">
+                  Online Payment
+                </label>
+              </div>
+            </div> */}
             <div className="mb-3">
               <label className="form-label">Shipping Address</label>
               <textarea
@@ -150,9 +175,7 @@ export default function Checkout() {
                       <h6 className="my-0">{item.title}</h6>
                       <small className="text-muted">Size: {item.size}</small>
                       <br />
-                      <small className="text-muted">
-                        Qty: {item.quantity}
-                      </small>
+                      <small className="text-muted">Qty: {item.quantity}</small>
                     </div>
                   </div>
                   <span className="text-muted">
@@ -193,6 +216,7 @@ export default function Checkout() {
                 <p>
                   <strong>Address:</strong> {confirmedData.address}
                 </p>
+
                 <hr />
                 <h5>Order Summary</h5>
                 <ul className="list-group mb-3">
@@ -209,24 +233,25 @@ export default function Checkout() {
                       </span>
                     </li>
                   ))}
-              <li className="list-group-item d-flex justify-content-between">
-  <strong>Total</strong>
-  <strong>
-    $
-    {confirmedData.items
-      .reduce(
-        (total, item) =>
-          total + Number(item.price) * Number(item.quantity),
-        0
-      )}{" "}
-    USD
-  </strong>
-</li>
-
+                  <li className="list-group-item d-flex justify-content-between">
+                    <strong>Total</strong>
+                    <strong>
+                      $
+                      {confirmedData.items.reduce(
+                        (total, item) =>
+                          total + Number(item.price) * Number(item.quantity),
+                        0
+                      )}{" "}
+                      USD
+                    </strong>
+                  </li>
                 </ul>
               </div>
               <div className="d-flex justify-content-end mt-3">
-                <button className="btn btn-primary me-2" onClick={handleDownload}>
+                <button
+                  className="btn btn-primary me-2"
+                  onClick={handleDownload}
+                >
                   Download Confirmation PDF
                 </button>
                 <button

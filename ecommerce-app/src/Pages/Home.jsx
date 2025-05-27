@@ -163,7 +163,7 @@ export default function Home() {
         >
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2">
-              <h3 className="category_mainheading mt-4">
+              <h3 className="category_mainheading mt-5">
                 DRESS SHARP, LIVE SMART
               </h3>
             </div>
@@ -259,7 +259,7 @@ export default function Home() {
               Image.bestselling1,
               Image.bestselling2,
               Image.bestselling3,
-              Image.bestselling4,
+              Image.bestselling6,
             ].map((imgSrc, idx) => (
               <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
                 <motion.div className="position-relative" variants={fadeInUp}>

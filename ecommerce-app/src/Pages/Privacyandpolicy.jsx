@@ -13,7 +13,7 @@ export default function Privacyandpolicy() {
         At Pakistan Textile Exchange, we are committed to protecting the privacy of our users, clients, and visitors. This Privacy Policy outlines how we collect, use, and protect your information when you interact with our textile platform.
       </p>
 
-      <h3>1. Information We Collect</h3>
+      <h5>1. Information We Collect</h5>
       <p>We may collect the following types of personal and business-related information:</p>
       <ul>
         <li>Name, company name, and contact details (email, phone, address)</li>
@@ -22,7 +22,7 @@ export default function Privacyandpolicy() {
         <li>Website usage data through cookies and analytics tools</li>
       </ul>
 
-      <h3>2. How We Use Your Information</h3>
+      <h5>2. How We Use Your Information</h5>
       <p>Your information may be used for the following purposes:</p>
       <ul>
         <li>To process orders and deliver requested textile products</li>
@@ -31,7 +31,7 @@ export default function Privacyandpolicy() {
         <li>To improve our platform, services, and customer experience</li>
       </ul>
 
-      <h3>3. Data Sharing and Disclosure</h3>
+      <h5>3. Data Sharing and Disclosure</h5>
       <p>
         We do not sell, trade, or rent your personal information. However, we may share it with trusted third parties for:
       </p>
@@ -41,17 +41,17 @@ export default function Privacyandpolicy() {
         <li>Legal requirements, if mandated by law</li>
       </ul>
 
-      <h3>4. Cookies and Tracking</h3>
+      <h5>4. Cookies and Tracking</h5>
       <p>
         Our website uses cookies to enhance user experience, analyze traffic, and personalize content. You can modify your browser settings to decline cookies.
       </p>
 
-      <h3>5. Data Security</h3>
+      <h5>5. Data Security</h5>
       <p>
         We implement reasonable security measures (SSL, firewalls, access control) to protect your data from unauthorized access, alteration, or disclosure.
       </p>
 
-      <h3>6. Your Rights</h3>
+      <h5>6. Your Rights</h5>
       <p>You have the right to:</p>
       <ul>
         <li>Access the information we hold about you</li>
@@ -59,17 +59,17 @@ export default function Privacyandpolicy() {
         <li>Withdraw consent for marketing communications</li>
       </ul>
 
-      <h3>7. Third-Party Links</h3>
+      <h5>7. Third-Party Links</h5>
       <p>
         Our website may contain links to third-party textile directories or partner sites. We are not responsible for their privacy practices.
       </p>
 
-      <h3>8. Policy Updates</h3>
+      <h5>8. Policy Updates</h5>
       <p>
         This Privacy Policy may be updated occasionally to reflect changes in legal or business practices. We encourage users to review it regularly.
       </p>
 
-      <p className="mt-4">Last updated: May 16, 2025</p>
+      <p className="mt-4">Last updated: May 29, 2025</p>
     </div>
 </>
   )

@@ -237,6 +237,50 @@ export default function Home() {
         </motion.div>
       </div>
 
+
+      <div className="space"></div>
+      <motion.div
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <div className="space"></div>
+
+        {/* Shared Animation with Images */}
+        <motion.h2 className="text-center" variants={fadeInUp}>
+      SEARCH BY CATEGOROES
+        </motion.h2>
+
+        <div className="space"></div>
+
+        <div className="container-fluid p-0">
+          <div className="row gx-1 gy-1">
+            {[
+              Image.category1,
+              Image.category2,
+              Image.category3,
+              Image.category4,
+            ].map((imgSrc, idx) => (
+              <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
+                <motion.div className="position-relative" variants={fadeInUp}>
+                  <span className="badge bg-danger position-absolute top-0 end-0 m-2">
+                    SALE
+                  </span>
+                  <img
+                    src={imgSrc}
+                    alt="bestselling"
+                    title="Tsirts"
+                    className="best-selling img-fluid"
+                  />
+                </motion.div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      <div className="space"></div>
       <div className="space"></div>
       <motion.div
         variants={containerVariant}

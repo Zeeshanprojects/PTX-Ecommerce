@@ -1,6 +1,10 @@
 const Image = {
   logo: new URL("./PTX-Main-Logo.png", import.meta.url).href,
   banner: new URL("./Fashionsalebanner.webp", import.meta.url).href,
+  category1:new URL("./latestproduct2/webp",import.meta.url).href,
+  category2:new URL("./latestproduct3/webp",import.meta.url).href,
+  category3:new URL("./latestproduct4.webp",import.meta.url).href,
+  category4:new URL("./latestproduct5.webp",import.meta.url).href,
   image1: new URL("./1.webp", import.meta.url).href,
   image2: new URL("./2.webp", import.meta.url).href,
   image3: new URL("./3.webp", import.meta.url).href,

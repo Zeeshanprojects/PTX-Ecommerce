@@ -237,7 +237,6 @@ export default function Home() {
         </motion.div>
       </div>
 
-
       <div className="space"></div>
       <motion.div
         variants={containerVariant}
@@ -249,7 +248,7 @@ export default function Home() {
 
         {/* Shared Animation with Images */}
         <motion.h2 className="text-center" variants={fadeInUp}>
-      SEARCH BY CATEGOROES
+          SEARCH BY CATEGORIES
         </motion.h2>
 
         <div className="space"></div>
@@ -270,7 +269,6 @@ export default function Home() {
                   <img
                     src={imgSrc}
                     alt="bestselling"
-                    title="Tsirts"
                     className="best-selling img-fluid"
                   />
                 </motion.div>
@@ -294,32 +292,36 @@ export default function Home() {
         <motion.h2 className="text-center" variants={fadeInUp}>
           BEST SELLINGS
         </motion.h2>
-
         <div className="space"></div>
-
-        <div className="container-fluid p-0">
-          <div className="row gx-1 gy-1">
-            {[
-              Image.bestselling1,
-              Image.bestselling2,
-              Image.bestselling3,
-              Image.bestselling6,
-            ].map((imgSrc, idx) => (
-              <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
-                <motion.div className="position-relative" variants={fadeInUp}>
-                  <span className="badge bg-danger position-absolute top-0 end-0 m-2">
-                    SALE
-                  </span>
-                  <img
-                    src={imgSrc}
-                    alt="bestselling"
-                    className="best-selling img-fluid"
-                  />
-                </motion.div>
-              </div>
-            ))}
-          </div>
+      <div className="row">
+  {/* Left Column */}
+  <div className="left-column col-6">
+    <div className="container-fluid mb-2">
+      <div className="row g-2">
+        <div className="col-6">
+          <img src={Image.bestseller1} className="img-background" />
         </div>
+        <div className="col-6">
+          <img src={Image.bestseller2} className="img-background" />
+        </div>
+        <div className="col-6">
+          <img src={Image.bestseller3} className="img-background" />
+        </div>
+        <div className="col-6">
+          <img src={Image.bestseller4} className="img-background" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Right Column */}
+  <div className="right-column col-6 d-flex">
+    <img src={Image.rightbanner} alt="rightbanner" className="right-banner-img" />
+  </div>
+</div>
+            
+
+       
       </motion.div>
 
       <div className="space"></div>

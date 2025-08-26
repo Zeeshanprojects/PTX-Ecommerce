@@ -295,27 +295,27 @@ export default function Home() {
         <div className="space"></div>
         <div className="row m-2">
           {/* Left Column */}
-          <div className="left-column col-6">
-            <div className="container-fluid mb-2">
+          <div className="left-column col-6 m-0 p-0 h-100">
+            <div className="container-fluid mb-2 h-100">
               <div className="row g-2">
                 <div className="col-6">
                   <img src={Image.bestseller1} className="img-background" />
                 </div>
                 <div className="col-6">
-                  <img src={Image.bestseller2} className="img-background" />
+                  <img src={Image.bestseller4} className="img-background" />
+                </div>
+                <div className="col-6">
+                  <img src={Image.bestseller5} className="img-background" />
                 </div>
                 <div className="col-6">
                   <img src={Image.bestseller3} className="img-background" />
-                </div>
-                <div className="col-6">
-                  <img src={Image.bestseller4} className="img-background" />
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="right-column col-6 d-flex">
+          <div className="right-column col-6 d-flex m-0 p-0 ">
             <img
               src={Image.rightbanner}
               alt="rightbanner"
@@ -324,9 +324,13 @@ export default function Home() {
             <div className="overlay-text">
               <h5> SALE IS ON</h5>
               <h1>50 % OFF</h1>
-               
-          <button type="button" class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3">SHOP NOW</button>
-        
+
+              <button
+                type="button"
+                class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
+              >
+                SHOP NOW
+              </button>
             </div>
           </div>
         </div>

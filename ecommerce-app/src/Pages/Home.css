@@ -9,8 +9,8 @@
   display: block;
 }
 .img-background {
-  background-color: #f6f6f6;
-  height: 300px;
+  background-color: #cccccc;
+  height: 250px;
   width: 100%;
   object-fit: contain !important;
 }
@@ -18,7 +18,7 @@
   width: 100%;
   height: 100%; /* covers full column height */
   object-fit: cover;
-  filter: brightness(0.5) !important;
+  filter: brightness(0.8) !important;
 }
 .right-column {
   position: relative; /* make it the reference for absolute child */

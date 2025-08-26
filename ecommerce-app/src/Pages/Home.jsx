@@ -142,16 +142,24 @@ export default function Home() {
 
   return (
     <>
-      <div className="image-wrapper">
-        <img src={Image.banner} alt="slider-image1" className="sliderimage" />
-        <div className="main-btn">
-          <Link to="/Shop">
-            <button className="btn btn-outline-light mt-4 ps-5 pe-5 ">
-              SHOP NOW
-            </button>
-          </Link>
+      <motion.div
+        className="text-center "
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <div className="image-wrapper">
+          <img src={Image.banner} alt="slider-image1" className="sliderimage" />
+          <div className="main-btn">
+            <Link to="/Shop">
+              <button className="btn btn-outline-light mt-4 ps-5 pe-5 ">
+                SHOP NOW
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </motion.div>
 
       <div className="space"></div>
       <div className="container-fluid ">
@@ -254,7 +262,7 @@ export default function Home() {
         <div className="space"></div>
 
         <div className="container-fluid p-0">
-          <div className="row gx-1 gy-1">
+          <div className="row gx-1 gy-1 m-2">
             {[
               Image.category1,
               Image.category2,
@@ -279,7 +287,6 @@ export default function Home() {
       </motion.div>
 
       <div className="space"></div>
-      <div className="space"></div>
       <motion.div
         variants={containerVariant}
         initial="hidden"
@@ -292,7 +299,15 @@ export default function Home() {
         <motion.h2 className="text-center" variants={fadeInUp}>
           BEST SELLINGS
         </motion.h2>
-        <div className="space"></div>
+
+      
+      </motion.div>
+<motion.div
+ variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}>
+      <div className="space"></div>
         <div className="row m-2">
           {/* Left Column */}
           <div className="left-column col-6 m-0 p-0 h-100">
@@ -334,8 +349,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.div>
-
+</motion.div>
       <div className="space"></div>
 
       {/* Product Grid */}
@@ -357,17 +371,6 @@ export default function Home() {
       {renderProductSection("Kids", products.Kids, "/Kid")}
       {renderProductSection("Fleece", products.Fleece, "/Fleece")}
 
-      <motion.div
-        className="container-fluid p-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <img src={Image.Fashion_Banner} alt="banner" className="banner" />
-      </motion.div>
-
-      {/* ✅ Newsletter Section (Corrected) */}
       <div
         className="container-fluid py-5"
         style={{ backgroundColor: "#000000" }}

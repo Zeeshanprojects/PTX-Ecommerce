@@ -144,9 +144,9 @@ export default function Home() {
     <>
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="sliderimage" />
-        <div className="imagetext">
+        <div className="main-btn">
           <Link to="/Shop">
-            <button className="btn btn-outline-light mt-4 ps-5 pe-5 main-btn">
+            <button className="btn btn-outline-light mt-4 ps-5 pe-5 ">
               SHOP NOW
             </button>
           </Link>

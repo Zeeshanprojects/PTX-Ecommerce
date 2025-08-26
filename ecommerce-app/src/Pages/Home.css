@@ -8,10 +8,14 @@
   height: auto;
   display: block;
 }
-.imagetext {
+.main-btn {
   position: absolute;
   top: 80%;
-  left: 12%;
+  left:50%;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
   transform: translate(-50%, -50%);
   text-align: start;
   padding: 20px;
@@ -141,15 +145,18 @@
 ::placeholder {
   color: gray !important;
 }
-
+.main-btn{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto ;
+}
 @media (min-width:768px) and (max-width:991px) {
   .category_mainheading{
     text-align: center !important;
     width: 100%;
   }
-  .main-btn{
-   margin-left: 70px !important;
-  }
+ 
   .banner {
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
@@ -165,9 +172,7 @@
   width: 50px !important;
 
 }
- .main-btn{
-  margin-left: 100px !important;
- } 
+
  .banner {
   height: auto; /* Let height adjust automatically */
   object-fit: contain; /* Show full image without cropping */
@@ -185,14 +190,6 @@
     text-align: center;
   }
 
-  .main-btn {
-    height: 30px;
-    font-size: 10px;
-    margin-left: 0 !important;
-   width: 100px !important;
-   padding: 0 !important;
-
-  }
 
   .banner {
     height: auto; /* Let height adjust automatically */

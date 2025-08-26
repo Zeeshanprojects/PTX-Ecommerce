@@ -293,35 +293,43 @@ export default function Home() {
           BEST SELLINGS
         </motion.h2>
         <div className="space"></div>
-      <div className="row">
-  {/* Left Column */}
-  <div className="left-column col-6">
-    <div className="container-fluid mb-2">
-      <div className="row g-2">
-        <div className="col-6">
-          <img src={Image.bestseller1} className="img-background" />
-        </div>
-        <div className="col-6">
-          <img src={Image.bestseller2} className="img-background" />
-        </div>
-        <div className="col-6">
-          <img src={Image.bestseller3} className="img-background" />
-        </div>
-        <div className="col-6">
-          <img src={Image.bestseller4} className="img-background" />
-        </div>
-      </div>
-    </div>
-  </div>
+        <div className="row m-2">
+          {/* Left Column */}
+          <div className="left-column col-6">
+            <div className="container-fluid mb-2">
+              <div className="row g-2">
+                <div className="col-6">
+                  <img src={Image.bestseller1} className="img-background" />
+                </div>
+                <div className="col-6">
+                  <img src={Image.bestseller2} className="img-background" />
+                </div>
+                <div className="col-6">
+                  <img src={Image.bestseller3} className="img-background" />
+                </div>
+                <div className="col-6">
+                  <img src={Image.bestseller4} className="img-background" />
+                </div>
+              </div>
+            </div>
+          </div>
 
-  {/* Right Column */}
-  <div className="right-column col-6 d-flex">
-    <img src={Image.rightbanner} alt="rightbanner" className="right-banner-img" />
-  </div>
-</div>
-            
-
-       
+          {/* Right Column */}
+          <div className="right-column col-6 d-flex">
+            <img
+              src={Image.rightbanner}
+              alt="rightbanner"
+              className="right-banner-img"
+            />
+            <div className="overlay-text">
+              <h5> SALE IS ON</h5>
+              <h1>50 % OFF</h1>
+               
+          <button type="button" class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3">SHOP NOW</button>
+        
+            </div>
+          </div>
+        </div>
       </motion.div>
 
       <div className="space"></div>

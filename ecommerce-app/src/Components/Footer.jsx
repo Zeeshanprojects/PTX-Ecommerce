@@ -6,8 +6,8 @@ export default function Footer() {
     <>
       <div className="container-fluid p-0">
         <footer
-          className="text-center text-lg-start text-dark "
-          // style={{ backgroundColor: "#f0f0f0" }}
+          className="text-center text-lg-start text-light "
+          style={{ backgroundColor: "black" }}
         >
           <section>
             <div className="container-fluid text-center text-md-start">
@@ -40,17 +40,17 @@ export default function Footer() {
                     }}
                   />
                   <p>
-                    <Link to="/Contact" className="text-dark">
+                    <Link to="/Contact" className="text-white">
                       Contact US
                     </Link>
                   </p>
                   <p>
-                    <Link to="/TermsandConditions" className="text-dark">
+                    <Link to="/TermsandConditions" className="text-white">
                       Terms & Condition
                     </Link>
                   </p>
                   <p>
-                    <Link to="/PrivacyandPolicy" className="text-dark">
+                    <Link to="/PrivacyandPolicy" className="text-white">
                       Privacy Policy
                     </Link>
                   </p>
@@ -67,17 +67,17 @@ export default function Footer() {
                     }}
                   />
                   <p>
-                    <Link to="/T" className="text-dark">
+                    <Link to="/T" className="text-white">
                       T-Shirts
                     </Link>
                   </p>
                   <p>
-                    <Link to="#!" className="text-dark">
+                    <Link to="#!" className="text-white">
                       Fleece
                     </Link>
                   </p>
                   <p>
-                    <Link to="#!" className="text-dark">
+                    <Link to="#!" className="text-white">
                       Kids
                     </Link>
                   </p>

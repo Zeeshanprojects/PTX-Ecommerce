@@ -52,46 +52,6 @@ export default function Home() {
     }
   };
 
-  //   <motion.div
-  //     className="container-fluid my-5"
-  //     initial="hidden"
-  //     whileInView="visible"
-  //     viewport={{ once: true }}
-  //     variants={fadeInUp}
-  //   >
-  //     <h3 className="text-center mb-4 text-uppercase">{category} Collection</h3>
-  //     <div className="row g-4">
-  //       {items.map((product) => (
-  //         <div className="col-sm-12 col-md-6 col-lg-2" key={product.id}>
-  //           <div className="product-card position-relative overflow-hidden rounded shadow-sm">
-  //             <span className="new-badge position-absolute top-0 start-0 m-2">
-  //               NEW
-  //             </span>
-  //             <div className="product-img-container position-relative">
-  //               <img
-  //                 src={product.image}
-  //                 alt={product.name}
-  //                 className="img-fluid product-img"
-  //               />
-  //             </div>
-  //             <div className="p-3" style={{ background: "Transparent" }}>
-  //               {/* <h6 className="mb-1">{product.name}</h6>
-  //               <p className="text-muted mb-1">{product.price}</p> */}
-  //             </div>
-  //           </div>
-  //         </div>
-  //       ))}
-  //     </div>
-  //     <div className="text-center mt-4">
-  //       <Link to={route}>
-  //         <button className="btn btn-outline-dark ps-5 pe-5">
-  //           View All Collection
-  //         </button>
-  //       </Link>
-  //     </div>
-  //   </motion.div>
-  // );
-
   return (
     <>
       <div className="image-wrapper">
@@ -283,23 +243,13 @@ export default function Home() {
       <h2 className="uppercase text-center">
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
-      <p className="text-center">
-        Complement your everyday style with timeless essential items
-      </p>
+
       <div className="container-fluid">
         <div className="row justify-content-center m-3">
           {/* Big main image */}
-          <div className="col-lg-3 col-md-12">
-            <img
-              src={Image.bestseller1}
-              className="main-image img-fluid img-background"
-              alt="Main"
-
-            />
-          </div>
 
           {/* Small product images */}
-          <div className="col-lg-8 col-md-12">
+          <div className="col-lg-12 col-md-12">
             <div className="row g-2">
               <div className="col-3">
                 <img
@@ -364,69 +314,62 @@ export default function Home() {
       <div className="container-fluid">
         <div className="row justify-content-center m-3">
           {/* Big main image */}
-          <div className="col-lg-3 col-md-12">
-            <img
-              src={Image.bestseller3}
-              className="main-image img-fluid img-background"
-              alt="Main"
-            />
-          </div>
 
           {/* Small product images */}
-          <div className="col-lg-8 col-md-12">
+          <div className="col-sm-12 col-md-6 col-lg-12 col-xl-12 col-md-12">
             <div className="row g-2">
               <div className="col-3">
                 <img
-                  src={Image.image1}
+                  src={Image.image8}
                   className="small-image img-fluid img-background"
                   alt="Product 1"
                 />
               </div>
               <div className="col-3">
                 <img
-                  src={Image.image2}
+                  src={Image.image9}
                   className="small-image img-fluid img-background"
                   alt="Product 2"
                 />
               </div>
               <div className="col-3">
                 <img
-                  src={Image.image3}
+                  src={Image.image10}
                   className="small-image img-fluid img-background"
                   alt="Product 3"
                 />
               </div>
               <div className="col-3">
                 <img
-                  src={Image.image4}
+                  src={Image.image11}
                   className="small-image img-fluid img-background"
                   alt="Product 4"
                 />
               </div>
               <div className="col-3">
                 <img
-                  src={Image.image4}
+                  src={Image.image12}
                   className="small-image img-fluid img-background"
                   alt="Product 4"
                 />
               </div>
               <div className="col-3">
                 <img
-                  src={Image.image1}
+                  src={Image.image13}
                   className="small-image img-fluid img-background"
                   alt="Product 1"
                 />
               </div>
               <div className="col-3">
                 <img
-                  src={Image.image2}
+                  src={Image.image14}
                   className="small-image img-fluid img-background"
                   alt="Product 2"
                 />
               </div>
               <div className="col-3">
                 <img
-                  src={Image.image3}
+                  src={Image.image15}
                   className="small-image img-fluid img-background"
                   alt="Product 3"
                 />

@@ -158,7 +158,7 @@ export default function Home() {
       <div className="space"></div>
 
       <div className="container-fluid p-0 m-0 h-100">
-        <div className="row gx-1 gy-1 m-2">
+        <div className="row gx-1 gy-1">
           {[
             { img: Image.Menpic, title: "MENS" },
             { img: Image.WomenTshirt, title: "WOMENS " },
@@ -240,142 +240,36 @@ export default function Home() {
 
       {/* Product Grid */}
 
-      <h2 className="uppercase text-center">
+      <h2 className="uppercase text-center mb-3">
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
 
-      <div className="container-fluid">
-        <div className="row justify-content-center m-3">
-          {/* Big main image */}
+      <div className="container-fluid mb-2 p-0">
+        <div className="row g-3 m-1">
+          {/* Left column with carousel */}
+         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <img src={Image.smallbanner4} alt="smallbanner" className="w-100"/>
+         </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <img src={Image.smallbanner3} alt="smallbanner" className="w-100"/>
+         </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <img src={Image.smallbanner2} alt="smallbanner" className="w-100"/>
+         </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <img src={Image.smallbanner1} alt="smallbanner" className="w-100"/>
+         </div>
 
-          {/* Small product images */}
-          <div className="col-lg-12 col-md-12">
-            <div className="row g-2">
-              <div className="col-3">
-                <img
-                  src={Image.image1}
-                  className="small-image img-fluid img-background "
-                  alt="Product 1"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image2}
-                  className="small-image img-fluid img-background"
-                  alt="Product 2"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image3}
-                  className="small-image img-fluid img-background"
-                  alt="Product 3"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image4}
-                  className="small-image img-fluid img-background"
-                  alt="Product 4"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image4}
-                  className="small-image img-fluid img-background"
-                  alt="Product 4"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image5}
-                  className="small-image img-fluid img-background"
-                  alt="Product 1"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image6}
-                  className="small-image img-fluid img-background"
-                  alt="Product 2"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image7}
-                  className="small-image img-fluid img-background"
-                  alt="Product 3"
-                />
-              </div>
+          {/* Right column */}
+          {/* <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center text-center">
+            <div>
+              <h1 className="mb-3">Discover Our Latest Collection</h1>
+              <p className="mb-3">
+                Trendy T-shirts in all colors, perfect for every style.
+              </p>
+              <button className="btn btn-dark px-4 py-2">Shop Now</button>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="container-fluid">
-        <div className="row justify-content-center m-3">
-          {/* Big main image */}
-
-          {/* Small product images */}
-          <div className="col-sm-12 col-md-6 col-lg-12 col-xl-12 col-md-12">
-            <div className="row g-2">
-              <div className="col-3">
-                <img
-                  src={Image.image8}
-                  className="small-image img-fluid img-background"
-                  alt="Product 1"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image9}
-                  className="small-image img-fluid img-background"
-                  alt="Product 2"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image10}
-                  className="small-image img-fluid img-background"
-                  alt="Product 3"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image11}
-                  className="small-image img-fluid img-background"
-                  alt="Product 4"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image12}
-                  className="small-image img-fluid img-background"
-                  alt="Product 4"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image13}
-                  className="small-image img-fluid img-background"
-                  alt="Product 1"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image14}
-                  className="small-image img-fluid img-background"
-                  alt="Product 2"
-                />
-              </div>
-              <div className="col-3">
-                <img
-                  src={Image.image15}
-                  className="small-image img-fluid img-background"
-                  alt="Product 3"
-                />
-              </div>
-            </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

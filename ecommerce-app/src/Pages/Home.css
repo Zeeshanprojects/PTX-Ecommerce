@@ -18,9 +18,9 @@
 
 /* Hover effect */
 .img-background:hover {
-  transform: scale(1);              /* slight zoom */
-  filter: brightness(90%);             /* darken a bit */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* smooth shadow */
+  transform: scale(1); /* slight zoom */
+  filter: brightness(90%); /* darken a bit */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* smooth shadow */
   cursor: pointer;
 }
 
@@ -217,9 +217,24 @@
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  background-color: #F5F2F5;
+  background-color: #f5f2f5;
+}
+/* Container for each slide (keeps bg visible) */
+.slide-bg {
+  height: 500px;
+  width: 100%;
 }
 
+/* T-shirt image */
+.tshirt-img {
+  height: 450px;
+  object-fit: contain;
+}
+
+/* Background colors */
+.bg {
+  background: black;
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .category_mainheading {

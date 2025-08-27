@@ -215,7 +215,7 @@ export default function Home() {
                 <div className="overlay d-flex flex-column justify-content-center align-items-center">
                   <h2 className="text-white">{item.title}</h2>
                   <button className="btn btn-outline-light btn-lg mt-2">
-                    VIEW COLLECTIO
+                    VIEW COLLECTION
                   </button>
                 </div>
               </div>

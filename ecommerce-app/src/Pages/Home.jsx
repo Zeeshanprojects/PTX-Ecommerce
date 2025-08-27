@@ -197,35 +197,32 @@ export default function Home() {
 
       <div className="space"></div>
 
-     <div className="container-fluid p-0 m-0 h-100">
-  <div className="row gx-1 gy-1 m-2">
-    {[
-      { img: Image.Menpic, title: "MENS" },
-      { img: Image.WomenTshirt, title: "WOMENS " },
-      { img: Image.Kidpic, title: "JUNIOR" },
-    ].map((item, idx) => (
-      <div key={idx} className="col-sm-12 col-md-6 col-lg-4 h-100">
-        <div className="position-relative overflow-hidden">
-          <span className="badge bg-danger position-absolute top-0 end-0 m-2">
-            SALE
-          </span>
-          <img
-            src={item.img}
-            alt="bestselling"
-            className="best-selling"
-          />
+      <div className="container-fluid p-0 m-0 h-100">
+        <div className="row gx-1 gy-1 m-2">
+          {[
+            { img: Image.Menpic, title: "MENS" },
+            { img: Image.WomenTshirt, title: "WOMENS " },
+            { img: Image.Kidpic, title: "JUNIOR" },
+          ].map((item, idx) => (
+            <div key={idx} className="col-sm-12 col-md-6 col-lg-4 h-100">
+              <div className="position-relative overflow-hidden">
+                <span className="badge bg-danger position-absolute top-0 end-0 m-2">
+                  SALE
+                </span>
+                <img src={item.img} alt="bestselling" className="categories" />
 
-          {/* Overlay */}
-          <div className="overlay d-flex flex-column justify-content-center align-items-center">
-            <h2 className="text-white">{item.title}</h2>
-            <button className="btn btn-outline-light btn-lg mt-2">VIEW COLLECTION</button>
-          </div>
+                {/* Overlay */}
+                <div className="overlay d-flex flex-column justify-content-center align-items-center">
+                  <h2 className="text-white">{item.title}</h2>
+                  <button className="btn btn-outline-light btn-lg mt-2">
+                    VIEW COLLECTIO
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
-</div>
-
 
       <div className="space"></div>
 
@@ -295,8 +292,9 @@ export default function Home() {
           <div className="col-lg-3 col-md-12">
             <img
               src={Image.bestseller1}
-              className="main-image img-fluid"
+              className="main-image img-fluid img-background"
               alt="Main"
+
             />
           </div>
 
@@ -306,56 +304,56 @@ export default function Home() {
               <div className="col-3">
                 <img
                   src={Image.image1}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background "
                   alt="Product 1"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image2}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 2"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image3}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 3"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image4}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 4"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image4}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 4"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image5}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 1"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image6}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 2"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image7}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 3"
                 />
               </div>
@@ -369,7 +367,7 @@ export default function Home() {
           <div className="col-lg-3 col-md-12">
             <img
               src={Image.bestseller3}
-              className="main-image img-fluid"
+              className="main-image img-fluid img-background"
               alt="Main"
             />
           </div>
@@ -380,56 +378,56 @@ export default function Home() {
               <div className="col-3">
                 <img
                   src={Image.image1}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 1"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image2}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 2"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image3}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 3"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image4}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 4"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image4}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 4"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image1}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 1"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image2}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 2"
                 />
               </div>
               <div className="col-3">
                 <img
                   src={Image.image3}
-                  className="small-image img-fluid"
+                  className="small-image img-fluid img-background"
                   alt="Product 3"
                 />
               </div>

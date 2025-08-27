@@ -122,9 +122,10 @@ export default function Home() {
                   className="img-fluid product-img"
                 />
               </div>
-              <div className="p-3">
-                <h6 className="mb-1">{product.name}</h6>
-                <p className="text-muted mb-1">{product.price}</p>
+              <div className="p-3" style={{ background: "Transparent" }}>
+               
+                {/* <h6 className="mb-1">{product.name}</h6>
+                <p className="text-muted mb-1">{product.price}</p> */}
               </div>
             </div>
           </div>
@@ -299,15 +300,14 @@ export default function Home() {
         <motion.h2 className="text-center" variants={fadeInUp}>
           BEST SELLINGS
         </motion.h2>
-
-      
       </motion.div>
-<motion.div
- variants={containerVariant}
+      <motion.div
+        variants={containerVariant}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}>
-      <div className="space"></div>
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <div className="space"></div>
         <div className="row m-2">
           {/* Left Column */}
           <div className="left-column col-6 m-0 p-0 h-100">
@@ -349,7 +349,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-</motion.div>
+      </motion.div>
       <div className="space"></div>
 
       {/* Product Grid */}

@@ -1,43 +1,50 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import Image from "../Images/Image";
 import "./Home.css";
 
 export default function TShirt() {
-  useEffect(()=>{
-    document.title="TShirts | Pakistan Textile Exchange"
-  });
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
-
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/api/EcommerceTshirt`)
-      .then((res) => {
-        setProducts(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch T-shirts:", err);
-        setLoading(false);
-      });
+    document.title = "TShirts | Pakistan Textile Exchange";
   }, []);
 
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
-        <h4>Loading...</h4>
-      </div>
-    );
-  }
+  // Hardcoded products
+ const [products] = useState([
+  {
+    title: "Classic White T-Shirt",
+    price: 25,
+    image: Image.image1,
+  },
+  {
+    title: "Black Premium Tee",
+    price: 30,
+    image: Image.image2,
+  },
+  {
+    title: "Graphic Print Tee",
+    price: 35,
+    image: Image.image3,
+  },
+  {
+    title: "Blue Casual T-Shirt",
+    price: 28,
+    image: Image.image4,
+  },
+   {
+    title: "Blue Casual T-Shirt",
+    price: 28,
+    image: Image.image5,
+  },
+]);
 
   return (
     <>
+      {/* Banner */}
       <div className="image-container">
         <img src={Image.Tshirts} alt="Tshirts" className="sub-banner-image" />
       </div>
 
+      {/* Product Grid */}
       <div className="container my-5">
         <div className="row g-4">
           {products.map((product, index) => (
@@ -64,13 +71,15 @@ export default function TShirt() {
                     />
                   </Link>
                 </div>
-                <div className="p-3">
-                  <h6 className="mb-1">{product.title}</h6>
-                  <p className="text-muted mb-1">
-                    USD {product.price}
-                  </p>
-                </div>
+               
               </div>
+               <div className="pt-4 ps-1">
+                  <p className="font">READY TO WEAR</p>
+                  <h6 className="mb-1">{product.title}</h6>
+                  <p className="text-muted mb-1">USD {product.price}</p>
+                 
+                </div>
+                 <button type="button "className="btn btn-outline-dark m-0 ">View Details</button>
             </div>
           ))}
         </div>

@@ -58,11 +58,11 @@ export default function Home() {
         <img
           src={Image.mainbanner}
           alt="slider-image1"
-          className="sliderimage"
+          className="bannerimage"
         />
         <div className="main-btn">
           <Link to="/Shop">
-            <button className="btn btn-outline-light mt-4 ps-5 pe-5 ">
+            <button className="btn btn-outline-light  ps-5 pe-5 ">
               SHOP NOW
             </button>
           </Link>

@@ -3,10 +3,23 @@
   width: 100%;
   max-width: 100%;
 }
-.sliderimage {
+.bannerimage {
   width: 100%;
   height: auto;
   display: block;
+}
+.main-btn {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  transform: translate(-50%, -50%);
+  text-align: start;
+  padding: 20px;
+  border-radius: 10px;
 }
 .img-background {
   height: 100%;
@@ -48,19 +61,7 @@
   width: 500px !important;
   font-weight: bolder;
 }
-.main-btn {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
-  text-align: start;
-  padding: 20px;
-  border-radius: 10px;
-}
+
 .btn {
   height: 50px;
 }

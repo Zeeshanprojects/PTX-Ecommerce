@@ -195,13 +195,13 @@ export default function Home() {
               className="w-100"
             />
             <div className="banner-text">
-              <h2 className="text-white">FLEECE CREWNECK</h2>
-              <p className="text-white">
+              <h2 className="text-dark">FLEECE CREWNECK</h2>
+              <p className="text-dark">
                 Cozy fleece sweatshirt with a round neckline for <br />
                 everyday comfort.
               </p>
               <Link to="#">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                <button className="btn btn-outline-dark ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
               </Link>
@@ -214,12 +214,12 @@ export default function Home() {
               className="w-100"
             />
             <div className="banner-text">
-              <h2 className="text-white">BOAT NECK</h2>
-              <p className="text-white">
+              <h2 className="text-dark">BOAT NECK</h2>
+              <p className="text-dark">
                 Stylish wide-neck fleece with a relaxed, modern fit.
               </p>
               <Link to="#">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                <button className="btn btn-outline-dark ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
               </Link>
@@ -270,13 +270,13 @@ export default function Home() {
               className="w-100"
             />
             <div className="banner-text">
-              <h2 className="text-white">CREW NECKS</h2>
-              <p className="text-white">
+              <h2 className="text-dark">MINERAL WASH</h2>
+              <p className="text-dark">
                 Timeless round-neck sweatshirt with ribbed <br />
                 cuffs and hem
               </p>
               <Link to="#">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                <button className="btn btn-outline-dark ps-3 pe-3 m-0 ">
                   VIEW COLLECTION
                 </button>
               </Link>

@@ -166,7 +166,7 @@ export default function Home() {
       </p>
       <div className="space"></div>
       <div className="container-fluid mb-2 p-0 ">
-        <div className="row g-1 p-0 m-0">
+        <div className="row g-0 p-0 m-0">
           {/* Left column with carousel */}
           <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative">
             <img

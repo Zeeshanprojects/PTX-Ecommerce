@@ -250,8 +250,21 @@
   height: auto !important;
   object-fit: contain !important;
 }
+@media (min-width:993px) and (max-width:1199px) {
+  .main-btn{
+    top: 80%;
+  }
+    .banner-text{
+    font-size: 12px ;
+  }
+.banner-text h2{
+font-size: 20px !important;
+  }
+  .banner-text button{
+    font-size: 10px !important;  }
+}
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
   .main-btn {
     top: 80%;
     padding: 0px !important;

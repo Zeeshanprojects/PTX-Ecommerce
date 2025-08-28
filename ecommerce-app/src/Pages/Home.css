@@ -46,7 +46,7 @@
 }
 .right-column {
   position: relative; /* make it the reference for absolute child */
-  height:auto;
+  height: auto;
   border-radius: 10px !important;
 }
 
@@ -71,7 +71,7 @@
 .category_mainheading {
   font-size: 24px;
   font-weight: bolder;
-  text-align: center ;
+  text-align: center;
   align-items: center;
 }
 .category_heading {
@@ -278,6 +278,27 @@
   }
 }
 @media (max-width: 576px) {
+  .main-btn {
+    top: 80%;
+    padding: 0px !important;
+  }
+  .main-btn button{
+    font-size: 10px !important;
+  }
+  .overlay-text h1{
+    font-size: 20px !important;
+  }
+  .overlay-text button{
+    font-size: 11px !important;
+  }
+  .banner-text{
+    font-size: 8px ;
+  }
+.banner-text h2{
+font-size: 15px !important;
+  }
+  .banner-text button{
+    font-size: 10px !important;  }
   .sizes {
     height: 50px !important;
     width: 50px !important;

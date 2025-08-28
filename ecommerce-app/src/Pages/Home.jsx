@@ -54,7 +54,7 @@ export default function Home() {
         />
         <div className="main-btn">
           <Link to="/Shop">
-            <button className="btn btn-outline-light  ps-5 pe-5 ">
+            <button className="btn btn-outline-light ps-5 pe-5 ">
               SHOP NOW
             </button>
           </Link>
@@ -80,7 +80,6 @@ export default function Home() {
             { img: Image.Menpic, title: "MEN" },
             { img: Image.WomenTshirt, title: "JUNIOR " },
             { img: Image.Denim, title: "DENIM" },
-            
           ].map((item, idx) => (
             <div
               key={idx}
@@ -118,7 +117,7 @@ export default function Home() {
       <div className="space"></div>
       <div className="row m-2">
         {/* Left Column */}
-        <div className="left-column col-6 m-0 p-0 h-100">
+        <div className="left-column col-sm-12 col-md-12 col-lg-6 col-xl-6 m-0 p-0 h-100">
           <div className="container-fluid mb-2 h-100">
             <div className="row g-2">
               <div className="col-6">
@@ -138,7 +137,7 @@ export default function Home() {
         </div>
 
         {/* Right Column */}
-        <div className="right-column col-6 d-flex m-0 p-0 ">
+        <div className="right-column col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex m-0 p-0 ">
           <img
             src={Image.rightbanner}
             alt="rightbanner"

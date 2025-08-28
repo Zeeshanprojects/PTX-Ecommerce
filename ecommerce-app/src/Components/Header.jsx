@@ -49,7 +49,7 @@ export default function Header() {
                   Home
                 </Link>
               </li>
- <li className="nav-item">
+              <li className="nav-item">
                 <Link
                   className="nav-link active"
                   to="/Shop"
@@ -58,16 +58,16 @@ export default function Header() {
                   Men
                 </Link>
               </li>
-               <li className="nav-item">
+              <li className="nav-item">
                 <Link
                   className="nav-link active"
                   to="/Shop"
                   onClick={handleNavCollapse}
                 >
-                Junior
+                  Junior
                 </Link>
               </li>
-               <li className="nav-item">
+              <li className="nav-item">
                 <Link
                   className="nav-link active"
                   to="/Shop"
@@ -96,17 +96,29 @@ export default function Header() {
               </li>
             </ul>
 
-          <div className="d-flex align-items-center gap-3 ms-auto " >
-             <Link to="/Login" onClick={handleNavCollapse} className="text-decoration-none text-white">
-    Search
-  </Link>
-  <Link to="/Login" onClick={handleNavCollapse} className="text-decoration-none text-white">
-    User
-  </Link>
-  <Link to="/Cart" onClick={handleNavCollapse} className="text-decoration-none text-white">
-    Cart
-  </Link>
-</div>
+            <div className="d-flex align-items-center gap-3 ms-auto ">
+              <Link
+                to="/Login"
+                onClick={handleNavCollapse}
+                className="text-decoration-none text-white"
+              >
+                Search
+              </Link>
+              <Link
+                to="/Login"
+                onClick={handleNavCollapse}
+                className="text-decoration-none text-white"
+              >
+                User
+              </Link>
+              <Link
+                to="/Cart"
+                onClick={handleNavCollapse}
+                className="text-decoration-none text-white"
+              >
+                Cart
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="topbar">
+      <div className="topbar ">
         <div className="container ">
           <p className="pt-3">
             {" "}
@@ -22,7 +22,7 @@ export default function Header() {
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-black ">
-        <div className="container-fluid px-2">
+        <div className="container-fluid px-5">
           {" "}
           <Link className="navbar-brand" to="/">
             <img src={Image.logo} />
@@ -46,7 +46,7 @@ export default function Header() {
                   to="/"
                   onClick={handleNavCollapse}
                 >
-                  HOME
+                  Home
                 </Link>
               </li>
  <li className="nav-item">
@@ -55,7 +55,7 @@ export default function Header() {
                   to="/Shop"
                   onClick={handleNavCollapse}
                 >
-                  MEN
+                  Men
                 </Link>
               </li>
                <li className="nav-item">
@@ -64,7 +64,7 @@ export default function Header() {
                   to="/Shop"
                   onClick={handleNavCollapse}
                 >
-                JUNIOR
+                Junior
                 </Link>
               </li>
                <li className="nav-item">
@@ -73,7 +73,7 @@ export default function Header() {
                   to="/Shop"
                   onClick={handleNavCollapse}
                 >
-                  DENIM
+                  Denim
                 </Link>
               </li>
               <li className="nav-item">
@@ -82,7 +82,7 @@ export default function Header() {
                   to="/Shop"
                   onClick={handleNavCollapse}
                 >
-                  CATALOG
+                  Catalog
                 </Link>
               </li>
               <li className="nav-item">
@@ -91,23 +91,22 @@ export default function Header() {
                   to="https://book.paktex.com/book/ptx-company-profile/PTX-C-P"
                   onClick={handleNavCollapse}
                 >
-                  LOOKBOOK
+                  Lookbook
                 </Link>
               </li>
             </ul>
 
-            <div className="d-flex align-items-center gap-3 ms-auto">
-              <Link to="/Login" onClick={handleNavCollapse}>
-                <img
-                  src={Image.user}
-                  alt="User Icon"
-                  className="header-icon "
-                />
-              </Link>
-              <Link to="/Cart" onClick={handleNavCollapse}>
-                <img src={Image.cart} alt="Cart Icon" className="header-icon" />
-              </Link>
-            </div>
+          <div className="d-flex align-items-center gap-3 ms-auto " >
+             <Link to="/Login" onClick={handleNavCollapse} className="text-decoration-none text-white">
+    Search
+  </Link>
+  <Link to="/Login" onClick={handleNavCollapse} className="text-decoration-none text-white">
+    User
+  </Link>
+  <Link to="/Cart" onClick={handleNavCollapse} className="text-decoration-none text-white">
+    Cart
+  </Link>
+</div>
           </div>
         </div>
       </nav>

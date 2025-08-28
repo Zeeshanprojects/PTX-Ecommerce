@@ -64,10 +64,13 @@ export default function Home() {
       <div className="space"></div>
 
       {/* Shared Animation with Images */}
-      <h2 className="text-center" variants={fadeInUp}>
+      <h2 className="text-center fw-bold" variants={fadeInUp}>
         SEARCH BY CATEGORIES
       </h2>
-      <p className="text-center">Explore our collections by category to quickly find the styles that suit your look</p>
+      <p className="text-center">
+        Explore our collections by category to quickly find the styles that suit
+        your look
+      </p>
 
       <div className="space"></div>
 
@@ -378,7 +381,6 @@ export default function Home() {
 
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="bannerimage" />
-        
       </div>
 
       <div

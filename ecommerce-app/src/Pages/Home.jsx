@@ -291,12 +291,11 @@ export default function Home() {
       <div className="space"></div>
       <div className="container-fluid ">
         <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2">
-            <h3 className="category_mainheading mt-5">
-              DRESS SHARP, LIVE SMART
-            </h3>
-          </div>
-          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <h2 className="uppercase text-center mb-5">
+      DRESS SHARP, LIVE SMART
+      </h2>
+         
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center offset-lg-1">
             <div className="icon-wrapper mx-auto">
               <img
                 src={Image.categoriesicon1}
@@ -393,7 +392,7 @@ export default function Home() {
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
             <div className="text-center">
-              <h3 className="mb-4 text-dark">Subscribe to Our Newsletter</h3>
+              <h3 className="mb-4 text-dark text-uppercase">Subscribe to Our Newsletter</h3>
               <p className="mb-4 text-dark">
                 Stay updated with the latest trends, offers, and news. Sign up
                 for our newsletter!

@@ -5,14 +5,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import axios from "axios"; // ✅ Import axios
 
-// const containerVariant = {
-//   hidden: {},
-//   visible: {
-//     transition: {
-//       staggerChildren: 0.15,
-//     },
-//   },
-// };
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -244,21 +237,27 @@ export default function Home() {
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
 
-      <div className="container-fluid mb-2 p-0">
-        <div className="row g-3 m-1">
+      <div className="container-fluid mb-2 p-0 ">
+        <div className="row g-1 p-0 m-0">
           {/* Left column with carousel */}
-         <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <img src={Image.smallbanner4} alt="smallbanner" className="w-100"/>
-         </div>
           <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <img src={Image.smallbanner3} alt="smallbanner" className="w-100"/>
-         </div>
+            <img src={Image.productbanner1} alt="smallbanner" className="w-100 p-0 m-0" />
+          </div>
           <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <img src={Image.smallbanner2} alt="smallbanner" className="w-100"/>
-         </div>
+            <img src={Image.productbanner2} alt="smallbanner" className="w-100" />
+          </div>
           <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <img src={Image.smallbanner1} alt="smallbanner" className="w-100"/>
-         </div>
+            <img src={Image.productbanner3} alt="smallbanner" className="w-100" />
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src={Image.productbanner4} alt="smallbanner" className="w-100" />
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src={Image.productbanner5} alt="smallbanner" className="w-100" />
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <img src={Image.productbanner6} alt="smallbanner" className="w-100" />
+          </div>
 
           {/* Right column */}
           {/* <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center text-center">
@@ -274,7 +273,7 @@ export default function Home() {
       </div>
 
       <div className="image-wrapper">
-        <img src={Image.banner} alt="slider-image1" className="sliderimage" />
+        <img src={Image.banner} alt="slider-image1" className="bannerimage" />
         <div className="main-btn">
           <Link to="/Shop">
             <button className="btn btn-outline-light mt-4 ps-5 pe-5 ">

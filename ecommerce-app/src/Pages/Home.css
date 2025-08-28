@@ -300,11 +300,12 @@ font-size: 20px !important;
 }
 @media (max-width: 576px) {
   .main-btn {
-    top: 80%;
+    top: 82%;
     padding: 0px !important;
+    margin: 0px !important;
   }
   .main-btn button{
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .overlay-text h1{
     font-size: 20px !important;

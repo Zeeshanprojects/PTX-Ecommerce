@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <div className="container-fluid p-0">
+      <div className="container-fluid p-0 ">
         <footer
           className="text-center text-lg-start text-light "
           style={{ backgroundColor: "black" }}
@@ -25,7 +25,8 @@ export default function Footer() {
                     }}
                   />
                   <p>
-                  Trusted by industry leaders for quality, reliability, and fast delivery.
+                    Trusted by industry leaders for quality, reliability, and
+                    fast delivery.
                   </p>
                 </div>
 
@@ -111,10 +112,7 @@ export default function Footer() {
             </div>
           </section>
 
-          <div
-            className="text-center p-2"
-        
-          >
+          <div className="text-center p-2">
             © 2025 |
             <Link className="text-dark" to="https://mdbootstrap.com/">
               {" "}

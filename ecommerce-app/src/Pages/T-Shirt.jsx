@@ -79,7 +79,7 @@ export default function TShirt() {
                   <p className="text-muted mb-1">USD {product.price}</p>
                  
                 </div>
-                 <button type="button "className="btn btn-outline-dark m-0 ">View Details</button>
+                
             </div>
           ))}
         </div>

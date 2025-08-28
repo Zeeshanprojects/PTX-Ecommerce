@@ -49,33 +49,6 @@ export default function Header() {
                   HOME
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  to="/T-Shirts"
-                  onClick={handleNavCollapse}
-                >
-                  T-SHIRTS
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  to="/Fleece"
-                  onClick={handleNavCollapse}
-                >
-                  FLEECE
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link active"
-                  to="/Kid"
-                  onClick={handleNavCollapse}
-                >
-                  KIDS
-                </Link>
-              </li>
 
               <li className="nav-item">
                 <Link
@@ -89,7 +62,7 @@ export default function Header() {
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/LookBook"
+                  to="https://book.paktex.com/book/ptx-company-profile/PTX-C-P"
                   onClick={handleNavCollapse}
                 >
                   LOOKBOOK

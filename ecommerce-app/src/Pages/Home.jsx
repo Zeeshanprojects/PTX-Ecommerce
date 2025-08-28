@@ -5,7 +5,6 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import axios from "axios"; // ✅ Import axios
 
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -63,105 +62,27 @@ export default function Home() {
       </div>
 
       <div className="space"></div>
-      <div className="container-fluid ">
-        <div className="row">
-          <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2">
-            <h3 className="category_mainheading mt-5">
-              DRESS SHARP, LIVE SMART
-            </h3>
-          </div>
-          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-            <div className="icon-wrapper mx-auto">
-              <img
-                src={Image.categoriesicon1}
-                alt="categoryicons"
-                className=" mb-2"
-              />
-            </div>
-
-            <h6 className="category_heading">Trend-Forward Collections</h6>
-            <p className="category_font">
-              Stay fashionable with our latest styles
-            </p>
-          </div>
-          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-            <div className="icon-wrapper mx-auto">
-              <img
-                src={Image.categoriesicon2}
-                alt="categoryicons"
-                className=" mb-2"
-              />
-            </div>
-            <h6 className="category_heading">Fast Shipping</h6>
-            <p className="category_font">
-              Get your new clothes quickly with our speedy shipping
-            </p>
-          </div>
-          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-            <div className="icon-wrapper mx-auto">
-              <img
-                src={Image.categoriesicon3}
-                alt="categoryicons"
-                className=" mb-2"
-              />
-            </div>
-            <h6 className="category_heading">Easy Returns</h6>
-            <p className="category_font">
-              If it doesn't fit or you don't like it, return it easily
-            </p>
-          </div>
-          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-            <div className="icon-wrapper mx-auto">
-              <img
-                src={Image.categoriesicon4}
-                alt="categoryicons"
-                className=" mb-2"
-              />
-            </div>
-            <h6 className="category_heading">Loyalty Rewards</h6>
-            <p className="category_font">
-              Earn rewards and discounts when you shop with us
-            </p>
-          </div>
-          <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2 text-center">
-            <div className="icon-wrapper mx-auto">
-              <img
-                src={Image.categoriesicon5}
-                alt="categoryicons"
-                className=" mb-2"
-              />
-            </div>
-            <h6 className="category_heading">Secured Payments</h6>
-            <p className="category_font">
-              Pay with our safe and secure payment options
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="space"></div>
-
-      <div className="space"></div>
 
       {/* Shared Animation with Images */}
       <h2 className="text-center" variants={fadeInUp}>
         SEARCH BY CATEGORIES
       </h2>
+      <p className="text-center">Explore our collections by category to quickly find the styles that suit your look</p>
 
       <div className="space"></div>
 
       <div className="container-fluid p-0 m-0 h-100">
         <div className="row gx-1 gy-1">
           {[
-            { img: Image.Menpic, title: "MENS" },
-            { img: Image.WomenTshirt, title: "WOMENS " },
+            { img: Image.Menpic, title: "MEN" },
+            { img: Image.WomenTshirt, title: "WOMEN " },
             { img: Image.Kidpic, title: "JUNIOR" },
           ].map((item, idx) => (
             <div key={idx} className="col-sm-12 col-md-6 col-lg-4 h-100">
               <div className="position-relative overflow-hidden">
-                <span className="badge bg-danger position-absolute top-0 end-0 m-2">
+                {/* <span className="badge bg-danger position-absolute top-0 end-0 m-2">
                   SALE
-                </span>
+                </span> */}
                 <img src={item.img} alt="bestselling" className="categories" />
 
                 {/* Overlay */}
@@ -185,6 +106,7 @@ export default function Home() {
       <h2 className="text-center" variants={fadeInUp}>
         BEST SELLINGS
       </h2>
+      <p className="text-center">Our top-selling essentials, curated for you</p>
 
       <div className="space"></div>
       <div className="row m-2">
@@ -233,54 +155,230 @@ export default function Home() {
 
       {/* Product Grid */}
 
-      <h2 className="uppercase text-center mb-3">
+      <h2 className="uppercase text-center ">
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
-
+      <p className="text-center">
+        Essential styles designed for comfort, versatility, and timeless appeal
+      </p>
+      <div className="space"></div>
       <div className="container-fluid mb-2 p-0 ">
         <div className="row g-1 p-0 m-0">
           {/* Left column with carousel */}
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <img src={Image.productbanner1} alt="smallbanner" className="w-100 p-0 m-0" />
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <img src={Image.productbanner2} alt="smallbanner" className="w-100" />
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <img src={Image.productbanner3} alt="smallbanner" className="w-100" />
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <img src={Image.productbanner4} alt="smallbanner" className="w-100" />
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <img src={Image.productbanner5} alt="smallbanner" className="w-100" />
-          </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <img src={Image.productbanner6} alt="smallbanner" className="w-100" />
-          </div>
-
-          {/* Right column */}
-          {/* <div className="col-sm-12 col-md-6 d-flex justify-content-center align-items-center text-center">
-            <div>
-              <h1 className="mb-3">Discover Our Latest Collection</h1>
-              <p className="mb-3">
-                Trendy T-shirts in all colors, perfect for every style.
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative">
+            <img
+              src={Image.productbanner1}
+              alt="smallbanner"
+              className="w-100 p-0 m-0"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">COLLARED NECK </h2>
+              <p className="text-white">
+                Smart casual polo with a classic collar and <br />
+                button placket.
               </p>
-              <button className="btn btn-dark px-4 py-2">Shop Now</button>
+
+              <Link to="#">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
             </div>
-          </div> */}
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+            <img
+              src={Image.productbanner2}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">FLEECE CREWNECK</h2>
+              <p className="text-white">
+                Cozy fleece sweatshirt with a round neckline for <br />
+                everyday comfort.
+              </p>
+              <Link to="#">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+            <img
+              src={Image.productbanner3}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">BOAT NECK</h2>
+              <p className="text-white">
+                Stylish wide-neck fleece with a relaxed, modern fit.
+              </p>
+              <Link to="#">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+            <img
+              src={Image.productbanner4}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">PULLOVER HOODIES</h2>
+              <p className="text-white">
+                Classic hoodie with drawstring hood and <br />
+                kangaroo pocket.
+              </p>
+              <Link to="#">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+            <img
+              src={Image.productbanner5}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">SWEAT SHORTS</h2>
+              <p className="text-white ">
+                Comfortable fleece shorts with drawstring waist <br />
+                and side pockets.
+              </p>
+              <Link to="#">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+            <img
+              src={Image.productbanner6}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">CREW NECKS</h2>
+              <p className="text-white">
+                Timeless round-neck sweatshirt with ribbed <br />
+                cuffs and hem
+              </p>
+              <Link to="#">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
+      <div className="space"></div>
+      <div className="container-fluid ">
+        <div className="row">
+          <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2">
+            <h3 className="category_mainheading mt-5">
+              DRESS SHARP, LIVE SMART
+            </h3>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon1}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+
+            <h6 className="category_heading">Trend-Forward Collections</h6>
+            <p className="category_font">
+              Stay fashionable with our latest styles
+            </p>
+            <Link to="/Shop">
+              <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                VIEW COLLECTION
+              </button>
+            </Link>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon2}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Fast Shipping</h6>
+            <p className="category_font">
+              Get your new clothes quickly with our speedy shipping
+            </p>
+            <Link to="/Shop">
+              <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                VIEW COLLECTION
+              </button>
+            </Link>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon3}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Easy Returns</h6>
+            <p className="category_font">
+              If it doesn't fit or you don't like it, return it easily
+            </p>
+            <Link to="/Shop">
+              <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                VIEW COLLECTION
+              </button>
+            </Link>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon4}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Loyalty Rewards</h6>
+            <p className="category_font">
+              Earn rewards and discounts when you shop with us
+            </p>
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon5}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Secured Payments</h6>
+            <p className="category_font">
+              Pay with our safe and secure payment options
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="space"></div>
+
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="bannerimage" />
-        <div className="main-btn">
-          <Link to="/Shop">
-            <button className="btn btn-outline-light mt-4 ps-5 pe-5 ">
-              SHOP NOW
-            </button>
-          </Link>
-        </div>
+        
       </div>
 
       <div

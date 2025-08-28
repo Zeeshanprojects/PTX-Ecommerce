@@ -45,6 +45,7 @@ const Image = {
   productbanner4: new URL("./productbanner4.webp", import.meta.url).href,
   productbanner5: new URL("./productbanner5.webp", import.meta.url).href,
   productbanner6: new URL("./productbanner6.webp", import.meta.url).href,
+
   Menpic: new URL("./Menpic.webp", import.meta.url).href,
   Womenpic: new URL("./Womenpic.webp", import.meta.url).href,
   Kidpic: new URL("./Kidimage.webp", import.meta.url).href,

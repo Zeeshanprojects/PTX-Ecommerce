@@ -80,8 +80,12 @@ export default function Home() {
             { img: Image.Menpic, title: "MEN" },
             { img: Image.WomenTshirt, title: "JUNIOR " },
             { img: Image.Denim, title: "DENIM" },
+            
           ].map((item, idx) => (
-            <div key={idx} className="col-sm-12 col-md-6 col-lg-4 h-100">
+            <div
+              key={idx}
+              className="col-sm-12 col-md-12 col-lg-4 col-xl-4 h-100"
+            >
               <div className="position-relative overflow-hidden">
                 {/* <span className="badge bg-danger position-absolute top-0 end-0 m-2">
                   SALE

@@ -71,6 +71,8 @@
 .category_mainheading {
   font-size: 24px;
   font-weight: bolder;
+  text-align: center ;
+  align-items: center;
 }
 .category_heading {
   font-size: 14px !important;

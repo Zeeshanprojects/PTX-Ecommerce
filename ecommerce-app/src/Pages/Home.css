@@ -252,6 +252,10 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .main-btn {
+    top: 80%;
+    padding: 0px !important;
+  }
   .category_mainheading {
     text-align: center !important;
     width: 100%;
@@ -263,6 +267,10 @@
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
+  .main-btn {
+    top: 80%;
+    padding: 0px !important;
+  }
   .category_mainheading {
     text-align: center !important;
     margin-bottom: 50px;

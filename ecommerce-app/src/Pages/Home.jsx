@@ -171,7 +171,7 @@ export default function Home() {
       <div className="container-fluid mb-2 p-0 ">
         <div className="row g-0 p-0 m-0">
           {/* Left column with carousel */}
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6  position-relative">
             <img
               src={Image.productbanner1}
               alt="smallbanner"
@@ -191,7 +191,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative">
             <img
               src={Image.productbanner2}
               alt="smallbanner"
@@ -210,7 +210,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative">
             <img
               src={Image.productbanner3}
               alt="smallbanner"
@@ -228,7 +228,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative">
             <img
               src={Image.productbanner4}
               alt="smallbanner"
@@ -247,7 +247,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative">
             <img
               src={Image.productbanner5}
               alt="smallbanner"
@@ -266,7 +266,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative">
             <img
               src={Image.productbanner6}
               alt="smallbanner"
@@ -379,7 +379,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="space"></div>
 
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="bannerimage" />

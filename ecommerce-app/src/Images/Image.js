@@ -48,6 +48,7 @@ const Image = {
   Menpic: new URL("./Menpic.webp", import.meta.url).href,
   Womenpic: new URL("./Womenpic.webp", import.meta.url).href,
   Kidpic: new URL("./Kidimage.webp", import.meta.url).href,
+  Denim:new URL("./Denimpic.webp",import.meta.url).href,
   WomenTshirt: new URL("./Womenpic.webp", import.meta.url).href,
   fleece: new URL("./Fleece-image.webp", import.meta.url).href,
   hoddies: new URL("./Hoodie.webp", import.meta.url).href,

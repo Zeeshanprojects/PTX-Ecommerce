@@ -75,8 +75,8 @@ export default function Home() {
         <div className="row gx-1 gy-1">
           {[
             { img: Image.Menpic, title: "MEN" },
-            { img: Image.WomenTshirt, title: "WOMEN " },
-            { img: Image.Kidpic, title: "JUNIOR" },
+            { img: Image.WomenTshirt, title: "JUNIOR " },
+            { img: Image.Denim, title: "DENIM" },
           ].map((item, idx) => (
             <div key={idx} className="col-sm-12 col-md-6 col-lg-4 h-100">
               <div className="position-relative overflow-hidden">

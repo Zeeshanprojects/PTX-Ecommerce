@@ -17,7 +17,7 @@ export default function Shop() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const categories = ["COLLARED NECK", "FLEECE CREWNECK", "BOAT NECK","PULLOVER HOODIES","SWEAT SHORTS","MINERAL WASH"];
+  const categories = ["T-Shirt","COLLARED NECK","FLEECE CREWNECK","BOATNECK","PULLOVER HOODIES","SWEAT SHORT","MINERAL WADH"];
   const baseURL = import.meta.env.VITE_API_URL;
   const apiEndpoints = {
     "T-Shirt": `${baseURL}/api/EcommerceTshirt`,

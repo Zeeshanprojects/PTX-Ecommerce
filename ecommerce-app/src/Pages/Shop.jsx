@@ -17,12 +17,20 @@ export default function Shop() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const categories = ["T-Shirt","COLLARED NECK","FLEECE CREWNECK","BOATNECK","PULLOVER HOODIES","SWEAT SHORT","MINERAL WADH"];
+  const categories = [
+    "T-Shirt",
+    "COLLARED NECK",
+    "FLEECE CREWNECK",
+    "BOATNECK",
+    "PULLOVER HOODIES",
+    "SWEAT SHORT",
+    "MINERAL WADH",
+  ];
   const baseURL = import.meta.env.VITE_API_URL;
   const apiEndpoints = {
     "T-Shirt": `${baseURL}/api/EcommerceTshirt`,
-   " Fleece": `${baseURL}/api/EcommerceFleece`,
-    "Kids": `${baseURL}/api/EcommerceKid`,
+    Fleece: `${baseURL}/api/EcommerceFleece`,
+    Kids: `${baseURL}/api/EcommerceKid`,
   };
 
   useEffect(() => {
@@ -180,7 +188,6 @@ export default function Shop() {
                                   {title}
                                 </label>
                               </div>
-                    
                             </div>
                           );
                         })}

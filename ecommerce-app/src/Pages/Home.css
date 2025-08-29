@@ -254,6 +254,7 @@ border-radius: 10px !important;
 .background{
   background-color: #FAFAFA;
 }
+
 @media (min-width: 993px) and (max-width: 1199px) {
   .main-btn {
     top: 80%;
@@ -342,4 +343,5 @@ border-radius: 10px !important;
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
+
 }

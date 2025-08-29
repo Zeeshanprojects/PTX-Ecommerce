@@ -102,7 +102,7 @@ export default function Footer() {
                 </div>
 
                 <div className="col-md-12 text-md-center  text-lg-start col-lg-2 col-xl-2 mx-auto mb-4 mt-5">
-                  <h6 className="text-uppercase fw-bold">USEFUL LINKS</h6>
+                  <h6 className="text-uppercase fw-bold">OUR PRODUCTS</h6>
                   <hr
                     className="mb-4 mt-0 d-inline-block mx-auto"
                     style={{
@@ -161,11 +161,9 @@ export default function Footer() {
                     <i className="fas fa-envelope mr-3"></i> sales@paktex.com
                   </p>
                   <p>
-                    <i className="fas fa-phone mr-3"></i> + 01 234 567 88
+                    <i className="fas fa-phone mr-3"></i>  +1 949 283 9554
                   </p>
-                  <p>
-                    <i className="fas fa-print mr-3"></i> + 01 234 567 89
-                  </p>
+                
                 </div>
               </div>
             </div>

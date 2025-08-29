@@ -6,10 +6,10 @@ export default function Privacyandpolicy() {
   })
   return (
 <>
-<div className="container my-5">
-      <h1 className="mb-4">Privacy Policy</h1>
-
-      <p>
+<div className="container my-5" style={{width: "800px"}}>
+      <h1 className="mb-4 ">Privacy Policy</h1>
+<div className='text-justify'>
+  <p>
         At Pakistan Textile Exchange, we are committed to protecting the privacy of our users, clients, and visitors. This Privacy Policy outlines how we collect, use, and protect your information when you interact with our textile platform.
       </p>
 
@@ -71,6 +71,8 @@ export default function Privacyandpolicy() {
 
       <p className="mt-4">Last updated: May 29, 2025</p>
     </div>
-</>
+
+</div>
+      </>
   )
 }

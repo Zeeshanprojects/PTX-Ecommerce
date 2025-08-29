@@ -95,7 +95,7 @@ export default function Footer() {
                     </Link>
                   </p>
                   <p>
-                    <Link to="/Contact" className="text-white">
+                    <Link to="/faq" className="text-white">
                       FAQ
                     </Link>
                   </p>

@@ -99,7 +99,7 @@
 }
 .product-card {
   background-color: white;
-border-radius: 10px !important;
+  border-radius: 10px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .product-card:hover {
@@ -141,7 +141,7 @@ border-radius: 10px !important;
   color: white;
 }
 .new-badge {
-  background-color: black; 
+  background-color: black;
   color: #fff;
   padding: 5px 15px;
   font-size: 12px;
@@ -251,10 +251,12 @@ border-radius: 10px !important;
   height: auto !important;
   object-fit: contain !important;
 }
-.background{
-  background-color: #FAFAFA;
+.background {
+  background-color: #fafafa;
 }
-
+.border{
+  border: 1222px solid orange;
+}
 @media (min-width: 993px) and (max-width: 1199px) {
   .main-btn {
     top: 80%;
@@ -343,5 +345,4 @@ border-radius: 10px !important;
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
-
 }

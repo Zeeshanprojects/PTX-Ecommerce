@@ -191,7 +191,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative ">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative border">
             <img
               src={Image.productbanner2}
               alt="smallbanner"
@@ -210,7 +210,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative  ">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative border">
             <img
               src={Image.productbanner3}
               alt="smallbanner"

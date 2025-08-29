@@ -3,8 +3,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 export default function Denim() {
+
       const [products, setProducts] = useState([]);
       const [loading, setLoading] = useState(true);
+
+      useEffect(()=>{
+        document.title="Denim | Pakitan Textle Exchnage"
+      })
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)
@@ -24,7 +29,14 @@ export default function Denim() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "50vh" }}
       >
-        <h4>Loading...</h4>
+    <div
+  className="spinner-grow"
+  style={{ width: "3rem", height: "3rem" }}
+  role="status"
+>
+  <span className="visually-hidden">Loading...</span>
+</div>
+
       </div>
     );
   }

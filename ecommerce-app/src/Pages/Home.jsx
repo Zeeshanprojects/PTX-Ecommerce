@@ -1,18 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "../Images/Image";
 import "./Home.css";
-import { motion } from "framer-motion";
+
 import { Link } from "react-router-dom";
 import axios from "axios"; // ✅ Import axios
 
-const containerVariant = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -52,101 +44,17 @@ export default function Home() {
     }
   };
 
-  const products = {
-    Mens: [
-      {
-        id: 1,
-        name: "PT-5000-Green",
-        price: "$ 5.00 USD",
-        image: Image.image1,
-      },
-      { id: 2, name: "Pt-5000-Yellow", price: "$ 5 USD", image: Image.image2 },
-      { id: 3, name: "PT-5000-Red", price: "$ 5 USD", image: Image.image3 },
-      { id: 4, name: "PT-5000-Blue", price: "$ 5 USD", image: Image.image4 },
-      { id: 5, name: "PT-5000-Black", price: "$ 5 USD", image: Image.image5 },
-      { id: 6, name: "PT-5000-Gray", price: "$ 5 USD", image: Image.image6 },
-    ],
-    Kids: [
-      { id: 10, name: "W-2050-Gray", price: "$ 5 USD", image: Image.image10 },
-      { id: 11, name: "W-2050-Pink", price: "$ 5 USD", image: Image.image11 },
-      { id: 12, name: "W-2050-Black", price: "$ 5 USD", image: Image.image12 },
-      { id: 13, name: "W-2050-Yellow", price: "$ 5 USD", image: Image.image13 },
-      { id: 14, name: "W-2050-Red", price: "$ 5 USD", image: Image.image14 },
-      { id: 15, name: "W-2050-Green", price: "$ 5 USD", image: Image.image15 },
-    ],
-    Fleece: [
-      {
-        id: 16,
-        name: "PT-18000-Brown",
-        price: "$ 5 USD",
-        image: Image.Fleece1,
-      },
-      {
-        id: 17,
-        name: "PT-18000-L-Brown",
-        price: "$ 5 USD",
-        image: Image.Fleece2,
-      },
-      { id: 18, name: "PT-18000-Gray", price: "$ 5 USD", image: Image.Fleece3 },
-      { id: 19, name: "PT-18000-Blue", price: "$ 5 USD", image: Image.Fleece4 },
-      { id: 20, name: "PT-18000-Red", price: "$ 5 USD", image: Image.Fleece5 },
-      {
-        id: 21,
-        name: "PT-18000-Purple",
-        price: "$ 5 USD",
-        image: Image.Fleece6,
-      },
-    ],
-  };
-
-  const renderProductSection = (category, items, route) => (
-    <motion.div
-      className="container-fluid my-5"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      variants={fadeInUp}
-    >
-      <h3 className="text-center mb-4 text-uppercase">{category} Collection</h3>
-      <div className="row g-4">
-        {items.map((product) => (
-          <div className="col-sm-12 col-md-6 col-lg-2" key={product.id}>
-            <div className="product-card position-relative overflow-hidden rounded shadow-sm">
-              <span className="new-badge position-absolute top-0 start-0 m-2">
-                NEW
-              </span>
-              <div className="product-img-container position-relative">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="img-fluid product-img"
-                />
-              </div>
-              <div className="p-3">
-                <h6 className="mb-1">{product.name}</h6>
-                <p className="text-muted mb-1">{product.price}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="text-center mt-4">
-        <Link to={route}>
-          <button className="btn btn-outline-dark ps-5 pe-5">
-            View All Collection
-          </button>
-        </Link>
-      </div>
-    </motion.div>
-  );
-
   return (
     <>
       <div className="image-wrapper">
-        <img src={Image.banner} alt="slider-image1" className="sliderimage" />
-        <div className="imagetext">
+        <img
+          src={Image.mainbanner}
+          alt="slider-image1"
+          className="bannerimage"
+        />
+        <div className="main-btn">
           <Link to="/Shop">
-            <button className="btn btn-outline-light mt-4 ps-5 pe-5 main-btn">
+            <button className="btn btn-outline-light ps-5 pe-5 ">
               SHOP NOW
             </button>
           </Link>
@@ -154,171 +62,336 @@ export default function Home() {
       </div>
 
       <div className="space"></div>
-      <div className="container-fluid ">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2">
-              <h3 className="category_mainheading mt-5">
-                DRESS SHARP, LIVE SMART
-              </h3>
-            </div>
-            <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-              <div className="icon-wrapper mx-auto">
-                <img
-                  src={Image.categoriesicon1}
-                  alt="categoryicons"
-                  className=" mb-2"
-                />
-              </div>
 
-              <h6 className="category_heading">Trend-Forward Collections</h6>
-              <p className="category_font">
-                Stay fashionable with our latest styles
-              </p>
-            </div>
-            <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-              <div className="icon-wrapper mx-auto">
-                <img
-                  src={Image.categoriesicon2}
-                  alt="categoryicons"
-                  className=" mb-2"
-                />
+      {/* Shared Animation with Images */}
+      <h2 className="text-center fw-bold" variants={fadeInUp}>
+        SEARCH BY CATEGORIES
+      </h2>
+      <p className="text-center">
+        Explore our collections by category to quickly find the styles that suit
+        your look
+      </p>
+
+      <div className="space"></div>
+
+      <div className="container-fluid p-0 m-0 h-100">
+        <div className="row gx-1 gy-1">
+          {[
+            { img: Image.Menpic, title: "MEN", path: "/Men" },
+            { img: Image.WomenTshirt, title: "JUNIOR", path: "/junior" },
+            { img: Image.Denim, title: "DENIM", path: "/denim" },
+          ].map((item, idx) => (
+            <div
+              key={idx}
+              className="col-sm-12 col-md-12 col-lg-4 col-xl-4 h-100"
+            >
+              <div className="position-relative overflow-hidden">
+                <img src={item.img} alt={item.title} className="categories" />
+
+                {/* Overlay */}
+                <div className="overlay d-flex flex-column justify-content-center align-items-center">
+                  <h2 className="text-white">{item.title}</h2>
+                  <Link to={item.path}>
+                    <button className="btn btn-outline-light btn-lg mt-2">
+                      VIEW COLLECTION
+                    </button>
+                  </Link>
+                </div>
               </div>
-              <h6 className="category_heading">Fast Shipping</h6>
-              <p className="category_font">
-                Get your new clothes quickly with our speedy shipping
-              </p>
             </div>
-            <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-              <div className="icon-wrapper mx-auto">
-                <img
-                  src={Image.categoriesicon3}
-                  alt="categoryicons"
-                  className=" mb-2"
-                />
-              </div>
-              <h6 className="category_heading">Easy Returns</h6>
-              <p className="category_font">
-                If it doesn't fit or you don't like it, return it easily
-              </p>
-            </div>
-            <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
-              <div className="icon-wrapper mx-auto">
-                <img
-                  src={Image.categoriesicon4}
-                  alt="categoryicons"
-                  className=" mb-2"
-                />
-              </div>
-              <h6 className="category_heading">Loyalty Rewards</h6>
-              <p className="category_font">
-                Earn rewards and discounts when you shop with us
-              </p>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2 text-center">
-              <div className="icon-wrapper mx-auto">
-                <img
-                  src={Image.categoriesicon5}
-                  alt="categoryicons"
-                  className=" mb-2"
-                />
-              </div>
-              <h6 className="category_heading">Secured Payments</h6>
-              <p className="category_font">
-                Pay with our safe and secure payment options
-              </p>
-            </div>
-          </div>
-        </motion.div>
+          ))}
+        </div>
       </div>
 
       <div className="space"></div>
-      <motion.div
-        variants={containerVariant}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-      >
-        <div className="space"></div>
 
-        {/* Shared Animation with Images */}
-        <motion.h2 className="text-center" variants={fadeInUp}>
-          BEST SELLINGS
-        </motion.h2>
+      <div className="space"></div>
 
-        <div className="space"></div>
+      {/* Shared Animation with Images */}
+      <h2 className="text-center" variants={fadeInUp}>
+        BEST SELLINGS
+      </h2>
+      <p className="text-center">Our top-selling essentials, curated for you</p>
 
-        <div className="container-fluid p-0">
-          <div className="row gx-1 gy-1">
-            {[
-              Image.bestselling1,
-              Image.bestselling2,
-              Image.bestselling3,
-              Image.bestselling6,
-            ].map((imgSrc, idx) => (
-              <div key={idx} className="col-sm-12 col-md-6 col-lg-3">
-                <motion.div className="position-relative" variants={fadeInUp}>
-                  <span className="badge bg-danger position-absolute top-0 end-0 m-2">
-                    SALE
-                  </span>
-                  <img
-                    src={imgSrc}
-                    alt="bestselling"
-                    className="best-selling img-fluid"
-                  />
-                </motion.div>
+      <div className="space"></div>
+      <div className="row m-2">
+        {/* Left Column */}
+        <div className="left-column col-sm-12 col-md-12 col-lg-6 col-xl-6 m-0 p-0 h-100">
+          <div className="container-fluid mb-2 h-100">
+            <div className="row g-2">
+              <div className="col-6">
+                <img src={Image.category1} className="img-background " />
               </div>
-            ))}
+              <div className="col-6">
+                <img src={Image.category2} className="img-background" />
+              </div>
+              <div className="col-6">
+                <img src={Image.category3} className="img-background" />
+              </div>
+              <div className="col-6">
+                <img src={Image.category4} className="img-background" />
+              </div>
+            </div>
           </div>
         </div>
-      </motion.div>
+
+        <div className="right-column col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex m-0 p-0 ">
+          <img
+            src={Image.rightbanner}
+            alt="rightbanner"
+            className="right-banner-img"
+          />
+          <div className="overlay-text">
+            <h5> SALE IS ON</h5>
+            <h1>50 % OFF</h1>
+
+            <button
+              type="button"
+              class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
+            >
+              SHOP NOW
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="space"></div>
 
       {/* Product Grid */}
 
-      <motion.div
-        className="text-center mt-5"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <h2 className="uppercase">
-          CURATED ESSENTIALS FOR A TIMELESS WARDROBE
-        </h2>
-        <p>Complement your everyday style with timeless essential items</p>
-      </motion.div>
+      <h2 className="uppercase text-center ">
+        CURATED ESSENTIALS FOR A TIMELESS WARDROBE
+      </h2>
+      <p className="text-center">
+        Essential styles designed for comfort, versatility, and timeless appeal
+      </p>
+      <div className="space"></div>
+      <div className="container-fluid mb-2 p-0 ">
+        <div className="row g-0 p-0 m-0">
+          {/* Left column with carousel */}
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6  position-relative ">
+            <img
+              src={Image.productbanner1}
+              alt="smallbanner"
+              className="w-100 p-0 m-0"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">COLLARED NECK </h2>
+              <p className="text-white">
+                Smart casual polo with a classic collar and <br />
+                button placket.
+              </p>
 
-      {renderProductSection("T-Shirts", products.Mens, "/T-Shirts")}
-      {renderProductSection("Kids", products.Kids, "/Kid")}
-      {renderProductSection("Fleece", products.Fleece, "/Fleece")}
+              <Link to="/Collaredneck">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative border">
+            <img
+              src={Image.productbanner2}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-dark">FLEECE CREWNECK</h2>
+              <p className="text-dark">
+                Cozy fleece sweatshirt with a round neckline for <br />
+                everyday comfort.
+              </p>
+              <Link to="/Fleece">
+                <button className="btn btn-outline-dark ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative border">
+            <img
+              src={Image.productbanner3}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-dark">BOAT NECK</h2>
+              <p className="text-dark">
+                Stylish wide-neck fleece with a relaxed, modern fit.
+              </p>
+              <Link to="/Boatneck">
+                <button className="btn btn-outline-dark ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative  ">
+            <img
+              src={Image.productbanner4}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">PULLOVER HOODIES</h2>
+              <p className="text-white">
+                Classic hoodie with drawstring hood and <br />
+                kangaroo pocket.
+              </p>
+              <Link to="/Pulloverhoodie">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative ">
+            <img
+              src={Image.productbanner5}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">SWEAT SHORTS</h2>
+              <p className="text-white ">
+                Comfortable fleece shorts with drawstring waist <br />
+                and side pockets.
+              </p>
+              <Link to="/short">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 position-relative ">
+            <img
+              src={Image.productbanner6}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-dark">MINERAL WASH</h2>
+              <p className="text-dark">
+                Timeless round-neck sweatshirt with ribbed <br />
+                cuffs and hem
+              </p>
+              <Link to="/Mineralwash">
+                <button className="btn btn-outline-dark ps-3 pe-3 m-0 ">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <motion.div
-        className="container-fluid p-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeInUp}
-      >
-        <img src={Image.Fashion_Banner} alt="banner" className="banner" />
-      </motion.div>
+      <div className="space"></div>
+      <div className="container-fluid ">
+        <div className="row">
+          <h2 className="uppercase text-center mb-5">
+            DRESS SHARP, LIVE SMART
+          </h2>
 
-      {/* ✅ Newsletter Section (Corrected) */}
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center offset-lg-1">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon1}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+
+            <h6 className="category_heading">Trend-Forward Collections</h6>
+            <p className="category_font">
+              Stay fashionable with our latest styles
+            </p>
+            <Link to="/Shop">
+              <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                VIEW COLLECTION
+              </button>
+            </Link>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon2}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Fast Shipping</h6>
+            <p className="category_font">
+              Get your new clothes quickly with our speedy shipping
+            </p>
+            <Link to="/Shop">
+              <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                VIEW COLLECTION
+              </button>
+            </Link>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon3}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Easy Returns</h6>
+            <p className="category_font">
+              If it doesn't fit or you don't like it, return it easily
+            </p>
+            <Link to="/Shop">
+              <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                VIEW COLLECTION
+              </button>
+            </Link>
+          </div>
+          <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon4}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Loyalty Rewards</h6>
+            <p className="category_font">
+              Earn rewards and discounts when you shop with us
+            </p>
+          </div>
+          <div className="col-sm-12 col-md-12 col-lg-2 col-xl-2 text-center">
+            <div className="icon-wrapper mx-auto">
+              <img
+                src={Image.categoriesicon5}
+                alt="categoryicons"
+                className=" mb-2"
+              />
+            </div>
+            <h6 className="category_heading">Secured Payments</h6>
+            <p className="category_font">
+              Pay with our safe and secure payment options
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="image-wrapper">
+        <img src={Image.banner} alt="slider-image1" className="bannerimage" />
+      </div>
+
       <div
         className="container-fluid py-5"
-        style={{ backgroundColor: "#000000" }}
+        style={{ backgroundColor: "##FFFFFF" }}
       >
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
             <div className="text-center">
-              <h3 className="mb-4 text-white">Subscribe to Our Newsletter</h3>
-              <p className="mb-4 text-white">
+              <h3 className="mb-4 text-dark text-uppercase">
+                Subscribe to Our Newsletter
+              </h3>
+              <p className="mb-4 text-dark">
                 Stay updated with the latest trends, offers, and news. Sign up
                 for our newsletter!
               </p>
@@ -327,13 +400,13 @@ export default function Home() {
                 <div className="input-group mb-3">
                   <input
                     type="email"
-                    className="form-control bg-transparent text-white border-white"
+                    className="form-control  text-white border-black "
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
-                  <button className="btn btn-light px-4" type="submit">
+                  <button className="btn btn-light ms-2" type="submit">
                     Subscribe
                   </button>
                 </div>

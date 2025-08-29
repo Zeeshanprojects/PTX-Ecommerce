@@ -1,44 +1,55 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import Image from "../Images/Image";
 import "./Home.css";
 
 export default function TShirt() {
-  useEffect(()=>{
-    document.title="TShirts | Pakistan Textile Exchange"
-  });
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
-
   useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/api/EcommerceTshirt`)
-      .then((res) => {
-        setProducts(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch T-shirts:", err);
-        setLoading(false);
-      });
+    document.title = "TShirts | Pakistan Textile Exchange";
   }, []);
 
-  if (loading) {
-    return (
-      <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
-        <h4>Loading...</h4>
-      </div>
-    );
-  }
+  // Hardcoded products
+ const [products] = useState([
+  {
+    title: "Classic White T-Shirt",
+    price: 25,
+    color: "green",
+    image: Image.image1,
+  },
+  {
+    title: "Black Premium Tee",
+    price: 30,
+     color: "yellow",
+    image: Image.image2,
+  },
+  {
+    title: "Graphic Print Tee",
+    price: 35,
+     color: "red",
+    image: Image.image3,
+  },
+  {
+    title: "Blue Casual T-Shirt",
+    price: 28,
+     color: "purple",
+    image: Image.image4,
+  },
+   
+]);
 
   return (
     <>
-      <div className="image-container">
+   
+      {/* <div className="image-container">
         <img src={Image.Tshirts} alt="Tshirts" className="sub-banner-image" />
-      </div>
+      </div> */}
+      <div className="background">
+        
+   
+      <div className="container-fluid p-5 ">
+        <h1 className="fw-bold">MINERAL WASH </h1>
+        <p className="mb-5">OUR PREMIUM QUALITY COLLECTION</p>
 
-      <div className="container my-5">
         <div className="row g-4">
           {products.map((product, index) => (
             <div key={index} className="col-sm-12 col-md-6 col-lg-3 mb-4">
@@ -64,17 +75,21 @@ export default function TShirt() {
                     />
                   </Link>
                 </div>
-                <div className="p-3">
-                  <h6 className="mb-1">{product.title}</h6>
-                  <p className="text-muted mb-1">
-                    USD {product.price}
-                  </p>
+                 <div className="pt-2 ps-1 text-center">
+                 
+                  <h6 className="fw-bold">{product.title}</h6>
+                  {/* <p className="text-muted mb-2">USD {product.price}</p> */}
+                 <p className="tex-muted">Mineral Wash | {product.color}</p>
                 </div>
               </div>
+             
+                
             </div>
           ))}
         </div>
       </div>
+      </div>
+      
     </>
   );
 }

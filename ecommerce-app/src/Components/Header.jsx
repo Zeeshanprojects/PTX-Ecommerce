@@ -13,18 +13,17 @@ export default function Header() {
 
   return (
     <>
-      <div className="topbar">
-        <div className="container">
+      <div className="topbar ">
+        <div className="container ">
           <p className="pt-3">
             {" "}
             Free shipping, 30-day return or refund guarantee.
           </p>
         </div>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-black">
-        <div className="container px-0">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-black ">
+        <div className="container-fluid px-5">
           {" "}
-       
           <Link className="navbar-brand" to="/">
             <img src={Image.logo} />
           </Link>
@@ -40,74 +39,84 @@ export default function Header() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link
                   className="nav-link active"
                   to="/"
                   onClick={handleNavCollapse}
                 >
-                  HOME
+                  Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/T-Shirts"
+                  to="/Men"
                   onClick={handleNavCollapse}
                 >
-                  T-SHIRTS
+                  Men
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/Fleece"
+                  to="/Junior"
                   onClick={handleNavCollapse}
                 >
-                  FLEECE
+                  Junior
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/Kid"
+                  to="/Denim"
                   onClick={handleNavCollapse}
                 >
-                  KIDS
+                  Denim
                 </Link>
               </li>
-
               <li className="nav-item">
                 <Link
                   className="nav-link active"
                   to="/Shop"
                   onClick={handleNavCollapse}
                 >
-                  CATALOG
+                  Catalog
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/LookBook"
+                  to="https://book.paktex.com/book/ptx-company-profile/PTX-C-P"
                   onClick={handleNavCollapse}
                 >
-                  LOOKBOOK
+                  Lookbook
                 </Link>
               </li>
             </ul>
 
-            <div className="d-flex align-items-center gap-3 ms-auto">
-              <Link to="/Login" onClick={handleNavCollapse}>
-                <img
-                  src={Image.user}
-                  alt="User Icon"
-                  className="header-icon "
-                />
+            <div className="d-flex align-items-center gap-3 ms-auto ">
+              <Link
+                to="/Login"
+                onClick={handleNavCollapse}
+                className="text-decoration-none text-white"
+              >
+                Search
               </Link>
-              <Link to="/Cart" onClick={handleNavCollapse}>
-                <img src={Image.cart} alt="Cart Icon" className="header-icon" />
+              <Link
+                to="/Login"
+                onClick={handleNavCollapse}
+                className="text-decoration-none text-white"
+              >
+                User
+              </Link>
+              <Link
+                to="/Cart"
+                onClick={handleNavCollapse}
+                className="text-decoration-none text-white"
+              >
+                Cart
               </Link>
             </div>
           </div>

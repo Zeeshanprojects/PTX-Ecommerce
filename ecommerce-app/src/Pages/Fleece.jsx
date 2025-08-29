@@ -4,11 +4,10 @@ import axios from "axios";
 import Image from "../Images/Image";
 import "./Home.css";
 
-
 export default function Fleece() {
-  useEffect(()=>{
-    document.title="Fleece | Pakistan Textile Exchange"
-  })
+  useEffect(() => {
+    document.title = "Fleece | Pakistan Textile Exchange";
+  });
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // loading state
 
@@ -27,7 +26,10 @@ export default function Fleece() {
 
   if (loading) {
     return (
-      <div className="d-flex justify-content-center align-items-center" style={{ height: "50vh" }}>
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "50vh" }}
+      >
         <h4>Loading...</h4>
       </div>
     );
@@ -35,14 +37,16 @@ export default function Fleece() {
 
   return (
     <>
-      <div className="image-container">
-        <img src={Image.Fleece} alt="Fleece" className="sub-banner-image" />
-      </div>
-
-      <div className="container my-5">
+     <div className="background">
+  <div className="container-fluid p-5  ">
+      <h1 className="fw-bold">FLEECE CREWNECK</h1>
+        <p className="mb-5">OUR PREMIUM QUALITY COLLECTION</p>
         <div className="row g-4">
           {products.map((product, index) => (
-            <div key={index} className="col-sm-12 col-md-6 col-lg-3 mb-4">
+            <div
+              key={index}
+              className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
+            >
               <div className="product-card position-relative overflow-hidden rounded shadow-sm">
                 <span className="new-badge position-absolute top-0 start-0 m-2">
                   NEW
@@ -74,6 +78,9 @@ export default function Fleece() {
           ))}
         </div>
       </div>
+     </div>
+
+    
     </>
   );
 }

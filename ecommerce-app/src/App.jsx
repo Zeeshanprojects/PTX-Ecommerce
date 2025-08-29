@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,7 +12,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
-import Kids from "./Pages/Kids";
 import Fleece from "./Pages/Fleece";
 import Shop from "./Pages/Shop";
 import Cart from "./Pages/Cart";
@@ -22,6 +26,14 @@ import TShirt from "./Pages/T-Shirt";
 import Checkout from "./Pages/Checkout";
 import LookBook from "./Pages/LookBook";
 import Preloader from "./Components/Preloader";
+import CollaredNeck from "./Pages/CollaredNeck";
+import BoatNeck from "./Pages/BoatNeck";
+import Hoddies from "./Pages/Hoddies";
+import Short from "./Pages/Short";
+import MineralWash from "./Pages/MineralWash";
+import Men from "./Pages/Men";
+import Junior from "./Pages/Junior";
+import Denim from "./Pages/Denim";
 
 function AppWrapper() {
   const location = useLocation();
@@ -32,8 +44,15 @@ function AppWrapper() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/T-Shirts" element={<TShirt />} />
-        <Route path="/Kid" element={<Kids />} />
+    <Route path="/Men" element={<Men/>}/>
+    <Route path="/Junior" element={<Junior/>}/>
+    <Route path="/Denim" element={<Denim/>}/>
+        <Route path="/Tshirts" element={<TShirt />} />
+        <Route path="/Collaredneck" element={<CollaredNeck />} />
+        <Route path="Boatneck" element={<BoatNeck />} />
+        <Route path="Pulloverhoodie" element={<Hoddies />} />
+        <Route path="short" element={<Short />} />
+        <Route path="Mineralwash" element={<MineralWash />} />
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Fleece" element={<Fleece />} />
         <Route path="/Cart" element={<Cart />} />
@@ -64,9 +83,7 @@ function App() {
 
   return (
     <>
-      <Router>
-        {loading ? <Preloader /> : <AppWrapper />}
-      </Router>
+      <Router>{loading ? <Preloader /> : <AppWrapper />}</Router>
     </>
   );
 }

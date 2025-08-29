@@ -60,9 +60,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
       <div className="space"></div>
-
       {/* Shared Animation with Images */}
       <h2 className="text-center fw-bold" variants={fadeInUp}>
         SEARCH BY CATEGORIES
@@ -71,49 +69,43 @@ export default function Home() {
         Explore our collections by category to quickly find the styles that suit
         your look
       </p>
-
       <div className="space"></div>
-
+      import {Link} from "react-router-dom";
       <div className="container-fluid p-0 m-0 h-100">
         <div className="row gx-1 gy-1">
           {[
-            { img: Image.Menpic, title: "MEN" },
-            { img: Image.WomenTshirt, title: "JUNIOR " },
-            { img: Image.Denim, title: "DENIM" },
+            { img: Image.Menpic, title: "MEN", path: "/Men" },
+            { img: Image.WomenTshirt, title: "JUNIOR", path: "/Junior" },
+            { img: Image.Denim, title: "DENIM", path: "/Denim" },
           ].map((item, idx) => (
             <div
               key={idx}
               className="col-sm-12 col-md-12 col-lg-4 col-xl-4 h-100"
             >
               <div className="position-relative overflow-hidden">
-                {/* <span className="badge bg-danger position-absolute top-0 end-0 m-2">
-                  SALE
-                </span> */}
-                <img src={item.img} alt="bestselling" className="categories" />
+                <img src={item.img} alt={item.title} className="categories" />
 
                 {/* Overlay */}
                 <div className="overlay d-flex flex-column justify-content-center align-items-center">
                   <h2 className="text-white">{item.title}</h2>
-                  <button className="btn btn-outline-light btn-lg mt-2">
-                    VIEW COLLECTION
-                  </button>
+                  <Link to={item.path}>
+                    <button className="btn btn-outline-light btn-lg mt-2">
+                      VIEW COLLECTION
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
       <div className="space"></div>
-
       <div className="space"></div>
-
       {/* Shared Animation with Images */}
       <h2 className="text-center" variants={fadeInUp}>
         BEST SELLINGS
       </h2>
       <p className="text-center">Our top-selling essentials, curated for you</p>
-
       <div className="space"></div>
       <div className="row m-2">
         {/* Left Column */}
@@ -136,7 +128,6 @@ export default function Home() {
           </div>
         </div>
 
-     
         <div className="right-column col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex m-0 p-0 ">
           <img
             src={Image.rightbanner}
@@ -156,11 +147,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="space"></div>
-
       {/* Product Grid */}
-
       <h2 className="uppercase text-center ">
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
@@ -287,7 +275,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="space"></div>
       <div className="container-fluid ">
         <div className="row">
@@ -378,11 +365,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="bannerimage" />
       </div>
-
       <div
         className="container-fluid py-5"
         style={{ backgroundColor: "##FFFFFF" }}

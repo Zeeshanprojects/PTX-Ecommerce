@@ -65,9 +65,6 @@
   font-weight: bolder;
 }
 
-.btn {
-  height: 50px;
-}
 .category_mainheading {
   font-size: 24px;
   font-weight: bolder;
@@ -254,7 +251,7 @@
 .background {
   background-color: #fafafa;
 }
-.border{
+.border {
   border: 1222px solid orange;
 }
 @media (min-width: 993px) and (max-width: 1199px) {

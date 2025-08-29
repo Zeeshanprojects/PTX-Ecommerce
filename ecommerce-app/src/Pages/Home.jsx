@@ -60,7 +60,9 @@ export default function Home() {
           </Link>
         </div>
       </div>
+
       <div className="space"></div>
+
       {/* Shared Animation with Images */}
       <h2 className="text-center fw-bold" variants={fadeInUp}>
         SEARCH BY CATEGORIES
@@ -69,14 +71,15 @@ export default function Home() {
         Explore our collections by category to quickly find the styles that suit
         your look
       </p>
+
       <div className="space"></div>
-      import {Link} from "react-router-dom";
+
       <div className="container-fluid p-0 m-0 h-100">
         <div className="row gx-1 gy-1">
           {[
             { img: Image.Menpic, title: "MEN", path: "/Men" },
-            { img: Image.WomenTshirt, title: "JUNIOR", path: "/Junior" },
-            { img: Image.Denim, title: "DENIM", path: "/Denim" },
+            { img: Image.WomenTshirt, title: "JUNIOR", path: "/junior" },
+            { img: Image.Denim, title: "DENIM", path: "/denim" },
           ].map((item, idx) => (
             <div
               key={idx}
@@ -99,13 +102,17 @@ export default function Home() {
           ))}
         </div>
       </div>
+
       <div className="space"></div>
+
       <div className="space"></div>
+
       {/* Shared Animation with Images */}
       <h2 className="text-center" variants={fadeInUp}>
         BEST SELLINGS
       </h2>
       <p className="text-center">Our top-selling essentials, curated for you</p>
+
       <div className="space"></div>
       <div className="row m-2">
         {/* Left Column */}
@@ -147,8 +154,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="space"></div>
+
       {/* Product Grid */}
+
       <h2 className="uppercase text-center ">
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
@@ -275,6 +285,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="space"></div>
       <div className="container-fluid ">
         <div className="row">
@@ -365,9 +376,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="bannerimage" />
       </div>
+
       <div
         className="container-fluid py-5"
         style={{ backgroundColor: "##FFFFFF" }}

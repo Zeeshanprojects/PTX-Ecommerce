@@ -13,10 +13,10 @@ export default function Cart() {
 
   if (!cart || cart.length === 0) {
     return (
-      <div className="container py-5 text-center">
-        <h2>Your Cart is Empty</h2>
-        <Link to="/" className="btn btn-dark mt-3">
-          Continue Shopping
+      <div className=" py-5 text-center ">
+        <h2>EMPTY CART</h2>
+        <Link to="/" className="btn btn-outline-dark mt-3">
+          SHOP NOW
         </Link>
       </div>
     );

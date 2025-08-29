@@ -5,9 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function Shop() {
-useEffect(()=>{
-  document.title="Catalog | Pakistan Textile Exchange"
-});
+  useEffect(() => {
+    document.title = "Catalog | Pakistan Textile Exchange";
+  });
 
   const [products, setProducts] = useState([]);
   const [search, setSearch] = useState("");
@@ -17,13 +17,13 @@ useEffect(()=>{
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const categories = ["T-Shirt", "Fleece", "Kids"];
+  const categories = ["COLLARED NECK", "FLEECE CREWNECK", "BOAT NECK","PULLOVER HOODIES","SWEAT SHORTS","MINERAL WASH"];
   const baseURL = import.meta.env.VITE_API_URL;
-const apiEndpoints = {
-  "T-Shirt": `${baseURL}/api/EcommerceTshirt`,
-  Fleece: `${baseURL}/api/EcommerceFleece`,
-  Kids: `${baseURL}/api/EcommerceKid`,
-};
+  const apiEndpoints = {
+    "T-Shirt": `${baseURL}/api/EcommerceTshirt`,
+   " Fleece": `${baseURL}/api/EcommerceFleece`,
+    "Kids": `${baseURL}/api/EcommerceKid`,
+  };
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -115,7 +115,7 @@ const apiEndpoints = {
             isSidebarOpen ? "d-block" : "d-none d-md-block"
           }`}
         >
-          <div className="p-3 bg-light rounded shadow-sm">
+          <div className="p-3  rounded shadow-sm">
             <h5 className="mb-3">Filters</h5>
             <input
               type="text"
@@ -134,10 +134,10 @@ const apiEndpoints = {
                 ];
 
                 return (
-                  <div className="accordion-item border-0" key={cat}>
+                  <div className="accordion-item border-0 " key={cat}>
                     <h2 className="accordion-header">
                       <button
-                        className={`accordion-button bg-white shadow-none ${
+                        className={`accordion-button bg-white shadow-none  fw-bold${
                           activeCategory === cat ? "" : "collapsed"
                         }`}
                         type="button"
@@ -174,13 +174,13 @@ const apiEndpoints = {
                                   }
                                 />
                                 <label
-                                  className="form-check-label ms-3"
+                                  className="form-check-label ms-3 "
                                   htmlFor={filterKey}
                                 >
                                   {title}
                                 </label>
                               </div>
-                              <hr className="my-2" />
+                    
                             </div>
                           );
                         })}

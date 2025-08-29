@@ -1,0 +1,11 @@
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+.accordion-button {
+  border: none !important;
+}
+.accordion-item {
+  border: none !important;
+}

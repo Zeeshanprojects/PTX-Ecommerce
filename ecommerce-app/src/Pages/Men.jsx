@@ -62,7 +62,7 @@ export default function Men() {
                     >
                       <img
                         src={product.image}
-                        alt={product.title}
+                        alt="xyz"
                         className="img-fluid product-img"
                       />
                     </Link>

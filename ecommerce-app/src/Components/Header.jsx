@@ -89,8 +89,10 @@ export default function Header() {
                 <Link
                   className="nav-link active"
                   to="https://book.paktex.com/book/ptx-company-profile/PTX-C-P"
+                  target="_blank"
                   onClick={handleNavCollapse}
                 >
+
                   Lookbook
                 </Link>
               </li>

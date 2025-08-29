@@ -29,7 +29,14 @@ export default function Denim() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "50vh" }}
       >
-        <h4>Loading...</h4>
+    <div
+  className="spinner-grow"
+  style={{ width: "3rem", height: "3rem" }}
+  role="status"
+>
+  <span className="visually-hidden">Loading...</span>
+</div>
+
       </div>
     );
   }

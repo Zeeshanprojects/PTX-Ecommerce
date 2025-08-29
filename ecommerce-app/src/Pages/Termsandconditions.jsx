@@ -8,10 +8,10 @@ useEffect(()=>{
   return (
    <>
 
-   <div className="container my-5">
-      <h1 className="mb-4">Terms and Conditions</h1>
-
-      <p>
+   <div className="container my-5"  style={{width: "800px"}}>
+      <h1 className="mb-4 text-center">Terms and Conditions</h1>
+<div className='text-justify'>
+    <p>
         Welcome to Pakistan Textile Exchange. These terms and conditions outline
         the rules and regulations for the use of our website and services.
       </p>
@@ -84,6 +84,8 @@ useEffect(()=>{
 
       <p className="mt-4">Last updated: May 29, 2025</p>
     </div>
-   </>
+
+</div>
+       </>
   )
 }

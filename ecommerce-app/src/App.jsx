@@ -34,6 +34,7 @@ import MineralWash from "./Pages/MineralWash";
 import Men from "./Pages/Men";
 import Junior from "./Pages/Junior";
 import Denim from "./Pages/Denim";
+import FAQ from "./Pages/FAQ";
 
 function AppWrapper() {
   const location = useLocation();
@@ -44,9 +45,9 @@ function AppWrapper() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-    <Route path="/Men" element={<Men/>}/>
-    <Route path="/Junior" element={<Junior/>}/>
-    <Route path="/Denim" element={<Denim/>}/>
+        <Route path="/Men" element={<Men />} />
+        <Route path="/Junior" element={<Junior />} />
+        <Route path="/Denim" element={<Denim />} />
         <Route path="/Tshirts" element={<TShirt />} />
         <Route path="/Collaredneck" element={<CollaredNeck />} />
         <Route path="Boatneck" element={<BoatNeck />} />
@@ -64,6 +65,7 @@ function AppWrapper() {
         <Route path="/productInfo" element={<Productinfo />} />
         <Route path="/TermsandConditions" element={<Termsandconditions />} />
         <Route path="/PrivacyandPolicy" element={<Privacyandpolicy />} />
+        <Route path="/faq" element={<FAQ/>}/>
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>

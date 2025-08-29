@@ -5,13 +5,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
 
-
-  
-    const [email, setEmail] = useState("");
-    const [subscribed, setSubscribed] = useState(false);
-
-   const handleSubscription = async (e) => {
+  const handleSubscription = async (e) => {
     e.preventDefault();
     if (email.trim()) {
       try {
@@ -55,22 +52,21 @@ export default function Footer() {
                     Trusted by industry leaders for quality, reliability, and
                     fast delivery.
                   </p>
-                    <form onSubmit={handleSubscription}>
-                <div className="input-group mb-3">
-                  <input
-                    type="email"
-                    className="form-control  text-white bg-transparent border-white "
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <button className="btn btn-light ms-2" type="submit">
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-
+                  <form onSubmit={handleSubscription}>
+                    <div className="input-group mb-3">
+                      <input
+                        type="email"
+                        className="form-control  text-white bg-transparent border-white "
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                      />
+                      <button className="btn btn-light ms-2" type="submit">
+                        Subscribe
+                      </button>
+                    </div>
+                  </form>
                 </div>
 
                 <div className="col-md-12 text-md-center  text-lg-start col-lg-2 col-xl-2 mx-auto mb-4 mt-5">
@@ -98,6 +94,11 @@ export default function Footer() {
                       Privacy Policy
                     </Link>
                   </p>
+                  <p>
+                    <Link to="/Contact" className="text-white">
+                      FAQ
+                    </Link>
+                  </p>
                 </div>
 
                 <div className="col-md-12 text-md-center  text-lg-start col-lg-2 col-xl-2 mx-auto mb-4 mt-5">
@@ -112,17 +113,32 @@ export default function Footer() {
                   />
                   <p>
                     <Link to="/T" className="text-white">
-                      T-Shirts
+                      Collared Neck
                     </Link>
                   </p>
                   <p>
                     <Link to="#!" className="text-white">
-                      Fleece
+                      Fleece CrewNeck
                     </Link>
                   </p>
                   <p>
                     <Link to="#!" className="text-white">
-                      Kids
+                      Boat Neck
+                    </Link>
+                  </p>
+                  <p>
+                    <Link to="#!" className="text-white">
+                      Pullover Hoodies
+                    </Link>
+                  </p>
+                  <p>
+                    <Link to="#!" className="text-white">
+                      Swet Shorts
+                    </Link>
+                  </p>
+                   <p>
+                    <Link to="#!" className="text-white">
+                     Mineral Wash
                     </Link>
                   </p>
                 </div>

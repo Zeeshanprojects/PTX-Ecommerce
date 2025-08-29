@@ -184,7 +184,7 @@ export default function Home() {
                 button placket.
               </p>
 
-              <Link to="#">
+              <Link to="/Collaredneck">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
@@ -203,7 +203,7 @@ export default function Home() {
                 Cozy fleece sweatshirt with a round neckline for <br />
                 everyday comfort.
               </p>
-              <Link to="#">
+              <Link to="/Fleece">
                 <button className="btn btn-outline-dark ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
@@ -221,7 +221,7 @@ export default function Home() {
               <p className="text-dark">
                 Stylish wide-neck fleece with a relaxed, modern fit.
               </p>
-              <Link to="#">
+              <Link to="/Boatneck">
                 <button className="btn btn-outline-dark ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
@@ -240,7 +240,7 @@ export default function Home() {
                 Classic hoodie with drawstring hood and <br />
                 kangaroo pocket.
               </p>
-              <Link to="#">
+              <Link to="/Pulloverhoodie">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
@@ -259,7 +259,7 @@ export default function Home() {
                 Comfortable fleece shorts with drawstring waist <br />
                 and side pockets.
               </p>
-              <Link to="#">
+              <Link to="/short">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
@@ -278,7 +278,7 @@ export default function Home() {
                 Timeless round-neck sweatshirt with ribbed <br />
                 cuffs and hem
               </p>
-              <Link to="#">
+              <Link to="/Mineralwash">
                 <button className="btn btn-outline-dark ps-3 pe-3 m-0 ">
                   VIEW COLLECTION
                 </button>
@@ -291,10 +291,10 @@ export default function Home() {
       <div className="space"></div>
       <div className="container-fluid ">
         <div className="row">
-            <h2 className="uppercase text-center mb-5">
-      DRESS SHARP, LIVE SMART
-      </h2>
-         
+          <h2 className="uppercase text-center mb-5">
+            DRESS SHARP, LIVE SMART
+          </h2>
+
           <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center offset-lg-1">
             <div className="icon-wrapper mx-auto">
               <img
@@ -379,7 +379,6 @@ export default function Home() {
         </div>
       </div>
 
-
       <div className="image-wrapper">
         <img src={Image.banner} alt="slider-image1" className="bannerimage" />
       </div>
@@ -391,7 +390,9 @@ export default function Home() {
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
             <div className="text-center">
-              <h3 className="mb-4 text-dark text-uppercase">Subscribe to Our Newsletter</h3>
+              <h3 className="mb-4 text-dark text-uppercase">
+                Subscribe to Our Newsletter
+              </h3>
               <p className="mb-4 text-dark">
                 Stay updated with the latest trends, offers, and news. Sign up
                 for our newsletter!

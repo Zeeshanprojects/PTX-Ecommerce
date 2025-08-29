@@ -254,6 +254,9 @@
 .border {
   border: 1222px solid orange;
 }
+
+
+
 @media (min-width: 993px) and (max-width: 1199px) {
   .main-btn {
     top: 80%;
@@ -278,11 +281,17 @@
     text-align: center !important;
     width: 100%;
   }
-
+  .banner-text h2{
+    font-size: 20px;
+  }
+.banner-text{
+  font-size: 9px ;
+}
   .banner {
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
+ 
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .main-btn {
@@ -301,6 +310,9 @@
   .banner {
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
+  }
+   .below-space{
+    margin-bottom: 10px !important;
   }
 }
 @media (max-width: 576px) {
@@ -341,5 +353,8 @@
   .banner {
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
+  }
+  .below-space{
+    margin-bottom: 10px !important;
   }
 }

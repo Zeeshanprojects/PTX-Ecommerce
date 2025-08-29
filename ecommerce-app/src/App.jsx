@@ -12,7 +12,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Footer from "./Components/Footer";
-
 import Fleece from "./Pages/Fleece";
 import Shop from "./Pages/Shop";
 import Cart from "./Pages/Cart";
@@ -32,6 +31,9 @@ import BoatNeck from "./Pages/BoatNeck";
 import Hoddies from "./Pages/Hoddies";
 import Short from "./Pages/Short";
 import MineralWash from "./Pages/MineralWash";
+import Men from "./Pages/Men";
+import Junior from "./Pages/Junior";
+import Denim from "./Pages/Denim";
 
 function AppWrapper() {
   const location = useLocation();
@@ -42,6 +44,9 @@ function AppWrapper() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+    <Route path="/Men" element={<Men/>}/>
+    <Route path="/Junior" element={<Junior/>}/>
+    <Route path="/Denim" element={<Denim/>}/>
         <Route path="/Tshirts" element={<TShirt />} />
         <Route path="/Collaredneck" element={<CollaredNeck />} />
         <Route path="Boatneck" element={<BoatNeck />} />

@@ -52,7 +52,7 @@ export default function Header() {
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/Shop"
+                  to="/Men"
                   onClick={handleNavCollapse}
                 >
                   Men
@@ -61,7 +61,7 @@ export default function Header() {
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/Shop"
+                  to="/Junior"
                   onClick={handleNavCollapse}
                 >
                   Junior
@@ -70,7 +70,7 @@ export default function Header() {
               <li className="nav-item">
                 <Link
                   className="nav-link active"
-                  to="/Shop"
+                  to="/Denim"
                   onClick={handleNavCollapse}
                 >
                   Denim

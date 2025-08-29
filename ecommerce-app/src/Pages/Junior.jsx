@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 export default function Junior() {
   useEffect(() => {
-    document.title = "Fleece | Pakistan Textile Exchange";
+    document.title = "Junior | Pakistan Textile Exchange";
   });
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // loading state

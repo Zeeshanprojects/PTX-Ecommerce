@@ -3,8 +3,13 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 export default function Denim() {
+
       const [products, setProducts] = useState([]);
       const [loading, setLoading] = useState(true);
+
+      useEffect(()=>{
+        document.title="Denim | Pakitan Textle Exchnage"
+      })
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)

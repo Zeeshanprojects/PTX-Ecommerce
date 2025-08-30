@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
@@ -37,6 +39,12 @@ import Denim from "./Pages/Denim";
 import FAQ from "./Pages/FAQ";
 
 function AppWrapper() {
+  useEffect(()=>{
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // whether animation should happen only once
+    });
+  },[])
   const location = useLocation();
 
   return (

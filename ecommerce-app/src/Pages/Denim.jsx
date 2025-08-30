@@ -3,13 +3,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 export default function Denim() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-      const [products, setProducts] = useState([]);
-      const [loading, setLoading] = useState(true);
-
-      useEffect(()=>{
-        document.title="Denim | Pakitan Textle Exchnage"
-      })
+  useEffect(() => {
+    document.title = "Denim | Pakitan Textle Exchnage";
+  });
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)
@@ -29,28 +28,27 @@ export default function Denim() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "50vh" }}
       >
-    <div
-  className="spinner-grow"
-  style={{ width: "3rem", height: "3rem" }}
-  role="status"
->
-  <span className="visually-hidden">Loading...</span>
-</div>
-
+        <div
+          className="spinner-grow"
+          style={{ width: "3rem", height: "3rem" }}
+          role="status"
+        >
+          <span className="visually-hidden">Loading...</span>
+        </div>
       </div>
     );
   }
   return (
     <>
       <div className="background">
-        <div className="container-fluid p-5  ">
-          <h1 className="fw-bold">DENIM</h1>
-          <p className="mb-5">OUR PREMIUM QUALITY DENIIM COLLECTION</p>
+        <div className="container-fluid p-5" >
+          <h1 className="fw-bold"  data-aos="fade-up">DENIM</h1>
+          <p className="mb-5"  data-aos="fade-up">OUR PREMIUM QUALITY DENIIM COLLECTION</p>
           <div className="row g-4">
             {products.map((product, index) => (
               <div
                 key={index}
-                className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
+                className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4" data-aos="fade-up"
               >
                 <div className="product-card position-relative overflow-hidden rounded shadow-sm">
                   <span className="new-badge position-absolute top-0 start-0 m-2">

@@ -44,13 +44,13 @@ export default function Junior() {
     <>
       <div className="background">
         <div className="container-fluid p-5  ">
-          <h1 className="fw-bold">JUNIOR</h1>
-          <p className="mb-5">OUR PREMIUM QUALITY JUNIORS COLLECTION</p>
+          <h1 className="fw-bold " data-aos="fade-up">JUNIOR</h1>
+          <p className="mb-5"  data-aos="fade-up">OUR PREMIUM QUALITY JUNIORS COLLECTION</p>
           <div className="row g-4">
             {products.map((product, index) => (
               <div
                 key={index}
-                className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
+                className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"  data-aos="fade-up"
               >
                 <div className="product-card position-relative overflow-hidden rounded shadow-sm">
                   <span className="new-badge position-absolute top-0 start-0 m-2">

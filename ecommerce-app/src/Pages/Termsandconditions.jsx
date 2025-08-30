@@ -7,11 +7,14 @@ useEffect(()=>{
 })
   return (
    <>
+<div className='container-fluid p-5'>
+  <div className='row'>
+    <div className='col-sm-12 col-md-6 col-lg-5 col-xl-5'>
+       <h1 className="mb-4 text-center fw-bold" >Terms and Conditions</h1>
+    </div>
+    <div className='col-sm-12 col-md-6 col-lg-7 col-xl-7'>
 
-   <div className="container my-5"  style={{width: "800px"}}>
-      <h1 className="mb-4 text-center">Terms and Conditions</h1>
-<div className='text-justify'>
-    <p>
+         <p>
         Welcome to Pakistan Textile Exchange. These terms and conditions outline
         the rules and regulations for the use of our website and services.
       </p>
@@ -85,7 +88,9 @@ useEffect(()=>{
       <p className="mt-4">Last updated: May 29, 2025</p>
     </div>
 
-</div>
+    </div>
+  </div>
+
        </>
   )
 }

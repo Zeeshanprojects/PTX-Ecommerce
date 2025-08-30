@@ -9,10 +9,10 @@ export default function FAQ() {
     <>
       <div className="container-fluid p-5">
         <div className="row">
-          <div className="col-sm-12 com-md-12 col-lg-4 col-xl-4">
-            <h1 className="fw-bold">Wholesale account info</h1>
+          <div className="col-sm-12 com-md-12 col-lg-5 col-xl-5">
+            <h1 className=" tet-center fw-bold">Wholesale account info</h1>
           </div>
-          <div className="col-sm-12 com-md-12 col-lg-8 col-xl-8">
+          <div className="col-sm-12 com-md-12 col-lg-7 col-xl-7">
             <div className="accordion" id="accordionExample1">
               <div className="accordion-item">
                 <h2 className="accordion-header" id="headingOne">

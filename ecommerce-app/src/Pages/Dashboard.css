@@ -1,0 +1,49 @@
+/* Dashboard.css */
+.dashboard-container {
+  background-color: #f1f3f6;
+
+}
+
+.profile-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.profile-img {
+  border: 4px solid #ddd;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.orders-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.orders-card:hover {
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.table thead th {
+  font-weight: 600;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header h2 {
+    font-size: 1.4rem;
+  }
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+}

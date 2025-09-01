@@ -38,6 +38,7 @@ import Junior from "./Pages/Junior";
 import Denim from "./Pages/Denim";
 import FAQ from "./Pages/FAQ";
 import Search from "./Pages/Search";
+import Dashboard from "./Pages/Dashboard";
 
 function AppWrapper() {
   useEffect(()=>{
@@ -76,7 +77,7 @@ function AppWrapper() {
         <Route path="/TermsandConditions" element={<Termsandconditions />} />
         <Route path="/PrivacyandPolicy" element={<Privacyandpolicy />} />
         <Route path="/faq" element={<FAQ/>}/>
-
+<Route path="/dashboard" element={<Dashboard/>}/>
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>

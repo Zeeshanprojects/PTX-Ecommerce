@@ -8,8 +8,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import AOS from "aos"
-import "aos/dist/aos.css"
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
@@ -39,14 +39,15 @@ import Denim from "./Pages/Denim";
 import FAQ from "./Pages/FAQ";
 import Search from "./Pages/Search";
 import Dashboard from "./Pages/Dashboard";
+import Profile from "./Pages/profile";
 
 function AppWrapper() {
-  useEffect(()=>{
+  useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration in ms
       once: true, // whether animation should happen only once
     });
-  },[])
+  }, []);
   const location = useLocation();
 
   return (
@@ -67,7 +68,7 @@ function AppWrapper() {
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Fleece" element={<Fleece />} />
         <Route path="/Cart" element={<Cart />} />
-        <Route path="/search" element={<Search/>}/>
+        <Route path="/search" element={<Search />} />
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
@@ -76,8 +77,9 @@ function AppWrapper() {
         <Route path="/productInfo" element={<Productinfo />} />
         <Route path="/TermsandConditions" element={<Termsandconditions />} />
         <Route path="/PrivacyandPolicy" element={<Privacyandpolicy />} />
-        <Route path="/faq" element={<FAQ/>}/>
-<Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="profile" element={<Profile/>}/>
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>

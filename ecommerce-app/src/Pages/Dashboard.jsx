@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "../Images/Image";
 import "./Dashboard.css"; // custom styles
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const user = {
@@ -54,6 +55,9 @@ export default function Dashboard() {
               <h5 className="fw-bold text-dark">{user.name}</h5>
               <p className="text-muted small mb-2">{user.email}</p>
             </div>
+            <Link to="/profile" className="prifile-btn">
+            <button type="button" className="btn btn-outline-dark w-75  "> Edit Profile
+                </button></Link>
           </div>
         </div>
 

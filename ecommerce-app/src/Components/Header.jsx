@@ -92,20 +92,25 @@ export default function Header() {
                   target="_blank"
                   onClick={handleNavCollapse}
                 >
-
                   Lookbook
                 </Link>
               </li>
             </ul>
 
             <div className="d-flex align-items-center gap-3 ms-auto ">
-             
+              <Link
+                to="/dashboard"
+                onClick={handleNavCollapse}
+                className="text-decoration-none text-white"
+              >
+             Dashboard
+              </Link>
               <Link
                 to="/Login"
                 onClick={handleNavCollapse}
                 className="text-decoration-none text-white"
               >
-              Sign in
+                Sign in
               </Link>
               <Link
                 to="/Cart"

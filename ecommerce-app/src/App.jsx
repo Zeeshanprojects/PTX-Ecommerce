@@ -90,7 +90,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Set loading to false after 2 seconds
+    
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);

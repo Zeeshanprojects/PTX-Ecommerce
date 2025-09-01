@@ -99,19 +99,13 @@ export default function Header() {
             </ul>
 
             <div className="d-flex align-items-center gap-3 ms-auto ">
+             
               <Link
                 to="/Login"
                 onClick={handleNavCollapse}
                 className="text-decoration-none text-white"
               >
-                Search
-              </Link>
-              <Link
-                to="/Login"
-                onClick={handleNavCollapse}
-                className="text-decoration-none text-white"
-              >
-                User
+              Sign in
               </Link>
               <Link
                 to="/Cart"

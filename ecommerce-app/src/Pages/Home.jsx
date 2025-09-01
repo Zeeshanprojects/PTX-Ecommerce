@@ -144,13 +144,14 @@ export default function Home() {
           <div className="overlay-text">
             <h5> SALE IS ON</h5>
             <h1>50 % OFF</h1>
-
-            <button
+<Link to="/shop">
+<button
               type="button"
               class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
             >
               SHOP NOW
-            </button>
+            </button></Link>
+            
           </div>
         </div>
       </div>
@@ -166,7 +167,7 @@ export default function Home() {
         Essential styles designed for comfort, versatility, and timeless appeal
       </p>
       <div className="space"></div>
-      <div className="container-fluid mb-2 p-0 ">
+      <div className="container-fluid mb-2 p-0" >
         <div className="row g-0 p-0 m-0">
           {/* Left column with carousel */}
           <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative below-space" data-aos="fade-up">
@@ -189,7 +190,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space " data-aos="fade-up">
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space " data-aos="fade-up" >
             <img
               src={Image.productbanner2}
               alt="smallbanner"
@@ -226,7 +227,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative  below-space" data-aos="fade-up">
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative  below-space"data-aos="fade-up" >
             <img
               src={Image.productbanner4}
               alt="smallbanner"
@@ -264,7 +265,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space" data-aos="fade-up">
+          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"data-aos="fade-up" >
             <img
               src={Image.productbanner6}
               alt="smallbanner"
@@ -289,7 +290,7 @@ export default function Home() {
       <div className="space"></div>
       <div className="container-fluid " data-aos="fade-up">
         <div className="row">
-          <h2 className="uppercase text-center mb-5" >
+          <h2 className="uppercase text-center mb-5 fw-bold" >
             DRESS SHARP, LIVE SMART
           </h2>
 
@@ -388,7 +389,7 @@ export default function Home() {
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
             <div className="text-center">
-              <h3 className="mb-4 text-dark text-uppercase">
+              <h3 className="mb-4 text-dark text-uppercase fw-bold">
                 Subscribe to Our Newsletter
               </h3>
               <p className="mb-4 text-dark">

@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 import React from "react";
-import "./faq.css"
+import "./faq.css";
 export default function FAQ() {
-    useEffect(()=>{
-        document.title="FAQ | Pakitan Tetile Exchange"
-    })
+  useEffect(() => {
+    document.title = "FAQ | Pakitan Tetile Exchange";
+  });
   return (
     <>
       <div className="container-fluid p-5">
         <div className="row">
-          <div className="col-sm-12 com-md-12 col-lg-5 col-xl-5">
-            <h1 className=" tet-center fw-bold">Wholesale account info</h1>
+          <div className="col-sm-12 col-md-12 col-lg-5 col-xl-5">
+            <h1 className="fw-bold">Wholesale account info</h1>
           </div>
-          <div className="col-sm-12 com-md-12 col-lg-7 col-xl-7">
+          <div className="col-sm-12 col-md-12 col-lg-7 col-xl-7">
             <div className="accordion" id="accordionExample1">
               <div className="accordion-item">
                 <h2 className="accordion-header" id="headingOne">
@@ -24,7 +24,7 @@ export default function FAQ() {
                     aria-expanded="true"
                     aria-controls="collapseOne"
                   >
-                    Accordion Item #1
+                    Who can get a Wholesale account?
                   </button>
                 </h2>
                 <div
@@ -34,15 +34,10 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It
-                    is shown by default, until the collapse plugin adds the
-                    appropriate classes that we use to style each element. These
-                    classes control the overall appearance, as well as the
-                    showing and hiding via CSS transitions. You can modify any
-                    of this with custom CSS or overriding our default variables.
-                    It's also worth noting that just about any HTML can go
-                    within the <code>.accordion-body</code>, though the
-                    transition does limit overflow.
+                    Wholesale pricing is available to specific businesses. To
+                    qualify for wholesale pricing, you must be in one of the
+                    industries listed below: – Printer – Embroiderer –
+                    Merchandise – Uniform – Promotional
                   </div>
                 </div>
               </div>
@@ -56,7 +51,7 @@ export default function FAQ() {
                     aria-expanded="false"
                     aria-controls="collapseTwo"
                   >
-                    Accordion Item #2
+                    How do I setup a wholesale account
                   </button>
                 </h2>
                 <div
@@ -66,15 +61,9 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the second item's accordion body.</strong>{" "}
-                    It is hidden by default, until the collapse plugin adds the
-                    appropriate classes that we use to style each element. These
-                    classes control the overall appearance, as well as the
-                    showing and hiding via CSS transitions. You can modify any
-                    of this with custom CSS or overriding our default variables.
-                    It's also worth noting that just about any HTML can go
-                    within the <code>.accordion-body</code>, though the
-                    transition does limit overflow.
+                    1. Click 'CREATE AN ACCOUNT' in top right hand corner.
+                    2. Complete the application form
+                    3. A login for our website will be created automatically (with default, retail pricing) – An account manager will review your pricing eligibility and be touch within 24 hours
                   </div>
                 </div>
               </div>
@@ -88,7 +77,7 @@ export default function FAQ() {
                     aria-expanded="false"
                     aria-controls="collapseThree"
                   >
-                    Accordion Item #3
+                   Is there a regular spend needed to qualify and retaina wholesale account
                   </button>
                 </h2>
                 <div
@@ -98,15 +87,7 @@ export default function FAQ() {
                   data-bs-parent="#accordionExample"
                 >
                   <div className="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It
-                    is hidden by default, until the collapse plugin adds the
-                    appropriate classes that we use to style each element. These
-                    classes control the overall appearance, as well as the
-                    showing and hiding via CSS transitions. You can modify any
-                    of this with custom CSS or overriding our default variables.
-                    It's also worth noting that just about any HTML can go
-                    within the <code>.accordion-body</code>, though the
-                    transition does limit overflow.
+                   The required spend to retain a wholesale account is $250 USD per month. Account pricing is re-evaluated at the start of each financial year.
                   </div>
                 </div>
               </div>
@@ -114,7 +95,6 @@ export default function FAQ() {
           </div>
         </div>
       </div>
-      
     </>
   );
 }

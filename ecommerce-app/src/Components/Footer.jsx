@@ -96,7 +96,7 @@ export default function Footer() {
                   </p>
                   <p>
                     <Link to="/faq" className="text-white">
-                      FAQ
+                      FAQs
                     </Link>
                   </p>
                 </div>

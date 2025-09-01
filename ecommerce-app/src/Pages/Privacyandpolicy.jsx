@@ -94,7 +94,7 @@ export default function Privacyandpolicy() {
               regularly.
             </p>
 
-            <p className="mt-4">Last updated: May 29, 2025</p>
+            <p className="mt-4">Last updated: May 1st, 2025</p>
           </div>
         </div>
       </div>

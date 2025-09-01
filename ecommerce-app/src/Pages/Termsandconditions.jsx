@@ -85,7 +85,7 @@ useEffect(()=>{
         Continued use of the website constitutes your acceptance of such changes.
       </p>
 
-      <p className="mt-4">Last updated: May 29, 2025</p>
+      <p className="mt-4">Last updated: September 1st, 2025</p>
     </div>
 
     </div>

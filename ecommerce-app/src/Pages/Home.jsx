@@ -144,13 +144,14 @@ export default function Home() {
           <div className="overlay-text">
             <h5> SALE IS ON</h5>
             <h1>50 % OFF</h1>
-
-            <button
+<Link to="/shop">
+<button
               type="button"
               class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
             >
               SHOP NOW
-            </button>
+            </button></Link>
+            
           </div>
         </div>
       </div>

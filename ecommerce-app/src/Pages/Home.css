@@ -40,14 +40,14 @@
 .right-banner-img {
   width: 100%;
   height: auto; /* covers full column height */
-  border-radius: 20px;
+  border-radius: 10px;
   object-fit: cover;
   filter: brightness(0.8) !important;
 }
 .right-column {
   position: relative; /* make it the reference for absolute child */
   height: auto;
-  border-radius: 10px !important;
+  border-radius: 2px !important;
 }
 
 .overlay-text {

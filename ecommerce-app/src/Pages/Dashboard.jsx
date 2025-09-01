@@ -10,24 +10,26 @@ export default function Dashboard() {
   };
 
   const orders = [
- 
     {
       id: "#12345",
       date: "Aug 28, 2025",
       status: "Shipped",
       amount: "$120.00",
+      payment: "Stripe",
     },
     {
       id: "#12346",
       date: "Aug 18, 2025",
       status: "Delivered",
       amount: "$85.00",
+      payment: "Cash on Delivery",
     },
     {
       id: "#12347",
       date: "Aug 10, 2025",
       status: "Processing",
       amount: "$42.50",
+      payment: "Stripe",
     },
   ];
 
@@ -41,7 +43,7 @@ export default function Dashboard() {
 
       <div className="row g-4">
         {/* Profile Section */}
-        <div className="col-md-4">
+        <div className="col-sm-12 col-md-12 col-lg-4 col-xl-4">
           <div className="card shadow-sm rounded profile-card h-100">
             <div className="card-body text-center d-flex flex-column align-items-center justify-content-center">
               <img
@@ -51,16 +53,12 @@ export default function Dashboard() {
               />
               <h5 className="fw-bold text-dark">{user.name}</h5>
               <p className="text-muted small mb-2">{user.email}</p>
-
-              <button className="btn btn-outline-dark w-100 mt-2">
-                Edit Profile
-              </button>
             </div>
           </div>
         </div>
 
         {/* Orders Section */}
-        <div className="col-md-8">
+        <div className="col-sm-12 col-md-12 col-lg-8 col-xl-8">
           <div className="card shadow-sm rounded orders-card h-100">
             <div className="card-body">
               <h5 className="mb-4 fw-bold text-secondary">My Orders</h5>
@@ -72,6 +70,7 @@ export default function Dashboard() {
                       <th>Date</th>
                       <th>Status</th>
                       <th>Amount</th>
+                      <th>Payment</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -93,12 +92,22 @@ export default function Dashboard() {
                           </span>
                         </td>
                         <td className="fw-bold">{order.amount}</td>
+                        <td>
+                          <span
+                            className={`badge px-3 py-2 rounded-pill ${
+                              order.payment === "Stripe"
+                                ? "bg-primary"
+                                : "bg-dark"
+                            }`}
+                          >
+                            {order.payment}
+                          </span>
+                        </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
-            
             </div>
           </div>
         </div>
@@ -106,4 +115,3 @@ export default function Dashboard() {
     </div>
   );
 }
-

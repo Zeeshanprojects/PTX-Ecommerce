@@ -100,7 +100,7 @@ export default function Header() {
 
             <div className="d-flex align-items-center gap-3 ms-auto ">
               <Link
-                to="/Login"
+                to="/search"
                 onClick={handleNavCollapse}
                 className="text-decoration-none text-white"
               >
@@ -111,7 +111,7 @@ export default function Header() {
                 onClick={handleNavCollapse}
                 className="text-decoration-none text-white"
               >
-                User
+              Sign in
               </Link>
               <Link
                 to="/Cart"

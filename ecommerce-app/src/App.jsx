@@ -37,6 +37,7 @@ import Men from "./Pages/Men";
 import Junior from "./Pages/Junior";
 import Denim from "./Pages/Denim";
 import FAQ from "./Pages/FAQ";
+import Search from "./Pages/Search";
 
 function AppWrapper() {
   useEffect(()=>{
@@ -65,6 +66,7 @@ function AppWrapper() {
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Fleece" element={<Fleece />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/search" element={<Search/>}/>
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Login" element={<Login />} />
@@ -74,6 +76,7 @@ function AppWrapper() {
         <Route path="/TermsandConditions" element={<Termsandconditions />} />
         <Route path="/PrivacyandPolicy" element={<Privacyandpolicy />} />
         <Route path="/faq" element={<FAQ/>}/>
+
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>

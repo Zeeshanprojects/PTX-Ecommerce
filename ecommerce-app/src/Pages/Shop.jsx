@@ -119,11 +119,11 @@ export default function Shop() {
       <div className="row">
         {/* Sidebar */}
         <div
-          className={`col-md-3 mb-4 ${
+          className={`col-md-3 mb-4 pe-5 ${
             isSidebarOpen ? "d-block" : "d-none d-md-block"
           }`}
         >
-          <div className="p-3  rounded shadow-sm">
+          <div className="p-2  rounded shadow-sm">
             <h5 className="mb-3">Filters</h5>
             <input
               type="text"
@@ -201,7 +201,7 @@ export default function Shop() {
         </div>
 
         {/* Products */}
-        <div className="col-md-9">
+        <div className="col-md-9 p-0 ">
           <h3 className="mb-4">Products</h3>
           <div className="row">
             {filteredProducts.length > 0 ? (

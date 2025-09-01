@@ -10,6 +10,7 @@ export default function Dashboard() {
   };
 
   const orders = [
+ 
     {
       id: "#12345",
       date: "Aug 28, 2025",
@@ -62,7 +63,7 @@ export default function Dashboard() {
         <div className="col-md-8">
           <div className="card shadow-sm rounded orders-card h-100">
             <div className="card-body">
-              <h5 className="mb-4 fw-bold text-secondary">Recent Orders</h5>
+              <h5 className="mb-4 fw-bold text-secondary">My Orders</h5>
               <div className="table-responsive">
                 <table className="table align-middle table-bordered table-hover">
                   <thead className="table-light">
@@ -97,9 +98,7 @@ export default function Dashboard() {
                   </tbody>
                 </table>
               </div>
-              <button className="btn btn-outline-dark mt-3 px-4">
-                View All Orders
-              </button>
+            
             </div>
           </div>
         </div>

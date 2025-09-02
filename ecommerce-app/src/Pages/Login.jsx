@@ -13,7 +13,7 @@ export default function Login() {
         
         <div
           className="login-form p-4 shadow"
-          style={{ width: "100%", maxWidth: "400px" }}
+          style={{ width: "100%", maxWidth: "500px" }}
         >
           <h2 className="text-center mb-4">SIGN IN</h2>
           <form>

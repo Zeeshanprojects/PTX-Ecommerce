@@ -7,6 +7,11 @@
 .card-img-top:hover {
   transform: scale(1.05);
 }
+.form-check-input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
 
 @media (max-width: 576px) {
   .catalog-image {

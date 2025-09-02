@@ -40,6 +40,7 @@ import FAQ from "./Pages/FAQ";
 import Search from "./Pages/Search";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/profile";
+import Orders from "./Pages/Orders";
 
 function AppWrapper() {
   useEffect(() => {
@@ -80,6 +81,7 @@ function AppWrapper() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="/orders" element={<Orders/>}/>
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>

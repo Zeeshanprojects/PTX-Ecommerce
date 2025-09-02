@@ -17,6 +17,7 @@ object-fit: contain !important;
 width: 100% !important;
   }
 
+
 input:focus {
   outline: none !important;
   box-shadow: none !important;

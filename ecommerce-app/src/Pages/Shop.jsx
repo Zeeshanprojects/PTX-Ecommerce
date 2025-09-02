@@ -174,7 +174,7 @@ export default function Shop() {
                             <div key={filterKey}>
                               <div className="form-check">
                                 <input
-                                  className="form-check-input"
+                                  className="form-check-input "
                                   type="checkbox"
                                   id={filterKey}
                                   checked={checkedFilters.includes(filterKey)}

@@ -9,4 +9,18 @@ background-color: white;
     background-color: white;
     border-radius: 10px;
   }
-  
+  .loginformpic{
+    height: 600px !important;
+padding: 0;
+margin: 0;
+object-fit: contain !important;
+width: 100% !important;
+  }
+
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+ border: 0.2px solid black !important;
+  background-color: transparent !important;
+}

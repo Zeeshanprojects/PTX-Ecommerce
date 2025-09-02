@@ -15,7 +15,7 @@ export default function Cart() {
     return (
       <div className=" py-5 text-center ">
         <h2>EMPTY CART</h2>
-        <Link to="/" className="btn btn-outline-dark mt-3">
+        <Link to="/shop" className="btn btn-outline-dark mt-3">
           SHOP NOW
         </Link>
       </div>

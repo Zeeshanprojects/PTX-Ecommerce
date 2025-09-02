@@ -1,11 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { CartContext } from "../Components/CartContext.jsx";
+import Image from "../Images/Image.js";
 import "./Productinfo.css";
 
 export default function Productinfo() {
-  useEffect(()=>{
-    document.title="ProductInformaiton | Paksitan Textile Exchange"
+  useEffect(() => {
+    document.title = "ProductInformaiton | Paksitan Textile Exchange";
   });
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -90,19 +91,24 @@ export default function Productinfo() {
   };
 
   return (
-    <div className="container py-5">
-      <div className="row align-items-center">
-        <div className="col-md-6 mb-4 mb-md-0">
+    <div className="container-fluid p-0">
+      <div className="row ">
+        <div className="col-sm-6 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
           <div className="product-image-wrapper">
-            <img src={image} alt={title} className="img-fluid product-image" />
+            {/* <img src={image} alt={title} className="img-fluid product-image" /> */}
+            <img
+              src={Image.image1}
+              alt={title}
+              className="img-fluid product-image"
+            />
           </div>
         </div>
-        <div className="col-md-6">
-          <h2 className="fw-bold">{title}</h2>
-          <h5 className="text-muted mb-3">${price} USD</h5>
-          <label className="me-3 fw-semibold">Sizes:</label>
+        <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-3">
+          <h1 className="fw-bold ms-3">{title}</h1>
+          <h5 className="text-muted mb-3 ms-3">${price} USD</h5>
+          <label className="me-3 fw-semibold ms-3">Sizes Available</label>
           <div className="buttons mt-2 mb-2">
-            {["S", "M", "L", "XL", "2XL"].map((sizeOption) => (
+            {["S", "M", "L", "XL", "2XL", "3XL"].map((sizeOption) => (
               <button
                 key={sizeOption}
                 type="button"
@@ -110,7 +116,7 @@ export default function Productinfo() {
                   selectedSizes.includes(sizeOption)
                     ? "btn-dark"
                     : "btn-outline-dark"
-                } me-2`}
+                } me-2 ms-3 mb-3`}
                 onClick={() => handleSizeSelect(sizeOption)}
               >
                 {sizeOption}
@@ -120,47 +126,50 @@ export default function Productinfo() {
 
           {/* Show selected sizes as text */}
           {selectedSizes.length > 0 && (
-            <div className="mb-3 text-success">
+            <div className="mb-3 ms-3 text-dark">
               Selected size{selectedSizes.length > 1 ? "s" : ""}:{" "}
               {selectedSizes.join(", ")}
             </div>
           )}
 
-          <p className="mb-2">
-            This premium cotton t-shirt offers comfort and elegance for everyday
-            wear. Designed with modern cuts and top-quality fabric, it’s perfect
-            for casual or semi-formal occasions.
+          <p className="mb-2 text-justify mt-3 ms-3">
+            This premium cotton Mineral Wash offers comfort and elegance for
+            everyday wear. Designed with modern cuts and top-quality fabric,
+            it’s perfect for casual or semi-formal occasions. The breathable
+            fabric ensures you stay cool in warmer climates, while the durable
+            stitching maintains shape and quality even after multiple washes.
           </p>
-          <div className="d-flex align-items-center mb-3">
-            <label className="me-3 fw-semibold">Quantity:</label>
-            <button
-              onClick={decreaseQty}
-              className="btn btn-outline-secondary px-3"
-            >
+
+          <div className="d-flex align-items-center mb-4 mt-4">
+            <label className="me-3 fw-semibold ms-3">Quantity:</label>
+            <button onClick={decreaseQty} className="btn btn-outline-dark px-3">
               −
             </button>
-            <span className="mx-3">{quantity}</span>
-            <button
-              onClick={increaseQty}
-              className="btn btn-outline-secondary px-3"
-            >
+
+            <span className="mx-4 ">{quantity}</span>
+
+            <button onClick={increaseQty} className="btn btn-outline-dark px-3">
               +
             </button>
           </div>
-          <div className="container">
-            <div className="row g-2">
-              <button
-                onClick={handleBuyNow}
-                className="btn btn-success px-5 py-2 w-100"
-              >
-                BUY NOW
-              </button>
-              <button
-                className="btn btn-dark px-5 py-2 w-100"
-                onClick={handleAddToCart}
-              >
-                ADD TO CART
-              </button>
+          <div className="container p-1">
+            <div className="row ">
+              <div className="col-6 ">
+                <button
+                  onClick={handleBuyNow}
+                  className="btn btn-success p-2 w-100"
+                >
+                  BUY NOW
+                </button>
+              </div>
+              <div className="col-6 ">
+                <button
+                  className="btn btn-dark p-2 w-100 "
+                  onClick={handleAddToCart}
+                >
+                  ADD TO CART
+                </button>
+              </div>
             </div>
           </div>
         </div>

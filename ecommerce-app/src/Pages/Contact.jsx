@@ -58,7 +58,7 @@ export default function Contact() {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-12 mb-4">
-            <div className="contact-form card p-4 shadow h-100">
+            <div className="contact-form  p-4 h-100">
               <h2 className="text-center mb-4">CONTACT US</h2>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">

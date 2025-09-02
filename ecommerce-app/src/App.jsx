@@ -81,7 +81,7 @@ function AppWrapper() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
-        <Route path="/orders" element={<Orders/>}/>
+        <Route path="/orders" element={<Orders />} />
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>
@@ -92,7 +92,6 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);

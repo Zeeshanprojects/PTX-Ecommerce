@@ -81,5 +81,6 @@ zeeshanpic:new URL("./Zeeshan-pic.png",import.meta.url).href,
   categoriesicon3: new URL("./icon3.svg", import.meta.url).href,
   categoriesicon4: new URL("./icon4.svg", import.meta.url).href,
   categoriesicon5: new URL("./icon5.svg", import.meta.url).href,
+
 };
 export default Image;

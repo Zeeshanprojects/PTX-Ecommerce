@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Image from "../Images/Image";
 import "./Shop.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -210,7 +211,7 @@ export default function Shop() {
                   key={product.id}
                   className="col-sm-6 col-md-4 col-lg-3 mb-4"
                 >
-                  <div className="card h-100 border-0 shadow-sm">
+                  <div className=" h-100 border-0 ">
                     <Link
                       to="/productinfo"
                       state={{
@@ -222,10 +223,11 @@ export default function Shop() {
                       }}
                     >
                       <img
-                        src={product.image}
-                        className="card-img-top bg-light catalog-image"
+                        // src={product.image}
+                        src={Image.image2}
+                        className="card-img-top  catalog-image"
                         alt={product.title}
-                        style={{ objectFit: "cover", height: "300px" }}
+                      
                       />
                     </Link>
                     <hr />

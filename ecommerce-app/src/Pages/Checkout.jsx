@@ -49,10 +49,10 @@ export default function Checkout() {
     };
 
     try {
-     const response = await axios.post(
-  `${import.meta.env.VITE_API_URL}/api/EcommerceCheckout`,
-  payload
-);
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/api/EcommerceCheckout`,
+        payload
+      );
 
       if (response.status === 201) {
         setConfirmedData(payload); // Store data for modal
@@ -107,16 +107,16 @@ export default function Checkout() {
                 required
               />
             </div>
-            {/* <div className="mb-3">
+            <div className="mb-3">
               <label className="form-label">Payment Method</label>
-              <div class="form-check">
+              <div class="form-check mt-2">
                 <input
                   className="form-check-input"
                   type="checkbox"
                   value=""
                   id="flexCheckDefault"
                 />
-                <label className="form-check-label" for="flexCheckDefault">
+                <label className="form-check-label " for="flexCheckDefault">
                   Cash on Delievery
                 </label>
               </div>
@@ -128,10 +128,10 @@ export default function Checkout() {
                   id="flexCheckDefault"
                 />
                 <label className="form-check-label" for="flexCheckDefault">
-                  Online Payment
+                  Stripe
                 </label>
               </div>
-            </div> */}
+            </div>
             <div className="mb-3">
               <label className="form-label">Shipping Address</label>
               <textarea

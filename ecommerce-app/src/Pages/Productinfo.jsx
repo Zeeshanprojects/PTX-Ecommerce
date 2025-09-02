@@ -93,7 +93,7 @@ export default function Productinfo() {
   return (
     <div className="container-fluid p-0">
       <div className="row ">
-        <div className="col-sm-6 col-md-12 col-lg-6 col-xl-6mb-4 mb-md-0">
+        <div className="col-sm-6 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
           <div className="product-image-wrapper">
             {/* <img src={image} alt={title} className="img-fluid product-image" /> */}
             <img
@@ -103,7 +103,7 @@ export default function Productinfo() {
             />
           </div>
         </div>
-        <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-5">
+        <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-3">
           <h1 className="fw-bold ms-3">{title}</h1>
           <h5 className="text-muted mb-3 ms-3">${price} USD</h5>
           <label className="me-3 fw-semibold ms-3">Sizes Available</label>
@@ -126,7 +126,7 @@ export default function Productinfo() {
 
           {/* Show selected sizes as text */}
           {selectedSizes.length > 0 && (
-            <div className="mb-3 text-success">
+            <div className="mb-3 ms-3 text-dark">
               Selected size{selectedSizes.length > 1 ? "s" : ""}:{" "}
               {selectedSizes.join(", ")}
             </div>
@@ -154,7 +154,7 @@ export default function Productinfo() {
           </div>
           <div className="container p-1">
             <div className="row ">
-              <div className="col-6">
+              <div className="col-6 ">
                 <button
                   onClick={handleBuyNow}
                   className="btn btn-success p-2 w-100"
@@ -162,7 +162,7 @@ export default function Productinfo() {
                   BUY NOW
                 </button>
               </div>
-              <div className="col-6">
+              <div className="col-6 ">
                 <button
                   className="btn btn-dark p-2 w-100 "
                   onClick={handleAddToCart}

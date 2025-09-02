@@ -8,7 +8,7 @@ export default function Login() {
   return (
     <div className="login-wrapper py-5">
       <div className="container d-flex justify-content-center align-items-center">
-        <div className="login-form card p-4 shadow" style={{ width: "100%", maxWidth: "400px" }}>
+        <div className="login-form p-4 shadow" style={{ width: "100%", maxWidth: "400px" }}>
           <h2 className="text-center mb-4">SIGN IN</h2>
           <form>
             <div className="mb-3">

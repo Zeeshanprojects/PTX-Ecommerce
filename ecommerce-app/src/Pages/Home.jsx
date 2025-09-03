@@ -315,7 +315,7 @@ export default function Home() {
             data-aos="fade-up"
           >
             <img
-              src={Image.productbanner6}
+              src={Image.productbanner7}
               alt="smallbanner"
               className="w-100"
             />
@@ -337,7 +337,7 @@ export default function Home() {
             data-aos="fade-up"
           >
             <img
-              src={Image.productbanner1}
+              src={Image.productbanner8}
               alt="smallbanner"
               className="w-100 p-0 m-0"
             />

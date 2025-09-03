@@ -1,112 +1,62 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Image from "../Images/Image";
 import "./Shop.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import Image from "../Images/Image";
 
 export default function Shop() {
   useEffect(() => {
     document.title = "Catalog | Pakistan Textile Exchange";
-  });
+  }, []);
 
-  const [products, setProducts] = useState([]);
-  const [search, setSearch] = useState("");
-  const [checkedFilters, setCheckedFilters] = useState([]);
-  const [activeCategory, setActiveCategory] = useState("T-Shirt");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [activeFilters, setActiveFilters] = useState([]);
 
   const categories = [
-    "T-Shirt",
     "COLLARED NECK",
     "FLEECE CREWNECK",
     "BOATNECK",
     "PULLOVER HOODIES",
     "SWEAT SHORT",
-    "MINERAL WADH",
+    "MINERAL WASH",
   ];
-  const baseURL = import.meta.env.VITE_API_URL;
-  const apiEndpoints = {
-    "T-Shirt": `${baseURL}/api/EcommerceTshirt`,
-    Fleece: `${baseURL}/api/EcommerceFleece`,
-    Kids: `${baseURL}/api/EcommerceKid`,
-  };
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        setLoading(true);
-        const allProducts = [];
-        let idCounter = 1;
+  // Hardcoded products (mapped to imported images)
+  const products = [
+    { id: 1, title: "Collared Neck Shirt 1", category: "COLLARED NECK", price: 25, image: Image.image1 },
+    { id: 2, title: "Collared Neck Shirt 2", category: "COLLARED NECK", price: 27, image: Image.image2 },
+     { id: 3, title: "Collared Neck Shirt 3", category: "COLLARED NECK", price: 25, image: Image.image3 },
+    { id: 4, title: "Collared Neck Shirt 4", category: "COLLARED NECK", price: 27, image: Image.image4 },
+    { id: 5, title: "Collared Neck Shirt 5", category: "COLLARED NECK", price: 25, image: Image.image5 },
+    { id: 6, title: "Collared Neck Shirt 6", category: "COLLARED NECK", price: 27, image: Image.image6 },
+     { id: 7, title: "Collared Neck Shirt 7", category: "COLLARED NECK", price: 25, image: Image.image7 },
+    { id: 8, title: "Collared Neck Shirt 8", category: "COLLARED NECK", price: 27, image: Image.image8 },
+     { id: 9, title: "Collared Neck Shirt 9", category: "COLLARED NECK", price: 27, image: Image.image9 },
+    // { id: 3, title: "Fleece Crewneck 1", category: "FLEECE CREWNECK", price: 30, image: Image.Fleece1 },
+    // { id: 4, title: "Fleece Crewneck 2", category: "FLEECE CREWNECK", price: 32, image: Image.Fleece2 },
+    // { id: 5, title: "Boatneck Top 1", category: "BOATNECK", price: 28, image: Image.Boat1 },
+    // { id: 6, title: "Pullover Hoodie 1", category: "PULLOVER HOODIES", price: 35, image: Image.Hoodie1 },
+    // { id: 7, title: "Sweat Short 1", category: "SWEAT SHORT", price: 18, image: Image.Short1 },
+    // { id: 8, title: "Mineral Wash Tee 1", category: "MINERAL WASH", price: 22, image: Image.Mineral1 },
+  ];
 
-        for (const [category, url] of Object.entries(apiEndpoints)) {
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error(`Failed to fetch ${category} products`);
-          }
-          const data = await response.json();
-          const categoryProducts = data.map((item) => ({
-            id: idCounter++,
-            title: item.title,
-            category,
-            price: parseFloat(item.price),
-            image: item.image,
-          }));
-          allProducts.push(...categoryProducts);
-        }
+  const filteredProducts =
+    activeFilters.length === 0
+      ? products
+      : products.filter((p) => activeFilters.includes(p.category));
 
-        setProducts(allProducts);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  const handleCheckboxChange = (category, name) => {
-    const filterKey = `${category}-${name}`;
-    setCheckedFilters((prev) =>
-      prev.includes(filterKey)
-        ? prev.filter((item) => item !== filterKey)
-        : [...prev, filterKey]
-    );
-  };
-
-  const handleCategoryClick = (cat) => {
-    setActiveCategory(cat);
-  };
-
-  const filteredProducts = products.filter((product) => {
-    const filterKey = `${product.category}-${product.title}`;
-    const matchesSearch = product.title
-      .toLowerCase()
-      .includes(search.toLowerCase());
-
-    if (checkedFilters.length > 0) {
-      return checkedFilters.includes(filterKey) && matchesSearch;
+  const handleFilterChange = (category) => {
+    if (activeFilters.includes(category)) {
+      setActiveFilters(activeFilters.filter((c) => c !== category));
+    } else {
+      setActiveFilters([...activeFilters, category]);
     }
-
-    return product.category === activeCategory && matchesSearch;
-  });
-
-  if (loading) {
-    return (
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ height: "50vh" }}
-      >
-        <h4>Loading...</h4>
-      </div>
-    );
-  }
+  };
 
   return (
     <div className="container-fluid mt-5">
+      {/* Mobile toggle button */}
       <div className="d-md-none mb-3">
         <button
           className="btn btn-outline-dark w-100"
@@ -120,89 +70,54 @@ export default function Shop() {
       <div className="row">
         {/* Sidebar */}
         <div
-          className={`col-md-3 mb-4 pe-5 ${
-            isSidebarOpen ? "d-block" : "d-none d-md-block"
-          }`}
+          className={`col-md-3 mb-4 pe-2 ${isSidebarOpen ? "d-block" : "d-none d-md-block"}`}
         >
-          <div className="p-2  rounded shadow-sm">
+          <div className="p-2 border rounded">
             <h5 className="mb-3">Filters</h5>
-            <input
-              type="text"
-              className="form-control mb-4"
-              placeholder="Search products..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
             <div className="accordion" id="filterAccordion">
-              {categories.map((cat) => {
-                const productsInCategory = products.filter(
-                  (p) => p.category === cat
-                );
-                const uniqueTitles = [
-                  ...new Set(productsInCategory.map((p) => p.title)),
-                ];
-
-                return (
-                  <div className="accordion-item border-0 " key={cat}>
-                    <h2 className="accordion-header">
-                      <button
-                        className={`accordion-button bg-white shadow-none  fw-bold${
-                          activeCategory === cat ? "" : "collapsed"
-                        }`}
-                        type="button"
-                        onClick={() => handleCategoryClick(cat)}
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#collapse${cat}`}
-                        aria-expanded={
-                          activeCategory === cat ? "true" : "false"
-                        }
-                      >
-                        {cat}
-                      </button>
-                    </h2>
-                    <div
-                      id={`collapse${cat}`}
-                      className={`accordion-collapse collapse ${
-                        activeCategory === cat ? "show" : ""
-                      }`}
-                      data-bs-parent="#filterAccordion"
+              {categories.map((cat) => (
+                <div className="accordion-item border-0" key={cat}>
+                  <h2 className="accordion-header">
+                    <button
+                      className="accordion-button bg-white shadow-none fw-bold collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#collapse${cat.replace(/\s+/g, "")}`}
                     >
-                      <div className="accordion-body px-2 pt-2">
-                        {uniqueTitles.map((title) => {
-                          const filterKey = `${cat}-${title}`;
-                          return (
-                            <div key={filterKey}>
-                              <div className="form-check">
-                                <input
-                                  className="form-check-input "
-                                  type="checkbox"
-                                  id={filterKey}
-                                  checked={checkedFilters.includes(filterKey)}
-                                  onChange={() =>
-                                    handleCheckboxChange(cat, title)
-                                  }
-                                />
-                                <label
-                                  className="form-check-label ms-3 "
-                                  htmlFor={filterKey}
-                                >
-                                  {title}
-                                </label>
-                              </div>
-                            </div>
-                          );
-                        })}
+                      {cat}
+                    </button>
+                  </h2>
+                  <div
+                    id={`collapse${cat.replace(/\s+/g, "")}`}
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#filterAccordion"
+                  >
+                    <div className="accordion-body px-2 pt-2">
+                      <div className="form-check">
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id={`${cat}-opt`}
+                          checked={activeFilters.includes(cat)}
+                          onChange={() => handleFilterChange(cat)}
+                        />
+                        <label
+                          className="form-check-label ms-2"
+                          htmlFor={`${cat}-opt`}
+                        >
+                          Show {cat}
+                        </label>
                       </div>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Products */}
-        <div className="col-md-9 p-0 ">
+        <div className="col-md-9 p-0 m-0">
           <h3 className="mb-4">Products</h3>
           <div className="row">
             {filteredProducts.length > 0 ? (
@@ -211,7 +126,10 @@ export default function Shop() {
                   key={product.id}
                   className="col-sm-6 col-md-4 col-lg-3 mb-4"
                 >
-                  <div className=" h-100 border-0 ">
+                  <div className="h-100 border-0 position-relative">
+                    <span className="new-badge position-absolute top-0 start-0 m-2">
+                      SALE
+                    </span>
                     <Link
                       to="/productinfo"
                       state={{
@@ -223,30 +141,25 @@ export default function Shop() {
                       }}
                     >
                       <img
-                        // src={product.image}
-                        src={Image.image2}
-                        className="card-img-top  catalog-image"
+                        src={product.image}
+                        className="card-img-top catalog-image"
                         alt={product.title}
-                      
                       />
                     </Link>
-                    <hr />
                     <div className="card-body d-flex flex-column">
-                      <h6 className="card-title catalog-title">
-                        {product.title}
-                      </h6>
-                      <p className="text-muted small mb-1 catalog-title">
+                      <h6 className="card-title fw-bold">{product.title}</h6>
+                      <p className="text-muted small mb-1">
                         {product.category}
                       </p>
-                      <p className="fw-semibold text-muted mb-2 catalog-title">
-                        USD {product.price}
+                      <p className="fw-semibold text-muted mb-2">
+                        USD {product.price}.00
                       </p>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
-              <p>No products found.</p>
+              <p>No products found for selected filters.</p>
             )}
           </div>
         </div>

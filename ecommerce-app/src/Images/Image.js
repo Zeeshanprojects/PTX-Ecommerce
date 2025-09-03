@@ -81,7 +81,7 @@ const Image = {
   categoriesicon3: new URL("./icon3.svg", import.meta.url).href,
   categoriesicon4: new URL("./icon4.svg", import.meta.url).href,
   categoriesicon5: new URL("./icon5.svg", import.meta.url).href,
-  add:new URL("./add",import.meta.url).href,
-  minus:new URL("./minus".import.meta.url).href,
+  add:new URL("./add.png",import.meta.url).href,
+  minus:new URL("./minus.png",import.meta.url).href,
 };
 export default Image;

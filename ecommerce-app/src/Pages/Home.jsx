@@ -332,7 +332,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-              <div
+          <div
             className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative below-space"
             data-aos="fade-up"
           >

@@ -266,28 +266,30 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div
-            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"
+           <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative below-space"
             data-aos="fade-up"
           >
             <img
-              src={Image.productbanner5}
+              src={Image.productbanner8}
               alt="smallbanner"
-              className="w-100"
+              className="w-100 p-0 m-0"
             />
             <div className="banner-text">
-              <h2 className="text-white">SWEAT SHORTS</h2>
-              <p className="text-white ">
-                Comfortable fleece shorts with drawstring waist <br />
-                and side pockets.
+              <h2 className="text-white">FLANNEL SHIRTS</h2>
+              <p className="text-white">
+                Smart casual polo with a classic collar and <br />
+                button placket.
               </p>
-              <Link to="/short">
+
+              <Link to="/shirts">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>
               </Link>
             </div>
           </div>
+        
           <div
             className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"
             data-aos="fade-up"
@@ -332,23 +334,22 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div
-            className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative below-space"
+           <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"
             data-aos="fade-up"
           >
             <img
-              src={Image.productbanner8}
+              src={Image.productbanner5}
               alt="smallbanner"
-              className="w-100 p-0 m-0"
+              className="w-100"
             />
             <div className="banner-text">
-              <h2 className="text-white">FLANNEL SHIRTS</h2>
-              <p className="text-white">
-                Smart casual polo with a classic collar and <br />
-                button placket.
+              <h2 className="text-white">SWEAT SHORTS</h2>
+              <p className="text-white ">
+                Comfortable fleece shorts with drawstring waist <br />
+                and side pockets.
               </p>
-
-              <Link to="/shirts">
+              <Link to="/short">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0">
                   VIEW COLLECTION
                 </button>

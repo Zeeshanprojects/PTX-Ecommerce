@@ -83,9 +83,9 @@ function AppWrapper() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
-  <Route path="/orders/:id" element={<Orders />} />  
-        <Route path="/sandow" element={<Sandow/>}/>
-<Route path="/shirts" element={<Shirts/>}/>
+        <Route path="/orders/:id" element={<Orders />} />
+        <Route path="/sandow" element={<Sandow />} />
+        <Route path="/shirts" element={<Shirts />} />
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>

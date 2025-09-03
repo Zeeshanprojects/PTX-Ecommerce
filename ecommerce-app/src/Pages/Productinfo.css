@@ -3,7 +3,7 @@
   padding: 10px;
 }
 .product-image {
-  height: 500px;
+  height: 600px;
   width: 100%;
   background: none !important;
   object-fit: contain !important;
@@ -16,8 +16,7 @@
 .btn {
   border-radius: 0px !important;
 }
-@media (min-width:1024px) and (max-width:1366px) {
-  .product-image{
-    height: 600px ;
-  }
+.quantity{
+ font-size:20px !important;
+ font-weight: bold;
 }

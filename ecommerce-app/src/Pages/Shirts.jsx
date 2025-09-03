@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import Image from "../Images/Image";
 import axios from "axios";
-export default function MineralWash() {
-  useEffect(() => {
-    document.title = "MINERAL-WASH | Pakistan Textile Exchange";
+
+export default function Shirts() {
+      useEffect(() => {
+    document.title = "FLANNEL SHIRTS | Pakistan Textile Exchange";
   });
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // loading state
-
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)
@@ -29,19 +28,18 @@ export default function MineralWash() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "50vh" }}
       >
-     <div className="spinner-grow" style={{width: "3rem", height: "3rem"}} role="status">
+<div className="spinner-grow" style={{width: "3rem", height: "3rem"}} role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
       </div>
     );
   }
-
   return (
     <>
       <div className="background">
         <div className="container-fluid p-5  ">
           <h1 className="fw-bold" data-aos="fade-up">
-            SWEAT SHORT
+        FLANNEL SHIRTS
           </h1>
           <p className="mb-5" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
@@ -69,9 +67,9 @@ export default function MineralWash() {
                       }}
                     >
                       <img
-                        src={Image.image2}
+                        src={product.image}
                         alt={product.title}
-                        className="img-fluid product-img p-2"
+                        className="img-fluid product-img"
                       />
                     </Link>
                   </div>

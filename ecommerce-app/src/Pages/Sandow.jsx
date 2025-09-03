@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import Image from "../Images/Image";
 import axios from "axios";
-export default function MineralWash() {
-  useEffect(() => {
-    document.title = "MINERAL-WASH | Pakistan Textile Exchange";
+
+export default function Sandow() {
+      useEffect(() => {
+    document.title = "SANDOW | Pakistan Textile Exchange";
   });
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // loading state
-
-  useEffect(() => {
+      useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)
       .then((res) => {
@@ -29,29 +28,24 @@ export default function MineralWash() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "50vh" }}
       >
-     <div className="spinner-grow" style={{width: "3rem", height: "3rem"}} role="status">
+        <div className="spinner-grow" style={{width: "3rem", height: "3rem"}} role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
       </div>
     );
   }
-
   return (
-    <>
-      <div className="background">
+    
+<>
+ <div className="background">
         <div className="container-fluid p-5  ">
-          <h1 className="fw-bold" data-aos="fade-up">
-            SWEAT SHORT
-          </h1>
-          <p className="mb-5" data-aos="fade-up">
-            OUR PREMIUM QUALITY COLLECTION
-          </p>
+          <h1 className="fw-bold"  data-aos="fade-up">SANDOW</h1>
+          <p className="mb-5"  data-aos="fade-up">OUR PREMIUM QUALITY COLLECTION</p>
           <div className="row g-4">
             {products.map((product, index) => (
               <div
                 key={index}
-                className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
-                data-aos="fade-up"
+                className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4" data-aos="fade-up"
               >
                 <div className="product-card position-relative overflow-hidden rounded shadow-sm">
                   <span className="new-badge position-absolute top-0 start-0 m-2">
@@ -69,9 +63,9 @@ export default function MineralWash() {
                       }}
                     >
                       <img
-                        src={Image.image2}
+                        src={product.image}
                         alt={product.title}
-                        className="img-fluid product-img p-2"
+                        className="img-fluid product-img"
                       />
                     </Link>
                   </div>
@@ -85,6 +79,6 @@ export default function MineralWash() {
           </div>
         </div>
       </div>
-    </>
-  );
+</>
+  )
 }

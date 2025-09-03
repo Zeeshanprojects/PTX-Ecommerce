@@ -46,7 +46,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="image-wrapper "data-aos="fade-up">
+      <div className="image-wrapper " data-aos="fade-up">
         <img
           src={Image.mainbanner}
           alt="slider-image1"
@@ -64,7 +64,7 @@ export default function Home() {
       <div className="space"></div>
 
       {/* Shared Animation with Images */}
-      <h2 className="text-center fw-bold" data-aos="fade-up" >
+      <h2 className="text-center fw-bold" data-aos="fade-up">
         SEARCH BY CATEGORIES
       </h2>
       <p className="text-center" data-aos="fade-up">
@@ -111,12 +111,17 @@ export default function Home() {
       <h2 className="text-center fw-bold" data-aos="fade-up">
         BEST SELLINGS
       </h2>
-      <p className="text-center" data-aos="fade-up">Our top-selling essentials, curated for you</p>
+      <p className="text-center" data-aos="fade-up">
+        Our top-selling essentials, curated for you
+      </p>
 
       <div className="space"></div>
       <div className="row m-2">
         {/* Left Column */}
-        <div className="left-column col-sm-12 col-md-12 col-lg-6 col-xl-6 m-0 p-0 h-100" data-aos="fade-up">
+        <div
+          className="left-column col-sm-12 col-md-12 col-lg-6 col-xl-6 m-0 p-0 h-100"
+          data-aos="fade-up"
+        >
           <div className="container-fluid mb-2 h-100">
             <div className="row g-2">
               <div className="col-6">
@@ -135,7 +140,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="right-column col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex m-0 p-0" data-aos="fade-up">
+        <div
+          className="right-column col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex m-0 p-0"
+          data-aos="fade-up"
+        >
           <img
             src={Image.rightbanner}
             alt="rightbanner"
@@ -144,14 +152,14 @@ export default function Home() {
           <div className="overlay-text">
             <h5> SALE IS ON</h5>
             <h1>50 % OFF</h1>
-<Link to="/shop">
-<button
-              type="button"
-              class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
-            >
-              SHOP NOW
-            </button></Link>
-            
+            <Link to="/shop">
+              <button
+                type="button"
+                class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
+              >
+                SHOP NOW
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -167,10 +175,13 @@ export default function Home() {
         Essential styles designed for comfort, versatility, and timeless appeal
       </p>
       <div className="space"></div>
-      <div className="container-fluid mb-2 p-0" >
+      <div className="container-fluid mb-2 p-0">
         <div className="row g-0 p-0 m-0">
           {/* Left column with carousel */}
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative below-space" data-aos="fade-up">
+          <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative below-space"
+            data-aos="fade-up"
+          >
             <img
               src={Image.productbanner1}
               alt="smallbanner"
@@ -190,7 +201,10 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space " data-aos="fade-up" >
+          <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space "
+            data-aos="fade-up"
+          >
             <img
               src={Image.productbanner2}
               alt="smallbanner"
@@ -209,7 +223,10 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space" data-aos="fade-up">
+          <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"
+            data-aos="fade-up"
+          >
             <img
               src={Image.productbanner3}
               alt="smallbanner"
@@ -227,7 +244,10 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative  below-space"data-aos="fade-up" >
+          <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative  below-space"
+            data-aos="fade-up"
+          >
             <img
               src={Image.productbanner4}
               alt="smallbanner"
@@ -246,7 +266,10 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space" data-aos="fade-up">
+          <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"
+            data-aos="fade-up"
+          >
             <img
               src={Image.productbanner5}
               alt="smallbanner"
@@ -265,7 +288,10 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"data-aos="fade-up" >
+          <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"
+            data-aos="fade-up"
+          >
             <img
               src={Image.productbanner6}
               alt="smallbanner"
@@ -284,13 +310,58 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6 position-relative below-space"
+            data-aos="fade-up"
+          >
+            <img
+              src={Image.productbanner6}
+              alt="smallbanner"
+              className="w-100"
+            />
+            <div className="banner-text">
+              <h2 className="text-dark">SANDOW</h2>
+              <p className="text-dark">
+                Timeless round-neck sweatshirt with ribbed <br />
+                cuffs and hem
+              </p>
+              <Link to="/sandow">
+                <button className="btn btn-outline-dark ps-3 pe-3 m-0 ">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
+              <div
+            className="col-sm-12 col-md-6 col-lg-6 col-xl-6  position-relative below-space"
+            data-aos="fade-up"
+          >
+            <img
+              src={Image.productbanner1}
+              alt="smallbanner"
+              className="w-100 p-0 m-0"
+            />
+            <div className="banner-text">
+              <h2 className="text-white">FLANNEL SHIRTS</h2>
+              <p className="text-white">
+                Smart casual polo with a classic collar and <br />
+                button placket.
+              </p>
+
+              <Link to="/shirts">
+                <button className="btn btn-outline-light ps-3 pe-3 m-0">
+                  VIEW COLLECTION
+                </button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="space"></div>
       <div className="container-fluid " data-aos="fade-up">
         <div className="row">
-          <h2 className="uppercase text-center mb-5 fw-bold" >
+          <h2 className="uppercase text-center mb-5 fw-bold">
             DRESS SHARP, LIVE SMART
           </h2>
 
@@ -383,7 +454,8 @@ export default function Home() {
       </div>
 
       <div
-        className="container-fluid py-5"data-aos="fade-up"
+        className="container-fluid py-5"
+        data-aos="fade-up"
         style={{ backgroundColor: "##FFFFFF" }}
       >
         <div className="row justify-content-center">

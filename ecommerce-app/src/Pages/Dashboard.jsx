@@ -12,21 +12,21 @@ export default function Dashboard() {
 
   const orders = [
     {
-      id: "#12345",
+      id: "12345",
       date: "Aug 28, 2025",
       status: "Shipped",
       amount: "$120.00",
       payment: "Stripe",
     },
     {
-      id: "#12346",
+      id: "12346",
       date: "Aug 18, 2025",
       status: "Delivered",
       amount: "$85.00",
       payment: "Cash on Delivery",
     },
     {
-      id: "#12347",
+      id: "12347",
       date: "Aug 10, 2025",
       status: "Processing",
       amount: "$42.50",
@@ -83,7 +83,14 @@ export default function Dashboard() {
                   <tbody>
                     {orders.map((order, index) => (
                       <tr key={index}>
-                        <td className="fw-semibold">{order.id}</td>
+                        <td className="fw-semibold">
+                          <Link
+                            to={`/orders/${order.id}`}
+                            className="text-decoration-none"
+                          >
+                            {order.id}
+                          </Link>
+                        </td>
                         <td>{order.date}</td>
                         <td>
                           <span

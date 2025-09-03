@@ -41,6 +41,8 @@ import Search from "./Pages/Search";
 import Dashboard from "./Pages/Dashboard";
 import Profile from "./Pages/profile";
 import Orders from "./Pages/Orders";
+import Sandow from "./Pages/Sandow";
+import Shirts from "./Pages/Shirts";
 
 function AppWrapper() {
   useEffect(() => {
@@ -81,7 +83,9 @@ function AppWrapper() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="profile" element={<Profile />} />
-        <Route path="/orders" element={<Orders />} />
+  <Route path="/orders/:id" element={<Orders />} />  
+        <Route path="/sandow" element={<Sandow/>}/>
+<Route path="/shirts" element={<Shirts/>}/>
       </Routes>
       {location.pathname !== "/LookBook" && <Footer />}
     </>

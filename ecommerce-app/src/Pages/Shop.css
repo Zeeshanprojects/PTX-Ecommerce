@@ -4,8 +4,9 @@
   object-fit: contain !important;
   background-color: white !important;
 }
-.card-img-top:hover {
-  transform: scale(1.05);
+.form-check-label {
+  font-size: 13px !important;
+  font-weight: bold !important;
 }
 .form-check-input {
   width: 18px;

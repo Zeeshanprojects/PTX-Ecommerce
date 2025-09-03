@@ -76,7 +76,7 @@ export default function Header() {
                   Denim
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link
                   className="nav-link active"
                   to="/Shop"
@@ -84,7 +84,7 @@ export default function Header() {
                 >
                   Catalog
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link
                   className="nav-link active"

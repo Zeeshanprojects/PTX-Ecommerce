@@ -45,11 +45,11 @@ const Image = {
   productbanner4: new URL("./productbanner4.webp", import.meta.url).href,
   productbanner5: new URL("./productbanner5.webp", import.meta.url).href,
   productbanner6: new URL("./productbanner6.webp", import.meta.url).href,
-zeeshanpic:new URL("./Zeeshan-pic.png",import.meta.url).href,
+  zeeshanpic: new URL("./Zeeshan-pic.png", import.meta.url).href,
   Menpic: new URL("./Menpic.webp", import.meta.url).href,
   Womenpic: new URL("./Womenpic.webp", import.meta.url).href,
   Kidpic: new URL("./Kidimage.webp", import.meta.url).href,
-  Denim:new URL("./Denimpic.webp",import.meta.url).href,
+  Denim: new URL("./Denimpic.webp", import.meta.url).href,
   WomenTshirt: new URL("./Womenpic.webp", import.meta.url).href,
   fleece: new URL("./Fleece-image.webp", import.meta.url).href,
   hoddies: new URL("./Hoodie.webp", import.meta.url).href,
@@ -81,6 +81,7 @@ zeeshanpic:new URL("./Zeeshan-pic.png",import.meta.url).href,
   categoriesicon3: new URL("./icon3.svg", import.meta.url).href,
   categoriesicon4: new URL("./icon4.svg", import.meta.url).href,
   categoriesicon5: new URL("./icon5.svg", import.meta.url).href,
-
+  add:new URL("./add.png",import.meta.url).href,
+  minus:new URL("./minus.png",import.meta.url).href,
 };
 export default Image;

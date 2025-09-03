@@ -56,6 +56,7 @@ export default function Productinfo() {
         id: `${id}-${size}`, // Unique ID per size
         image,
         title,
+
         price: Number(price), // Ensure price is a number
         category,
         size,
@@ -91,89 +92,107 @@ export default function Productinfo() {
   };
 
   return (
-    <div className="container-fluid p-0">
-      <div className="row ">
-        <div className="col-sm-6 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
-          <div className="product-image-wrapper">
-            {/* <img src={image} alt={title} className="img-fluid product-image" /> */}
-            <img
-              src={Image.image1}
-              alt={title}
-              className="img-fluid product-image"
-            />
-          </div>
-        </div>
-        <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-3">
-          <h1 className="fw-bold ms-3">{title}</h1>
-          <h5 className="text-muted mb-3 ms-3">${price} USD</h5>
-          <label className="me-3 fw-semibold ms-3">Sizes Available</label>
-          <div className="buttons mt-2 mb-2">
-            {["S", "M", "L", "XL", "2XL", "3XL"].map((sizeOption) => (
-              <button
-                key={sizeOption}
-                type="button"
-                className={`sizes btn ${
-                  selectedSizes.includes(sizeOption)
-                    ? "btn-dark"
-                    : "btn-outline-dark"
-                } me-2 ms-3 mb-3`}
-                onClick={() => handleSizeSelect(sizeOption)}
-              >
-                {sizeOption}
-              </button>
-            ))}
-          </div>
-
-          {/* Show selected sizes as text */}
-          {selectedSizes.length > 0 && (
-            <div className="mb-3 ms-3 text-dark">
-              Selected size{selectedSizes.length > 1 ? "s" : ""}:{" "}
-              {selectedSizes.join(", ")}
+    <>
+      <div className="container-fluid p-0">
+        <div className="row ">
+          <div className="col-sm-6 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
+            <div className="product-image-wrapper">
+              {/* <img src={image} alt={title} className="img-fluid product-image" /> */}
+              <img
+                src={Image.image1}
+                alt={title}
+                className="img-fluid product-image"
+              />
             </div>
-          )}
-
-          <p className="mb-2 text-justify mt-3 ms-3">
-            This premium cotton Mineral Wash offers comfort and elegance for
-            everyday wear. Designed with modern cuts and top-quality fabric,
-            it’s perfect for casual or semi-formal occasions. The breathable
-            fabric ensures you stay cool in warmer climates, while the durable
-            stitching maintains shape and quality even after multiple washes.
-          </p>
-
-          <div className="d-flex align-items-center mb-4 mt-4">
-            <label className="me-3 fw-semibold ms-3">Quantity:</label>
-            <button onClick={decreaseQty} className="btn btn-outline-dark px-3">
-              −
-            </button>
-
-            <span className="mx-4 ">{quantity}</span>
-
-            <button onClick={increaseQty} className="btn btn-outline-dark px-3">
-              +
-            </button>
           </div>
-          <div className="container p-1">
-            <div className="row ">
-              <div className="col-6 ">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-0 p-3 info-right-column">
+            <h6 className=" mt-3 text-muted">Men</h6>
+            <h3 className="">{title}</h3>
+            <h5 className="text-muted mb-3 ">USD {price}.00 </h5>
+            <label className="me-3 fw-semibold ">Sizes Available</label>
+            <div className="buttons mt-3 mb-2">
+              {["S", "M", "L", "XL", "2XL", "3XL"].map((sizeOption) => (
                 <button
+                  key={sizeOption}
+                  type="button"
+                  className={`sizes btn ${
+                    selectedSizes.includes(sizeOption)
+                      ? "btn-dark"
+                      : "btn-outline-dark"
+                  } me-2  mb-3`}
+                  onClick={() => handleSizeSelect(sizeOption)}
+                >
+                  {sizeOption}
+                </button>
+              ))}
+            </div>
+
+            {/* Show selected sizes as text */}
+            {selectedSizes.length > 0 && (
+              <div className="mb-3 text-dark">
+                Selected size{selectedSizes.length > 1 ? "s" : ""}:{" "}
+                {selectedSizes.join(", ")}
+              </div>
+            )}
+
+            <p className="mb-2 text mt-2">
+              This premium cotton Mineral Wash offers comfort and elegance for
+              everyday wear. Designed with modern cuts and top-quality fabric,
+              it’s perfect for casual or semi-formal occasions. The breathable
+              fabric ensures you stay cool in warmer climates, while the durable
+              stitching maintains shape and quality even after multiple washes.
+            </p>
+
+            <div className="d-flex align-items-center mb-4 mt-4">
+              <label className="me-3 fw-semibold ">Quantity:</label>
+              <button
+                onClick={decreaseQty}
+                className="btn btn-outline-dark fw-bold quantity px-3"
+              >
+                <img src={Image.minus} alt="minus" className="icon" />
+              </button>
+              <span className="mx-4 ">{quantity}</span>
+
+              <button
+                onClick={increaseQty}
+                className="btn btn-outline-dark quantity px-3"
+              >
+                <img src={Image.add} alt="add" className="icon" />
+              </button>
+            </div>
+            <div className="container p-1">
+              <div className="row ">
+                {/* <div className="col-6 ">
+                   <button
                   onClick={handleBuyNow}
                   className="btn btn-success p-2 w-100"
                 >
                   BUY NOW
-                </button>
-              </div>
-              <div className="col-6 ">
-                <button
-                  className="btn btn-dark p-2 w-100 "
-                  onClick={handleAddToCart}
-                >
-                  ADD TO CART
-                </button>
+                </button> 
+                </div> */}
+                <div className="col-12 ">
+                  <button
+                    className="btn btn-dark  w-100 "
+                    onClick={handleAddToCart}
+                  >
+                    ADD TO CART
+                  </button>
+                </div>
+                <div className="details">
+                  <label className="me-5 mt-3 fw-semibold ">
+                    Product Details
+                  </label>
+                  <ul className="mt-2 ps-3 ">
+                    <li>Color: Green</li>
+                    <li>Fit: Regulr Fit</li>
+                    <li>Type: Plain</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

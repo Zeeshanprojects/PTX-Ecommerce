@@ -56,8 +56,11 @@ export default function Dashboard() {
               <p className="text-muted small mb-2">{user.email}</p>
             </div>
             <Link to="/profile" className="prifile-btn">
-            <button type="button" className="btn btn-outline-dark w-75  "> Edit Profile
-                </button></Link>
+              <button type="button" className="btn btn-outline-dark w-75  ">
+                {" "}
+                Edit Profile
+              </button>
+            </Link>
           </div>
         </div>
 

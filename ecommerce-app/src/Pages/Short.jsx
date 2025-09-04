@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import axios from "axios";
+import Image from "../Images/Image";
 export default function Short() {
   useEffect(() => {
-    document.title = "SWEAT SHORT | Pakistan Textile Exchange";
+    document.title = " SHORT | Pakistan Textile Exchange";
   });
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); 
-  const [searchTerm,setSearchTerm]=useState("")
+  const [loading, setLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     axios
@@ -29,20 +30,24 @@ export default function Short() {
         className="d-flex justify-content-center align-items-center"
         style={{ height: "50vh" }}
       >
-<div className="spinner-grow" style={{width: "3rem", height: "3rem"}} role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
+        <div
+          className="spinner-grow"
+          style={{ width: "3rem", height: "3rem" }}
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
       </div>
     );
   }
-   const filteredProducts = products.filter((product) =>
+  const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return (
     <>
       <div className="background">
         <div className="container-fluid p-5  ">
-         <div
+          <div
             className="d-flex align-items-center justify-content-between mb-2"
             data-aos="fade-up"
           >
@@ -60,7 +65,9 @@ export default function Short() {
               />
             </div>
           </div>
-          <p className="mb-5"  data-aos="fade-up">OUR PREMIUM QUALITY COLLECTION</p>
+          <p className="mb-5" data-aos="fade-up">
+            OUR PREMIUM QUALITY COLLECTION
+          </p>
           <div className="row g-4">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => (

@@ -66,10 +66,10 @@ function AppWrapper() {
         <Route path="/Denim" element={<Denim />} />
         <Route path="/Tshirts" element={<TShirt />} />
         <Route path="/Collaredneck" element={<CollaredNeck />} />
-        <Route path="Boatneck" element={<BoatNeck />} />
-        <Route path="Pulloverhoodie" element={<Hoddies />} />
-        <Route path="short" element={<Short />} />
-        <Route path="Mineralwash" element={<MineralWash />} />
+        <Route path="/Boatneck" element={<BoatNeck />} />
+        <Route path="/Pulloverhoodie" element={<Hoddies />} />
+        <Route path="/short" element={<Short />} />
+        <Route path="/Mineralwash" element={<MineralWash />} />
         <Route path="/Shop" element={<Shop />} />
         <Route path="/Fleece" element={<Fleece />} />
         <Route path="/Cart" element={<Cart />} />
@@ -87,6 +87,7 @@ function AppWrapper() {
         <Route path="profile" element={<Profile />} />
         <Route path="/orders/:id" element={<Orders />} />
         <Route path="/sandow" element={<Sandow />} />
+
         <Route path="/shirts" element={<Shirts />} />
         <Route path="/croptee" element={<Croptee/>}/>
         <Route path="/puffers" element={<Puffers/>}/>

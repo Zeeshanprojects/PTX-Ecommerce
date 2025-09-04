@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Image from "../Images/Image";
 import axios from "axios";
 export default function Hoddies() {
   useEffect(() => {

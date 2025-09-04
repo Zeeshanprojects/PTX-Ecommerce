@@ -284,7 +284,8 @@ export default function Home() {
             <div className="banner-text">
               <h2 className="text-white">FLANNEL SHIRTS</h2>
               <p className="text-white">
-               Timeless flannel design, perfect for layering<br/> and casual style
+                Timeless flannel design, perfect for layering
+                <br /> and casual style
               </p>
               <Link to="/shirts">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
@@ -330,7 +331,7 @@ export default function Home() {
             <div className="banner-text">
               <h2 className="text-dark">CROP TEE</h2>
               <p className="text-dark">
-              Everyday essential crop tee for comfort and style
+                Everyday essential crop tee for comfort and style
               </p>
               <Link to="/croptee">
                 <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
@@ -351,8 +352,7 @@ export default function Home() {
             <div className="banner-text">
               <h2 className="text-light">PUFFERS</h2>
               <p className="text-light">
-              
-            Trendy puffer outerwear for a sleek winter look
+                Trendy puffer outerwear for a sleek winter look
               </p>
               <Link to="/puffers">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
@@ -377,9 +377,10 @@ export default function Home() {
             <div className="banner-text">
               <h2 className="text-light">SHORT</h2>
               <p className="text-light">
-                Classic shorts with side pockets and an easy <br/> drawstring waist
+                Classic shorts with side pockets and an easy <br /> drawstring
+                waist
               </p>
-              <Link to="/sweatshort">
+              <Link to="/short">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
                   VIEW COLLECTION
                 </button>
@@ -398,7 +399,8 @@ export default function Home() {
             <div className="banner-text">
               <h2 className="text-dark">SANDOW</h2>
               <p className="text-dark">
-                Durable and comfortable sandow for a relaxed,<br/> casual look
+                Durable and comfortable sandow for a relaxed,
+                <br /> casual look
               </p>
               <Link to="/sandow">
                 <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">

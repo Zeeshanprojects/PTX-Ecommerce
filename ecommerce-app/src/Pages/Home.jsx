@@ -319,97 +319,82 @@ export default function Home() {
 
         {/* 4th Row (Flipped on Desktop) */}
 
-   <div className="row g-0 p-0 m-0">
-          <div
-            className="col-sm-12 col-md-6 order-2 order-md-1 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner9}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-dark">CROP TEE</h2>
-              <p className="text-dark">
-                Timeless round-neck sweatshirt with ribbed <br /> cuffs and hem
-              </p>
-              <Link to="/sandow">
-                <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div
-            className="col-sm-12 col-md-6 order-1 order-md-2 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner10}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-light">DENIM</h2>
-              <p className="text-light">
-                Comfortable fleece shorts with drawstring waist <br /> and side
-                pockets.
-              </p>
-              <Link to="/short">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+ {/* 4th Row (Flipped on Desktop) */}
+<div className="row g-0 p-0 m-0">
+  <div
+    className="col-sm-12 col-md-6 order-2 order-md-1 position-relative"
+    data-aos="fade-up"
+  >
+    <img src={Image.productbanner9} alt="smallbanner" className="w-100" />
+    <div className="banner-text">
+      <h2 className="text-dark">CROP TEE</h2>
+      <p className="text-dark">
+        Timeless round-neck sweatshirt with ribbed <br /> cuffs and hem
+      </p>
+      <Link to="/croptee">
+        <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
+          VIEW COLLECTION
+        </button>
+      </Link>
+    </div>
+  </div>
+  <div
+    className="col-sm-12 col-md-6 order-1 order-md-2 position-relative"
+    data-aos="fade-up"
+  >
+    <img src={Image.productbanner10} alt="smallbanner" className="w-100" />
+    <div className="banner-text">
+      <h2 className="text-light">DENIM</h2>
+      <p className="text-light">
+        Comfortable fleece shorts with drawstring waist <br /> and side pockets.
+      </p>
+      <Link to="/denim">
+        <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
+          VIEW COLLECTION
+        </button>
+      </Link>
+    </div>
+  </div>
+</div>
 
-        <div className="row g-0 p-0 m-0">
-          <div
-            className="col-sm-12 col-md-6 order-2 order-md-1 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner5}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-light">SWEAT SHORT</h2>
-              <p className="text-light">
-                Timeless round-neck sweatshirt with ribbed <br /> cuffs and hem
-              </p>
-              <Link to="/sandow">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div
-            className="col-sm-12 col-md-6 order-1 order-md-2 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner7}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-dark">SANDOW</h2>
-              <p className="text-dark">
-                Comfortable fleece shorts with drawstring waist <br /> and side
-                pockets.
-              </p>
-              <Link to="/short">
-                <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
+{/* 5th Row */}
+<div className="row g-0 p-0 m-0">
+  <div
+    className="col-sm-12 col-md-6 position-relative"
+    data-aos="fade-up"
+  >
+    <img src={Image.productbanner5} alt="smallbanner" className="w-100" />
+    <div className="banner-text">
+      <h2 className="text-light">SWEAT SHORT</h2>
+      <p className="text-light">
+        Timeless round-neck sweatshirt with ribbed <br /> cuffs and hem
+      </p>
+      <Link to="/sweatshort">
+        <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
+          VIEW COLLECTION
+        </button>
+      </Link>
+    </div>
+  </div>
+  <div
+    className="col-sm-12 col-md-6 position-relative"
+    data-aos="fade-up"
+  >
+    <img src={Image.productbanner7} alt="smallbanner" className="w-100" />
+    <div className="banner-text">
+      <h2 className="text-dark">SANDOW</h2>
+      <p className="text-dark">
+        Comfortable fleece shorts with drawstring waist <br /> and side pockets.
+      </p>
+      <Link to="/sandow">
+        <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
+          VIEW COLLECTION
+        </button>
+      </Link>
+    </div>
+  </div>
+</div>
+
 
        
       </div>

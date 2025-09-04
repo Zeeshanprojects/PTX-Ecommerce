@@ -133,12 +133,37 @@ export default function Footer() {
                   </p>
                   <p>
                     <Link to="#!" className="text-white">
-                      Swet Shorts
+                      Sweat Shorts
                     </Link>
                   </p>
                    <p>
                     <Link to="#!" className="text-white">
                      Mineral Wash
+                    </Link>
+                  </p>
+                   <p>
+                    <Link to="#!" className="text-white">
+            Flannel Shirts
+                    </Link>
+                  </p>
+                   <p>
+                    <Link to="#!" className="text-white">
+              Crop Tee
+                    </Link>
+                  </p>
+                   <p>
+                    <Link to="#!" className="text-white">
+           Puffers
+                    </Link>
+                  </p>
+                   <p>
+                    <Link to="#!" className="text-white">
+             Sandow
+                    </Link>
+                  </p>
+                   <p>
+                    <Link to="#!" className="text-white">
+                 
                     </Link>
                   </p>
                 </div>

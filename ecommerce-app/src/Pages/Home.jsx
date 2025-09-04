@@ -179,7 +179,7 @@ export default function Home() {
 
   {/* 1st Row */}
   <div className="row g-0 p-0 m-0">
-    <div className="col-sm-12 col-md-6 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 position-relative " data-aos="fade-up">
       <img src={Image.productbanner1} alt="smallbanner" className="w-100 p-0 m-0" />
       <div className="banner-text">
         <h2 className="text-white">COLLARED NECK</h2>
@@ -189,7 +189,7 @@ export default function Home() {
         </Link>
       </div>
     </div>
-    <div className="col-sm-12 col-md-6 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 position-relative " data-aos="fade-up">
       <img src={Image.productbanner2} alt="smallbanner" className="w-100" />
       <div className="banner-text">
         <h2 className="text-dark">FLEECE CREWNECK</h2>
@@ -203,7 +203,7 @@ export default function Home() {
 
   {/* 2nd Row (Flipped on Desktop) */}
   <div className="row g-0 p-0 m-0">
-    <div className="col-sm-12 col-md-6 order-2 order-md-1 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 order-2 order-md-1 position-relative " data-aos="fade-up">
       <img src={Image.productbanner3} alt="smallbanner" className="w-100" />
       <div className="banner-text">
         <h2 className="text-dark">BOAT NECK</h2>
@@ -213,7 +213,7 @@ export default function Home() {
         </Link>
       </div>
     </div>
-    <div className="col-sm-12 col-md-6 order-1 order-md-2 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 order-1 order-md-2 position-relative " data-aos="fade-up">
       <img src={Image.productbanner4} alt="smallbanner" className="w-100" />
       <div className="banner-text">
         <h2 className="text-white">PULLOVER HOODIES</h2>
@@ -227,7 +227,7 @@ export default function Home() {
 
   {/* 3rd Row */}
   <div className="row g-0 p-0 m-0">
-    <div className="col-sm-12 col-md-6 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 position-relative " data-aos="fade-up">
       <img src={Image.productbanner8} alt="smallbanner" className="w-100 p-0 m-0" />
       <div className="banner-text">
         <h2 className="text-white">FLANNEL SHIRTS</h2>
@@ -237,7 +237,7 @@ export default function Home() {
         </Link>
       </div>
     </div>
-    <div className="col-sm-12 col-md-6 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 position-relative " data-aos="fade-up">
       <img src={Image.productbanner6} alt="smallbanner" className="w-100" />
       <div className="banner-text">
         <h2 className="text-dark">MINERAL WASH</h2>
@@ -251,7 +251,7 @@ export default function Home() {
 
   {/* 4th Row (Flipped on Desktop) */}
   <div className="row g-0 p-0 m-0">
-    <div className="col-sm-12 col-md-6 order-2 order-md-1 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 order-2 order-md-1 position-relative " data-aos="fade-up">
       <img src={Image.productbanner7} alt="smallbanner" className="w-100" />
       <div className="banner-text">
         <h2 className="text-dark">SANDOW</h2>
@@ -261,7 +261,7 @@ export default function Home() {
         </Link>
       </div>
     </div>
-    <div className="col-sm-12 col-md-6 order-1 order-md-2 position-relative below-space" data-aos="fade-up">
+    <div className="col-sm-12 col-md-6 order-1 order-md-2 position-relative " data-aos="fade-up">
       <img src={Image.productbanner5} alt="smallbanner" className="w-100" />
       <div className="banner-text">
         <h2 className="text-white">SWEAT SHORTS</h2>

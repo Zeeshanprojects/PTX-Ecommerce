@@ -254,15 +254,17 @@
 .border {
   border: 1222px solid orange;
 }
-
-
-
-@media (min-width: 993px) and (max-width: 1199px) {
+@media (min-width:1200px) and (max-width:1399.98px) {
+  .banner-text{
+    font-size: 13px ;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .main-btn {
     top: 80%;
   }
   .banner-text {
-    font-size: 12px;
+    font-size: 10px;
   }
   .banner-text h2 {
     font-size: 20px !important;
@@ -270,12 +272,12 @@
   .banner-text button {
     font-size: 10px !important;
   }
-   .collection-btn{
-  font-size: 12px !important;
- }
+  .collection-btn {
+    font-size: 12px !important;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .main-btn {
     top: 80%;
     padding: 0px !important;
@@ -284,21 +286,21 @@
     text-align: center !important;
     width: 100%;
   }
-  .banner-text h2{
+  .banner-text h2 {
     font-size: 20px;
   }
-.banner-text{
-  font-size: 9px ;
-}
+  .banner-text {
+    font-size: 8px;
+  }
   .banner {
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
- .collection-btn{
-  font-size: 12px !important;
- }
+  .collection-btn {
+    font-size: 12px !important;
+  }
 }
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
   .main-btn {
     top: 80%;
     padding: 0px !important;
@@ -316,8 +318,10 @@
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
-   .below-space{
+  .below-space {
     margin-bottom: 10px !important;
+  }.banner-text{
+    font-size: 10px;
   }
 }
 @media (max-width: 576px) {
@@ -359,7 +363,7 @@
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
-  .below-space{
+  .below-space {
     margin-bottom: 10px !important;
   }
 }

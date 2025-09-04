@@ -375,7 +375,7 @@ export default function Home() {
               className="w-100"
             />
             <div className="banner-text">
-              <h2 className="text-light">SWEAT SHORT</h2>
+              <h2 className="text-light">SHORT</h2>
               <p className="text-light">
                 Classic shorts with side pockets and an easy <br/> drawstring waist
               </p>

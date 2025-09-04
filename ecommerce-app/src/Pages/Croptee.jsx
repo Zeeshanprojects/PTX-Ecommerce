@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image";
 import axios from "axios";
-export default function BoatNeck() {
+export default function Croptee() {
   useEffect(() => {
-    document.title = "Fleece | Pakistan Textile Exchange";
+    document.title = "Croptee | Pakistan Textile Exchange";
   });
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -53,7 +53,7 @@ export default function BoatNeck() {
             data-aos="fade-up"
           >
             {/* Title */}
-            <h1 className="fw-bold m-0">BOAT NECK</h1>
+            <h1 className="fw-bold m-0">CROP TEE</h1>
 
             {/* Search Bar */}
             <div style={{ maxWidth: "300px", width: "100%" }}>

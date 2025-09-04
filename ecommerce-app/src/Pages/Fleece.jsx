@@ -10,6 +10,7 @@ export default function Fleece() {
   });
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true); // loading state
+    const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     axios
@@ -40,53 +41,78 @@ export default function Fleece() {
       </div>
     );
   }
-
+  // Filter products based on search
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <>
       <div className="background">
         <div className="container-fluid p-5">
-          <h1 className="fw-bold " data-aos="fade-up">
-            FLEECE CREWNECK
-          </h1>
+                  <div
+            className="d-flex align-items-center justify-content-between mb-2"
+            data-aos="fade-up"
+          >
+            {/* Title */}
+            <h1 className="fw-bold m-0">FLEECE CEWNECK</h1>
+
+            {/* Search Bar */}
+            <div style={{ maxWidth: "300px", width: "100%" }}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search Collared Neck T-shirts..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
           <p className="mb-5" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
           </p>
-          <div className="row g-4">
-            {products.map((product, index) => (
-              <div
-                key={index}
-                className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
-                data-aos="fade-up"
-              >
-                <div className="product-card position-relative overflow-hidden rounded shadow-sm">
-                  <span className="new-badge position-absolute top-0 start-0 m-2">
-                    NEW
-                  </span>
-                  <div className="product-img-container position-relative">
-                    <Link
-                      to="/productinfo"
-                      state={{
-                        id: index,
-                        title: product.title,
-                        price: product.price,
-                        image: product.image,
-                        category: "Fleece",
-                      }}
-                    >
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="img-fluid product-img"
-                      />
-                    </Link>
-                  </div>
-                  <div className="p-3">
-                    <h6 className="mb-1">{product.title}</h6>
-                    <p className="text-muted mb-1">USD {product.price}</p>
+       <div className="row g-4">
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
+                  data-aos="fade-up"
+                >
+                  <div className="product-card position-relative overflow-hidden rounded shadow-sm">
+                    <span className="new-badge position-absolute top-0 start-0 m-2">
+                      NEW
+                    </span>
+                    <div className="product-img-container position-relative">
+                      <Link
+                        to="/productinfo"
+                        state={{
+                          id: index,
+                          title: product.title,
+                          price: product.price,
+                          image: product.image,
+                          category: "Fleece",
+                        }}
+                      >
+                        <img
+                          src={product.image}
+                          alt={product.title}
+                          className="img-fluid product-img"
+                        />
+                      </Link>
+                    </div>
+                    <div className="p-3">
+                      <h6 className="mb-1">{product.title}</h6>
+                      <p className="text-muted mb-1">USD {product.price}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))
+            ) :(
+  <div className="text-center">
+    <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+    <h5 className="mt-5">Sorry No products found.</h5>
+  </div>
+)}
           </div>
         </div>
       </div>

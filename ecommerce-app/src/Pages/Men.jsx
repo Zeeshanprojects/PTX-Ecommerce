@@ -7,7 +7,7 @@ export default function Men() {
     document.title = "Men | Pakistan Textile Exchange";
   });
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true); // loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios

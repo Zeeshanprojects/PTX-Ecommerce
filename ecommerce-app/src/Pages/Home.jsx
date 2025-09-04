@@ -354,7 +354,7 @@ export default function Home() {
               
             Trendy puffer outerwear for a sleek winter look
               </p>
-              <Link to="/denim">
+              <Link to="/puffers">
                 <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
                   VIEW COLLECTION
                 </button>

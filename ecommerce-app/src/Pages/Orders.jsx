@@ -43,19 +43,34 @@ export default function Orders() {
 
   return (
     <div className="container py-4">
-      <div className="card shadow-sm p-4">
-        <h3 className="fw-bold text-dark mb-3">Order Details</h3>
-        <p><strong>Order ID:</strong> {order.id}</p>
-        <p><strong>Date:</strong> {order.date}</p>
-        <p><strong>Status:</strong> {order.status}</p>
-        <p><strong>Amount:</strong> {order.amount}</p>
-        <p><strong>Payment:</strong> {order.payment}</p>
+      <div className="card shadow-lg p-4 ">
+        <h3 className="fw-bold text-dark mb-3">ORDER DETAILS</h3>
+        <p>
+          <strong>Order ID:</strong>&nbsp;{order.id}
+        </p>
+        <p>
+          <strong>Date:</strong> &nbsp;{order.date}
+        </p>
+        <p>
+          <strong>Status:</strong>&nbsp;{order.status}
+        </p>
+        <p>
+          <strong>Amount:</strong>&nbsp;{order.amount}
+        </p>
+        <p>
+          <strong>Payment:</strong>&nbsp;{order.payment}
+        </p>
 
         <h5 className="mt-4">Items</h5>
-        <ul className="list-group mb-3">
+        <ul className="list-group mb-3 ">
           {order.items.map((item, i) => (
-            <li key={i} className="list-group-item d-flex justify-content-between">
-              <span>{item.name} (x{item.qty})</span>
+            <li
+              key={i}
+              className="list-group-item d-flex justify-content-between fw-bold"
+            >
+              <span>
+                {item.name} (x{item.qty})
+              </span>
               <span>{item.price}</span>
             </li>
           ))}

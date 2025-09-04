@@ -6,10 +6,10 @@ export default function Signup() {
     document.title="Signup | Pakistan Textile Exchange"
   });
   return (
-    <div className="login-wrapper py-2">
-      <div className="container-fluid d-flex justify-content-center align-items-center">
-        <div className="login-form p-4 " style={{ width: "100%", maxWidth: "1200px" }}>
-          <h2 className="text-center mb-4">CREATE ACCOUNT</h2>
+    <div className="login-wrapper py-4">
+      <div className="container-fluid d-flex justify-content-center align-items-center ">
+        <div className="login-form p-4 shadow-lg" style={{ width: "100%", maxWidth: "1200px" }}>
+          <h2 className="text-center mb-3">CREATE ACCOUNT</h2>
           <form>
           <div className="mb-3">
               <label className="form-label">Name</label>

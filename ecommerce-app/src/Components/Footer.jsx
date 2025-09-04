@@ -112,52 +112,52 @@ export default function Footer() {
                     }}
                   />
                   <p>
-                    <Link to="/T" className="text-white">
+                    <Link to="/Collaredneck" className="text-white">
                       Collared Neck
                     </Link>
                   </p>
                   <p>
-                    <Link to="#!" className="text-white">
-                      Fleece CrewNeck
+                    <Link to="/Fleece" className="text-white">
+                      Fleece Crewneck
                     </Link>
                   </p>
                   <p>
-                    <Link to="#!" className="text-white">
+                    <Link to="/Boatneck" className="text-white">
                       Boat Neck
                     </Link>
                   </p>
                   <p>
-                    <Link to="#!" className="text-white">
+                    <Link to="Pulloverhoodie" className="text-white">
                       Pullover Hoodies
                     </Link>
                   </p>
                   <p>
-                    <Link to="#!" className="text-white">
-                      Sweat Shorts
+                    <Link to="/short" className="text-white">
+                       Shorts
                     </Link>
                   </p>
                    <p>
-                    <Link to="#!" className="text-white">
+                    <Link to="/Mineralwash" className="text-white">
                      Mineral Wash
                     </Link>
                   </p>
                    <p>
-                    <Link to="#!" className="text-white">
+                    <Link to="/shirts" className="text-white">
             Flannel Shirts
                     </Link>
                   </p>
                    <p>
-                    <Link to="#!" className="text-white">
+                    <Link to="/croptee" className="text-white">
               Crop Tee
                     </Link>
                   </p>
                    <p>
-                    <Link to="#!" className="text-white">
+                    <Link to="/puffers" className="text-white">
            Puffers
                     </Link>
                   </p>
                    <p>
-                    <Link to="#!" className="text-white">
+                    <Link to="/sandow" className="text-white">
              Sandow
                     </Link>
                   </p>

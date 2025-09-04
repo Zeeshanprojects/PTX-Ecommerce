@@ -64,7 +64,7 @@ export default function CollaredNeck() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Search Collared Neck T-shirts..."
+                placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />

@@ -39,7 +39,7 @@ import Denim from "./Pages/Denim";
 import FAQ from "./Pages/FAQ";
 import Search from "./Pages/Search";
 import Dashboard from "./Pages/Dashboard";
-import Profile from "./Pages/profile";
+import Profile from "./Pages/Profile";
 import Orders from "./Pages/Orders";
 import Sandow from "./Pages/Sandow";
 import Shirts from "./Pages/Shirts";

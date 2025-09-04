@@ -270,6 +270,9 @@
   .banner-text button {
     font-size: 10px !important;
   }
+   .collection-btn{
+  font-size: 12px !important;
+ }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -291,7 +294,9 @@
     height: auto; /* Let height adjust automatically */
     object-fit: contain; /* Show full image without cropping */
   }
- 
+ .collection-btn{
+  font-size: 12px !important;
+ }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .main-btn {

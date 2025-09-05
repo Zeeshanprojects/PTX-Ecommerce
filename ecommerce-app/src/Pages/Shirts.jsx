@@ -29,7 +29,7 @@ export default function Shirts() {
             data-aos="fade-up"
           >
             {/* Title */}
-            <h1 className="fw-bold m-0">BOAT NECK</h1>
+            <h1 className="fw-bold m-0">FLANNEL SHIRTS</h1>
 
             {/* Search Bar */}
             <div style={{ maxWidth: "300px", width: "100%" }}>

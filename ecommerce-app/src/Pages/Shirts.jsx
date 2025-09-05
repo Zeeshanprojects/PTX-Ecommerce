@@ -1,52 +1,29 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import Image from "../Images/Image";
-import axios from "axios";
+import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Shirts() {
-  useEffect(() => {
-    document.title = "FLANNEL SHIRTS | Pakistan Textile Exchange";
-  });
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("");
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)
-      .then((res) => {
-        setProducts(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch fleece products:", err);
-        setLoading(false);
-      });
-  }, []);
+  // Hardcoded products
+  const [products] = useState([
+    {
+      title: "FLANNEL SHIRTS",
+      price: 10.99,
+      image: Image.Shirt1, // replace with your actual image path
+    },
+  ]);
 
-  if (loading) {
-    return (
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ height: "50vh" }}
-      >
-        <div
-          className="spinner-grow"
-          style={{ width: "3rem", height: "3rem" }}
-          role="status"
-        >
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    );
-  }
+  const [searchTerm, setSearchTerm] = useState(""); // state for search
+
+  // Filter products based on search
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return (
     <>
-      <div className="background">
-        <div className="container-fluid p-5  ">
+   <div className="background">
+        <div className="container-fluid p-5">
           <div
             className="d-flex align-items-center justify-content-between mb-2"
             data-aos="fade-up"
@@ -59,15 +36,18 @@ export default function Shirts() {
               <input
                 type="text"
                 className="form-control"
-                placeholder="Search Collared Neck T-shirts..."
+                placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
           </div>
-          <p className="mb-5" data-aos="fade-up">
+
+          <p className="mb-4" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
           </p>
+
+          {/* Product Grid */}
           <div className="row g-4">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => (
@@ -99,20 +79,18 @@ export default function Shirts() {
                       </Link>
                     </div>
                     <div className="p-3">
-                      <h6 className="mb-1">{product.title}</h6>
+                      <div className="text-center">
+                      <h6 className="mb-1 fw-bold">{product.title}</h6>
                       <p className="text-muted mb-1">USD {product.price}</p>
+                    </div>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
               <div className="text-center">
-                <img
-                  src={Image.sadface}
-                  alt="sadface"
-                  style={{ maxWidth: "150px" }}
-                />
-                <h5 className="mt-5">Sorry No products found.</h5>
+                <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+                <p className="text-muted">No products found.</p>
               </div>
             )}
           </div>

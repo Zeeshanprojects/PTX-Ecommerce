@@ -9,7 +9,7 @@ export default function Sandow() {
     {
       title: "Sandow",
       price: 10.99,
-      image: Image.Sandow1, // replace with your actual image path
+      image: Image.Sandow1, 
     },
   ]);
 

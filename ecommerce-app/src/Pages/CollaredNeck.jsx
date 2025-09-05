@@ -1,47 +1,54 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import Image from "../Images/Image";
-import axios from "axios";
+import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function CollaredNeck() {
-  useEffect(() => {
-    document.title = "Fleece | Pakistan Textile Exchange";
-  });
+  // Hardcoded products
+  const [products] = useState([
+    {
+      title: "Collared Neck",
+      price: 10.99,
+      image: Image.CollaredNeck1, // replace with your actual image path
+    },
+    {
+      title: "Collared Neck",
+      price: 10.99,
+      image: Image.CollaredNeck8,
+    },
+    {
+      title: "Collared Neck",
+      price: 10.99,
+      image: Image.CollaredNeck3,
+    },
+    {
+      title: "Collared Neck",
+      price:10.99,
+      image: Image.CollaredNeck4,
+    },
+     {
+      title: "Collared Neck",
+      price: 10.99,
+      image: Image.CollaredNeck5, // replace with your actual image path
+    },
+    {
+      title: "Collared Neck",
+      price: 10.99,
+      image: Image.CollaredNeck6,
+    },
+    {
+      title: "Collared Neck",
+      price: 10.99,
+      image: Image.CollaredNeck7,
+    },
+    {
+      title:"Collared Neck",
+      price: 10.99,
+      image: Image.CollaredNeck2,
+    },
+  ]);
 
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState(""); // state for search
-
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_API_URL}/api/EcommerceFleece`)
-      .then((res) => {
-        setProducts(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Failed to fetch fleece products:", err);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return (
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ height: "50vh" }}
-      >
-        <div
-          className="spinner-grow"
-          style={{ width: "3rem", height: "3rem" }}
-          role="status"
-        >
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    );
-  }
 
   // Filter products based on search
   const filteredProducts = products.filter((product) =>
@@ -107,18 +114,20 @@ export default function CollaredNeck() {
                       </Link>
                     </div>
                     <div className="p-3">
-                      <h6 className="mb-1">{product.title}</h6>
+                      <div className="text-center">
+                      <h6 className="mb-1 fw-bold">{product.title}</h6>
                       <p className="text-muted mb-1">USD {product.price}</p>
+                    </div>
                     </div>
                   </div>
                 </div>
               ))
-            ) :(
-  <div className="text-center">
-    <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
-    <p className="text-muted">No products found.</p>
-  </div>
-)}
+            ) : (
+              <div className="text-center">
+                <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+                <p className="text-muted">No products found.</p>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -32,11 +32,12 @@
   hyphens: auto;
   padding-right:20px;
 }
+.strict-spacing {
+  padding-left: 30px !important; 
+  padding-right: 30px !important;
+}
 
-@media (max-width:1199.98px) {
-  .info-right-column{
-    padding: 25px !important;
-  }
+@media (max-width:1280.98px) {
   .product-image {
     height: 750px;
   }

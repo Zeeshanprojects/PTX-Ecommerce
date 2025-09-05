@@ -9,137 +9,342 @@ export default function Men() {
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.CollaredNeck1,
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck2, // replace with your actual image path
+      image: Image.CollaredNeck2, 
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck3, // replace with your actual image path
+      image: Image.CollaredNeck3, 
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck4, // replace with your actual image path
+      image: Image.CollaredNeck4, 
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck5, // replace with your actual image path
+      image: Image.CollaredNeck5, 
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck6, // replace with your actual image path
+      image: Image.CollaredNeck6, 
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck7, // replace with your actual image path
+      image: Image.CollaredNeck7, 
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck8, // replace with your actual image path
+      image: Image.CollaredNeck8, 
     },
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck, // replace with your actual image path
+      image: Image.CollaredNeck, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.Fleece1, // replace with your actual image path
+      image: Image.Fleece1, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece2, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece3, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece4, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece5, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece6, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece7, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece8, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece9,
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece10, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece11, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece12, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece13, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece14, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece15, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece16, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece17, 
     },
     {
-      title: "Collared Neck",
+      title: "Fleece",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.Fleece18, 
+    },
+     {
+      title: "Fleece",
+      price: 10.99,
+      image: Image.Fleece19, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash1, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash2, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash3, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash4, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash5, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash6, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash7, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash8, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash9, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash10, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash11, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash12, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash13, 
+    },
+     {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash14, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash15, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash16, 
+    },
+     {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash17, 
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash18, 
+    },
+      {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie1, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie2, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie3, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie4, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie5, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie6, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie7, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie8, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie9, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie10, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie11, 
+    },
+      {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie12, 
+    },
+      {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie13, 
+    },
+      {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie14, 
+    },
+    {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie15, 
+    },
+    {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie16, 
+    },
+    {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie17, 
+    },
+     {
+      title: "Hoodie",
+      price: 10.99,
+      image: Image.Hoodie18, 
+    },
+     {
+      title: "Flannel Shirt",
+      price: 10.99,
+      image: Image.Shirt1, 
+    },
+    {
+      title: "Sandow",
+      price: 10.99,
+      image: Image.Sandow1, 
+    },
+    {
+      title: "Puffer",
+      price: 10.99,
+      image: Image.Puffer1, 
+    },
+    {
+      title: "Short",
+      price: 10.99,
+      image: Image.Short1, 
     },
   ]);
 

@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { CartContext } from "../Components/CartContext.jsx";
 import Image from "../Images/Image.js";
 import "./Productinfo.css";
@@ -12,7 +12,8 @@ export default function Productinfo() {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
-  const [selectedSizes, setSelectedSizes] = useState([]); // Track multiple sizes
+  const [selectedSizes, setSelectedSizes] = useState([]); 
+  const [showSizeModal, setShowSizeModal] = useState(false); // modal state
 
   if (!state) {
     console.log("No state provided, redirecting to home");
@@ -32,37 +33,26 @@ export default function Productinfo() {
       const newSizes = prev.includes(sizeOption)
         ? prev.filter((size) => size !== sizeOption)
         : [...prev, sizeOption];
-      console.log("Selected sizes:", newSizes);
-      console.log(
-        "Button class for",
-        sizeOption,
-        ":",
-        newSizes.includes(sizeOption) ? "btn-dark" : "btn-outline-dark"
-      );
       return newSizes;
     });
   };
 
   const handleAddToCart = () => {
     if (selectedSizes.length === 0) {
-      alert("Please select at least one size.");
-      console.log("No sizes selected");
+      setShowSizeModal(true); // show modal instead of alert
       return;
     }
 
-    // Create a cart entry for each selected size
     selectedSizes.forEach((size) => {
       const product = {
-        id: `${id}-${size}`, // Unique ID per size
+        id: `${id}-${size}`, 
         image,
         title,
-
-        price: Number(price), // Ensure price is a number
+        price: Number(price),
         category,
         size,
         quantity,
       };
-      console.log("Adding to cart:", product);
       addToCart(product);
     });
 
@@ -71,23 +61,20 @@ export default function Productinfo() {
 
   const handleBuyNow = () => {
     if (selectedSizes.length === 0) {
-      alert("Please select at least one size.");
-      console.log("No sizes selected");
+      setShowSizeModal(true); // show modal instead of alert
       return;
     }
 
-    // Create an array of products for each selected size
     const products = selectedSizes.map((size) => ({
-      id: `${id}-${size}`, // Unique ID per size
+      id: `${id}-${size}`,
       image,
       title,
-      price: Number(price), // Ensure price is a number
+      price: Number(price),
       category,
       size,
       quantity,
     }));
 
-    // Navigate to Checkout with the selected products
     navigate("/checkout", { state: { products } });
   };
 
@@ -97,7 +84,6 @@ export default function Productinfo() {
         <div className="row ">
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
             <div className="product-image-wrapper">
-              {/* <img src={image} alt={title} className="img-fluid product-image" /> */}
               <img
                 src={image}
                 alt={title}
@@ -127,7 +113,6 @@ export default function Productinfo() {
               ))}
             </div>
 
-            {/* Show selected sizes as text */}
             {selectedSizes.length > 0 && (
               <div className="mb-3 text-dark">
                 Selected size{selectedSizes.length > 1 ? "s" : ""}:{" "}
@@ -152,7 +137,6 @@ export default function Productinfo() {
                 <img src={Image.minus} alt="minus" className="icon" />
               </button>
               <span className="mx-4 ">{quantity}</span>
-
               <button
                 onClick={increaseQty}
                 className="btn btn-outline-dark quantity px-3"
@@ -160,16 +144,9 @@ export default function Productinfo() {
                 <img src={Image.add} alt="add" className="icon" />
               </button>
             </div>
+
             <div className="container p-1">
               <div className="row ">
-                {/* <div className="col-6 ">
-                   <button
-                  onClick={handleBuyNow}
-                  className="btn btn-success p-2 w-100"
-                >
-                  BUY NOW
-                </button> 
-                </div> */}
                 <div className="col-12 ">
                   <button
                     className="btn btn-dark  w-100 "
@@ -189,6 +166,38 @@ export default function Productinfo() {
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bootstrap Modal */}
+      <div
+        className={`modal fade ${showSizeModal ? "show d-block" : ""}`}
+        tabIndex="-1"
+        style={{ backgroundColor: "rgba(0,0,0,0.5)" }}
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title">Size Required</h5>
+              <button
+                type="button"
+                className="btn-close"
+                onClick={() => setShowSizeModal(false)}
+              ></button>
+            </div>
+            <div className="modal-body">
+              <p>Please select at least one size before proceeding.</p>
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-dark"
+                onClick={() => setShowSizeModal(false)}
+              >
+                OK
+              </button>
             </div>
           </div>
         </div>

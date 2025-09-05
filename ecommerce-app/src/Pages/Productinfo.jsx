@@ -95,7 +95,7 @@ export default function Productinfo() {
     <>
       <div className="container-fluid p-0">
         <div className="row ">
-          <div className="col-sm-6 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
+          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
             <div className="product-image-wrapper">
               {/* <img src={image} alt={title} className="img-fluid product-image" /> */}
               <img

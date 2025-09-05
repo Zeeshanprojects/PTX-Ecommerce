@@ -110,23 +110,25 @@ export default function MineralWash() {
    <div className="background">
         <div className="container-fluid p-5">
           <div
-            className="d-flex align-items-center justify-content-between mb-2"
-            data-aos="fade-up"
-          >
-            {/* Title */}
-            <h1 className="fw-bold m-0">MINERAL WASH</h1>
+  className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
+  data-aos="fade-up"
+>
+  {/* Title */}
+  <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">MINERAL WASH</h1>
 
-            {/* Search Bar */}
-            <div style={{ maxWidth: "300px", width: "100%" }}>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
-          </div>
+  {/* Search Bar */}
+  <div style={{ maxWidth: "300px", width: "100%" }}>
+    <input
+      type="text"
+      className="form-control"
+      placeholder="Search"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+  </div>
+</div>
+
+
 
           <p className="mb-4" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION

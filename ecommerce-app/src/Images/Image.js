@@ -86,6 +86,7 @@ const Image = {
   Fleece18: new URL("./F19.webp", import.meta.url).href,
   Fleece19: new URL("./F20.webp", import.meta.url).href,
   Short1: new URL("./short1.webp", import.meta.url).href,
+  Boatneck1:new URL("./BN.webp",import.meta.url).href,
   productbanner1: new URL("./productbanner1.webp", import.meta.url).href,
   productbanner2: new URL("./productbanner2.webp", import.meta.url).href,
   productbanner3: new URL("./productbanner3.webp", import.meta.url).href,

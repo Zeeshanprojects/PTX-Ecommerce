@@ -67,7 +67,7 @@ export default function CollaredNeck() {
   <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">COLLARED NECK</h1>
 
   {/* Search Bar */}
-  <div style={{ maxWidth: "300px", width: "100%" }}>
+  <div style={{ maxWidth: "500px", width: "100%" }}>
     <input
       type="text"
       className="form-control"

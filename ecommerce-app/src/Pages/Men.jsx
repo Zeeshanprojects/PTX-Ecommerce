@@ -141,11 +141,7 @@ export default function Men() {
       price: 10.99,
       image: Image.Fleece18, 
     },
-     {
-      title: "Fleece",
-      price: 10.99,
-      image: Image.Fleece19, 
-    },
+   
       {
       title: "Mineral Wash",
       price: 10.99,

@@ -89,6 +89,7 @@ const Image = {
   Shirt1:new URL("./shirt1.webp",import.meta.url).href,
   Boatneck1:new URL("./BN.webp",import.meta.url).href,
   Puffer1:new URL("./Puffer1.webp",import.meta.url).href,
+    Puffer2:new URL("./Puffer2.png",import.meta.url).href,
    Sandow1:new URL("./Sandow1.webp",import.meta.url).href,
   productbanner1: new URL("./productbanner1.webp", import.meta.url).href,
   productbanner2: new URL("./productbanner2.webp", import.meta.url).href,

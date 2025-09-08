@@ -46,11 +46,7 @@ export default function Men() {
       price: 10.99,
       image: Image.CollaredNeck8, 
     },
-    {
-      title: "Collared Neck",
-      price: 10.99,
-      image: Image.CollaredNeck, 
-    },
+ 
     {
       title: "Fleece",
       price: 10.99,
@@ -332,11 +328,7 @@ export default function Men() {
       price: 10.99,
       image: Image.Sandow1, 
     },
-    {
-      title: "Puffer",
-      price: 10.99,
-      image: Image.Puffer1, 
-    },
+   
     {
       title: "Short",
       price: 10.99,

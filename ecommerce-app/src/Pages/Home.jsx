@@ -125,9 +125,11 @@ export default function Home() {
           <div className="container-fluid p-2 mb-2 h-100">
             <div className="row g-2">
               <div className="col-6 m-0 mb-2">
+                 
                 <img src={Image.category1} className="img-background " />
               </div>
               <div className="col-6 m-0 mb-2">
+                 
                 <img src={Image.category2} className="img-background" />
               </div>
               <div className="col-6 m-0">

@@ -11,15 +11,15 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.2, // 👈 Try 1.2 seconds for a smoother feel
-      ease: "easeOut", // 👈 Optional, makes it even smoother
+      duration: 1.2, 
+      ease: "easeOut",
     },
   },
 };
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Home | Pakistan Textile Exchange";
+    document.title = "Home | PTX Ecommerce";
   }, []);
 
   const [email, setEmail] = useState("");

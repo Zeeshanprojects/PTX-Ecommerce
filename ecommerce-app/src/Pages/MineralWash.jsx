@@ -4,6 +4,9 @@ import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function MineralWash() {
+    useEffect(()=>{
+      document.title="Mineral Wash - PTX Ecommerce"
+    })
   // Hardcoded products
   const [products] = useState([
     {

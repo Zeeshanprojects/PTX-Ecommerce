@@ -1,10 +1,13 @@
-import React from "react";
+import {useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "../Images/Image";
 import "./Dashboard.css"; // custom styles
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {
+    useEffect(()=>{
+      document.title="Dashboard - PTX Ecommerce"
+    })
   const user = {
     name: "Zeeshan",
     email: "zeeshan.ali@paktex.com",

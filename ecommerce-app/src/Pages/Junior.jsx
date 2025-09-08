@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Junior() {
+  useEffect(()=>{
+    document.title="Junior - PTX Ecommerce"
+  })
   // Hardcoded products
   const [products] = useState([
     {

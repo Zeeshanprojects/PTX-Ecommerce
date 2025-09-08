@@ -4,7 +4,7 @@ import "./Contact.css";
 
 export default function Contact() {
   useEffect(()=>{
-    document.title="Contactus | Pakistan Textile Exchange"
+    document.title="Contact us | Pakistan Textile Exchange"
   })
   const [formData, setFormData] = useState({
     name: "",

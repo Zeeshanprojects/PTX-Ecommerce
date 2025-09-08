@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Puffers() {
+    useEffect(()=>{
+      document.title="Puffer - PTX Ecommerce"
+    })
   // Hardcoded products
   const [products] = useState([
     {

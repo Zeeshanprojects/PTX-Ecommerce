@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Men() {
+  useEffect(()=>{
+    document.title="Men - PTX Ecommerce"
+  })
   // Hardcoded products
   const [products] = useState([
     {
@@ -46,11 +49,7 @@ export default function Men() {
       price: 10.99,
       image: Image.CollaredNeck8, 
     },
-    {
-      title: "Collared Neck",
-      price: 10.99,
-      image: Image.CollaredNeck, 
-    },
+ 
     {
       title: "Fleece",
       price: 10.99,
@@ -332,11 +331,7 @@ export default function Men() {
       price: 10.99,
       image: Image.Sandow1, 
     },
-    {
-      title: "Puffer",
-      price: 10.99,
-      image: Image.Puffer1, 
-    },
+   
     {
       title: "Short",
       price: 10.99,

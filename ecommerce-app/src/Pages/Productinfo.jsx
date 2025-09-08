@@ -6,7 +6,7 @@ import "./Productinfo.css";
 
 export default function Productinfo() {
   useEffect(() => {
-    document.title = "ProductInformaiton | Paksitan Textile Exchange";
+    document.title = "Product Derails | Paksitan Textile Exchange";
   });
   const { state } = useLocation();
   const navigate = useNavigate();

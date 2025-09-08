@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Fleece() {
+    useEffect(()=>{
+      document.title="Fleece - PTX Ecommerce"
+    })
   // Hardcoded products
   const [products] = useState([
     {

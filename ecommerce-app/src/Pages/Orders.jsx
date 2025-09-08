@@ -1,7 +1,10 @@
-import React from "react";
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 export default function Orders() {
+    useEffect(()=>{
+      document.title="Order - PTX Ecommerce"
+    })
   const { id } = useParams();
 
   // Dummy order data (later replace with API call)

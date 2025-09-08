@@ -11,15 +11,15 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.2, // 👈 Try 1.2 seconds for a smoother feel
-      ease: "easeOut", // 👈 Optional, makes it even smoother
+      duration: 1.2, 
+      ease: "easeOut",
     },
   },
 };
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Home | Pakistan Textile Exchange";
+    document.title = "Home | PTX Ecommerce";
   }, []);
 
   const [email, setEmail] = useState("");
@@ -116,24 +116,26 @@ export default function Home() {
       </p>
 
       <div className="space"></div>
-      <div className="row m-2">
+      <div className="row m-1">
         {/* Left Column */}
         <div
-          className="left-column col-sm-12 col-md-12 col-lg-6 col-xl-6 m-0 p-0 h-100"
+          className="left-column col-sm-12 col-md-12 col-lg-6 col-xl-6 m-0 p-0 h-100 mt-2"
           data-aos="fade-up"
         >
-          <div className="container-fluid mb-2 h-100">
+          <div className="container-fluid p-2 mb-2 h-100">
             <div className="row g-2">
-              <div className="col-6">
+              <div className="col-6 m-0 mb-2">
+                 
                 <img src={Image.category1} className="img-background " />
               </div>
-              <div className="col-6">
+              <div className="col-6 m-0 mb-2">
+                 
                 <img src={Image.category2} className="img-background" />
               </div>
-              <div className="col-6">
+              <div className="col-6 m-0">
                 <img src={Image.category3} className="img-background" />
               </div>
-              <div className="col-6">
+              <div className="col-6 m-0">
                 <img src={Image.category4} className="img-background" />
               </div>
             </div>
@@ -141,7 +143,7 @@ export default function Home() {
         </div>
 
         <div
-          className="right-column col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex m-0 p-0"
+          className="right-column col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex m-0 p-0 "
           data-aos="fade-up"
         >
           <img

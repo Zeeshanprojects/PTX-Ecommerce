@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Sandow() {
+    useEffect(()=>{
+      document.title="Sandow - PTX Ecommerce"
+    })
   // Hardcoded products
   const [products] = useState([
     {
       title: "Sandow",
       price: 10.99,
-      image: Image.Sandow1, 
+      image: Image.Sandow1,
     },
   ]);
 
@@ -22,28 +25,26 @@ export default function Sandow() {
 
   return (
     <>
-   <div className="background">
+      <div className="background">
         <div className="container-fluid p-5">
-         <div
-  className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
-  data-aos="fade-up"
->
-  {/* Title */}
-  <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">SANDOW</h1>
+          <div
+            className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
+            data-aos="fade-up"
+          >
+            {/* Title */}
+            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">SANDOW</h1>
 
-  {/* Search Bar */}
-  <div style={{ maxWidth: "300px", width: "100%" }}>
-    <input
-      type="text"
-      className="form-control"
-      placeholder="Search"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-  </div>
-</div>
-
-
+            {/* Search Bar */}
+            <div style={{ maxWidth: "300px", width: "100%" }}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
 
           <p className="mb-4" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
@@ -82,16 +83,20 @@ export default function Sandow() {
                     </div>
                     <div className="p-3">
                       <div className="text-center">
-                      <h6 className="mb-1 fw-bold">{product.title}</h6>
-                      <p className="text-muted mb-1">USD {product.price}</p>
-                    </div>
+                        <h6 className="mb-1 fw-bold">{product.title}</h6>
+                        <p className="text-muted mb-1">USD {product.price}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
               <div className="text-center">
-                <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+                <img
+                  src={Image.sadface}
+                  alt="sadface"
+                  style={{ maxWidth: "150px" }}
+                />
                 <p className="text-muted">No products found.</p>
               </div>
             )}

@@ -12,7 +12,9 @@ export default function BoatNeck() {
     {
       title: "BOAT NECK",
       price: 10.99,
-      image: Image.Boatneck1, // replace with your actual image path
+      image: Image.Boatneck1,
+      GSM: 180,
+      color: "Gray" 
     },
   ]);
 
@@ -73,6 +75,8 @@ export default function BoatNeck() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
+                          color: product.color, 
+                          GSM: product.GSM,
                           category: "Fleece",
                         }}
                       >

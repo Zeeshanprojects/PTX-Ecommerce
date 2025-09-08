@@ -194,6 +194,8 @@ export default function MineralWash() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
+                          color: product.color,
+                          GSM: product.GSM,
                           category: "Fleece",
                         }}
                       >

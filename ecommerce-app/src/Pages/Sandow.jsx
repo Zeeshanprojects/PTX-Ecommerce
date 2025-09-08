@@ -1,18 +1,20 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Sandow() {
-    useEffect(()=>{
-      document.title="Sandow - PTX Ecommerce"
-    })
+  useEffect(() => {
+    document.title = "Sandow - PTX Ecommerce";
+  });
   // Hardcoded products
   const [products] = useState([
     {
       title: "Sandow",
       price: 10.99,
       image: Image.Sandow1,
+      color: "Prussian Blue",
+      GSM: 180,
     },
   ]);
 
@@ -71,6 +73,8 @@ export default function Sandow() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
+                          color: product.color,
+                          GSM: product.GSM,
                           category: "Fleece",
                         }}
                       >

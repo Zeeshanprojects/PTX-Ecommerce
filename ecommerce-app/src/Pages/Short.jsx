@@ -12,7 +12,9 @@ export default function Short() {
     {
       title: "Short",
       price: 10.99,
-      image: Image.Short1, // replace with your actual image path
+      image: Image.Short1,
+      color: "white",
+      GSM: 180,
     },
   ]);
 
@@ -73,6 +75,8 @@ export default function Short() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
+                          color: product.color,
+                          GSM: product.GSM,
                           category: "Fleece",
                         }}
                       >

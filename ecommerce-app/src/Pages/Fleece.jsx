@@ -1,93 +1,125 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Fleece() {
-    useEffect(()=>{
-      document.title="Fleece - PTX Ecommerce"
-    })
+  useEffect(() => {
+    document.title = "Fleece - PTX Ecommerce";
+  });
   // Hardcoded products
   const [products] = useState([
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
-      image: Image.Fleece1, // replace with your actual image path
+      image: Image.Fleece1, 
+      color: "white",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece2,
+      color: "Green",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece3,
+      color: "Gray",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
-      price:10.99,
+      price: 10.99,
       image: Image.Fleece4,
+      color: "Pink",
+      GSM: 180,
     },
-     {
+    {
       title: "FLEECE CREWNECk",
       price: 10.99,
-      image: Image.Fleece5, // replace with your actual image path
+      image: Image.Fleece5,
+      color: "Sand",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece6,
+      color: "Dim Gray",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece7,
+      color: "Black",
+      GSM: 180,
     },
     {
-      title:"FLEECE CREWNECK",
-      price: 10.99,
-      image: Image.Fleece8,
-    },
-        {
       title: "FLEECE CREWNECK",
       price: 10.99,
-      image: Image.Fleece9, // replace with your actual image path
+      image: Image.Fleece8,
+      color: "Lavender Purple",
+      GSM: 180,
+    },
+    {
+      title: "FLEECE CREWNECK",
+      price: 10.99,
+      image: Image.Fleece9, 
+      color: "Light Blue",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece10,
+        color: "Brown",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece11,
+       color: "Jungle Green",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
-      price:10.99,
+      price: 10.99,
       image: Image.Fleece12,
+       color: "Han Blue",
+      GSM: 180,
     },
-     {
+    {
       title: "FLEECE CREWNECK",
       price: 10.99,
-      image: Image.Fleece13, // replace with your actual image path
+      image: Image.Fleece13,
+        color: "Dim Gray",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece14,
+      color: "Midnight Blue",
+      GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece15,
+       color: "Pastal Brown",
+      GSM: 180,
     },
     {
-      title:"FLEECE CREWNECK",
+      title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece16,
+       color: "Satin sheen gold",
+      GSM: 180,
     },
   ]);
 
@@ -102,26 +134,26 @@ export default function Fleece() {
     <>
       <div className="background">
         <div className="container-fluid p-5">
-       <div
-  className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
-  data-aos="fade-up"
->
-  {/* Title */}
-  <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">FLEECE CREWNECK</h1>
+          <div
+            className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
+            data-aos="fade-up"
+          >
+            {/* Title */}
+            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">
+              FLEECE CREWNECK
+            </h1>
 
-  {/* Search Bar */}
-  <div style={{ maxWidth: "300px", width: "100%" }}>
-    <input
-      type="text"
-      className="form-control"
-      placeholder="Search"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-  </div>
-</div>
-
-
+            {/* Search Bar */}
+            <div style={{ maxWidth: "300px", width: "100%" }}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
 
           <p className="mb-4" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
@@ -149,6 +181,8 @@ export default function Fleece() {
                           price: product.price,
                           image: product.image,
                           category: "Fleece",
+                          color: product.color,
+                          GSM: product.GSM,
                         }}
                       >
                         <img
@@ -160,16 +194,20 @@ export default function Fleece() {
                     </div>
                     <div className="p-3">
                       <div className="text-center">
-                      <h6 className="mb-1 fw-bold">{product.title}</h6>
-                      <p className="text-muted mb-1">USD {product.price}</p>
-                    </div>
+                        <h6 className="mb-1 fw-bold">{product.title}</h6>
+                        <p className="text-muted mb-1">USD {product.price}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
               <div className="text-center">
-                <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+                <img
+                  src={Image.sadface}
+                  alt="sadface"
+                  style={{ maxWidth: "150px" }}
+                />
                 <p className="text-muted">No products found.</p>
               </div>
             )}

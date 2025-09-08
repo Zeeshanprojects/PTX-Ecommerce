@@ -14,14 +14,13 @@ export default function Productinfo() {
   const [quantity, setQuantity] = useState(1);
   const [selectedSizes, setSelectedSizes] = useState([]); 
   const [showSizeModal, setShowSizeModal] = useState(false); // modal state
-
+const{id,image, title , price , color, GSM}=state;
   if (!state) {
     console.log("No state provided, redirecting to home");
     navigate("/");
     return null;
   }
 
-  const { id, image, title, price, category } = state;
 
   const increaseQty = () => setQuantity((prev) => prev + 1);
   const decreaseQty = () => {
@@ -72,6 +71,8 @@ export default function Productinfo() {
       price: Number(price),
       category,
       size,
+   
+      
       quantity,
     }));
 
@@ -160,9 +161,9 @@ export default function Productinfo() {
                     Product Details
                   </label>
                   <ul className="mt-2 ps-3 ">
-                    <li>Color: Green</li>
+                    <li>Color: {color}</li>
                     <li>Fit: Regulr Fit</li>
-                    <li>Type: Plain</li>
+                    <li>GSM: {GSM}</li>
                   </ul>
                 </div>
               </div>

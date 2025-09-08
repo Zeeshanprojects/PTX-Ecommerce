@@ -1,53 +1,69 @@
-import { useState , useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function CollaredNeck() {
-    useEffect(()=>{
-      document.title="Collared Neck - PTX Ecommerce"
-    })
+  useEffect(() => {
+    document.title = "Collared Neck - PTX Ecommerce";
+  });
   // Hardcoded products
   const [products] = useState([
     {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck1, // replace with your actual image path
+      image: Image.CollaredNeck1,
+      GSM: 180,
+      color: "Black" 
     },
     {
       title: "Collared Neck",
       price: 10.99,
       image: Image.CollaredNeck8,
+      GSM: 180,
+      color: "Light Green" 
     },
     {
       title: "Collared Neck",
       price: 10.99,
       image: Image.CollaredNeck3,
+      GSM: 180,
+       color: "Blue" 
     },
     {
       title: "Collared Neck",
-      price:10.99,
+      price: 10.99,
       image: Image.CollaredNeck4,
+      GSM: 180,
+       color: "Red" 
     },
-     {
+    {
       title: "Collared Neck",
       price: 10.99,
-      image: Image.CollaredNeck5, // replace with your actual image path
+      image: Image.CollaredNeck5,
+      GSM: 180,
+       color: "Black" 
     },
     {
       title: "Collared Neck",
       price: 10.99,
       image: Image.CollaredNeck6,
+      GSM: 180,
+      color: "Light Green" 
     },
     {
       title: "Collared Neck",
       price: 10.99,
       image: Image.CollaredNeck7,
+      GSM: 180,
+       color: "white" 
     },
     {
-      title:"Collared Neck",
+      title: "Collared Neck",
       price: 10.99,
       image: Image.CollaredNeck2,
+      GSM: 180,
+       color: "Blue" 
     },
   ]);
 
@@ -62,25 +78,26 @@ export default function CollaredNeck() {
     <>
       <div className="background">
         <div className="container-fluid p-5">
-        <div
-  className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
-  data-aos="fade-up"
->
-  {/* Title */}
-  <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">COLLARED NECK</h1>
+          <div
+            className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
+            data-aos="fade-up"
+          >
+            {/* Title */}
+            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">
+              COLLARED NECK
+            </h1>
 
-  {/* Search Bar */}
-  <div style={{ maxWidth: "500px", width: "100%" }}>
-    <input
-      type="text"
-      className="form-control"
-      placeholder="Search"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-  </div>
-</div>
-
+            {/* Search Bar */}
+            <div style={{ maxWidth: "500px", width: "100%" }}>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
 
           <p className="mb-4" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
@@ -107,6 +124,8 @@ export default function CollaredNeck() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
+                          color: product.color,
+                          GSM: product.GSM,
                           category: "Fleece",
                         }}
                       >
@@ -119,16 +138,22 @@ export default function CollaredNeck() {
                     </div>
                     <div className="p-3">
                       <div className="text-center">
-                      <h6 className="mb-1 fw-bold">{product.title}</h6>
-                      <p className="text-muted mb-1">USD {product.price}</p>
-                    </div>
+                        <h6 className="mb-1 fw-bold">{product.title}</h6>
+                        <p className="text-muted mb-1">
+                          USD {product.price} | GSM {product.GSM}{" "}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
               <div className="text-center">
-                <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+                <img
+                  src={Image.sadface}
+                  alt="sadface"
+                  style={{ maxWidth: "150px" }}
+                />
                 <p className="text-muted">No products found.</p>
               </div>
             )}

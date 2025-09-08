@@ -20,46 +20,57 @@ export default function Croptee() {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee2,
+       color: "Sky Mangenta",
+      GSM: 180,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee3,
-    },
-    {
-      title: "Crop Tee",
-      price: 10.99,
-      image: Image.Croptee4,
+        color: "Onyx",
+      GSM: 180,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee5,
+        color: "Cardinal", 
+        GSM: 180,      
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee6,
+       color: "Jungle Green", 
+        GSM: 180,  
     },
     {
       title: "Crop Teer ",
       price: 10.99,
       image: Image.Croptee7,
+       color: "Denim", 
+        GSM: 180 ,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee8,
+       color: "Old Gold", 
+        GSM: 180 ,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee9,
+       color: "Shadow", 
+        GSM: 180 ,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee10,
+       color: "Wine", 
+        GSM: 180 ,
     },
   ]);
 
@@ -118,6 +129,8 @@ export default function Croptee() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
+                          color: product.color,
+                          GSM:product.GSM,
                           category: "Fleece",
                         }}
                       >

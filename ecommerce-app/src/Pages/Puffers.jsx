@@ -12,7 +12,9 @@ export default function Puffers() {
     {
       title: "Puffers",
       price: 10.99,
-      image: Image.Puffer2, // replace with your actual image path
+      image: Image.Puffer2,
+      color: "Black",
+      GSM: 180,
     },
   ]);
 
@@ -73,6 +75,8 @@ export default function Puffers() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
+                          color:product.color,
+                          GSM: product.GSM,
                           category: "Fleece",
                         }}
                       >

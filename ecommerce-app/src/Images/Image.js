@@ -141,5 +141,8 @@ const Image = {
   add: new URL("./add.png", import.meta.url).href,
   minus: new URL("./minus.png", import.meta.url).href,
   sadface: new URL("./sad.webp", import.meta.url).href,
+  left:new URL ("./left.png", import.meta.url).href,  
+  right:new URL ("./next.png", import.meta.url).href, 
+  down:new URL ("./down.png", import.meta.url).href, 
 };
 export default Image;

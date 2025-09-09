@@ -51,7 +51,18 @@ export default function Fleece() {
 
   return (
     <div className="container-fluid py-5">
-      <div className="row">
+
+       <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0  ">
+             FLEECE CREWNECK
+            </h1>
+
+           
+          
+
+          <p className="mb-4" data-aos="fade-up">
+            OUR PREMIUM QUALITY COLLECTION
+          </p>
+      <div className="row mt-5">
         {/* Sidebar */}
         <div className="col-md-3 col-lg-2 border-end pe-4">
           <h5 className="fw-bold mb-3">Filters</h5>

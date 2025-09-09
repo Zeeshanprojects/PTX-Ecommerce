@@ -148,7 +148,7 @@ export default function Fleece() {
   return (
     <>
       <div className="background">
-        <div className="container-fluid p-5">
+        <div className="container-fluid p-lg-5 p-xl-5">
           <div
             className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
             data-aos="fade-up"
@@ -159,10 +159,10 @@ export default function Fleece() {
             </h1>
 
             {/* Search Bar */}
-            <div style={{ maxWidth: "300px", width: "100%" }}>
+            <div style={{ maxWidth: "500px", width: "100%" }}>
               <input
                 type="text"
-                className="form-control"
+                className="form-control search-bar"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}

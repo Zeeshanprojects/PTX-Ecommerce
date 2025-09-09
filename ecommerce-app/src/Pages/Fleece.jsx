@@ -12,29 +12,39 @@ export default function Fleece() {
     price: 10.0,
     fit: "Regular Fit",
     colors: [
-      { name: "White", image: Image.Fleece1, hex: "#CECECE" },
-      { name: "Green", image: Image.Fleece2, hex: "#3C5F3C" },
-      { name: "Black", image: Image.Fleece3, hex: "#747C84" },
-      { name: "Light Gray", image: Image.Fleece4, hex: "#BE90BB" },
-      { name: "Red", image: Image.Fleece5, hex: "#BBB39F" },
-      { name: "Dark Blue", image: Image.Fleece6, hex: "#706F6B" },
-      { name: "Charcoal", image: Image.Fleece7, hex: "#1F1F1F" },
-      { name: "Navy", image: Image.Fleece8, hex: "#9B73B2" },
-      { name: "Maroon", image: Image.Fleece9, hex: "#5E70A7" },
-      { name: "Gray", image: Image.Fleece10, hex: "#2E241E" },
-      { name: "Blue", image: Image.Fleece11, hex: "#2B2F33" },
-      { name: "Black", image: Image.Fleece12, hex: "#5A79D3" },
-      { name: "Light Gray", image: Image.Fleece13, hex: "#585F6B" },
-      { name: "Red", image: Image.Fleece14, hex: "#3A0862" },
-      { name: "Dark Blue", image: Image.Fleece15, hex: "#6F5F4E" },
-      { name: "Charcoal", image: Image.Fleece16, hex: "#C09C2B" },
-      { name: "Navy", image: Image.Fleece17, hex: "#152418" },
-      { name: "Maroon", image: Image.Fleece18, hex: "#613FBC" },
+      { image: Image.Fleece1, hex: "#CFCFCF" },
+      { image: Image.Fleece2, hex: "#3A5E3B" },
+      { image: Image.Fleece3, hex: "#737A83" },
+      { image: Image.Fleece4, hex: "#BD8DB9" },
+      { image: Image.Fleece5, hex: "#B7AF98" },
+      { image: Image.Fleece6, hex: "#75736F" },
+      { image: Image.Fleece7, hex: "#212121" },
+      { image: Image.Fleece8, hex: "#9B73B2" },
+      { image: Image.Fleece9, hex: "#6679AE" },
+      { image: Image.Fleece10, hex: "#2D231D" },
+      { image: Image.Fleece11, hex: "#2D3134" },
+      { image: Image.Fleece12, hex: "#5374D0" },
+      { image: Image.Fleece13, hex: "#5B636E" },
+      { image: Image.Fleece14, hex: "#37095F" },
+      {image: Image.Fleece15, hex: "#766753" }, 
+      { image: Image.Fleece16, hex: "#BD9929" },
+      { image: Image.Fleece17, hex: "#17271B" },
+      { image: Image.Fleece18, hex: "#6341BC" },
+
     ],
   };
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [startIndex, setStartIndex] = useState(0);
+
+  // multiple accordions open by default
+  const [openSections, setOpenSections] = useState([
+    "productType",
+    "size",
+    "fit",
+    "colors",
+  ]);
+
   const visibleCount = 5;
 
   const handleNext = () => {
@@ -44,49 +54,183 @@ export default function Fleece() {
   };
 
   const handlePrev = () => {
-    if (startIndex > 0) {
+    if (startIndex - visibleCount >= 0) {
       setStartIndex(startIndex - 1);
     }
   };
 
+  const productTypes = [
+    "T-Shirts",
+    "Longsleeve T-Shirts",
+    "Singlets / Tanks",
+    "Crew Sweatshirts",
+    "Hooded Sweatshirts",
+    "Zip Sweatshirts",
+    "Trackpants",
+    "Shirts",
+    "Polos",
+    "Pants",
+  ];
+
+  const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
+  const fits = ["Slim Fit", "Regular Fit", "Oversized"];
+  const colors = ["White", "Black", "Blue", "Green", "Gray", "Red"];
+
+  const toggleSection = (section) => {
+    if (openSections.includes(section)) {
+      setOpenSections(openSections.filter((s) => s !== section));
+    } else {
+      setOpenSections([...openSections, section]);
+    }
+  };
+
   return (
-    <div className="container-fluid py-5">
-
-       <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0  ">
-             FLEECE CREWNECK
-            </h1>
-
-           
-        
-          <p className="mb-4" data-aos="fade-up">
-            OUR PREMIUM QUALITY COLLECTION
-          </p>
-      <div className="row mt-5">
+    <div className="container-fluid py-4">
+      <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">
+        FLEECE CREWNECK
+      </h1>
+      <p className="mb-4" data-aos="fade-up">
+        OUR PREMIUM QUALITY COLLECTION
+      </p>
+      <div className="row mt-4">
         {/* Sidebar */}
-        <div className="col-md-3 col-lg-2 border-end pe-4">
+        <div className="col-lg-2 border-end pe-4">
           <h5 className="fw-bold mb-3">Filters</h5>
 
+          {/* Accordion Section - Product Type */}
           <div className="mb-3">
-            <h6 className="fw-semibold">Category</h6>
-            <ul className="list-unstyled">
-              <li>
-                <input type="checkbox" /> Hoodies
-              </li>
-              <li>
-                <input type="checkbox" /> Crewnecks
-              </li>
-              <li>
-                <input type="checkbox" /> Jackets
-              </li>
-            </ul>
+            <h6
+              className="fw-semibold d-flex justify-content-between align-items-center"
+              style={{ cursor: "pointer" }}
+              onClick={() => toggleSection("productType")}
+            >
+              Product Type
+              <span
+                className={`small ms-2 ${
+                  openSections.includes("productType") ? "rotate-arrow" : ""
+                }`}
+              >
+                ▼
+              </span>
+            </h6>
+
+            {openSections.includes("productType") && (
+              <div className="ps-2">
+                <ul className="list-unstyled">
+                  {productTypes.map((type, index) => (
+                    <li key={index} className="mb-1">
+                      <input type="checkbox" id={type} />{" "}
+                      <label htmlFor={type}>{type}</label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion Section - Size */}
+          <div className="mb-3">
+            <h6
+              className="fw-semibold d-flex justify-content-between align-items-center"
+              style={{ cursor: "pointer" }}
+              onClick={() => toggleSection("size")}
+            >
+              Size
+              <span
+                className={`small ms-2 ${
+                  openSections.includes("size") ? "rotate-arrow" : ""
+                }`}
+              >
+                ▼
+              </span>
+            </h6>
+
+            {openSections.includes("size") && (
+              <div className="ps-2">
+                <ul className="list-unstyled">
+                  {sizes.map((size, index) => (
+                    <li key={index} className="mb-1">
+                      <input type="checkbox" id={size} />{" "}
+                      <label htmlFor={size}>{size}</label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion Section - Fit */}
+          <div className="mb-3">
+            <h6
+              className="fw-semibold d-flex justify-content-between align-items-center"
+              style={{ cursor: "pointer" }}
+              onClick={() => toggleSection("fit")}
+            >
+              Fit
+              <span
+                className={`small ms-2 ${
+                  openSections.includes("fit") ? "rotate-arrow" : ""
+                }`}
+              >
+                ▼
+              </span>
+            </h6>
+
+            {openSections.includes("fit") && (
+              <div className="ps-2">
+                <ul className="list-unstyled">
+                  {fits.map((fit, index) => (
+                    <li key={index} className="mb-1">
+                      <input type="checkbox" id={fit} />{" "}
+                      <label htmlFor={fit}>{fit}</label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          {/* Accordion Section - Colors */}
+          <div className="mb-3">
+            <h6
+              className="fw-semibold d-flex justify-content-between align-items-center"
+              style={{ cursor: "pointer" }}
+              onClick={() => toggleSection("colors")}
+            >
+              Colors
+              <span
+                className={`small ms-2 ${
+                  openSections.includes("colors") ? "rotate-arrow" : ""
+                }`}
+              >
+                ▼
+              </span>
+            </h6>
+
+            {openSections.includes("colors") && (
+              <div className="ps-2">
+                <ul className="list-unstyled">
+                  {colors.map((color, index) => (
+                    <li key={index} className="mb-1">
+                      <input type="checkbox" id={color} />{" "}
+                      <label htmlFor={color}>{color}</label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
 
         {/* Product Section */}
-        <div className="col-md-9 col-lg-10">
+        <div className="col-lg-10">
           <div className="row">
-            <div className="col-md-4 col-lg-4 text-center">
+            <div className="col-md-6 col-lg-4 text-center">
               <div className="product-card position-relative overflow-hidden rounded p-3">
+                <span className="new-badge position-absolute top-0 start-0 m-2">
+                  NEW
+                </span>
+
                 {/* Product Image */}
                 <div className="product-img-container">
                   <img
@@ -138,7 +282,8 @@ export default function Fleece() {
             </div>
           </div>
         </div>
-      </div>
+      </div>{" "}
+      {/* row end */}
     </div>
   );
 }

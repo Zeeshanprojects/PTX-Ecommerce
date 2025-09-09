@@ -493,6 +493,8 @@ export default function Shop() {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee4,
+       color: "Drab",
+      GSM: 180,
     },
     {
       title: "Crop Tee",
@@ -505,26 +507,36 @@ export default function Shop() {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee6,
+             color: "Jungle Green", 
+        GSM: 180,  
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee7,
+       color: "Denim", 
+        GSM: 180 ,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee8,
+        color: "Old Gold", 
+        GSM: 180 ,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee9,
+       color: "Shadow", 
+        GSM: 180 ,
     },
     {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee10,
+        color: "Wine", 
+        GSM: 180 ,
     },
   ]);
 

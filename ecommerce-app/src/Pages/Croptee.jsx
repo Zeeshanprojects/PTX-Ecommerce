@@ -30,6 +30,13 @@ export default function Croptee() {
         color: "Onyx",
       GSM: 180,
     },
+     {
+      title: "Crop Tee",
+      price: 10.99,
+      image: Image.Croptee4,
+       color: "Drab",
+      GSM: 180,
+    },
     {
       title: "Crop Tee",
       price: 10.99,

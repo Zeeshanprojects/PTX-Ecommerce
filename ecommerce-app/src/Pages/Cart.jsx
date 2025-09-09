@@ -3,13 +3,16 @@ import { CartContext } from "../Components/CartContext.jsx";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
-  useEffect(()=>{
-    document.title="Cart | Pakistan Textile Exchange"
+  useEffect(() => {
+    document.title = "Cart | Pakistan Textile Exchange";
   });
   const { cart, removeFromCart } = useContext(CartContext);
 
   const getTotal = () =>
-    cart.reduce((total, item) => total + Number(item.price) * Number(item.quantity), 0);
+    cart.reduce(
+      (total, item) => total + Number(item.price) * Number(item.quantity),
+      0
+    );
 
   if (!cart || cart.length === 0) {
     return (
@@ -45,7 +48,11 @@ export default function Cart() {
                   <img
                     src={item.image}
                     alt={item.title}
-                    style={{ width: "80px", height: "80px", objectFit: "contain" }}
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      objectFit: "contain",
+                    }}
                   />
                 </td>
                 <td>{item.title}</td>
@@ -69,7 +76,9 @@ export default function Cart() {
       <div className="text-end">
         <h4>Total: USD {getTotal()}$</h4>
         <Link to="/Shop">
-          <button className="btn btn-primary mt-3 me-2">Continue Shopping</button>
+          <button className="btn btn-primary mt-3 me-2">
+            Continue Shopping
+          </button>
         </Link>
         <Link to="/checkout">
           <button className="btn btn-success mt-3">Proceed to Checkout</button>

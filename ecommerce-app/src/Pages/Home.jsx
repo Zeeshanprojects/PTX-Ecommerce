@@ -3,7 +3,7 @@ import Image from "../Images/Image";
 import "./Home.css";
 
 import { Link } from "react-router-dom";
-import axios from "axios"; 
+import axios from "axios";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },

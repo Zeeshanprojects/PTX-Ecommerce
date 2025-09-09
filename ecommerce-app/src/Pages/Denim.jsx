@@ -1,12 +1,12 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Denim() {
-    useEffect(()=>{
-      document.title="Puffer - PTX Ecommerce"
-    })
+  useEffect(() => {
+    document.title = "Puffer - PTX Ecommerce";
+  });
   // Hardcoded products
   const [products] = useState([
     {
@@ -34,9 +34,7 @@ export default function Denim() {
             data-aos="fade-up"
           >
             {/* Title */}
-            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">
-              DENIM
-            </h1>
+            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">DENIM</h1>
 
             {/* Search Bar */}
             <div style={{ maxWidth: "300px", width: "100%" }}>
@@ -75,7 +73,7 @@ export default function Denim() {
                           title: product.title,
                           price: product.price,
                           image: product.image,
-                          color:product.color,
+                          color: product.color,
                           GSM: product.GSM,
                           category: "Fleece",
                         }}

@@ -3,7 +3,7 @@ import Image from "../Images/Image";
 import "./Home.css";
 
 import { Link } from "react-router-dom";
-import axios from "axios"; // ✅ Import axios
+import axios from "axios"; 
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -11,7 +11,7 @@ const fadeInUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.2, 
+      duration: 1.2,
       ease: "easeOut",
     },
   },
@@ -125,11 +125,9 @@ export default function Home() {
           <div className="container-fluid p-2 mb-2 h-100">
             <div className="row g-2">
               <div className="col-6 m-0 mb-2">
-                 
                 <img src={Image.category1} className="img-background " />
               </div>
               <div className="col-6 m-0 mb-2">
-                 
                 <img src={Image.category2} className="img-background" />
               </div>
               <div className="col-6 m-0">

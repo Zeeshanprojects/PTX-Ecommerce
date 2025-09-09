@@ -590,58 +590,55 @@ export default function Shop() {
           </p>
 
           {/* Product Grid */}
-          <div className="row g-4">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product, index) => (
-                <div
-                  key={index}
-                  className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
-                  data-aos="fade-up"
-                >
-                  <div className="product-card position-relative overflow-hidden rounded shadow-sm">
-                    <span className="new-badge position-absolute top-0 start-0 m-2">
-                      NEW
-                    </span>
-                    <div className="product-img-container position-relative">
-                      <Link
-                        to="/productinfo"
-                        state={{
-                          id: index,
-                          title: product.title,
-                          price: product.price,
-                          image: product.image,
-                          color: product.color,
-                          GSM: product.GSM,
-                          category: "Fleece",
-                        }}
-                      >
-                        <img
-                          src={product.image}
-                          alt={product.title}
-                          className="img-fluid product-img"
-                        />
-                      </Link>
-                    </div>
-                    <div className="p-3">
-                      <div className="text-center">
-                        <h6 className="mb-1 fw-bold">{product.title}</h6>
-                        <p className="text-muted mb-1">USD {product.price}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="text-center">
-                <img
-                  src={Image.sadface}
-                  alt="sadface"
-                  style={{ maxWidth: "150px" }}
-                />
-                <p className="text-muted">No products found.</p>
-              </div>
-            )}
+         <div className="row g-4">
+  {shuffledProducts.length === 0 ? (
+    <p className="text-center">Loading products...</p>
+  ) : filteredProducts.length > 0 ? (
+    filteredProducts.map((product, index) => (
+      <div
+        key={index}
+        className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
+        data-aos="fade-up"
+      >
+        <div className="product-card position-relative overflow-hidden rounded shadow-sm">
+          <span className="new-badge position-absolute top-0 start-0 m-2">
+            NEW
+          </span>
+          <div className="product-img-container position-relative">
+            <Link
+              to="/productinfo"
+              state={{
+                id: index,
+                title: product.title,
+                price: product.price,
+                image: product.image,
+                color: product.color,
+                GSM: product.GSM,
+                category: "Fleece",
+              }}
+            >
+              <img
+                src={product.image}
+                alt={product.title}
+                className="img-fluid product-img"
+              />
+            </Link>
           </div>
+          <div className="p-3 text-center">
+            <h6 className="mb-1 fw-bold">{product.title}</h6>
+            <p className="text-muted mb-1">USD {product.price}</p>
+          </div>
+        </div>
+      </div>
+    ))
+  ) : (
+    <div className="text-center">
+      <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+      <p className="text-muted">No products found.</p>
+    </div>
+  )}
+</div>
+
         </div>
       </div>
     </>

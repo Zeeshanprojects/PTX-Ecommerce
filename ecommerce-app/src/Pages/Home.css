@@ -40,16 +40,15 @@
 .right-banner-img {
   width: 100%;
   height: auto; /* covers full column height */
-   object-fit: cover;
-   border-radius: 10px !important;
-   margin-top: 8px;
- margin-bottom: 13px ;
-    filter: brightness(0.8) !important;
+  object-fit: cover;
+  border-radius: 10px !important;
+  margin-top: 8px;
+  margin-bottom: 13px;
+  filter: brightness(0.8) !important;
 }
 .right-column {
   position: relative; /* make it the reference for absolute child */
   height: auto;
-
 }
 
 .overlay-text {
@@ -300,6 +299,13 @@
   .collection-btn {
     font-size: 12px !important;
   }
+  .category-heding {
+    font-size: 24px;
+  }
+  .search-bar{
+    margin-top: 15px;
+   
+  }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .main-btn {
@@ -327,6 +333,13 @@
   }
 }
 @media (max-width: 576px) {
+  .product-card {
+    background-color: white;
+    border-radius: 10px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
   .main-btn {
     top: 82%;
     padding: 0px !important;

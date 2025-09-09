@@ -2,7 +2,7 @@
   height: 50px;
   width: 100%;
   background-color: #cccccc !important;
-  position: fixed;  /* changed from absolute to fixed */
+  position: fixed; /* changed from absolute to fixed */
   top: 0;
   left: 0;
   z-index: 99999;
@@ -58,7 +58,7 @@
 .header-icon {
   height: 24px;
   width: 24px;
-  filter: invert(1); /* assuming navbar bg is black */
+  filter: invert(1); 
   cursor: pointer;
 }
 
@@ -116,6 +116,8 @@
   .navbar {
     z-index: 8888;
     width: 100% !important;
+    padding-top: 60px; /* Match topbar height */
+    height: auto; /* Remove fixed height */
   }
   .navbar-brand {
     padding-left: 5px;

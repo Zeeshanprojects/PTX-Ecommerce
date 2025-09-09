@@ -13,42 +13,42 @@ export default function Fleece() {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece1, 
-      color: "white",
+      color: "Gainsboro",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece2,
-      color: "Green",
+      color: "Hunter Green",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece3,
-      color: "Gray",
+      color: "Light Slate Gray",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece4,
-      color: "Pink",
+      color: "Opera mauve",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECk",
       price: 10.99,
       image: Image.Fleece5,
-      color: "Sand",
+      color: "Pale Silver",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece6,
-      color: "Dim Gray",
+      color: "Trolley Gray",
       GSM: 180,
     },
     {
@@ -121,6 +121,21 @@ export default function Fleece() {
        color: "Satin sheen gold",
       GSM: 180,
     },
+    {
+      title: "Fleece",
+      price: 10.99,
+      image: Image.Fleece17,
+      color: "Dark Green",
+      GSM: "180",
+    },
+    {
+      title: "Fleece",
+      price: 10.99,
+      image: Image.Fleece18,
+      color: "Iris",
+      GSM: "180",
+    },
+
   ]);
 
   const [searchTerm, setSearchTerm] = useState(""); // state for search
@@ -133,7 +148,7 @@ export default function Fleece() {
   return (
     <>
       <div className="background">
-        <div className="container-fluid p-5">
+        <div className="container-fluid p-lg-5 p-xl-5">
           <div
             className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
             data-aos="fade-up"
@@ -144,10 +159,10 @@ export default function Fleece() {
             </h1>
 
             {/* Search Bar */}
-            <div style={{ maxWidth: "300px", width: "100%" }}>
+            <div style={{ maxWidth: "500px", width: "100%" }}>
               <input
                 type="text"
-                className="form-control"
+                className="form-control search-bar"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -208,7 +223,7 @@ export default function Fleece() {
                   alt="sadface"
                   style={{ maxWidth: "150px" }}
                 />
-                <p className="text-muted">No products found.</p>
+                <p className="text-muted mt-3">No products found.</p>
               </div>
             )}
           </div>

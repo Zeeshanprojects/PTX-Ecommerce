@@ -71,7 +71,7 @@ export default function Junior() {
   return (
     <>
       <div className="background">
-        <div className="container-fluid p-5">
+        <div className="container-fluid p-lg-5 p-xl-5">
           <div
             className="d-flex align-items-center justify-content-between mb-2"
             data-aos="fade-up"
@@ -83,7 +83,7 @@ export default function Junior() {
             <div style={{ maxWidth: "300px", width: "100%" }}>
               <input
                 type="text"
-                className="form-control"
+                className="form-control search-bar"
                 placeholder="Search"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -142,7 +142,7 @@ export default function Junior() {
                   alt="sadface"
                   style={{ maxWidth: "150px" }}
                 />
-                <p className="text-muted">No products found.</p>
+                <p className="text-muted mt-3">No products found.</p>
               </div>
             )}
           </div>

@@ -539,14 +539,8 @@ export default function Shop() {
       color: "Wine",
       GSM: 180,
     },
-       {
-      title: "Short",
-      price: 10.99,
-      image: Image.Short1,
-      color: "white",
-      GSM: 180,
-    },
-       {
+
+    {
       title: "Puffer",
       price: 10.99,
       image: Image.Puffer2,
@@ -604,55 +598,58 @@ export default function Shop() {
           </p>
 
           {/* Product Grid */}
-         <div className="row g-3">
-  {shuffledProducts.length === 0 ? (
-    <p className="text-center">Loading products...</p>
-  ) : filteredProducts.length > 0 ? (
-    filteredProducts.map((product, index) => (
-      <div
-        key={index}
-        className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
-        data-aos="fade-up"
-      >
-        <div className="product-card position-relative overflow-hidden rounded shadow-sm">
-          <span className="new-badge position-absolute top-0 start-0 m-2">
-            NEW
-          </span>
-          <div className="product-img-container position-relative">
-            <Link
-              to="/productinfo"
-              state={{
-                id: index,
-                title: product.title,
-                price: product.price,
-                image: product.image,
-                color: product.color,
-                GSM: product.GSM,
-                category: "Fleece",
-              }}
-            >
-              <img
-                src={product.image}
-                alt={product.title}
-                className="img-fluid product-img"
-              />
-            </Link>
+          <div className="row g-3">
+            {shuffledProducts.length === 0 ? (
+              <p className="text-center">Loading products...</p>
+            ) : filteredProducts.length > 0 ? (
+              filteredProducts.map((product, index) => (
+                <div
+                  key={index}
+                  className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
+                  data-aos="fade-up"
+                >
+                  <div className="product-card position-relative overflow-hidden rounded shadow-sm">
+                    <span className="new-badge position-absolute top-0 start-0 m-2">
+                      NEW
+                    </span>
+                    <div className="product-img-container position-relative">
+                      <Link
+                        to="/productinfo"
+                        state={{
+                          id: index,
+                          title: product.title,
+                          price: product.price,
+                          image: product.image,
+                          color: product.color,
+                          GSM: product.GSM,
+                          category: "Fleece",
+                        }}
+                      >
+                        <img
+                          src={product.image}
+                          alt={product.title}
+                          className="img-fluid product-img"
+                        />
+                      </Link>
+                    </div>
+                    <div className="p-3 text-center">
+                      <h6 className="mb-1 fw-bold">{product.title}</h6>
+                      <p className="text-muted mb-1">USD {product.price}</p>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center">
+                <img
+                  src={Image.sadface}
+                  alt="sadface"
+                  style={{ maxWidth: "150px" }}
+                />
+                <p className="text-muted mt-3">No products found.</p>
+              </div>
+            )}
           </div>
-          <div className="p-3 text-center">
-            <h6 className="mb-1 fw-bold">{product.title}</h6>
-            <p className="text-muted mb-1">USD {product.price}</p>
-          </div>
-        </div>
-      </div>
-    ))
-  ) : (
-    <div className="text-center">
-      <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
-      <p className="text-muted mt-3">No products found.</p>
-    </div>
-  )}
-</div>
-
         </div>
       </div>
     </>

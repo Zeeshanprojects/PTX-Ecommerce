@@ -53,7 +53,7 @@ export default function Home() {
           className="bannerimage"
         />
         <div className="main-btn">
-          <Link to="/Shop">
+          <Link to="/shop">
             <button className="btn btn-outline-light ps-5 pe-5 ">
               SHOP NOW
             </button>
@@ -152,14 +152,15 @@ export default function Home() {
           <div className="overlay-text">
             <h5> SALE IS ON</h5>
             <h1>50 % OFF</h1>
-            <Link to="/shop">
+             <h5 className="mt-1"> READY TO WEAR</h5>
+            {/* <a href="/product-section">
               <button
                 type="button"
                 class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
               >
                 SHOP NOW
               </button>
-            </Link>
+            </a> */}
           </div>
         </div>
       </div>
@@ -167,8 +168,8 @@ export default function Home() {
       <div className="space"></div>
 
       {/* Product Grid */}
-
-      <h2 className="uppercase text-center fw-bold" data-aos="fade-up">
+<div id="product-section">
+  <h2 className="uppercase text-center fw-bold" data-aos="fade-up">
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>
       <p className="text-center" data-aos="fade-up">
@@ -411,6 +412,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+</div>
+      
 
       <div className="space"></div>
       <div className="container-fluid " data-aos="fade-up">
@@ -432,11 +435,7 @@ export default function Home() {
             <p className="category_font">
               Stay fashionable with our latest styles
             </p>
-            <Link to="/Shop">
-              <button className="btn btn-outline-light ps-3 pe-3 m-0">
-                VIEW COLLECTION
-              </button>
-            </Link>
+           
           </div>
           <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
             <div className="icon-wrapper mx-auto">
@@ -450,11 +449,7 @@ export default function Home() {
             <p className="category_font">
               Get your new clothes quickly with our speedy shipping
             </p>
-            <Link to="/Shop">
-              <button className="btn btn-outline-light ps-3 pe-3 m-0">
-                VIEW COLLECTION
-              </button>
-            </Link>
+            
           </div>
           <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
             <div className="icon-wrapper mx-auto">
@@ -468,11 +463,7 @@ export default function Home() {
             <p className="category_font">
               If it doesn't fit or you don't like it, return it easily
             </p>
-            <Link to="/Shop">
-              <button className="btn btn-outline-light ps-3 pe-3 m-0">
-                VIEW COLLECTION
-              </button>
-            </Link>
+           
           </div>
           <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
             <div className="icon-wrapper mx-auto">

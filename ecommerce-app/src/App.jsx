@@ -87,7 +87,6 @@ function AppWrapper() {
         <Route path="profile" element={<Profile />} />
         <Route path="/orders/:id" element={<Orders />} />
         <Route path="/sandow" element={<Sandow />} />
-
         <Route path="/shirts" element={<Shirts />} />
         <Route path="/croptee" element={<Croptee/>}/>
         <Route path="/puffers" element={<Puffers/>}/>

@@ -26,11 +26,11 @@ export default function Fleece() {
       { image: Image.Fleece12, hex: "#5374D0" },
       { image: Image.Fleece13, hex: "#5B636E" },
       { image: Image.Fleece14, hex: "#37095F" },
-      {image: Image.Fleece15, hex: "#766753" }, 
+      { image: Image.Fleece15, hex: "#766753" },
       { image: Image.Fleece16, hex: "#BD9929" },
       { image: Image.Fleece17, hex: "#17271B" },
       { image: Image.Fleece18, hex: "#6341BC" },
-
+  
     ],
   };
 
@@ -45,19 +45,21 @@ export default function Fleece() {
     "colors",
   ]);
 
-  const visibleCount = 5;
 
-  const handleNext = () => {
-    if (startIndex + visibleCount < product.colors.length) {
-      setStartIndex(startIndex + 1);
-    }
-  };
+const visibleCount = 5; // or 8, or any number you want
 
-  const handlePrev = () => {
-    if (startIndex - visibleCount >= 0) {
-      setStartIndex(startIndex - 1);
-    }
-  };
+const handleNext = () => {
+  if (startIndex + visibleCount < product.colors.length) {
+    setStartIndex(startIndex + visibleCount);
+  }
+};
+
+const handlePrev = () => {
+  if (startIndex - visibleCount >= 0) {
+    setStartIndex(startIndex - visibleCount);
+  }
+};
+
 
   const productTypes = [
     "T-Shirts",
@@ -95,7 +97,7 @@ export default function Fleece() {
       <div className="row mt-4">
         {/* Sidebar */}
         <div className="col-lg-2 border-end pe-4">
-          <h5 className="fw-bold mb-3">Filters</h5>
+      
 
           {/* Accordion Section - Product Type */}
           <div className="mb-3">
@@ -110,7 +112,7 @@ export default function Fleece() {
                   openSections.includes("productType") ? "rotate-arrow" : ""
                 }`}
               >
-                ▼
+                <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
 
@@ -141,7 +143,7 @@ export default function Fleece() {
                   openSections.includes("size") ? "rotate-arrow" : ""
                 }`}
               >
-                ▼
+                <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
 
@@ -172,7 +174,7 @@ export default function Fleece() {
                   openSections.includes("fit") ? "rotate-arrow" : ""
                 }`}
               >
-                ▼
+                <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
 
@@ -203,7 +205,7 @@ export default function Fleece() {
                   openSections.includes("colors") ? "rotate-arrow" : ""
                 }`}
               >
-                ▼
+                <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
 
@@ -223,7 +225,7 @@ export default function Fleece() {
         </div>
 
         {/* Product Section */}
-        <div className="col-lg-10">
+        <div className="col-lg-10 mt-3">
           <div className="row">
             <div className="col-md-6 col-lg-4 text-center">
               <div className="product-card position-relative overflow-hidden rounded p-3">

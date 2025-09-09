@@ -13,42 +13,42 @@ export default function Fleece() {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece1, 
-      color: "white",
+      color: "Gainsboro",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece2,
-      color: "Green",
+      color: "Hunter Green",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece3,
-      color: "Gray",
+      color: "Light Slate Gray",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece4,
-      color: "Pink",
+      color: "Opera mauve",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECk",
       price: 10.99,
       image: Image.Fleece5,
-      color: "Sand",
+      color: "Pale Silver",
       GSM: 180,
     },
     {
       title: "FLEECE CREWNECK",
       price: 10.99,
       image: Image.Fleece6,
-      color: "Dim Gray",
+      color: "Trolley Gray",
       GSM: 180,
     },
     {
@@ -121,6 +121,21 @@ export default function Fleece() {
        color: "Satin sheen gold",
       GSM: 180,
     },
+    {
+      title: "Fleece",
+      price: 10.99,
+      image: Image.Fleece17,
+      color: "Dark Green",
+      GSM: "180",
+    },
+    {
+      title: "Fleece",
+      price: 10.99,
+      image: Image.Fleece18,
+      color: "Iris",
+      GSM: "180",
+    },
+
   ]);
 
   const [searchTerm, setSearchTerm] = useState(""); // state for search

@@ -486,6 +486,8 @@ export default function Shop() {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee3,
+       color: "Onyx",
+      GSM: 180,
     },
     {
       title: "Crop Tee",
@@ -496,6 +498,8 @@ export default function Shop() {
       title: "Crop Tee",
       price: 10.99,
       image: Image.Croptee5,
+       color: "Cardinal", 
+        GSM: 180,      
     },
     {
       title: "Crop Tee",

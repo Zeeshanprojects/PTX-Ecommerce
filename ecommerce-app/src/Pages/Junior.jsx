@@ -142,7 +142,7 @@ export default function Junior() {
                   alt="sadface"
                   style={{ maxWidth: "150px" }}
                 />
-                <p className="text-muted">No products found.</p>
+                <p className="text-muted mt-3">No products found.</p>
               </div>
             )}
           </div>

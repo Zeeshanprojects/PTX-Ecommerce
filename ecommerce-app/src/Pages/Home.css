@@ -1,3 +1,6 @@
+body{
+  background-color: #FFFFFF !important;
+}
 .image-wrapper {
   position: relative;
   width: 100%;
@@ -95,12 +98,12 @@
   background-color: #e9ecf3;
   object-fit: contain;
 }
-.product-card {
+/* .product-card {
   background-color: white;
   border-radius: 10px !important;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.product-card:hover {
+} */
+/* .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
@@ -113,7 +116,7 @@
   width: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
-}
+} */
 .product-card:hover .product-img {
   transform: scale(1.05);
 }
@@ -254,6 +257,59 @@
 .border {
   border: 1222px solid orange;
 }
+
+.product-card {
+  transition: all 0.3s ease-in-out;
+  border: none !important; 
+  width: 300px;
+}
+.product-card:hover {
+  border: 1px solid !important; /* border only on hover */
+}
+
+/* Product Image */
+.product-img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Color Circles */
+.color-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+  flex: 0 0 auto; /* prevent shrinking */
+  transition: transform 0.2s ease;
+}
+.color-circle:hover {
+  transform: scale(1.1);
+}
+.color-circle.active {
+  border: 2px solid #000;
+}
+
+/* Scrollable slider for colors */
+.color-slider {
+  display: flex;
+  overflow-x: auto;
+  padding: 5px 0;
+  scrollbar-width: thin; /* Firefox */
+}
+.color-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.color-slider::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+.small-icon{
+  height:20px ;
+}
+
+
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .banner-text {
     font-size: 13px;

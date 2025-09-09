@@ -268,7 +268,7 @@ const handlePrev = () => {
                             selectedColor.name === color.name ? "active" : ""
                           }`}
                           style={{ backgroundColor: color.hex }}
-                          onClick={() => setSelectedColor(color)}
+                        onMouseEnter={() => setSelectedColor(color)}
                           title={color.name}
                         ></button>
                       ))}

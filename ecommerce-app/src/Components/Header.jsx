@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <>
       <div className="topbar ">
-        <div className="container ">
+        <div className="container-fluid ">
           <p className="pt-3">
             {" "}
             Free shipping, 30-day return or refund guarantee.
@@ -22,7 +22,7 @@ export default function Header() {
         </div>
       </div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-black ">
-        <div className="container-fluid px-5">
+        <div className="container-fluid ">
           {" "}
           <Link className="navbar-brand" to="/">
             <img src={Image.logo} />

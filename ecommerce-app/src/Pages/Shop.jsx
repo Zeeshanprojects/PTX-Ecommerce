@@ -539,7 +539,7 @@ export default function Shop() {
       color: "Wine",
       GSM: 180,
     },
-   
+
     {
       title: "Puffer",
       price: 10.99,

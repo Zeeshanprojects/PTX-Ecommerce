@@ -152,6 +152,7 @@ export default function Home() {
           <div className="overlay-text">
             <h5> SALE IS ON</h5>
             <h1>50 % OFF</h1>
+             <h5 className="mt-1"> READY TO WEAR</h5>
             {/* <a href="/product-section">
               <button
                 type="button"

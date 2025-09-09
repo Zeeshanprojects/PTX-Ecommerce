@@ -57,8 +57,7 @@ export default function Fleece() {
             </h1>
 
            
-          
-
+        
           <p className="mb-4" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
           </p>

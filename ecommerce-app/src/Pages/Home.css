@@ -285,10 +285,10 @@ body{
   transition: transform 0.2s ease;
 }
 .color-circle:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .color-circle.active {
-  border: 2px solid #000;
+  border: 3px solid #000;
 }
 
 /* Scrollable slider for colors */

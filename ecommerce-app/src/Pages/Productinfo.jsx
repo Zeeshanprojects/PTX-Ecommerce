@@ -12,15 +12,14 @@ export default function Productinfo() {
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
-  const [selectedSizes, setSelectedSizes] = useState([]); 
+  const [selectedSizes, setSelectedSizes] = useState([]);
   const [showSizeModal, setShowSizeModal] = useState(false); // modal state
-const{id,image, title , price , color, GSM}=state;
+  const { id, image, title, price, color, GSM, category  } = state;
   if (!state) {
     console.log("No state provided, redirecting to home");
     navigate("/");
     return null;
   }
-
 
   const increaseQty = () => setQuantity((prev) => prev + 1);
   const decreaseQty = () => {
@@ -44,7 +43,7 @@ const{id,image, title , price , color, GSM}=state;
 
     selectedSizes.forEach((size) => {
       const product = {
-        id: `${id}-${size}`, 
+        id: `${id}-${size}`,
         image,
         title,
         price: Number(price),
@@ -71,8 +70,7 @@ const{id,image, title , price , color, GSM}=state;
       price: Number(price),
       category,
       size,
-   
-      
+
       quantity,
     }));
 

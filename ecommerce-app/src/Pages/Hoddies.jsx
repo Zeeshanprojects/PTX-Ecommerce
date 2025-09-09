@@ -13,14 +13,14 @@ export default function Hoddies() {
       title: "Pullover Hoodie",
       price: 10.99,
       image: Image.Hoodie1, 
-      color: "white",
+      color: "Gainsboro",
       GSM: 180,
     },
     {
       title: "Pullover Hoodie",
       price: 10.99,
       image: Image.Hoodie2, 
-       color: "Green",
+       color: "Myrtle",
       GSM: 180,
     },
     {
@@ -118,7 +118,7 @@ export default function Hoddies() {
       title: "Pullover Hoodie",
       price: 10.99,
       image: Image.Hoodie16, 
-       color: "Pastel Brown",
+       color: "Persian Indigo",
       GSM: 180,
     },
         {

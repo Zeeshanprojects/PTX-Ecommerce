@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { CartContext } from "../Components/CartContext.jsx";
 import { Link } from "react-router-dom";
+import "../Pages/cart.css";
 
 export default function Cart() {
   useEffect(() => {
@@ -73,15 +74,15 @@ export default function Cart() {
           </tbody>
         </table>
       </div>
-      <div className="text-end">
-        <h4>Total: USD {getTotal()}$</h4>
+      <h4 className="text-end mt-3">Total: USD {getTotal()}$</h4>
+      <div className="d-flex  justify-content-end">
         <Link to="/Shop">
-          <button className="btn btn-primary mt-3 me-2">
+          <button className="btn btn-primary mt-3 me-2 ">
             Continue Shopping
           </button>
         </Link>
         <Link to="/checkout">
-          <button className="btn btn-success mt-3">Proceed to Checkout</button>
+          <button className="btn btn-success mt-3 ">Proceed to Checkout</button>
         </Link>
       </div>
     </div>

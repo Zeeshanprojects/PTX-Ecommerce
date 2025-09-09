@@ -539,6 +539,20 @@ export default function Shop() {
       color: "Wine",
       GSM: 180,
     },
+       {
+      title: "Short",
+      price: 10.99,
+      image: Image.Short1,
+      color: "white",
+      GSM: 180,
+    },
+       {
+      title: "Puffer",
+      price: 10.99,
+      image: Image.Puffer2,
+      color: "Black",
+      GSM: 180,
+    },
   ]);
 
   // State for shuffled products

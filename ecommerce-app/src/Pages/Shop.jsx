@@ -6,7 +6,8 @@ import Image from "../Images/Image"; // make sure your images are exported prope
 export default function Shop() {
   useEffect(() => {
     document.title = "Men - PTX Ecommerce";
-  });
+  }, []);
+
   // Hardcoded products
   const [products] = useState([
     {
@@ -540,10 +541,22 @@ export default function Shop() {
     },
   ]);
 
-  const [searchTerm, setSearchTerm] = useState(""); // state for search
+  // State for shuffled products
+  const [shuffledProducts, setShuffledProducts] = useState([]);
 
-  // Filter products based on search
-  const filteredProducts = products.filter((product) =>
+  // Shuffle products once when component loads
+  useEffect(() => {
+    const shuffleArray = (array) => {
+      return [...array].sort(() => Math.random() - 0.5);
+    };
+    setShuffledProducts(shuffleArray(products));
+  }, [products]);
+
+  // Search state
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Filter on shuffled products
+  const filteredProducts = shuffledProducts.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -598,7 +611,7 @@ export default function Shop() {
                           price: product.price,
                           image: product.image,
                           color: product.color,
-                          GSM:product.GSM,
+                          GSM: product.GSM,
                           category: "Fleece",
                         }}
                       >

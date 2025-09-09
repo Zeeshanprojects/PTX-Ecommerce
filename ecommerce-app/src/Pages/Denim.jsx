@@ -37,7 +37,7 @@ export default function Denim() {
             <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">DENIM</h1>
 
             {/* Search Bar */}
-            <div style={{ maxWidth: "500px", width: "100%" }}>
+            <div style={{ maxWidth: "300px", width: "100%" }}>
               <input
                 type="text"
                 className="form-control search-bar"
@@ -53,7 +53,7 @@ export default function Denim() {
           </p>
 
           {/* Product Grid */}
-          <div className="row g-4">
+          <div className="row g-3">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => (
                 <div

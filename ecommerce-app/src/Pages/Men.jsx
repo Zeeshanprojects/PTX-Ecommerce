@@ -388,7 +388,7 @@ export default function Men() {
             </h1>
 
             {/* Search Bar */}
-            <div style={{ maxWidth: "500px", width: "100%" }}>
+            <div style={{ maxWidth: "300px", width: "100%" }}>
               <input
                 type="text"
                 className="form-control"

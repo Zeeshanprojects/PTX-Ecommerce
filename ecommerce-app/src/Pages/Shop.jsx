@@ -590,7 +590,7 @@ export default function Shop() {
           </p>
 
           {/* Product Grid */}
-         <div className="row g-4">
+         <div className="row g-3">
   {shuffledProducts.length === 0 ? (
     <p className="text-center">Loading products...</p>
   ) : filteredProducts.length > 0 ? (

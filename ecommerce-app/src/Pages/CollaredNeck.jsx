@@ -83,12 +83,12 @@ export default function CollaredNeck() {
             data-aos="fade-up"
           >
             {/* Title */}
-            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0 mt-3">
+            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0  ">
               COLLARED NECK
             </h1>
 
             {/* Search Bar */}
-            <div style={{ maxWidth: "500px", width: "100%" }}>
+            <div style={{ maxWidth: "300px", width: "100%" }}>
               <input
                 type="text"
                 className="form-control search-bar"
@@ -104,12 +104,12 @@ export default function CollaredNeck() {
           </p>
 
           {/* Product Grid */}
-          <div className="row g-4">
+          <div className="row g-3 ">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => (
                 <div
                   key={index}
-                  className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
+                  className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4 "
                   data-aos="fade-up"
                 >
                   <div className="product-card position-relative overflow-hidden rounded shadow-sm">

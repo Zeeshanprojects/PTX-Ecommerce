@@ -1,139 +1,139 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function MineralWash() {
-    useEffect(()=>{
-      document.title="Mineral Wash - PTX Ecommerce"
-    })
+  useEffect(() => {
+    document.title = "Mineral Wash - PTX Ecommerce";
+  });
   // Hardcoded products
   const [products] = useState([
     {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash1, 
+      image: Image.Mineralwash1,
       color: "Jungle Green",
       GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash2, 
-       color: "Straw",
+      image: Image.Mineralwash2,
+      color: "Straw",
       GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
       image: Image.Mineralwash3,
-        color: "Brick Red", 
-      GSM: 180,   
+      color: "Brick Red",
+      GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash4, 
-       color: "UCLA Blue", 
-      GSM: 180,  
+      image: Image.Mineralwash4,
+      color: "UCLA Blue",
+      GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
       image: Image.Mineralwash5,
-       color: "Black", 
-      GSM: 180,   
-    },
-    {
-      title: "Mineral Wash",
-      price: 10.99,
-      image: Image.Mineralwash6, 
-       color: "Grullo", 
-      GSM: 180, 
-    },
-    {
-      title: "Mineral Wash",
-      price: 10.99,
-      image: Image.Mineralwash7, 
-       color: "Trolley Grey", 
-      GSM: 180, 
-    },
-    {
-      title: "Mineral Wash",
-      price: 10.99,
-      image: Image.Mineralwash8, 
-       color: "Glaucous", 
-      GSM: 180, 
-    },
-    {
-      title: "Mineral Wash",
-      price: 10.99,
-      image: Image.Mineralwash9, 
-       color: "Opera Mauve", 
-      GSM: 180, 
-    },
-    {
-      title: "Mineral Wash",
-      price: 10.99,
-      image: Image.Mineralwash10, 
-        color: "Dark Gray",
+      color: "Black",
       GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash11, 
-       color: "Viridian",
-      GSM: 180,
-    },
-      {
-      title: "Mineral Wash",
-      price: 10.99,
-      image: Image.Mineralwash12, 
-       color: "Dsrk Jungle Green",
+      image: Image.Mineralwash6,
+      color: "Grullo",
       GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash13, 
-       color: "Orchid",
+      image: Image.Mineralwash7,
+      color: "Trolley Grey",
       GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash14, 
-       color: "Vivid auburn",
-      GSM: 180,
-    },
-       {
-      title: "Mineral Wash",
-      price: 10.99,
-      image: Image.Mineralwash15, 
-       color: "UCLA Blue",
+      image: Image.Mineralwash8,
+      color: "Glaucous",
       GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash16, 
-       color: "Citrine",
+      image: Image.Mineralwash9,
+      color: "Opera Mauve",
       GSM: 180,
     },
-        {
+    {
       title: "Mineral Wash",
       price: 10.99,
-      image: Image.Mineralwash17, 
-       color: "Shadow",
+      image: Image.Mineralwash10,
+      color: "Dark Gray",
+      GSM: 180,
+    },
+    {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash11,
+      color: "Viridian",
+      GSM: 180,
+    },
+    {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash12,
+      color: "Dsrk Jungle Green",
+      GSM: 180,
+    },
+    {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash13,
+      color: "Orchid",
+      GSM: 180,
+    },
+    {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash14,
+      color: "Vivid auburn",
+      GSM: 180,
+    },
+    {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash15,
+      color: "UCLA Blue",
+      GSM: 180,
+    },
+    {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash16,
+      color: "Citrine",
+      GSM: 180,
+    },
+    {
+      title: "Mineral Wash",
+      price: 10.99,
+      image: Image.Mineralwash17,
+      color: "Shadow",
       GSM: 180,
     },
     {
       title: "Mineral Wash",
       price: 10.99,
       image: Image.Mineralwash18,
-       color: "Pastel Brown",
-      GSM: 180, 
+      color: "Pastel Brown",
+      GSM: 180,
     },
   ]);
 
@@ -146,35 +146,35 @@ export default function MineralWash() {
 
   return (
     <>
-   <div className="background">
+      <div className="background">
         <div className="container-fluid p-lg-5 p-xl-5">
           <div
-  className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
-  data-aos="fade-up"
->
-  {/* Title */}
-  <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">MINERAL WASH</h1>
+            className="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between mb-2"
+            data-aos="fade-up"
+          >
+            {/* Title */}
+            <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">
+              MINERAL WASH
+            </h1>
 
-  {/* Search Bar */}
-  <div style={{ maxWidth: "300px", width: "100%" }}>
-    <input
-      type="text"
-      className="form-control search-bar"
-      placeholder="Search"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-  </div>
-</div>
-
-
+            {/* Search Bar */}
+            <div style={{ maxWidth: "300px", width: "100%" }}>
+              <input
+                type="text"
+                className="form-control search-bar"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
 
           <p className="mb-4" data-aos="fade-up">
             OUR PREMIUM QUALITY COLLECTION
           </p>
 
           {/* Product Grid */}
-          <div className="row g-4">
+          <div className="row g-3">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => (
                 <div
@@ -208,16 +208,20 @@ export default function MineralWash() {
                     </div>
                     <div className="p-3">
                       <div className="text-center">
-                      <h6 className="mb-1 fw-bold">{product.title}</h6>
-                      <p className="text-muted mb-1">USD {product.price}</p>
-                    </div>
+                        <h6 className="mb-1 fw-bold">{product.title}</h6>
+                        <p className="text-muted mb-1">USD {product.price}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))
             ) : (
               <div className="text-center">
-                <img src={Image.sadface} alt="sadface" style={{ maxWidth: "150px" }} />
+                <img
+                  src={Image.sadface}
+                  alt="sadface"
+                  style={{ maxWidth: "150px" }}
+                />
                 <p className="text-muted mt-3">No products found.</p>
               </div>
             )}

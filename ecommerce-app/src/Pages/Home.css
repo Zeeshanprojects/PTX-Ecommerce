@@ -302,9 +302,8 @@
   .category-heding {
     font-size: 24px;
   }
-  .search-bar{
+  .search-bar {
     margin-top: 15px;
-   
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -383,5 +382,6 @@
   }
   .category-heding {
     font-size: 20px;
+    margin-top: 10% !important;
   }
 }

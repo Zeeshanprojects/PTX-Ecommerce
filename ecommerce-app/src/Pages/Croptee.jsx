@@ -116,7 +116,7 @@ export default function Croptee() {
           </p>
 
           {/* Product Grid */}
-          <div className="row g-4">
+          <div className="row g-3">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product, index) => (
                 <div

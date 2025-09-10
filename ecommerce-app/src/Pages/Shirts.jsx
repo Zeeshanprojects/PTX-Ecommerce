@@ -12,7 +12,7 @@ export default function Shirts() {
     price: 10.0,
     fit: "Regular Fit",
     colors: [
-      { image: Image.Shirt1, hex: "#CFCFCF" },
+      { image: Image.Shirt1, hex: "#6E1112" },
      
     ],
   };

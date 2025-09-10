@@ -11,7 +11,18 @@ export default function croptee() {
     title: "Crroptee",
     price: 10.0,
     fit: "Regular Fit",
-    colors: [{ image: Image.Croptee1, hex: "#CFCFCF" }],
+    colors: [{ image: Image.Croptee1, hex: "#BDB6A9" },
+      { image: Image.Croptee2, hex: "#DD7FBC" },
+      { image: Image.Croptee3, hex: "#302533" },
+      { image: Image.Croptee4, hex: "#B9A453" },
+      { image: Image.Croptee5, hex: "#BD2835" },
+      { image: Image.Croptee6, hex: "#549982" },
+      { image: Image.Croptee7, hex: "#6276B8" },
+      { image: Image.Croptee8, hex: "#B9B12E" },
+      { image: Image.Croptee9, hex: "#8E7D68" },
+       { image: Image.Croptee10, hex: "#A5363E" },
+     
+    ],
   };
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);

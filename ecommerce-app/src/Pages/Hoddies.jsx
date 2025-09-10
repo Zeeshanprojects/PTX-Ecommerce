@@ -11,7 +11,27 @@ export default function Hoddies() {
     title: "Hoodies",
     price: 10.0,
     fit: "Regular Fit",
-    colors: [{ image: Image.Hoodie1, hex: "#CFCFCF" }],
+    colors: [
+      { image: Image.Hoodie1, hex: "#DBD9D8" },
+      { image: Image.Hoodie2, hex: "#2A452A" },
+      { image: Image.Hoodie3, hex: "#7E7563" },
+      { image: Image.Hoodie4, hex: "#CBA2D7" },
+      { image: Image.Hoodie5, hex: "#ACA996" },
+      { image: Image.Hoodie6, hex: "#766949" },
+      { image: Image.Hoodie7, hex: "#1A1A1A" },
+      { image: Image.Hoodie8, hex: "#79B1C2" },
+      { image: Image.Hoodie9, hex: "#BBAEBB" },
+      { image: Image.Hoodie10, hex: "#372718" },
+      { image: Image.Hoodie11, hex: "#922020" },
+    
+      { image: Image.Hoodie12, hex: "#3E3E3E" },
+      { image: Image.Hoodie13, hex: "#6FB5EF" },
+      { image: Image.Hoodie14, hex: "#6A6661" },
+      { image: Image.Hoodie15, hex: "#421C6E" },
+      { image: Image.Hoodie16, hex: "#816855" },
+      { image: Image.Hoodie17, hex: "#D6A426" },
+      { image: Image.Hoodie18, hex: "#294233" },
+    ],
   };
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);

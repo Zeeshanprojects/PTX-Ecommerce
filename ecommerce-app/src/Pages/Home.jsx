@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Image from "../Images/Image";
 import "./Home.css";
-
 import { Link } from "react-router-dom";
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -21,7 +23,9 @@ export default function Home() {
   useEffect(() => {
     document.title = "Home | PTX Ecommerce";
   }, []);
-
+useEffect(() => {
+  AOS.init({ duration: 1000 , once: true});
+})
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 

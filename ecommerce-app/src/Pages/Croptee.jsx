@@ -8,7 +8,7 @@ export default function croptee() {
   }, []);
 
   const product = {
-    title: "Crroptee",
+    title: "Croptee",
     price: 10.0,
     fit: "Regular Fit",
     colors: [{ image: Image.Croptee1, hex: "#BDB6A9" },
@@ -23,6 +23,7 @@ export default function croptee() {
        { image: Image.Croptee10, hex: "#A5363E" },
      
     ],
+    
   };
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);

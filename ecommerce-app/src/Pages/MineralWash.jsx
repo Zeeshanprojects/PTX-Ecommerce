@@ -11,7 +11,27 @@ export default function Mineralwash() {
     title: "Mineral Wash",
     price: 10.0,
     fit: "Regular Fit",
-    colors: [{ image: Image.Mineralwash1, hex: "#CFCFCF" }],
+    colors: [
+      { image: Image.Mineralwash1, hex: "#4F8674" },
+      { image: Image.Mineralwash2, hex: "#D7CC7A" },
+      { image: Image.Mineralwash3, hex: "#C94C58" },
+      { image: Image.Mineralwash4, hex: "#4A5178" },
+      { image: Image.Mineralwash5, hex: "#020101ff" },
+      { image: Image.Mineralwash6, hex: "#A9A390" },
+      { image: Image.Mineralwash7, hex: "#71747A" },
+      { image: Image.Mineralwash8, hex: "#739AD1" },
+      { image: Image.Mineralwash9, hex: "#C286B6" },
+      { image: Image.Mineralwash10, hex: "#979797" },
+      { image: Image.Mineralwash11, hex: "#52886F" },
+      { image: Image.Mineralwash12, hex: "#232323" },
+      { image: Image.Mineralwash13, hex: "#DA8CD5" },
+      { image: Image.Mineralwash14, hex: "#931414" },
+      { image: Image.Mineralwash15, hex: "#4F6AA7" },
+      { image: Image.Mineralwash16, hex: "#DEC30B" },
+      { image: Image.Mineralwash17, hex: "#7E6D53" },
+       { image: Image.Mineralwash18, hex: "#A08337" },
+      
+    ],
   };
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);

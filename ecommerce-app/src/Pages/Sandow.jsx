@@ -11,7 +11,7 @@ export default function Sandow() {
     title: "Sandow",
     price: 10.0,
     fit: "Regular Fit",
-    colors: [{ image: Image.Sandow1, hex: "#CFCFCF" }],
+    colors: [{ image: Image.Sandow1, hex: "#233141" }],
   };
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);

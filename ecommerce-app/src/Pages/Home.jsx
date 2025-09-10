@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import  {  useEffect, useState } from "react";
 import Image from "../Images/Image";
 import "./Home.css";
 import { Link } from "react-router-dom";
@@ -23,9 +23,12 @@ export default function Home() {
   useEffect(() => {
     document.title = "Home | PTX Ecommerce";
   }, []);
-useEffect(() => {
-  AOS.init({ duration: 1000 , once: true});
-})
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      once: true, // whether animation should happen only once
+    });
+  }, []);
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 

@@ -12,7 +12,8 @@ export default function Puffers() {
     price: 10.0,
     fit: "Regular Fit",
     colors: [
-      { image: Image.Puffer2, hex: "#CFCFCF" },
+      { image: Image.Puffer2, hex: "#1E1D1B" },
+      
      
     ],
   };

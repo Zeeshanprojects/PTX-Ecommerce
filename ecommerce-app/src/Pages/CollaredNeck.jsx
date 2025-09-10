@@ -14,26 +14,27 @@ export default function ProductsPage() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.CollaredNeck1, hex: "#CFCFCF" },
-        { image: Image.CollaredNeck2, hex: "#000000" },
+        { image: Image.CollaredNeck1, hex: "#101012" },
+        { image: Image.CollaredNeck2, hex: "#070709" },
       ],
     },
     {
-      title: "Fleece",
-      price: 15.0,
-      fit: "Oversized",
+      title: "Collared Neck",
+      price: 10.0,
+      fit: "Regular Fit",
       colors: [
-        { image: Image.Fleece1, hex: "#FF0000" },
-        { image: Image.Fleece2, hex: "#0000FF" },
+        { image: Image.CollaredNeck3, hex: "#1A1C3A" },
+        { image: Image.CollaredNeck5, hex: "#080706" },
+          { image: Image.CollaredNeck8, hex: "#6F6940" },
       ],
     },
     {
-      title: "Hoodie",
-      price: 20.0,
+      title: "Collared Neck",
+      price: 10.0,
       fit: "Slim Fit",
       colors: [
-        { image: Image.Hoodie1, hex: "#008000" },
-        { image: Image.Hoodie2, hex: "#808080" },
+        { image: Image.CollaredNeck4, hex: "#E20F22" },
+        { image: Image.CollaredNeck6, hex: "#776A3A" },
       ],
     },
   ];
@@ -99,7 +100,7 @@ export default function ProductsPage() {
         className="fw-bold m-0 category-heding mb-2 mb-md-0"
         data-aos="fade-up"
       >
-        PRODUCTS
+    COLLARED NECK
       </h1>
       <p className="mb-4" data-aos="fade-up">
         OUR PREMIUM QUALITY COLLECTION

@@ -1,5 +1,5 @@
-body{
-  background-color: #FFFFFF !important;
+body {
+  background-color: #ffffff !important;
 }
 .image-wrapper {
   position: relative;
@@ -260,7 +260,7 @@ body{
 
 .product-card {
   transition: all 0.3s ease-in-out;
-  border: none !important; 
+  border: none !important;
   width: 300px;
 }
 .product-card:hover {
@@ -288,7 +288,6 @@ body{
   transform: scale(1.2);
 }
 
-
 /* Scrollable slider for colors */
 .color-slider {
   display: flex;
@@ -303,8 +302,8 @@ body{
   background: #aaa;
   border-radius: 3px;
 }
-.small-icon{
-  height:30px ;
+.small-icon {
+  height: 30px;
 }
 
 /* Smooth fade effect when image changes */
@@ -336,7 +335,6 @@ body{
 .arrow-icon.open {
   transform: rotate(180deg); /* flip arrow upward when open */
 }
-
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .banner-text {
@@ -468,4 +466,13 @@ body{
     font-size: 20px;
     margin-top: 10% !important;
   }
+  .product-card {
+  transition: all 0.3s ease-in-out;
+  border: none !important;
+  width: 300px;
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
+}
 }

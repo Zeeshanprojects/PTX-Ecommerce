@@ -88,7 +88,7 @@ const handlePrev = () => {
 
   return (
     <div className="container-fluid py-4">
-      <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0">
+      <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0" data-aos="fade-up">
         FLEECE CREWNECK
       </h1>
       <p className="mb-4" data-aos="fade-up">
@@ -96,7 +96,7 @@ const handlePrev = () => {
       </p>
       <div className="row mt-4">
         {/* Sidebar */}
-        <div className="col-lg-2 border-end pe-4">
+        <div className="col-lg-2 border-end pe-4" data-aos="fade-up">
       
 
           {/* Accordion Section - Product Type */}
@@ -225,7 +225,7 @@ const handlePrev = () => {
         </div>
 
         {/* Product Section */}
-        <div className="col-lg-10 mt-3">
+        <div className="col-lg-10 mt-3" data-aos="fade-up">
           <div className="row">
             <div className="col-md-6 col-lg-4 text-center">
               <div className="product-card position-relative overflow-hidden rounded p-3">

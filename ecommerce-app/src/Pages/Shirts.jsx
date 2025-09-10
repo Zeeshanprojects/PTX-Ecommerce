@@ -5,16 +5,13 @@ import Image from "../Images/Image";
 export default function Shirts() {
   useEffect(() => {
     document.title = "Fleece - PTX Ecommerce";
-  }, []);
+  }, []); 
 
   const product = {
     title: "Shirts",
     price: 10.0,
     fit: "Regular Fit",
-    colors: [
-      { image: Image.Shirt1, hex: "#6E1112" },
-     
-    ],
+    colors: [{ image: Image.Shirt1, hex: "#6E1112" }],
   };
 
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
@@ -28,21 +25,19 @@ export default function Shirts() {
     "colors",
   ]);
 
+  const visibleCount = 5; // or 8, or any number you want
 
-const visibleCount = 5; // or 8, or any number you want
+  const handleNext = () => {
+    if (startIndex + visibleCount < product.colors.length) {
+      setStartIndex(startIndex + visibleCount);
+    }
+  };
 
-const handleNext = () => {
-  if (startIndex + visibleCount < product.colors.length) {
-    setStartIndex(startIndex + visibleCount);
-  }
-};
-
-const handlePrev = () => {
-  if (startIndex - visibleCount >= 0) {
-    setStartIndex(startIndex - visibleCount);
-  }
-};
-
+  const handlePrev = () => {
+    if (startIndex - visibleCount >= 0) {
+      setStartIndex(startIndex - visibleCount);
+    }
+  };
 
   const productTypes = [
     "T-Shirts",
@@ -71,8 +66,11 @@ const handlePrev = () => {
 
   return (
     <div className="container-fluid py-4">
-      <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0" data-aos="fade-up">
- FLANNEL SHIRTS
+      <h1
+        className="fw-bold m-0 category-heding mb-2 mb-md-0"
+        data-aos="fade-up"
+      >
+        FLANNEL SHIRTS
       </h1>
       <p className="mb-4" data-aos="fade-up">
         OUR PREMIUM QUALITY COLLECTION
@@ -80,8 +78,6 @@ const handlePrev = () => {
       <div className="row mt-4">
         {/* Sidebar */}
         <div className="col-lg-2 border-end pe-4" data-aos="fade-up">
-      
-
           {/* Accordion Section - Product Type */}
           <div className="mb-3">
             <h6
@@ -251,7 +247,7 @@ const handlePrev = () => {
                             selectedColor.name === color.name ? "active" : ""
                           }`}
                           style={{ backgroundColor: color.hex }}
-                        onMouseEnter={() => setSelectedColor(color)}
+                          onMouseEnter={() => setSelectedColor(color)}
                           title={color.name}
                         ></button>
                       ))}

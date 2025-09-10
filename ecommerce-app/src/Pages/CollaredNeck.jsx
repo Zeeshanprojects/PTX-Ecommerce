@@ -100,7 +100,7 @@ export default function ProductsPage() {
         className="fw-bold m-0 category-heding mb-2 mb-md-0"
         data-aos="fade-up"
       >
-        PRODUCTS
+    COLLARED NECK
       </h1>
       <p className="mb-4" data-aos="fade-up">
         OUR PREMIUM QUALITY COLLECTION

@@ -1,5 +1,5 @@
-body{
-  background-color: #FFFFFF !important;
+body {
+  background-color: #ffffff !important;
 }
 .image-wrapper {
   position: relative;
@@ -260,7 +260,7 @@ body{
 
 .product-card {
   transition: all 0.3s ease-in-out;
-  border: none !important; 
+  border: none !important;
   width: 300px;
 }
 .product-card:hover {
@@ -268,10 +268,10 @@ body{
 }
 
 /* Product Image */
-.product-img {
+/* .product-img {
   max-height: 200px;
   object-fit: contain;
-}
+} */
 
 /* Color Circles */
 .color-circle {
@@ -288,7 +288,6 @@ body{
   transform: scale(1.2);
 }
 
-
 /* Scrollable slider for colors */
 .color-slider {
   display: flex;
@@ -303,13 +302,13 @@ body{
   background: #aaa;
   border-radius: 3px;
 }
-.small-icon{
-  height:30px ;
+.small-icon {
+  height: 30px;
 }
 
 /* Smooth fade effect when image changes */
 .product-img {
-  max-height: 250px;
+  max-height: 300px;
   object-fit: contain;
   transition: opacity 0.4s ease-in-out; /* smooth image change */
 }
@@ -337,11 +336,11 @@ body{
   transform: rotate(180deg); /* flip arrow upward when open */
 }
 
-
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .banner-text {
     font-size: 13px;
   }
+   
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .main-btn {
@@ -359,6 +358,12 @@ body{
   .collection-btn {
     font-size: 12px !important;
   }
+.product-img {
+  max-height: 200px;
+  object-fit: contain;
+  transition: opacity 0.4s ease-in-out; /* smooth image change */
+}
+
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -389,6 +394,13 @@ body{
   .search-bar {
     margin-top: 15px;
   }
+   .product-card {
+
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
+}
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .main-btn {
@@ -414,6 +426,13 @@ body{
   .banner-text {
     font-size: 10px;
   }
+   .product-card {
+ 
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
+}
 }
 @media (max-width: 576px) {
   .product-card {
@@ -468,4 +487,11 @@ body{
     font-size: 20px;
     margin-top: 10% !important;
   }
+  .product-card {
+ 
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
+}
 }

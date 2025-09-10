@@ -13,7 +13,17 @@
   height: 18px;
   cursor: pointer;
 }
+.image-position{
+  height:auto!important;
+    display: flex !important;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items:center !important;
+}
+.shop-img{
 
+  height: 300px !important;
+}
 @media (max-width: 576px) {
   .catalog-image {
     height: 300px !important;

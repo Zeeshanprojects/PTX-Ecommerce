@@ -330,7 +330,7 @@ MEN
         <div className="col-lg-10 mt-3" data-aos="fade-up">
           <div className="row">
             {products.map((product, i) => (
-              <div className="col-md-6 col-lg-3 col-xl-3 text-center" key={i}>
+              <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center" key={i}>
                 <div className="product-card position-relative overflow-hidden rounded p-3">
                   <span className="new-badge position-absolute top-0 start-0 m-2">
                     NEW

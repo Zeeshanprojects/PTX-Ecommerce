@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "./Home.css";
+import "./Shop.css";
 import Image from "../Images/Image"; // make sure your images are exported properly
 
 export default function Shop() {
@@ -608,11 +608,11 @@ export default function Shop() {
                   className="col-sm-12 col-md-6 col-lg-3 col-xl-3 mb-4"
                   data-aos="fade-up"
                 >
-                  <div className="product-card position-relative overflow-hidden rounded shadow-sm">
+                  <div className=" position-relative overflow-hidden rounded shadow-sm">
                     <span className="new-badge position-absolute top-0 start-0 m-2">
                       NEW
                     </span>
-                    <div className="product-img-container position-relative">
+                    <div className="image-position position-relative">
                       <Link
                         to="/productinfo"
                         state={{
@@ -628,7 +628,7 @@ export default function Shop() {
                         <img
                           src={product.image}
                           alt={product.title}
-                          className="img-fluid product-img"
+                          className="img-fluid shop-img"
                         />
                       </Link>
                     </div>

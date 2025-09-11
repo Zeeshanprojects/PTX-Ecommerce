@@ -105,11 +105,11 @@ export default function Short() {
         className={`fw-bold m-0 category-heding mb-2 mb-md-0 ${
           isSidebarOpen ? "d-none d-lg-block" : ""
         }`}
-        data-aos="fade-up"
+     
       >
-        COLLARED NECK
+      SHORT
       </h1>
-      <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`} data-aos="fade-up">
+      <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`} >
         OUR PREMIUM QUALITY COLLECTION
       </p>
       <div className="row mt-4">
@@ -259,7 +259,7 @@ export default function Short() {
         {/* Products Section */}
         <div
           className={`col-lg-10 mt-3 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}
-          data-aos="fade-up"
+        
         >
           <div className="row">
             {products.map((product, i) => (

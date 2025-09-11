@@ -22,7 +22,7 @@ export default function BoatNeck() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.Boatneck1, hex: "#DDD9D6" },
+        { image: Image.Boatneck1, hex: "#B3ADA8" },
       
       ],
     },

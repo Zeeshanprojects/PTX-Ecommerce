@@ -2,12 +2,20 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 import Image from "../Images/Image";
 
-export default function ProductsPage() {
+export default function CollaredNeck() {
   useEffect(() => {
-    document.title = "Products - PTX Ecommerce";
+    document.title = "CollaredNeck - PTX Ecommerce";
   }, []);
 
-  // ✅ Multiple products (categories)
+  // State for sidebar visibility on small screens
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Toggle sidebar visibility
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  // Multiple products (categories)
   const products = [
     {
       title: "Collared Neck",
@@ -25,7 +33,7 @@ export default function ProductsPage() {
       colors: [
         { image: Image.CollaredNeck3, hex: "#1A1C3A" },
         { image: Image.CollaredNeck5, hex: "#080706" },
-          { image: Image.CollaredNeck8, hex: "#6F6940" },
+        { image: Image.CollaredNeck8, hex: "#6F6940" },
       ],
     },
     {
@@ -39,7 +47,7 @@ export default function ProductsPage() {
     },
   ];
 
-  // ✅ State for selected colors of each product
+  // State for selected colors of each product
   const [selectedColors, setSelectedColors] = useState(
     products.map((p) => p.colors[0])
   );
@@ -63,7 +71,7 @@ export default function ProductsPage() {
     }
   };
 
-  // ✅ Sidebar filters
+  // Sidebar filters
   const [openSections, setOpenSections] = useState([
     "productType",
     "size",
@@ -96,18 +104,55 @@ export default function ProductsPage() {
 
   return (
     <div className="container-fluid py-4">
+      {/* Sidebar Toggle Button for Small Screens */}
+      {!isSidebarOpen && (
+        <button
+          className="btn d-lg-none mb-3 w-100"
+          style={{
+            backgroundColor: "#f8f9fa",
+            border: "1px solid #ddd",
+            padding: "8px 16px",
+          }}
+          onClick={toggleSidebar}
+        >
+          Open Filters
+        </button>
+      )}
+
       <h1
-        className="fw-bold m-0 category-heding mb-2 mb-md-0"
+        className={`fw-bold m-0 category-heding mb-2 mb-md-0 ${
+          isSidebarOpen ? "d-none d-lg-block" : ""
+        }`}
         data-aos="fade-up"
       >
-    COLLARED NECK
+        COLLARED NECK
       </h1>
-      <p className="mb-4" data-aos="fade-up">
+      <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`} data-aos="fade-up">
         OUR PREMIUM QUALITY COLLECTION
       </p>
       <div className="row mt-4">
         {/* Sidebar */}
-        <div className="col-lg-2 border-end pe-4" data-aos="fade-up">
+        <div
+          className={`col-lg-2 border-end pe-4 ${
+            isSidebarOpen ? "d-block" : "d-none d-lg-block"
+          }`}
+    
+        >
+          {/* Close Button for Sidebar on Small Screens */}
+          {isSidebarOpen && (
+            <button
+              className="btn d-lg-none mb-3 w-100"
+              style={{
+                backgroundColor: "#f8f9fa",
+                border: "1px solid #ddd",
+                padding: "8px 16px",
+              }}
+              onClick={toggleSidebar}
+            >
+              Close Filters
+            </button>
+          )}
+
           {/* Accordion - Product Type */}
           <div className="mb-3">
             <h6
@@ -230,7 +275,10 @@ export default function ProductsPage() {
         </div>
 
         {/* Products Section */}
-        <div className="col-lg-10 mt-3" data-aos="fade-up">
+        <div
+          className={`col-lg-10 mt-3 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}
+          data-aos="fade-up"
+        >
           <div className="row">
             {products.map((product, i) => (
               <div className="col-md-6 col-lg-3 col-xl-3 text-center" key={i}>
@@ -296,8 +344,7 @@ export default function ProductsPage() {
             ))}
           </div>
         </div>
-      </div>{" "}
-      {/* row end */}
+      </div>
     </div>
   );
 }

@@ -2,49 +2,64 @@ import { useState, useEffect } from "react";
 import "./Home.css";
 import Image from "../Images/Image";
 
-export default function Boatneck() {
+export default function BoatNeck() {
   useEffect(() => {
-    document.title = "Fleece - PTX Ecommerce";
+    document.title = "Boat Neck - PTX Ecommerce";
   }, []);
 
-  const product = {
-    title: "Boat Neck",
-    price: 10.0,
-    fit: "Regular Fit",
-    colors: [
-      { image: Image.Boatneck1, hex: "#CFCFCF" },
-     
-  
-    ],
+  // State for sidebar visibility on small screens
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Toggle sidebar visibility
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [startIndex, setStartIndex] = useState(0);
+  // Multiple products (categories)
+  const products = [
+    {
+      title: "BoatNeck",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Boatneck1, hex: "#DDD9D6" },
+      
+      ],
+    },
+   
+  ];
 
-  // multiple accordions open by default
+  // State for selected colors of each product
+  const [selectedColors, setSelectedColors] = useState(
+    products.map((p) => p.colors[0])
+  );
+
+  const [startIndexes, setStartIndexes] = useState(products.map(() => 0));
+  const visibleCount = 5;
+
+  const handleNext = (i, product) => {
+    if (startIndexes[i] + visibleCount < product.colors.length) {
+      const updated = [...startIndexes];
+      updated[i] = startIndexes[i] + visibleCount;
+      setStartIndexes(updated);
+    }
+  };
+
+  const handlePrev = (i) => {
+    if (startIndexes[i] - visibleCount >= 0) {
+      const updated = [...startIndexes];
+      updated[i] = startIndexes[i] - visibleCount;
+      setStartIndexes(updated);
+    }
+  };
+
+  // Sidebar filters
   const [openSections, setOpenSections] = useState([
     "productType",
     "size",
     "fit",
     "colors",
   ]);
-
-
-const visibleCount = 5; // or 8, or any number you want
-
-const handleNext = () => {
-  if (startIndex + visibleCount < product.colors.length) {
-    setStartIndex(startIndex + visibleCount);
-  }
-};
-
-const handlePrev = () => {
-  if (startIndex - visibleCount >= 0) {
-    setStartIndex(startIndex - visibleCount);
-  }
-};
-
-
   const productTypes = [
     "T-Shirts",
     "Longsleeve T-Shirts",
@@ -57,7 +72,6 @@ const handlePrev = () => {
     "Polos",
     "Pants",
   ];
-
   const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
   const fits = ["Slim Fit", "Regular Fit", "Oversized"];
   const colors = ["White", "Black", "Blue", "Green", "Gray", "Red"];
@@ -72,18 +86,56 @@ const handlePrev = () => {
 
   return (
     <div className="container-fluid py-4">
-      <h1 className="fw-bold m-0 category-heding mb-2 mb-md-0" data-aos="fade-up">
-      BOAT NECK
+      {/* Sidebar Toggle Button for Small Screens */}
+      {!isSidebarOpen && (
+        <button
+          className="btn d-lg-none mb-3 w-100"
+          style={{
+            backgroundColor: "#f8f9fa",
+            border: "1px solid #ddd",
+            padding: "8px 16px",
+          }}
+          onClick={toggleSidebar}
+        >
+          Open Filters
+        </button>
+      )}
+
+      <h1
+        className={`fw-bold m-0 category-heding mb-2 mb-md-0 ${
+          isSidebarOpen ? "d-none d-lg-block" : ""
+        }`}
+     
+      >
+    BOAT NECK
       </h1>
-      <p className="mb-4" data-aos="fade-up">
+      <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`} >
         OUR PREMIUM QUALITY COLLECTION
       </p>
       <div className="row mt-4">
         {/* Sidebar */}
-        <div className="col-lg-2 border-end pe-4" data-aos="fade-up">
-      
+        <div
+          className={`col-lg-2 border-end pe-4 ${
+            isSidebarOpen ? "d-block" : "d-none d-lg-block"
+          }`}
+    
+        >
+          {/* Close Button for Sidebar on Small Screens */}
+          {isSidebarOpen && (
+            <button
+              className="btn d-lg-none mb-3 w-100"
+              style={{
+                backgroundColor: "#f8f9fa",
+                border: "1px solid #ddd",
+                padding: "8px 16px",
+              }}
+              onClick={toggleSidebar}
+            >
+              Close Filters
+            </button>
+          )}
 
-          {/* Accordion Section - Product Type */}
+          {/* Accordion - Product Type */}
           <div className="mb-3">
             <h6
               className="fw-semibold d-flex justify-content-between align-items-center"
@@ -99,7 +151,6 @@ const handlePrev = () => {
                 <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
-
             {openSections.includes("productType") && (
               <div className="ps-2">
                 <ul className="list-unstyled">
@@ -114,7 +165,7 @@ const handlePrev = () => {
             )}
           </div>
 
-          {/* Accordion Section - Size */}
+          {/* Accordion - Size */}
           <div className="mb-3">
             <h6
               className="fw-semibold d-flex justify-content-between align-items-center"
@@ -130,7 +181,6 @@ const handlePrev = () => {
                 <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
-
             {openSections.includes("size") && (
               <div className="ps-2">
                 <ul className="list-unstyled">
@@ -145,7 +195,7 @@ const handlePrev = () => {
             )}
           </div>
 
-          {/* Accordion Section - Fit */}
+          {/* Accordion - Fit */}
           <div className="mb-3">
             <h6
               className="fw-semibold d-flex justify-content-between align-items-center"
@@ -161,7 +211,6 @@ const handlePrev = () => {
                 <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
-
             {openSections.includes("fit") && (
               <div className="ps-2">
                 <ul className="list-unstyled">
@@ -176,7 +225,7 @@ const handlePrev = () => {
             )}
           </div>
 
-          {/* Accordion Section - Colors */}
+          {/* Accordion - Colors */}
           <div className="mb-3">
             <h6
               className="fw-semibold d-flex justify-content-between align-items-center"
@@ -192,7 +241,6 @@ const handlePrev = () => {
                 <img src={Image.down} alt="down" className="small-icon" />
               </span>
             </h6>
-
             {openSections.includes("colors") && (
               <div className="ps-2">
                 <ul className="list-unstyled">
@@ -208,68 +256,77 @@ const handlePrev = () => {
           </div>
         </div>
 
-        {/* Product Section */}
-        <div className="col-lg-10 mt-3" data-aos="fade-up">
+        {/* Products Section */}
+        <div
+          className={`col-lg-10 mt-3 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}
+        
+        >
           <div className="row">
-            <div className="col-md-6 col-lg-4 text-center">
-              <div className="product-card position-relative overflow-hidden rounded p-3">
-                <span className="new-badge position-absolute top-0 start-0 m-2">
-                  NEW
-                </span>
+            {products.map((product, i) => (
+              <div className="col-md-6 col-lg-3 col-xl-3 text-center" key={i}>
+                <div className="product-card position-relative overflow-hidden rounded p-3">
+                  <span className="new-badge position-absolute top-0 start-0 m-2">
+                    NEW
+                  </span>
 
-                {/* Product Image */}
-                <div className="product-img-container">
-                  <img
-                    src={selectedColor.image}
-                    alt={product.title}
-                    className="img-fluid product-img"
-                  />
-                </div>
-
-                {/* Product Details */}
-                <h5 className="mt-3 fw-bold">{product.title}</h5>
-                <p className="text-muted mb-1">${product.price.toFixed(2)}</p>
-                <p className="text-muted small">{product.fit}</p>
-                <p className="text-muted small">
-                  {product.colors.length} Colours
-                </p>
-
-                {/* Color Selector */}
-                <div className="d-flex align-items-center justify-content-center mt-3">
-                  <img
-                    src={Image.left}
-                    alt="left"
-                    onClick={handlePrev}
-                    className="small-icon"
-                  />
-                  <div className="d-flex">
-                    {product.colors
-                      .slice(startIndex, startIndex + visibleCount)
-                      .map((color, index) => (
-                        <button
-                          key={index}
-                          className={`color-circle ${
-                            selectedColor.name === color.name ? "active" : ""
-                          }`}
-                          style={{ backgroundColor: color.hex }}
-                        onMouseEnter={() => setSelectedColor(color)}
-                          title={color.name}
-                        ></button>
-                      ))}
+                  {/* Product Image */}
+                  <div className="product-img-container">
+                    <img
+                      src={selectedColors[i].image}
+                      alt={product.title}
+                      className="img-fluid product-img"
+                    />
                   </div>
-                  <img
-                    src={Image.right}
-                    alt="right"
-                    onClick={handleNext}
-                    className="small-icon"
-                  />
+
+                  {/* Product Details */}
+                  <h5 className="mt-3 fw-bold">{product.title}</h5>
+                  <p className="text-muted mb-1">${product.price.toFixed(2)}</p>
+                  <p className="text-muted small">{product.fit}</p>
+                  <p className="text-muted small">
+                    {product.colors.length} Colours
+                  </p>
+
+                  {/* Color Selector */}
+                  <div className="d-flex align-items-center justify-content-center mt-3">
+                    <img
+                      src={Image.left}
+                      alt="left"
+                      onClick={() => handlePrev(i)}
+                      className="small-icon"
+                    />
+                    <div className="d-flex">
+                      {product.colors
+                        .slice(startIndexes[i], startIndexes[i] + visibleCount)
+                        .map((color, index) => (
+                          <button
+                            key={index}
+                            className={`color-circle ${
+                              selectedColors[i].hex === color.hex
+                                ? "active"
+                                : ""
+                            }`}
+                            style={{ backgroundColor: color.hex }}
+                            onMouseEnter={() => {
+                              const updated = [...selectedColors];
+                              updated[i] = color;
+                              setSelectedColors(updated);
+                            }}
+                          ></button>
+                        ))}
+                    </div>
+                    <img
+                      src={Image.right}
+                      alt="right"
+                      onClick={() => handleNext(i, product)}
+                      className="small-icon"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>{" "}
-      {/* row end */}
+      </div>
     </div>
   );
 }

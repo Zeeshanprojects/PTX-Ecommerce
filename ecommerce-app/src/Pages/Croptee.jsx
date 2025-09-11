@@ -121,7 +121,7 @@ export default function croptee() {
           isSidebarOpen ? "d-none d-lg-block" : ""
         }`}
       >
-        PULLOVER CropteeS
+        CROPTEE
       </h1>
       <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}>
         OUR PREMIUM QUALITY COLLECTION

@@ -121,7 +121,7 @@ export default function Mineralwash() {
           isSidebarOpen ? "d-none d-lg-block" : ""
         }`}
       >
-        PULLOVER MineralwashS
+      MINERAL WASH
       </h1>
       <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}>
         OUR PREMIUM QUALITY COLLECTION

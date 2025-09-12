@@ -107,7 +107,7 @@ export default function CollaredNeck() {
       {/* Sidebar Toggle Button for Small Screens */}
       {!isSidebarOpen && (
         <button
-          className="btn d-lg-none mb-3 w-100"
+          className="btn d-lg-none mb-3 w-100 "
           style={{
             backgroundColor: "#f8f9fa",
             border: "1px solid #ddd",

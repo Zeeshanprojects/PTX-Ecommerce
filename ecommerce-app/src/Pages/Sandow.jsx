@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image";
 
@@ -9,6 +10,7 @@ export default function Sandow() {
 
   // State for sidebar visibility on small screens
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate=useNavigate()
 
   // Toggle sidebar visibility
   const toggleSidebar = () => {
@@ -21,12 +23,8 @@ export default function Sandow() {
       title: "Sandow",
       price: 10.0,
       fit: "Regular Fit",
-      colors: [
-        { image: Image.Sandow1, hex: "#DDD9D6" },
-      
-      ],
+      colors: [{ image: Image.Sandow1, hex: "#DDD9D6",name:"Prussian Blue" }],
     },
-   
   ];
 
   // State for selected colors of each product
@@ -105,11 +103,10 @@ export default function Sandow() {
         className={`fw-bold m-0 category-heding mb-2 mb-md-0 ${
           isSidebarOpen ? "d-none d-lg-block" : ""
         }`}
-     
       >
-    SANDOW
+        SANDOW
       </h1>
-      <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`} >
+      <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}>
         OUR PREMIUM QUALITY COLLECTION
       </p>
       <div className="row mt-4">
@@ -118,7 +115,6 @@ export default function Sandow() {
           className={`col-lg-2 border-end pe-4 ${
             isSidebarOpen ? "d-block" : "d-none d-lg-block"
           }`}
-    
         >
           {/* Close Button for Sidebar on Small Screens */}
           {isSidebarOpen && (
@@ -258,8 +254,9 @@ export default function Sandow() {
 
         {/* Products Section */}
         <div
-          className={`col-lg-10 mt-3 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}
-        
+          className={`col-lg-10 mt-3 ${
+            isSidebarOpen ? "d-none d-lg-block" : ""
+          }`}
         >
           <div className="row">
             {products.map((product, i) => (
@@ -271,11 +268,24 @@ export default function Sandow() {
 
                   {/* Product Image */}
                   <div className="product-img-container">
-                    <img
-                      src={selectedColors[i].image}
-                      alt={product.title}
-                      className="img-fluid product-img"
-                    />
+                   <img
+                    src={selectedColors[i].image}
+                    alt={product.title}
+                    className="img-fluid product-img"
+                    style={{ cursor: "pointer" }} // makes it look clickable
+                    onClick={() =>
+                      navigate("/productinfo", {
+                        state: {
+                          image: selectedColors[i].image,
+                          title: product.title,
+                          price: product.price,
+                          color: selectedColors[i].name,
+                          GSM: "220", // you can pass actual GSM if available
+                          category: "Collared Neck",
+                        },
+                      })
+                    }
+                  />
                   </div>
 
                   {/* Product Details */}

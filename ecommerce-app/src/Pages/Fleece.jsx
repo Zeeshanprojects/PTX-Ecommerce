@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image";
 
@@ -7,10 +8,11 @@ export default function Fleece() {
     document.title = "Fleeece - PTX Ecommerce";
   }, []);
 
-  // State for sidebar visibility on small screens
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // Toggle sidebar visibility
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const navigate = useNavigate();
+
+
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -22,24 +24,24 @@ export default function Fleece() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.Fleece1, hex: "#CBCBCB" },
-        { image: Image.Fleece2, hex: "#3D603D" },
-        { image: Image.Fleece3, hex: "#777F88" },
-        { image: Image.Fleece4, hex: "#BF92BA" },
-        { image: Image.Fleece5, hex: "#B5AE97" },
-        { image: Image.Fleece6, hex: "#787773" },
-        { image: Image.Fleece7, hex: "#1F1F1F" },
-        { image: Image.Fleece8, hex: "#9B73B2" },
-        { image: Image.Fleece9, hex: "#6B7CAF" },
-        { image: Image.Fleece10, hex: "#2C211E" },
-        { image: Image.Fleece11, hex: "#2B2F33" },
-        { image: Image.Fleece12, hex: "#5978D2" },
-        { image: Image.Fleece13, hex: "#5B636E" },
-        { image: Image.Fleece14, hex: "#3A0962" },
-        { image: Image.Fleece15, hex: "#716250" },
-        { image: Image.Fleece16, hex: "#C7A22C" },
-        { image: Image.Fleece17, hex: "#162519" },
-        { image: Image.Fleece18, hex: "#6745C0" },
+        { image: Image.Fleece1, hex: "#CBCBCB",name:"Light Gray" },
+        { image: Image.Fleece2, hex: "#3D603D",name:"Hunter Green" },
+        { image: Image.Fleece3, hex: "#777F88",name:"Slate Gray" },
+        { image: Image.Fleece4, hex: "#BF92BA",name:"Pastel Violet" },
+        { image: Image.Fleece5, hex: "#B5AE97",name:"Khaki" },
+        { image: Image.Fleece6, hex: "#787773",name:"Trolley Grey" },
+        { image: Image.Fleece7, hex: "#1F1F1F",name:"Dark Jungle Green" },
+        { image: Image.Fleece8, hex: "#9B73B2",name:"Purple Mountain Majesty" },
+        { image: Image.Fleece9, hex: "#6B7CAF",name:"Glaucous" },
+        { image: Image.Fleece10, hex: "#2C211E",name:"Bistre" },
+        { image: Image.Fleece11, hex: "#2B2F33",name:"Jungle Green" },
+        { image: Image.Fleece12, hex: "#5978D2",name:"Han Blue" },
+        { image: Image.Fleece13, hex: "#5B636E",name:"Cadet" },
+        { image: Image.Fleece14, hex: "#3A0962",name:"Persian Indigo" },
+        { image: Image.Fleece15, hex: "#716250",name:"Pastel Brown" },
+        { image: Image.Fleece16, hex: "#C7A22C",name:"Satin sheen gold" },
+        { image: Image.Fleece17, hex: "#162519",name:"Dark Green" },
+        { image: Image.Fleece18, hex: "#6745C0",name:"Iris" },
       ],
     },
   ];
@@ -285,11 +287,24 @@ export default function Fleece() {
 
                   {/* Product Image */}
                   <div className="product-img-container">
-                    <img
-                      src={selectedColors[i].image}
-                      alt={product.title}
-                      className="img-fluid product-img"
-                    />
+                     <img
+                    src={selectedColors[i].image}
+                    alt={product.title}
+                    className="img-fluid product-img"
+                    style={{ cursor: "pointer" }} // makes it look clickable
+                    onClick={() =>
+                      navigate("/productinfo", {
+                        state: {
+                          image: selectedColors[i].image,
+                          title: product.title,
+                          price: product.price,
+                          color: selectedColors[i].name,
+                          GSM: "220", // you can pass actual GSM if available
+                          category: "Collared Neck",
+                        },
+                      })
+                    }
+                  />
                   </div>
 
                   {/* Product Details */}

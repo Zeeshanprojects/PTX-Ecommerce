@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image";
 
@@ -9,6 +10,7 @@ export default function Junior() {
 
   // State for sidebar visibility on small screens
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate=useNavigate()
 
   // Toggle sidebar visibility
   const toggleSidebar = () => {
@@ -22,24 +24,26 @@ export default function Junior() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.Croptee1, hex: "#DDD9D6" },
-        { image: Image.Croptee2, hex: "#DDD9D6" },
-        { image: Image.Croptee3, hex: "#DDD9D6" },
-        { image: Image.Croptee4, hex: "#DDD9D6" },
-        { image: Image.Croptee5, hex: "#DDD9D6" },
-        { image: Image.Croptee6, hex: "#DDD9D6" },
-        { image: Image.Croptee7, hex: "#DDD9D6" },
-        { image: Image.Croptee8, hex: "#DDD9D6" },
-        { image: Image.Croptee9, hex: "#DDD9D6" },
-        { image: Image.Croptee10, hex: "#DDD9D6" },
-        { image: Image.Croptee11, hex: "#DDD9D6" },
-        { image: Image.Croptee12, hex: "#DDD9D6" },
-        { image: Image.Croptee13, hex: "#DDD9D6" },
-        { image: Image.Croptee14, hex: "#DDD9D6" },
-        { image: Image.Croptee15, hex: "#DDD9D6" },
-        { image: Image.Croptee16, hex: "#DDD9D6" },
-        { image: Image.Croptee17, hex: "#DDD9D6" },
-        { image: Image.Croptee18, hex: "#DDD9D6" },
+        { image: Image.Croptee1, hex: "#9C9383" },
+        { image: Image.Croptee2, hex: "#D372B2" },
+        { image: Image.Croptee3, hex: "#2D222F" },
+        { image: Image.Croptee4, hex: "#CAB45A" },
+        { image: Image.Croptee5, hex: "#D02939" },
+        { image: Image.Croptee6, hex: "#66AA87" },
+        { image: Image.Croptee7, hex: "#6174B5" },
+        { image: Image.Croptee8, hex: "#C8C438" },
+        { image: Image.Croptee9, hex: "#968570" },
+        { image: Image.Croptee10, hex: "#A0333D" },
+       
+      ],
+    },
+        {
+      title: "BoatNeck",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Boatneck1, hex: "#B3ADA8" },
+      
       ],
     },
   ];
@@ -121,7 +125,7 @@ export default function Junior() {
           isSidebarOpen ? "d-none d-lg-block" : ""
         }`}
       >
-        CROPTEE
+JUNIOR
       </h1>
       <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}>
         OUR PREMIUM QUALITY COLLECTION
@@ -285,11 +289,24 @@ export default function Junior() {
 
                   {/* Product Image */}
                   <div className="product-img-container">
-                    <img
-                      src={selectedColors[i].image}
-                      alt={product.title}
-                      className="img-fluid product-img"
-                    />
+                   <img
+                    src={selectedColors[i].image}
+                    alt={product.title}
+                    className="img-fluid product-img"
+                    style={{ cursor: "pointer" }} // makes it look clickable
+                    onClick={() =>
+                      navigate("/productinfo", {
+                        state: {
+                          image: selectedColors[i].image,
+                          title: product.title,
+                          price: product.price,
+                          color: selectedColors[i].hex,
+                          GSM: "220", // you can pass actual GSM if available
+                          category: "Collared Neck",
+                        },
+                      })
+                    }
+                  />
                   </div>
 
                   {/* Product Details */}

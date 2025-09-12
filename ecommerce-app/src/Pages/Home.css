@@ -340,6 +340,13 @@ body {
   .banner-text {
     font-size: 13px;
   }
+     .product-card {
+
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
+}
    
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -358,10 +365,12 @@ body {
   .collection-btn {
     font-size: 12px !important;
   }
-.product-img {
-  max-height: 200px;
-  object-fit: contain;
-  transition: opacity 0.4s ease-in-out; /* smooth image change */
+   .product-card {
+
+  display: flex;
+flex-direction: column;
+  justify-content: center;
+  width: 100% !important;
 }
 
 }

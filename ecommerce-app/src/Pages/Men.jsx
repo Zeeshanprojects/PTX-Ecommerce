@@ -143,15 +143,7 @@ export default function Men() {
         { image: Image.Hoodie18, hex: "#2A4430" },
       ],
     },
-    {
-      title: "BoatNeck",
-      price: 10.0,
-      fit: "Regular Fit",
-      colors: [
-        { image: Image.Boatneck1, hex: "#B3ADA8" },
-      
-      ],
-    },
+    
   ];
 
   // State for selected colors of each product

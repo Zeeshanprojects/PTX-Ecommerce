@@ -36,6 +36,7 @@ export default function Men() {
         { image: Image.CollaredNeck8, hex: "#6F6940" },
       ],
     },
+    
     {
       title: "Mineral Wash",
       price: 10.0,
@@ -43,6 +44,112 @@ export default function Men() {
       colors: [
         { image: Image.CollaredNeck4, hex: "#E20F22" },
         { image: Image.CollaredNeck6, hex: "#776A3A" },
+      ],
+    },
+      {
+      title: "Mineral Wash",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Mineralwash1, hex: "#6EB49C" },
+        { image: Image.Mineralwash2, hex: "#D4CA79" },
+        { image: Image.Mineralwash3, hex: "#D7505E" },
+        { image: Image.Mineralwash4, hex: "#6A73A0" },
+        { image: Image.Mineralwash5, hex: "#151419" },
+        { image: Image.Mineralwash6, hex: "#9E937F" },
+        { image: Image.Mineralwash7, hex: "#76787C" },
+        { image: Image.Mineralwash8, hex: "#668ECA" },
+        { image: Image.Mineralwash9, hex: "#6B604F" },
+        { image: Image.Mineralwash10, hex: "#AEAEAE" },
+        { image: Image.Mineralwash11, hex: "#528B71" },
+        { image: Image.Mineralwash12, hex: "#242424" },
+        { image: Image.Mineralwash13, hex: "#DD95DD" },
+        { image: Image.Mineralwash14, hex: "#8C100D" },
+        { image: Image.Mineralwash15, hex: "#516CA7" },
+        { image: Image.Mineralwash16, hex: "#E7CD10" },
+        { image: Image.Mineralwash17, hex: "#7F6D53" },
+        { image: Image.Mineralwash18, hex: "#9F8237" },
+      ],
+    },
+     {
+      title: "Sandow",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [{ image: Image.Sandow1, hex: "#DDD9D6" }],
+    },
+    {
+      title: "Fleece",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Fleece1, hex: "#CBCBCB" },
+        { image: Image.Fleece2, hex: "#3D603D" },
+        { image: Image.Fleece3, hex: "#777F88" },
+        { image: Image.Fleece4, hex: "#BF92BA" },
+        { image: Image.Fleece5, hex: "#B5AE97" },
+        { image: Image.Fleece6, hex: "#787773" },
+        { image: Image.Fleece7, hex: "#1F1F1F" },
+        { image: Image.Fleece8, hex: "#9B73B2" },
+        { image: Image.Fleece9, hex: "#6B7CAF" },
+        { image: Image.Fleece10, hex: "#2C211E" },
+        { image: Image.Fleece11, hex: "#2B2F33" },
+        { image: Image.Fleece12, hex: "#5978D2" },
+        { image: Image.Fleece13, hex: "#5B636E" },
+        { image: Image.Fleece14, hex: "#3A0962" },
+        { image: Image.Fleece15, hex: "#716250" },
+        { image: Image.Fleece16, hex: "#C7A22C" },
+        { image: Image.Fleece17, hex: "#162519" },
+        { image: Image.Fleece18, hex: "#6745C0" },
+      ],
+    },
+     {
+      title: "Short",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Short1, hex: "#DDD9D6" },
+      
+      ],
+    },
+   
+      {
+      title: "Flannel Shirts",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [{ image: Image.Shirt1, hex: "#4A0B0C" }],
+    },
+       {
+      title: "Hoodies",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Hoodie1, hex: "#DAD8D6" },
+        { image: Image.Hoodie2, hex: "#2A452A" },
+        { image: Image.Hoodie3, hex: "#7B7361" },
+        { image: Image.Hoodie4, hex: "#D0ACDB" },
+        { image: Image.Hoodie5, hex: "#B2AF9B" },
+        { image: Image.Hoodie6, hex: "#ADA995" },
+        { image: Image.Hoodie7, hex: "#1B1B1B" },
+        { image: Image.Hoodie8, hex: "#A6CDD7" },
+        { image: Image.Hoodie9, hex: "#BBAEBB" },
+        { image: Image.Hoodie10, hex: "#362617" },
+        { image: Image.Hoodie11, hex: "#932221" },
+        { image: Image.Hoodie12, hex: "#404040" },
+        { image: Image.Hoodie13, hex: "#76B9F0" },
+        { image: Image.Hoodie14, hex: "#706D67" },
+        { image: Image.Hoodie15, hex: "#411B6C" },
+        { image: Image.Hoodie16, hex: "#846C59" },
+        { image: Image.Hoodie17, hex: "#DAA931" },
+        { image: Image.Hoodie18, hex: "#2A4430" },
+      ],
+    },
+    {
+      title: "BoatNeck",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Boatneck1, hex: "#B3ADA8" },
+      
       ],
     },
   ];
@@ -125,7 +232,7 @@ export default function Men() {
         }`}
      
       >
-        COLLARED NECK
+       MEN
       </h1>
       <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`} >
         OUR PREMIUM QUALITY COLLECTION

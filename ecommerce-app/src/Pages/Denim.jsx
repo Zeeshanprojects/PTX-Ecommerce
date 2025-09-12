@@ -23,7 +23,7 @@ export default function Denim() {
       title: "Denim",
       price: 10.0,
       fit: "Regular Fit",
-      colors: [{ image: Image.Denim1, hex: "#DDD9D6" }],
+      colors: [{ image: Image.Denim1, hex: "#DDD9D6",name:"Blue" }],
     },
   ];
 
@@ -279,7 +279,7 @@ export default function Denim() {
                           image: selectedColors[i].image,
                           title: product.title,
                           price: product.price,
-                          color: selectedColors[i].hex,
+                          color: selectedColors[i].name,
                           GSM: "220", // you can pass actual GSM if available
                           category: "Collared Neck",
                         },

@@ -91,7 +91,7 @@ export default function Productinfo() {
             </div>
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-0 p-3 info-right-column strict-spacing">
-            <h6 className=" mt-3 text-muted">Men</h6>
+           
             <h3 className="">{title}</h3>
             <h5 className="text-muted mb-3 ">USD {price}.00 </h5>
             <label className="me-3 fw-semibold ">Sizes Available</label>

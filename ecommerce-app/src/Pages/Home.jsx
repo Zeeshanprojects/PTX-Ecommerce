@@ -160,14 +160,14 @@ export default function Home() {
             <h5> SALE IS ON</h5>
             <h1>50 % OFF</h1>
              <h5 className="mt-1"> READY TO WEAR</h5>
-            {/* <a href="/product-section">
+            <a href="/shop">
               <button
                 type="button"
                 class="btn btn-outline-light btn-lg ps-5 pe-5 mt-3"
               >
                 SHOP NOW
               </button>
-            </a> */}
+            </a>
           </div>
         </div>
       </div>

@@ -22,24 +22,26 @@ export default function Junior() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.Croptee1, hex: "#DDD9D6" },
-        { image: Image.Croptee2, hex: "#DDD9D6" },
-        { image: Image.Croptee3, hex: "#DDD9D6" },
-        { image: Image.Croptee4, hex: "#DDD9D6" },
-        { image: Image.Croptee5, hex: "#DDD9D6" },
-        { image: Image.Croptee6, hex: "#DDD9D6" },
-        { image: Image.Croptee7, hex: "#DDD9D6" },
-        { image: Image.Croptee8, hex: "#DDD9D6" },
-        { image: Image.Croptee9, hex: "#DDD9D6" },
-        { image: Image.Croptee10, hex: "#DDD9D6" },
-        { image: Image.Croptee11, hex: "#DDD9D6" },
-        { image: Image.Croptee12, hex: "#DDD9D6" },
-        { image: Image.Croptee13, hex: "#DDD9D6" },
-        { image: Image.Croptee14, hex: "#DDD9D6" },
-        { image: Image.Croptee15, hex: "#DDD9D6" },
-        { image: Image.Croptee16, hex: "#DDD9D6" },
-        { image: Image.Croptee17, hex: "#DDD9D6" },
-        { image: Image.Croptee18, hex: "#DDD9D6" },
+        { image: Image.Croptee1, hex: "#9C9383" },
+        { image: Image.Croptee2, hex: "#D372B2" },
+        { image: Image.Croptee3, hex: "#2D222F" },
+        { image: Image.Croptee4, hex: "#CAB45A" },
+        { image: Image.Croptee5, hex: "#D02939" },
+        { image: Image.Croptee6, hex: "#66AA87" },
+        { image: Image.Croptee7, hex: "#6174B5" },
+        { image: Image.Croptee8, hex: "#C8C438" },
+        { image: Image.Croptee9, hex: "#968570" },
+        { image: Image.Croptee10, hex: "#A0333D" },
+       
+      ],
+    },
+        {
+      title: "BoatNeck",
+      price: 10.0,
+      fit: "Regular Fit",
+      colors: [
+        { image: Image.Boatneck1, hex: "#B3ADA8" },
+      
       ],
     },
   ];
@@ -121,7 +123,7 @@ export default function Junior() {
           isSidebarOpen ? "d-none d-lg-block" : ""
         }`}
       >
-        CROPTEE
+JUNIOR
       </h1>
       <p className={`mb-4 ${isSidebarOpen ? "d-none d-lg-block" : ""}`}>
         OUR PREMIUM QUALITY COLLECTION

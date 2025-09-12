@@ -288,14 +288,7 @@ export default function CollaredNeck() {
                     NEW
                   </span>
 
-                  {/*              
-                  <div className="product-img-container">
-                    <img
-                      src={selectedColors[i].image}
-                      alt={product.title}
-                      className="img-fluid product-img"
-                    />
-                  </div> */}
+            
                   <img
                     src={selectedColors[i].image}
                     alt={product.title}

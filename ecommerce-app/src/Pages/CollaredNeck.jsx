@@ -24,8 +24,8 @@ export default function CollaredNeck() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.CollaredNeck1, hex: "#101012" },
-        { image: Image.CollaredNeck2, hex: "#070709" },
+        { image: Image.CollaredNeck1, hex: "#101012", name:"Onyx" },
+        { image: Image.CollaredNeck2, hex: "#070709",name:"Oxford Blue" },
       ],
     },
     {
@@ -33,9 +33,9 @@ export default function CollaredNeck() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.CollaredNeck3, hex: "#1A1C3A" },
-        { image: Image.CollaredNeck5, hex: "#080706" },
-        { image: Image.CollaredNeck8, hex: "#6F6940" },
+        { image: Image.CollaredNeck3, hex: "#1A1C3A", name:"Oxford Blue" },
+        { image: Image.CollaredNeck5, hex: "#080706",name:"Onyx" },
+        { image: Image.CollaredNeck8, hex: "#6F6940",name:"Dark Olive green" },
       ],
     },
     {
@@ -43,8 +43,8 @@ export default function CollaredNeck() {
       price: 10.0,
       fit: "Slim Fit",
       colors: [
-        { image: Image.CollaredNeck4, hex: "#E20F22" },
-        { image: Image.CollaredNeck6, hex: "#776A3A" },
+        { image: Image.CollaredNeck4, hex: "#E20F22",name:"Cadmium red" },
+        { image: Image.CollaredNeck6, hex: "#776A3A",name:"Dark Tan" },
       ],
     },
   ];
@@ -293,14 +293,15 @@ export default function CollaredNeck() {
                     src={selectedColors[i].image}
                     alt={product.title}
                     className="img-fluid product-img"
-                    style={{ cursor: "pointer" }} // makes it look clickable
+                    style={{ cursor: "pointer" }} 
                     onClick={() =>
                       navigate("/productinfo", {
                         state: {
                           image: selectedColors[i].image,
                           title: product.title,
                           price: product.price,
-                          color: selectedColors[i].hex,
+                          color: selectedColors[i].name,
+                   
                           GSM: "220", // you can pass actual GSM if available
                           category: "Collared Neck",
                         },

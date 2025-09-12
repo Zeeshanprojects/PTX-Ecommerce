@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Image from "../Images/Image";
 
@@ -9,6 +10,7 @@ export default function Men() {
 
   // State for sidebar visibility on small screens
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const navigate=useNavigate()
 
   // Toggle sidebar visibility
   const toggleSidebar = () => {
@@ -388,11 +390,24 @@ export default function Men() {
 
                   {/* Product Image */}
                   <div className="product-img-container">
-                    <img
-                      src={selectedColors[i].image}
-                      alt={product.title}
-                      className="img-fluid product-img"
-                    />
+                   <img
+                    src={selectedColors[i].image}
+                    alt={product.title}
+                    className="img-fluid product-img"
+                    style={{ cursor: "pointer" }} // makes it look clickable
+                    onClick={() =>
+                      navigate("/productinfo", {
+                        state: {
+                          image: selectedColors[i].image,
+                          title: product.title,
+                          price: product.price,
+                          color: selectedColors[i].hex,
+                          GSM: "220", // you can pass actual GSM if available
+                          category: "Collared Neck",
+                        },
+                      })
+                    }
+                  />
                   </div>
 
                   {/* Product Details */}

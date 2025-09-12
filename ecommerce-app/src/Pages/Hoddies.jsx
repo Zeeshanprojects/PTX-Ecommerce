@@ -24,24 +24,24 @@ export default function Hoddies() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.Hoodie1, hex: "#DAD8D6" },
-        { image: Image.Hoodie2, hex: "#2A452A" },
-        { image: Image.Hoodie3, hex: "#7B7361" },
-        { image: Image.Hoodie4, hex: "#D0ACDB" },
-        { image: Image.Hoodie5, hex: "#B2AF9B" },
-        { image: Image.Hoodie6, hex: "#ADA995" },
-        { image: Image.Hoodie7, hex: "#1B1B1B" },
-        { image: Image.Hoodie8, hex: "#A6CDD7" },
-        { image: Image.Hoodie9, hex: "#BBAEBB" },
-        { image: Image.Hoodie10, hex: "#362617" },
-        { image: Image.Hoodie11, hex: "#932221" },
-        { image: Image.Hoodie12, hex: "#404040" },
-        { image: Image.Hoodie13, hex: "#76B9F0" },
-        { image: Image.Hoodie14, hex: "#706D67" },
-        { image: Image.Hoodie15, hex: "#411B6C" },
-        { image: Image.Hoodie16, hex: "#846C59" },
-        { image: Image.Hoodie17, hex: "#DAA931" },
-        { image: Image.Hoodie18, hex: "#2A4430" },
+        { image: Image.Hoodie1, hex: "#DAD8D6",name:"FGainsboro" },
+        { image: Image.Hoodie2, hex: "#2A452A",name:"Myrtle" },
+        { image: Image.Hoodie3, hex: "#7B7361",name:"Shadow" },
+        { image: Image.Hoodie4, hex: "#D0ACDB",name:"Wisteria" },
+        { image: Image.Hoodie5, hex: "#B2AF9B",name:"Grullo" },
+        { image: Image.Hoodie6, hex: "#ADA995",name:"Shadow" },
+        { image: Image.Hoodie7, hex: "#1B1B1B",name:"Onyx" },
+        { image: Image.Hoodie8, hex: "#A6CDD7",name:"Light Blue" },
+        { image: Image.Hoodie9, hex: "#BBAEBB",name:"Pastel Purple" },
+        { image: Image.Hoodie10, hex: "#362617",name:"Bistre" },
+        { image: Image.Hoodie11, hex: "#932221",name:"Vivid aAuburn" },
+        { image: Image.Hoodie12, hex: "#404040",name:"Outer Space" },
+        { image: Image.Hoodie13, hex: "#76B9F0",name:"Maya Blue" },
+        { image: Image.Hoodie14, hex: "#706D67",name:"Dim Gray" },
+        { image: Image.Hoodie15, hex: "#411B6C",name:"Persian Indigo" },
+        { image: Image.Hoodie16, hex: "#846C59",name:"Pastel Brown" },
+        { image: Image.Hoodie17, hex: "#DAA931",name:"Urobilin"},
+        { image: Image.Hoodie18, hex: "#2A4430",name:"Green" },
       ],
     },
   ];
@@ -287,11 +287,24 @@ export default function Hoddies() {
 
                   {/* Product Image */}
                   <div className="product-img-container">
-                    <img
-                      src={selectedColors[i].image}
-                      alt={product.title}
-                      className="img-fluid product-img"
-                    />
+                   <img
+                    src={selectedColors[i].image}
+                    alt={product.title}
+                    className="img-fluid product-img"
+                    style={{ cursor: "pointer" }} // makes it look clickable
+                    onClick={() =>
+                      navigate("/productinfo", {
+                        state: {
+                          image: selectedColors[i].image,
+                          title: product.title,
+                          price: product.price,
+                          color: selectedColors[i].name,
+                          GSM: "220", // you can pass actual GSM if available
+                          category: "Collared Neck",
+                        },
+                      })
+                    }
+                  />
                   </div>
 
                   {/* Product Details */}
@@ -305,23 +318,11 @@ export default function Hoddies() {
                   {/* Color Selector */}
                   <div className="d-flex align-items-center justify-content-center mt-3">
                     <img
-                    src={selectedColors[i].image}
-                    alt={product.title}
-                    className="img-fluid product-img"
-                    style={{ cursor: "pointer" }} // makes it look clickable
-                    onClick={() =>
-                      navigate("/productinfo", {
-                        state: {
-                          image: selectedColors[i].image,
-                          title: product.title,
-                          price: product.price,
-                          color: selectedColors[i].hex,
-                          GSM: "220", // you can pass actual GSM if available
-                          category: "Collared Neck",
-                        },
-                      })
-                    }
-                  />    
+                      src={Image.left}
+                      alt="left"
+                      onClick={() => handlePrev(i)}
+                      className="small-icon"
+                    />
                     <div className="d-flex">
                       {product.colors
                         .slice(startIndexes[i], startIndexes[i] + visibleCount)

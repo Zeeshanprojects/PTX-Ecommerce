@@ -24,7 +24,7 @@ export default function BoatNeck() {
       price: 10.0,
       fit: "Regular Fit",
       colors: [
-        { image: Image.Boatneck1, hex: "#B3ADA8" },
+        { image: Image.Boatneck1, hex: "#B3ADA8",name:"Dark Gray" },
       
       ],
     },
@@ -284,7 +284,7 @@ export default function BoatNeck() {
                           image: selectedColors[i].image,
                           title: product.title,
                           price: product.price,
-                          color: selectedColors[i].hex,
+                          color: selectedColors[i].name,
                           GSM: "220", // you can pass actual GSM if available
                           category: "Collared Neck",
                         },

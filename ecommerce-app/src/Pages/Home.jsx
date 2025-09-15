@@ -58,6 +58,7 @@ export default function Home() {
           src={Image.mainbanner}
           alt="slider-image1"
           className="bannerimage"
+          fetchPriority="high"
         />
         <div className="main-btn">
           <Link to="/shop">

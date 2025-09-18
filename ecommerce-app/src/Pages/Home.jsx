@@ -59,6 +59,7 @@ export default function Home() {
           alt="slider-image1"
           className="bannerimage"
           fetchPriority="high"
+          loading="eager"
         />
         <div className="main-btn">
           <Link to="/shop">

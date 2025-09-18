@@ -8,9 +8,11 @@ body {
 }
 .bannerimage {
   width: 100%;
-  height: auto;
+  height: 100vh; /* or a fixed ratio */
+  object-fit: cover;
   display: block;
 }
+
 .main-btn {
   position: absolute;
   top: 72%;

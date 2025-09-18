@@ -177,7 +177,7 @@ export default function Home() {
       <div className="space"></div>
 
       {/* Product Grid */}
-<div id="product-section">
+<div id="product-section" >
   <h2 className="uppercase text-center fw-bold" data-aos="fade-up">
         CURATED ESSENTIALS FOR A TIMELESS WARDROBE
       </h2>

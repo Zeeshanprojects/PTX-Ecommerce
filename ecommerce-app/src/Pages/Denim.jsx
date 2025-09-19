@@ -23,7 +23,7 @@ export default function Denim() {
       title: "Denim",
       price: 10.0,
       fit: "Regular Fit",
-      colors: [{ image: Image.Denim1, hex: "#DDD9D6", name: "Blue" }],
+      colors: [{ image: Image.Denim1, hex: "#3C4F5D", name: "Blue" }],
     },
   ];
   useEffect(() => {

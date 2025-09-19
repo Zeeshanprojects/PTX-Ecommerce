@@ -145,21 +145,20 @@ export default function Productinfo() {
 
             {/* Colors */}
             <h6 className="fw-semibold mt-4">Colors Available</h6>
-        <div className="d-flex flex-wrap align-items-center mt-3">
-  {colorOptions.map((option, index) => (
-    <button
-      key={index}
-      className={`color-circle ${
-        selectedImage === option.image ? "active" : ""
-      }`}
-      style={{ backgroundColor: option.hex }}
-      onMouseEnter={() => setSelectedImage(option.image)}
-      onClick={() => setSelectedImage(option.image)}
-      title={option.name}
-    ></button>
-  ))}
-</div>
-
+            <div className="d-flex flex-wrap align-items-center mt-3">
+              {colorOptions.map((option, index) => (
+                <button
+                  key={index}
+                  className={`color-circle ${
+                    selectedImage === option.image ? "active" : ""
+                  }`}
+                  style={{ backgroundColor: option.hex }}
+                  onMouseEnter={() => setSelectedImage(option.image)}
+                  onClick={() => setSelectedImage(option.image)}
+                  title={option.name}
+                ></button>
+              ))}
+            </div>
 
             {/* Quantity */}
             <div className="d-flex align-items-center mb-4 mt-4">
@@ -195,7 +194,6 @@ export default function Productinfo() {
                     Product Details
                   </label>
                   <ul className="mt-2 ps-3">
-                 
                     <li>Fit: Regular Fit</li>
                     <li>GSM: {GSM}</li>
                   </ul>

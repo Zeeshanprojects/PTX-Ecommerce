@@ -8,7 +8,7 @@ body {
 }
 .bannerimage {
   width: 100%;
-  height: 100vh; /* or a fixed ratio */
+  height: auto; /* or a fixed ratio */
   object-fit: cover;
   display: block;
 }
@@ -479,5 +479,10 @@ flex-direction: column;
 flex-direction: column;
   justify-content: center;
   width: 100% !important;
+}
+.bannerimage{
+height: auto;
+width: 100%;
+object-fit: cover;
 }
 }

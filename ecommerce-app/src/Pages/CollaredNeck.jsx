@@ -51,11 +51,12 @@ export default function CollaredNeck() {
 useEffect(() => {
   products.forEach((product) => {
     product.colors.forEach((color) => {
-      const img = new window.Image(); // ✅ use window.Image
+      const img = new window.Image();
       img.src = color.image;
     });
   });
-}, [products]);
+}, []);
+
 
   // State for selected colors of each product
   const [selectedColors, setSelectedColors] = useState(
@@ -309,9 +310,11 @@ useEffect(() => {
                           title: product.title,
                           price: product.price,
                           color: selectedColors[i].name,
+                           category: "Collared Neck", // or Fleece etc.
+                            colors: product.colors, // 👈 pass full color list
                    
                           GSM: "220", // you can pass actual GSM if available
-                          category: "Collared Neck",
+                          
                         },
                       })
                     }

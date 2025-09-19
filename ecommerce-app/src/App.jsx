@@ -24,7 +24,7 @@ import Privacyandpolicy from "./Pages/Privacyandpolicy";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import TShirt from "./Pages/T-Shirt";
+
 import Checkout from "./Pages/Checkout";
 import LookBook from "./Pages/LookBook";
 import Preloader from "./Components/Preloader";
@@ -64,7 +64,6 @@ function AppWrapper() {
         <Route path="/Men" element={<Men />} />
         <Route path="/Junior" element={<Junior />} />
         <Route path="/Denim" element={<Denim />} />
-        <Route path="/Tshirts" element={<TShirt />} />
         <Route path="/Collaredneck" element={<CollaredNeck />} />
         <Route path="/Boatneck" element={<BoatNeck />} />
         <Route path="/Pulloverhoodie" element={<Hoddies />} />

@@ -10,7 +10,7 @@ export default function Denim() {
 
   // State for sidebar visibility on small screens
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   // Toggle sidebar visibility
   const toggleSidebar = () => {
@@ -23,9 +23,17 @@ export default function Denim() {
       title: "Denim",
       price: 10.0,
       fit: "Regular Fit",
-      colors: [{ image: Image.Denim1, hex: "#DDD9D6",name:"Blue" }],
+      colors: [{ image: Image.Denim1, hex: "#DDD9D6", name: "Blue" }],
     },
   ];
+  useEffect(() => {
+    products.forEach((product) => {
+      product.colors.forEach((color) => {
+        const img = new window.Image();
+        img.src = color.image;
+      });
+    });
+  }, []);
 
   // State for selected colors of each product
   const [selectedColors, setSelectedColors] = useState(
@@ -268,24 +276,26 @@ export default function Denim() {
 
                   {/* Product Image */}
                   <div className="product-img-container">
-                   <img
-                    src={selectedColors[i].image}
-                    alt={product.title}
-                    className="img-fluid product-img"
-                    style={{ cursor: "pointer" }} // makes it look clickable
-                    onClick={() =>
-                      navigate("/productinfo", {
-                        state: {
-                          image: selectedColors[i].image,
-                          title: product.title,
-                          price: product.price,
-                          color: selectedColors[i].name,
-                          GSM: "220", // you can pass actual GSM if available
-                          category: "Collared Neck",
-                        },
-                      })
-                    }
-                  />
+                    <img
+                      src={selectedColors[i].image}
+                      alt={product.title}
+                      className="img-fluid product-img"
+                      style={{ cursor: "pointer" }} // makes it look clickable
+                      onClick={() =>
+                        navigate("/productinfo", {
+                          state: {
+                            image: selectedColors[i].image,
+                            title: product.title,
+                            price: product.price,
+                            color: selectedColors[i].name,
+                            GSM: "220", // you can pass actual GSM if available
+                            category: "Denim",
+
+                            colors: product.colors, // 👈 pass full color list
+                          },
+                        })
+                      }
+                    />
                   </div>
 
                   {/* Product Details */}

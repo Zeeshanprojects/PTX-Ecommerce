@@ -45,6 +45,14 @@ export default function Mineralwash() {
       ],
     },
   ];
+useEffect(() => {
+  products.forEach((product) => {
+    product.colors.forEach((color) => {
+      const img = new window.Image();
+      img.src = color.image;
+    });
+  });
+}, []);
 
   // State for selected colors of each product
   const [selectedColors, setSelectedColors] = useState(
@@ -300,7 +308,9 @@ export default function Mineralwash() {
                           price: product.price,
                           color: selectedColors[i].name,
                           GSM: "220", // you can pass actual GSM if available
-                          category: "Collared Neck",
+             category: "MineralWash", // or Fleece etc.
+                            colors: product.colors, // 👈 pass full color list
+                   
                         },
                       })
                     }

@@ -100,32 +100,7 @@ body {
   background-color: #e9ecf3;
   object-fit: contain;
 }
-/* .product-card {
-  background-color: white;
-  border-radius: 10px !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
-/* .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-.product-img-container {
-  height: 380px;
-  padding: 5px;
-}
-.product-img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-} */
-.product-card:hover .product-img {
-  transform: scale(1.05);
-}
 
-.product-card:hover .product-overlay {
-  opacity: 1;
-}
 .sizes {
   height: 50px;
   width: 50px;

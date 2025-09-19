@@ -34,7 +34,7 @@ export default function Hoddies() {
         { image: Image.Hoodie8, hex: "#A6CDD7",name:"Light Blue" },
         { image: Image.Hoodie9, hex: "#BBAEBB",name:"Pastel Purple" },
         { image: Image.Hoodie10, hex: "#362617",name:"Bistre" },
-        { image: Image.Hoodie11, hex: "#932221",name:"Vivid aAuburn" },
+        { image: Image.Hoodie11, hex: "#932221",name:"Vivid Auburn" },
         { image: Image.Hoodie12, hex: "#404040",name:"Outer Space" },
         { image: Image.Hoodie13, hex: "#76B9F0",name:"Maya Blue" },
         { image: Image.Hoodie14, hex: "#706D67",name:"Dim Gray" },
@@ -45,6 +45,15 @@ export default function Hoddies() {
       ],
     },
   ];
+useEffect(() => {
+  products.forEach((product) => {
+    product.colors.forEach((color) => {
+      const img = new window.Image();
+      img.src = color.image;
+    });
+  });
+}, []);
+
 
   // State for selected colors of each product
   const [selectedColors, setSelectedColors] = useState(
@@ -300,7 +309,9 @@ export default function Hoddies() {
                           price: product.price,
                           color: selectedColors[i].name,
                           GSM: "220", // you can pass actual GSM if available
-                          category: "Collared Neck",
+                         category: "Hoddies", // or Fleece etc.
+                            colors: product.colors, // 👈 pass full color list
+                   
                         },
                       })
                     }

@@ -26,7 +26,14 @@ export default function Denim() {
       colors: [{ image: Image.Denim1, hex: "#DDD9D6",name:"Blue" }],
     },
   ];
-
+useEffect(() => {
+  products.forEach((product) => {
+    product.colors.forEach((color) => {
+      const img = new window.Image(); // ✅ use window.Image
+      img.src = color.image;
+    });
+  });
+}, [products]);
   // State for selected colors of each product
   const [selectedColors, setSelectedColors] = useState(
     products.map((p) => p.colors[0])

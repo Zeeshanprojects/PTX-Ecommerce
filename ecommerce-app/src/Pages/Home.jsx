@@ -59,7 +59,7 @@ export default function Home() {
           alt="banner-image"
           className="bannerimage"
           fetchPriority="high"
-          loading="eager"
+    loading="preload"
         />
 
         <div className="main-btn">
@@ -135,16 +135,16 @@ export default function Home() {
           <div className="container-fluid p-2 mb-2 h-100">
             <div className="row g-2">
               <div className="col-6 m-0 mb-2">
-                <img src={Image.category1} className="img-background " />
+                <img src={Image.category1} className="img-background " loading="lazy" />
               </div>
               <div className="col-6 m-0 mb-2">
-                <img src={Image.category2} className="img-background" />
+                <img src={Image.category2} className="img-background" loading="lazy"/>
               </div>
               <div className="col-6 m-0">
-                <img src={Image.category3} className="img-background" />
+                <img src={Image.category3} className="img-background" loading="lazy"/>
               </div>
               <div className="col-6 m-0">
-                <img src={Image.category4} className="img-background" />
+                <img src={Image.category4} className="img-background"loading="lazy" />
               </div>
             </div>
           </div>
@@ -158,6 +158,7 @@ export default function Home() {
             src={Image.rightbanner}
             alt="rightbanner"
             className="right-banner-img"
+            loading="lazy"
           />
           <div className="overlay-text">
             <h5> SALE IS ON</h5>
@@ -197,6 +198,7 @@ export default function Home() {
                 src={Image.productbanner1}
                 alt="smallbanner"
                 className="w-100 p-0 m-0"
+                loading="lazy"
               />
               <div className="banner-text">
                 <h2 className="text-white">COLLARED NECK</h2>
@@ -219,6 +221,7 @@ export default function Home() {
                 src={Image.productbanner2}
                 alt="smallbanner"
                 className="w-100"
+                loading="lazy"
               />
               <div className="banner-text">
                 <h2 className="text-dark">FLEECE CREWNECK</h2>
@@ -245,6 +248,7 @@ export default function Home() {
                 src={Image.productbanner3}
                 alt="smallbanner"
                 className="w-100"
+                loading="lazy"
               />
               <div className="banner-text">
                 <h2 className="text-dark">BOAT NECK</h2>
@@ -266,6 +270,7 @@ export default function Home() {
                 src={Image.productbanner4}
                 alt="smallbanner"
                 className="w-100"
+                loading="lazy"
               />
               <div className="banner-text">
                 <h2 className="text-white">PULLOVER HOODIES</h2>
@@ -291,6 +296,7 @@ export default function Home() {
                 src={Image.productbanner8}
                 alt="smallbanner"
                 className="w-100 p-0 m-0"
+                loading="lazy"
               />
               <div className="banner-text">
                 <h2 className="text-white">FLANNEL SHIRTS</h2>
@@ -313,6 +319,7 @@ export default function Home() {
                 src={Image.productbanner6}
                 alt="smallbanner"
                 className="w-100"
+                loading="lazy"
               />
               <div className="banner-text">
                 <h2 className="text-dark">MINERAL WASH</h2>
@@ -338,6 +345,7 @@ export default function Home() {
                 src={Image.productbanner9}
                 alt="smallbanner"
                 className="w-100"
+                loading="lazy"
               />
               <div className="banner-text">
                 <h2 className="text-dark">CROP TEE</h2>

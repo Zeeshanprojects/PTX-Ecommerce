@@ -135,13 +135,13 @@ export default function Productinfo() {
             )}
 
             {/* Description */}
-            <p className="mb-2 text mt-2">
+            {/* <p className="mb-2 text mt-2">
               This premium cotton Mineral Wash offers comfort and elegance for
               everyday wear. Designed with modern cuts and top-quality fabric,
               it’s perfect for casual or semi-formal occasions. The breathable
               fabric ensures you stay cool in warmer climates, while the durable
               stitching maintains shape and quality even after multiple washes.
-            </p>
+            </p> */}
 
             {/* Colors */}
             <h6 className="fw-semibold mt-4">Colors Available</h6>

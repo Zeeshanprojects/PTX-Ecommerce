@@ -6,45 +6,56 @@ import "./Productinfo.css";
 
 export default function Productinfo() {
   useEffect(() => {
-    document.title = "Product Derails | Paksitan Textile Exchange";
-  });
+    document.title = "Product Details | Pakistan Textile Exchange";
+  }, []);
+
   const { state } = useLocation();
   const navigate = useNavigate();
   const { addToCart } = useContext(CartContext);
-  const [quantity, setQuantity] = useState(1);
-  const [selectedSizes, setSelectedSizes] = useState([]);
-  const [showSizeModal, setShowSizeModal] = useState(false); // modal state
-  const { id, image, title, price, color, GSM, category  } = state;
+
   if (!state) {
     console.log("No state provided, redirecting to home");
     navigate("/");
     return null;
   }
 
+  const { id, image, title, price, color, GSM, category ,colors} = state;
+
+  // Local states
+  const [quantity, setQuantity] = useState(1);
+  const [selectedSizes, setSelectedSizes] = useState([]);
+  const [showSizeModal, setShowSizeModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(image);
+
+  // Example color options (you can pass from CollaredNeck via state if needed)
+const colorOptions = colors || [];
+
+  // Quantity handlers
   const increaseQty = () => setQuantity((prev) => prev + 1);
   const decreaseQty = () => {
     if (quantity > 1) setQuantity((prev) => prev - 1);
   };
 
+  // Size selection
   const handleSizeSelect = (sizeOption) => {
-    setSelectedSizes((prev) => {
-      const newSizes = prev.includes(sizeOption)
+    setSelectedSizes((prev) =>
+      prev.includes(sizeOption)
         ? prev.filter((size) => size !== sizeOption)
-        : [...prev, sizeOption];
-      return newSizes;
-    });
+        : [...prev, sizeOption]
+    );
   };
 
+  // Cart
   const handleAddToCart = () => {
     if (selectedSizes.length === 0) {
-      setShowSizeModal(true); // show modal instead of alert
+      setShowSizeModal(true);
       return;
     }
 
     selectedSizes.forEach((size) => {
       const product = {
         id: `${id}-${size}`,
-        image,
+        image: selectedImage,
         title,
         price: Number(price),
         category,
@@ -57,20 +68,20 @@ export default function Productinfo() {
     navigate("/Cart");
   };
 
+  // Buy now
   const handleBuyNow = () => {
     if (selectedSizes.length === 0) {
-      setShowSizeModal(true); // show modal instead of alert
+      setShowSizeModal(true);
       return;
     }
 
     const products = selectedSizes.map((size) => ({
       id: `${id}-${size}`,
-      image,
+      image: selectedImage,
       title,
       price: Number(price),
       category,
       size,
-
       quantity,
     }));
 
@@ -80,21 +91,25 @@ export default function Productinfo() {
   return (
     <>
       <div className="container-fluid p-0">
-        <div className="row ">
-          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-4 mb-md-0">
+        <div className="row">
+          {/* Left: Product Image */}
+          <div className="col-lg-6 mb-4 mb-md-0">
             <div className="product-image-wrapper">
               <img
-                src={image}
+                src={selectedImage}
                 alt={title}
                 className="img-fluid product-image"
               />
             </div>
           </div>
-          <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-0 p-3 info-right-column strict-spacing">
-           
-            <h3 className="">{title}</h3>
-            <h5 className="text-muted mb-3 ">USD {price}.00 </h5>
-            <label className="me-3 fw-semibold ">Sizes Available</label>
+
+          {/* Right: Product Info */}
+          <div className="col-lg-6 p-3 info-right-column strict-spacing">
+            <h3>{title}</h3>
+            <h5 className="text-muted mb-3">USD {price}.00</h5>
+
+            {/* Sizes */}
+            <label className="me-3 fw-semibold">Sizes Available</label>
             <div className="buttons mt-3 mb-2">
               {["S", "M", "L", "XL", "2XL", "3XL"].map((sizeOption) => (
                 <button
@@ -104,7 +119,7 @@ export default function Productinfo() {
                     selectedSizes.includes(sizeOption)
                       ? "btn-dark"
                       : "btn-outline-dark"
-                  } me-2  mb-3`}
+                  } me-2 mb-3`}
                   onClick={() => handleSizeSelect(sizeOption)}
                 >
                   {sizeOption}
@@ -119,6 +134,7 @@ export default function Productinfo() {
               </div>
             )}
 
+            {/* Description */}
             <p className="mb-2 text mt-2">
               This premium cotton Mineral Wash offers comfort and elegance for
               everyday wear. Designed with modern cuts and top-quality fabric,
@@ -127,15 +143,35 @@ export default function Productinfo() {
               stitching maintains shape and quality even after multiple washes.
             </p>
 
+            {/* Colors */}
+            <h6 className="fw-semibold mt-4">Colors Available</h6>
+  <div className="d-flex align-items-center mt-3">
+  {colorOptions.map((option, index) => (
+    <button
+      key={index}
+      className={`color-circle ${
+        selectedImage === option.image ? "active" : ""
+      }`}
+      style={{ backgroundColor: option.hex }}
+      onMouseEnter={() => setSelectedImage(option.image)}  // 👈 hover
+      onClick={() => setSelectedImage(option.image)}       // 👈 also allow click
+      title={option.name}
+    ></button>
+  ))}
+</div>
+
+
+
+            {/* Quantity */}
             <div className="d-flex align-items-center mb-4 mt-4">
-              <label className="me-3 fw-semibold ">Quantity:</label>
+              <label className="me-3 fw-semibold">Quantity:</label>
               <button
                 onClick={decreaseQty}
                 className="btn btn-outline-dark fw-bold quantity px-3"
               >
                 <img src={Image.minus} alt="minus" className="icon" />
               </button>
-              <span className="mx-4 ">{quantity}</span>
+              <span className="mx-4">{quantity}</span>
               <button
                 onClick={increaseQty}
                 className="btn btn-outline-dark quantity px-3"
@@ -144,23 +180,24 @@ export default function Productinfo() {
               </button>
             </div>
 
+            {/* Buttons + Product details */}
             <div className="container p-1">
-              <div className="row ">
-                <div className="col-12 ">
+              <div className="row">
+                <div className="col-12">
                   <button
-                    className="btn btn-dark  w-100 "
+                    className="btn btn-dark w-100"
                     onClick={handleAddToCart}
                   >
                     ADD TO CART
                   </button>
                 </div>
                 <div className="details">
-                  <label className="me-5 mt-3 fw-semibold ">
+                  <label className="me-5 mt-3 fw-semibold">
                     Product Details
                   </label>
-                  <ul className="mt-2 ps-3 ">
+                  <ul className="mt-2 ps-3">
                     <li>Color: {color}</li>
-                    <li>Fit: Regulr Fit</li>
+                    <li>Fit: Regular Fit</li>
                     <li>GSM: {GSM}</li>
                   </ul>
                 </div>
@@ -170,7 +207,7 @@ export default function Productinfo() {
         </div>
       </div>
 
-      {/* Bootstrap Modal */}
+      {/* Modal */}
       <div
         className={`modal fade ${showSizeModal ? "show d-block" : ""}`}
         tabIndex="-1"

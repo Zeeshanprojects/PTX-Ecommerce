@@ -1,6 +1,6 @@
 const Image = {
   logo: new URL("./PTX-Main-Logo.png", import.meta.url).href,
-  mainbanner: new URL("./ecommercebanner2.webp", import.meta.url).href,
+  mainbanner: new URL("./ecommercebanner.webp", import.meta.url).href,
   banner: new URL("./Fashionsalebanner.webp", import.meta.url).href,
   rightbanner: new URL("./ptx-banner.webp", import.meta.url).href,
   category1: new URL("./latestproduct2.webp", import.meta.url).href,

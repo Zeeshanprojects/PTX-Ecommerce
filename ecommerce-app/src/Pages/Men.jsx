@@ -425,7 +425,7 @@ useEffect(() => {
                   <p className="text-muted mb-1">${product.price.toFixed(2)}</p>
                   <p className="text-muted small">{product.fit}</p>
                   <p className="text-muted small">
-                    {product.colors.length} Colours
+                    {product.colors.length} Colors
                   </p>
 
                   {/* Color Selector */}

@@ -22,14 +22,14 @@ export default function Men() {
     {
       title: "Collared Neck",
       price: 10.0,
-      fit: "Regular Fit",
+      fit: "Dotted",
       colors: [
         { image: Image.CollaredNeck1, hex: "#101012",name:"Onyx" },
         { image: Image.CollaredNeck2, hex: "#070709",name:"Oxford Blue" },
       ],
     },
     {
-      title: "Fleece",
+      title: "Collared Neck",
       price: 10.0,
       fit: "Regular Fit",
       colors: [
@@ -40,9 +40,9 @@ export default function Men() {
     },
     
     {
-      title: "Mineral Wash",
+      title: "Collared Neck",
       price: 10.0,
-      fit: "Slim Fit",
+      fit: "Regular Fit",
       colors: [
         { image: Image.CollaredNeck4, hex: "#E20F22",name:"Cadmium red" },
         { image: Image.CollaredNeck6, hex: "#776A3A", name:"Dark Tan"},
@@ -138,11 +138,11 @@ export default function Men() {
         { image: Image.Hoodie11, hex: "#932221",name:"Vivid Auburn" },
         { image: Image.Hoodie12, hex: "#404040",name:"Outer Space" },
         { image: Image.Hoodie13, hex: "#76B9F0",name:"Maya Blue" },
-        { image: Image.Hoodie14, hex: "#706D67" },
-        { image: Image.Hoodie15, hex: "#411B6C" },
-        { image: Image.Hoodie16, hex: "#846C59" },
-        { image: Image.Hoodie17, hex: "#DAA931" },
-        { image: Image.Hoodie18, hex: "#2A4430" },
+        { image: Image.Hoodie14, hex: "#706D67",name:"Dim Gray" },
+        { image: Image.Hoodie15, hex: "#411B6C",name:"Persian Indigo" },
+        { image: Image.Hoodie16, hex: "#846C59",name:"Pastel Brown" },
+        { image: Image.Hoodie17, hex: "#DAA931",name:"Urobilin" },
+        { image: Image.Hoodie18, hex: "#2A4430",name:"Green" },
       ],
     },
     
@@ -409,7 +409,7 @@ useEffect(() => {
                           image: selectedColors[i].image,
                           title: product.title,
                           price: product.price,
-                          color: selectedColors[i].hex,
+                          color: selectedColors[i].name,
                           GSM: "220", // you can pass actual GSM if available
                           category: "Collared Neck",
                         },

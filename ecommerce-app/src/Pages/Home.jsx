@@ -1,4 +1,4 @@
-import  {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "../Images/Image";
 import "./Home.css";
 import { Link } from "react-router-dom";
@@ -56,11 +56,12 @@ export default function Home() {
       <div className="image-wrapper " data-aos="fade-up">
         <img
           src={Image.mainbanner}
-          alt="slider-image1"
+          alt="banner-image"
           className="bannerimage"
           fetchPriority="high"
           loading="eager"
         />
+
         <div className="main-btn">
           <Link to="/shop">
             <button className="btn btn-outline-light ps-5 pe-5 ">
@@ -161,7 +162,7 @@ export default function Home() {
           <div className="overlay-text">
             <h5> SALE IS ON</h5>
             <h1>50 % OFF</h1>
-             <h5 className="mt-1"> READY TO WEAR</h5>
+            <h5 className="mt-1"> READY TO WEAR</h5>
             <a href="/shop">
               <button
                 type="button"
@@ -177,252 +178,252 @@ export default function Home() {
       <div className="space"></div>
 
       {/* Product Grid */}
-<div id="product-section" >
-  <h2 className="uppercase text-center fw-bold" data-aos="fade-up">
-        CURATED ESSENTIALS FOR A TIMELESS WARDROBE
-      </h2>
-      <p className="text-center" data-aos="fade-up">
-        Essential styles designed for comfort, versatility, and timeless appeal
-      </p>
-      <div className="space"></div>
-      <div className="container-fluid mb-2 p-0">
-        {/* 1st Row */}
-        <div className="row g-0 p-0 m-0">
-          <div
-            className="col-sm-12 col-md-6 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner1}
-              alt="smallbanner"
-              className="w-100 p-0 m-0"
-            />
-            <div className="banner-text">
-              <h2 className="text-white">COLLARED NECK</h2>
-              <p className="text-white">
-                Smart casual polo with a classic collar and <br /> button
-                placket.
-              </p>
-              <Link to="/Collaredneck">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
+      <div id="product-section" >
+        <h2 className="uppercase text-center fw-bold" data-aos="fade-up">
+          CURATED ESSENTIALS FOR A TIMELESS WARDROBE
+        </h2>
+        <p className="text-center" data-aos="fade-up">
+          Essential styles designed for comfort, versatility, and timeless appeal
+        </p>
+        <div className="space"></div>
+        <div className="container-fluid mb-2 p-0">
+          {/* 1st Row */}
+          <div className="row g-0 p-0 m-0">
+            <div
+              className="col-sm-12 col-md-6 position-relative "
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner1}
+                alt="smallbanner"
+                className="w-100 p-0 m-0"
+              />
+              <div className="banner-text">
+                <h2 className="text-white">COLLARED NECK</h2>
+                <p className="text-white">
+                  Smart casual polo with a classic collar and <br /> button
+                  placket.
+                </p>
+                <Link to="/Collaredneck">
+                  <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div
+              className="col-sm-12 col-md-6 position-relative "
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner2}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-dark">FLEECE CREWNECK</h2>
+                <p className="text-dark">
+                  Cozy fleece sweatshirt with a round neckline for <br /> everyday
+                  comfort.
+                </p>
+                <Link to="/Fleece">
+                  <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div
-            className="col-sm-12 col-md-6 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner2}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-dark">FLEECE CREWNECK</h2>
-              <p className="text-dark">
-                Cozy fleece sweatshirt with a round neckline for <br /> everyday
-                comfort.
-              </p>
-              <Link to="/Fleece">
-                <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
 
-        {/* 2nd Row (Flipped on Desktop) */}
-        <div className="row g-0 p-0 m-0">
-          <div
-            className="col-sm-12 col-md-6 order-2 order-md-1 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner3}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-dark">BOAT NECK</h2>
-              <p className="text-dark">
-                Stylish wide-neck fleece with a relaxed, modern fit.
-              </p>
-              <Link to="/Boatneck">
-                <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
+          {/* 2nd Row (Flipped on Desktop) */}
+          <div className="row g-0 p-0 m-0">
+            <div
+              className="col-sm-12 col-md-6 order-2 order-md-1 position-relative "
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner3}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-dark">BOAT NECK</h2>
+                <p className="text-dark">
+                  Stylish wide-neck fleece with a relaxed, modern fit.
+                </p>
+                <Link to="/Boatneck">
+                  <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div
+              className="col-sm-12 col-md-6 order-1 order-md-2 position-relative "
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner4}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-white">PULLOVER HOODIES</h2>
+                <p className="text-white">
+                  Classic hoodie with drawstring hood and <br /> kangaroo pocket.
+                </p>
+                <Link to="/Pulloverhoodie">
+                  <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div
-            className="col-sm-12 col-md-6 order-1 order-md-2 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner4}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-white">PULLOVER HOODIES</h2>
-              <p className="text-white">
-                Classic hoodie with drawstring hood and <br /> kangaroo pocket.
-              </p>
-              <Link to="/Pulloverhoodie">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
 
-        {/* 3rd Row */}
-        <div className="row g-0 p-0 m-0">
-          <div
-            className="col-sm-12 col-md-6 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner8}
-              alt="smallbanner"
-              className="w-100 p-0 m-0"
-            />
-            <div className="banner-text">
-              <h2 className="text-white">FLANNEL SHIRTS</h2>
-              <p className="text-white">
-                Timeless flannel design, perfect for layering
-                <br /> and casual style
-              </p>
-              <Link to="/shirts">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
+          {/* 3rd Row */}
+          <div className="row g-0 p-0 m-0">
+            <div
+              className="col-sm-12 col-md-6 position-relative "
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner8}
+                alt="smallbanner"
+                className="w-100 p-0 m-0"
+              />
+              <div className="banner-text">
+                <h2 className="text-white">FLANNEL SHIRTS</h2>
+                <p className="text-white">
+                  Timeless flannel design, perfect for layering
+                  <br /> and casual style
+                </p>
+                <Link to="/shirts">
+                  <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div
+              className="col-sm-12 col-md-6 position-relative "
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner6}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-dark">MINERAL WASH</h2>
+                <p className="text-dark">
+                  Timeless round-neck sweatshirt with ribbed <br /> cuffs and hem
+                </p>
+                <Link to="/Mineralwash">
+                  <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div
-            className="col-sm-12 col-md-6 position-relative "
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner6}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-dark">MINERAL WASH</h2>
-              <p className="text-dark">
-                Timeless round-neck sweatshirt with ribbed <br /> cuffs and hem
-              </p>
-              <Link to="/Mineralwash">
-                <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
 
-        {/* 4th Row (Flipped on Desktop) */}
-        <div className="row g-0 p-0 m-0">
-          <div
-            className="col-sm-12 col-md-6 order-2 order-md-1 position-relative"
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner9}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-dark">CROP TEE</h2>
-              <p className="text-dark">
-                Everyday essential crop tee for comfort and style
-              </p>
-              <Link to="/croptee">
-                <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
+          {/* 4th Row (Flipped on Desktop) */}
+          <div className="row g-0 p-0 m-0">
+            <div
+              className="col-sm-12 col-md-6 order-2 order-md-1 position-relative"
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner9}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-dark">CROP TEE</h2>
+                <p className="text-dark">
+                  Everyday essential crop tee for comfort and style
+                </p>
+                <Link to="/croptee">
+                  <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div
+              className="col-sm-12 col-md-6 order-1 order-md-2 position-relative"
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner10}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-light">PUFFERS</h2>
+                <p className="text-light">
+                  Trendy puffer outerwear for a sleek winter look
+                </p>
+                <Link to="/puffers">
+                  <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div
-            className="col-sm-12 col-md-6 order-1 order-md-2 position-relative"
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner10}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-light">PUFFERS</h2>
-              <p className="text-light">
-                Trendy puffer outerwear for a sleek winter look
-              </p>
-              <Link to="/puffers">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
 
-        {/* 5th Row */}
-        <div className="row g-0 p-0 m-0">
-          <div
-            className="col-sm-12 col-md-6 position-relative"
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner5}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-light">SHORT</h2>
-              <p className="text-light">
-                Classic shorts with side pockets and an easy <br /> drawstring
-                waist
-              </p>
-              <Link to="/short">
-                <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
+          {/* 5th Row */}
+          <div className="row g-0 p-0 m-0">
+            <div
+              className="col-sm-12 col-md-6 position-relative"
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner5}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-light">SHORT</h2>
+                <p className="text-light">
+                  Classic shorts with side pockets and an easy <br /> drawstring
+                  waist
+                </p>
+                <Link to="/short">
+                  <button className="btn btn-outline-light ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
             </div>
-          </div>
-          <div
-            className="col-sm-12 col-md-6 position-relative"
-            data-aos="fade-up"
-          >
-            <img
-              src={Image.productbanner7}
-              alt="smallbanner"
-              className="w-100"
-            />
-            <div className="banner-text">
-              <h2 className="text-dark">SANDOW</h2>
-              <p className="text-dark">
-                Durable and comfortable sandow for a relaxed,
-                <br /> casual look
-              </p>
-              <Link to="/sandow">
-                <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
-                  VIEW COLLECTION
-                </button>
-              </Link>
+            <div
+              className="col-sm-12 col-md-6 position-relative"
+              data-aos="fade-up"
+            >
+              <img
+                src={Image.productbanner7}
+                alt="smallbanner"
+                className="w-100"
+              />
+              <div className="banner-text">
+                <h2 className="text-dark">SANDOW</h2>
+                <p className="text-dark">
+                  Durable and comfortable sandow for a relaxed,
+                  <br /> casual look
+                </p>
+                <Link to="/sandow">
+                  <button className="btn btn-outline-dark ps-3 pe-3 m-0 collection-btn">
+                    VIEW COLLECTION
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
-</div>
-      
+
 
       <div className="space"></div>
       <div className="container-fluid " data-aos="fade-up">
@@ -444,7 +445,7 @@ export default function Home() {
             <p className="category_font">
               Stay fashionable with our latest styles
             </p>
-           
+
           </div>
           <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
             <div className="icon-wrapper mx-auto">
@@ -458,7 +459,7 @@ export default function Home() {
             <p className="category_font">
               Get your new clothes quickly with our speedy shipping
             </p>
-            
+
           </div>
           <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
             <div className="icon-wrapper mx-auto">
@@ -472,7 +473,7 @@ export default function Home() {
             <p className="category_font">
               If it doesn't fit or you don't like it, return it easily
             </p>
-           
+
           </div>
           <div className="col-sm-6 col-md-6 col-lg-2 col-xl-2 text-center">
             <div className="icon-wrapper mx-auto">

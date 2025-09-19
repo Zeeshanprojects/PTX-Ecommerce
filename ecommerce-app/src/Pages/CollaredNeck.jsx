@@ -51,11 +51,12 @@ export default function CollaredNeck() {
 useEffect(() => {
   products.forEach((product) => {
     product.colors.forEach((color) => {
-      const img = new window.Image(); // ✅ use window.Image
+      const img = new window.Image();
       img.src = color.image;
     });
   });
-}, [products]);
+}, []);
+
 
   // State for selected colors of each product
   const [selectedColors, setSelectedColors] = useState(

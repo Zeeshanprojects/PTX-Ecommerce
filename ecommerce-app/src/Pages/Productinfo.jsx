@@ -19,7 +19,7 @@ export default function Productinfo() {
     return null;
   }
 
-  const { id, image, title, price, color, GSM, category ,colors} = state;
+  const { id, image, title, price, color, GSM, category, colors } = state;
 
   // Local states
   const [quantity, setQuantity] = useState(1);
@@ -28,7 +28,7 @@ export default function Productinfo() {
   const [selectedImage, setSelectedImage] = useState(image);
 
   // Example color options (you can pass from CollaredNeck via state if needed)
-const colorOptions = colors || [];
+  const colorOptions = colors || [];
 
   // Quantity handlers
   const increaseQty = () => setQuantity((prev) => prev + 1);
@@ -145,7 +145,7 @@ const colorOptions = colors || [];
 
             {/* Colors */}
             <h6 className="fw-semibold mt-4">Colors Available</h6>
-  <div className="d-flex align-items-center mt-3">
+        <div className="d-flex flex-wrap align-items-center mt-3">
   {colorOptions.map((option, index) => (
     <button
       key={index}
@@ -153,13 +153,12 @@ const colorOptions = colors || [];
         selectedImage === option.image ? "active" : ""
       }`}
       style={{ backgroundColor: option.hex }}
-      onMouseEnter={() => setSelectedImage(option.image)}  // 👈 hover
-      onClick={() => setSelectedImage(option.image)}       // 👈 also allow click
+      onMouseEnter={() => setSelectedImage(option.image)}
+      onClick={() => setSelectedImage(option.image)}
       title={option.name}
     ></button>
   ))}
 </div>
-
 
 
             {/* Quantity */}
@@ -196,7 +195,7 @@ const colorOptions = colors || [];
                     Product Details
                   </label>
                   <ul className="mt-2 ps-3">
-                    <li>Color: {color}</li>
+                 
                     <li>Fit: Regular Fit</li>
                     <li>GSM: {GSM}</li>
                   </ul>

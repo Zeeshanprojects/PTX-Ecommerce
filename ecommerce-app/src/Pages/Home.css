@@ -101,13 +101,6 @@ body {
   object-fit: contain;
 }
 
-/* .product-card:hover .product-img {
-  transform: scale(1.05);
-} */
-
-/* .product-card:hover .product-overlay {
-  opacity: 1;
-} */
 .sizes {
   height: 50px;
   width: 50px;

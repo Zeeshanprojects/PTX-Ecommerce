@@ -310,7 +310,9 @@ JUNIOR
                           price: product.price,
                           color: selectedColors[i].hex,
                           GSM: "220", // you can pass actual GSM if available
-                          category: "Collared Neck",
+                         category: "Junior", // or Fleece etc.
+                            colors: product.colors, // 👈 pass full color list
+                   
                         },
                       })
                     }
